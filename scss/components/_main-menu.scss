@@ -14,14 +14,16 @@
   }
 
   &--dynamic-info {
-    position: absolute;
-    top: -20px;
+    position: fixed;
+    top: 30vh;
     left: 25vw;
     color: $mainGreen;
     text-transform: uppercase;
     width: 240px;
     font-weight: 400;
     display: none;
+    @include default-transition;
+    opacity: 0;
 
     @include media-breakpoint-up(xl) {
       display: block;
@@ -35,6 +37,11 @@
     &--subtitle {
       font-size: 16px;
       line-height: 19.2px;
+    }
+
+    &__visible {
+      @include default-transition;
+      opacity: 1;
     }
   }
 
@@ -55,6 +62,8 @@
       font-size: 70px;
       font-family: 'Kaisei Opti', serif;
       display: inline-block;
+      position: relative;
+      left: 0px;
 
       @include media-breakpoint-up(md) {
         font-size: 130px;
@@ -68,6 +77,8 @@
         @include media-breakpoint-up(md) {
           opacity: 1;
         }
+        position: relative;
+        left: 3px;
       }
     }
   }
