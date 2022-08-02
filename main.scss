@@ -1,3 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  /* Firefox */
+
+  background: transparent;
+}
+
+::selection {
+  background: transparent;
+}
+
 @import './scss/abstracts/variables';
 @import './scss/abstracts/mixins';
 
