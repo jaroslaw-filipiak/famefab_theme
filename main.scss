@@ -1,0 +1,17 @@
+@import './scss/abstracts/variables';
+@import './scss/abstracts/mixins';
+
+@import './scss/vendors/bootstrap';
+
+@import './scss/base/typography';
+@import './scss/base/colors';
+
+@import './scss/layout/navigation';
+@import './scss/layout/header';
+@import './scss/layout/footer';
+@import './scss/layout/forms';
+
+@import './scss/components/buttons';
+@import './scss/components/main-menu';
+
+@import './scss/pages/home';
