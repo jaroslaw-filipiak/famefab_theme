@@ -1,0 +1,71 @@
+.top-bar {
+  padding: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $topBarHeight;
+  background-color: transparent;
+  z-index: 2;
+
+  &--logo {
+    a {
+      cursor: pointer;
+
+      &:hover {
+        svg {
+          @include default-transition;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    svg {
+      @include default-transition;
+      transform: scale(1);
+    }
+  }
+
+  &--contact-link,
+  &--page-title {
+    font-size: 10px;
+    color: $mainGreen;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  &--contact-link {
+    margin-right: 40px;
+    opacity: 1;
+    transform: scale(1);
+    @include default-transition;
+
+    &:hover {
+      color: $mainGreen;
+      opacity: 0.8;
+      transform: scale(1.1);
+      @include default-transition;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      @include default-transition;
+      transform: scale(1);
+    }
+
+    &:hover {
+      svg {
+        @include default-transition;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.arrow-right {
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    svg {
+      @include default-transition;
+      transform: scale(1);
+    }
+
+    &:hover {
+      svg {
+        @include default-transition;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &--arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -31,6 +31,11 @@ html {
 @import './scss/layout/forms';
 
 @import './scss/components/buttons';
+@import './scss/components/icons';
 @import './scss/components/main-menu';
+@import './scss/components/top-bar';
 
 @import './scss/pages/home';
+
+// dev
+@import './scss/abstracts/debug';

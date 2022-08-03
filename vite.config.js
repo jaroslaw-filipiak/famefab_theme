@@ -1,6 +1,13 @@
-export default {
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
   build: {
     rollupOptions: {
+      input: {
+        global: resolve(__dirname, 'index.html'), // main global + vendors
+        homepage: resolve(__dirname, './front-pages/home/index.html'), // homepage
+      },
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `[name].js`,
@@ -8,4 +15,4 @@ export default {
       },
     },
   },
-};
+});

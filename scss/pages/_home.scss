@@ -1,0 +1,41 @@
+.hello {
+  height: 100vh;
+  padding-bottom: 20px;
+  background-color: $fioletLight;
+  position: relative;
+
+  &--get-started-area {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: $mainGreen;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(lg) {
+      width: 40%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 34%;
+    }
+
+    small {
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//
+
+.who-we-are {
+  height: 100vh;
+  padding-bottom: 20px;
+}

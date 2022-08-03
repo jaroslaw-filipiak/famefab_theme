@@ -2,7 +2,7 @@
 
 export function handleScreenMenuLinksOnHover() {
   const menuItems = document.querySelectorAll('.main-menu li');
-  const DynamicInfoWrapper = document.querySelector('.main-menu--dynamic-info');
+  const dynamicInfoWrapper = document.querySelector('.main-menu--dynamic-info');
 
   const dynamicInfoTitle = document.querySelector(
     '.main-menu--dynamic-info--title'
@@ -15,11 +15,28 @@ export function handleScreenMenuLinksOnHover() {
     link.addEventListener('mouseover', () => {
       dynamicInfoTitle.innerHTML = link.dataset.title;
       dynamicInfoSubtitle.innerHTML = link.dataset.content;
-      DynamicInfoWrapper.classList.add('main-menu--dynamic-info__visible');
+      dynamicInfoWrapper.classList.add('main-menu--dynamic-info__visible');
     });
 
     link.addEventListener('mouseleave', () => {
-      DynamicInfoWrapper.classList.remove('main-menu--dynamic-info__visible');
+      dynamicInfoWrapper.classList.remove('main-menu--dynamic-info__visible');
     });
+  });
+}
+
+export function handleHamburgerClick() {
+  const hamburger = document.querySelector('.hamburger');
+  const mainMenu = document.querySelector('.main-menu');
+  hamburger.addEventListener('click', () => {
+    mainMenu.classList.toggle('main-menu__visible');
+  });
+}
+
+export function handleClosemenu() {
+  const closeBtn = document.querySelector('.main-menu--close-btn');
+  const mainMenu = document.querySelector('.main-menu');
+
+  closeBtn.addEventListener('click', () => {
+    mainMenu.classList.remove('main-menu__visible');
   });
 }
