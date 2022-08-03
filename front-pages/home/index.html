@@ -158,7 +158,7 @@
 
 </section>
 
-<section class="hello d-none">
+<section class="hello ">
     <div class="row hello--get-started-area">
         <div class="col-6 p-0">Wij zijn Femmefab,
             een influencer marketing
@@ -192,7 +192,7 @@
     </div>
 </section>
 
-<section class="who-we-are d-none">
+<section class="who-we-are ">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
@@ -232,7 +232,7 @@
     </div>
 </section>
 
-<section class="home-manage bg-cover bg-no-repeat bg-center d-none"
+<section class="home-manage bg-cover bg-no-repeat bg-center"
     style="background-image: url('/assets/img/manage-bg.jpg');">
     <div class="container-fluid h-100">
         <div class="row h-100">
@@ -262,8 +262,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
     <div class="home-manage--title">Manage</div>
@@ -271,12 +269,12 @@
 
 <section class="manage-gallery">
     <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div class="border col-2 d-md-block col-md-3  ps-0"></div>
-            <div class="border col-10 col-md-9" style="position: relative">
+        <div class="row h-100" style="position: relative">
+            <div class=" col-2 d-md-block col-md-3  ps-0"></div>
+            <div class=" col-10 col-md-9 d-flex justify-content-between">
                 <!-- text + arrow button -->
-                <div class="border">
-                    <div class="manage-gallery--subtitle font-green-default text-uppercase font-sans">
+                <div>
+                    <div class="d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
                         Wij werken samen met
                         de leukste influencers
                         & publishers
@@ -300,17 +298,34 @@
                     </div>
                 </div>
                 <!-- gallery on right side -->
-                <div class="gallery">
-                    <img src="/assets/img/manage-gallery/gallery-1.png" alt="">
-                    <img src="/assets/img/manage-gallery/gallery-2.png" alt="">
-                    <img src="/assets/img/manage-gallery/gallery-3.png" alt="">
+                <div class="manage-gallery--gallery  d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-lg-center justify-content-lg-center"
+                    style="width:100%">
+                    <div class="manage-gallery-row-1">
+                        <div class="manage-gallery--item"
+                            style="background-image: url('/assets/img/manage-gallery/gallery-1.png');">
+                            <div class="manage-gallery--item--content">
+                                emily taylor
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="manage-gallery-row-2">
+                        <div class="manage-gallery--item"
+                            style="background-image: url('/assets/img/manage-gallery/gallery-2.png');">
+                            <div class="manage-gallery--item--content">emily taylor</div>
+                        </div>
+                        <div class="manage-gallery--item"
+                            style="background-image: url('/assets/img/manage-gallery/gallery-3.png');">
+                            <div class="manage-gallery--item--content">emily taylor</div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
     <div class="manage-gallery--title-wrapper">
-        <div class="font-small-green text-uppercase">we love to</div>
+        <div class="font-small-green text-uppercase d-none d-lg-block">we love to</div>
         <div class="manage-gallery--title">
             <p>Manage</p>
         </div>
