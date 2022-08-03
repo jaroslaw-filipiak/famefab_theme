@@ -173,4 +173,61 @@
 .manage-gallery {
   height: 100vh;
   background-color: $lightGray;
+  position: relative;
+
+  &--title-wrapper {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  &--title {
+    p {
+      font-size: 83px;
+      line-height: 83px;
+      color: $mainGreen;
+      @include font-serif;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 130px;
+        line-height: 130px;
+      }
+    }
+  }
+
+  &--subtitle {
+    width: 300px;
+    padding-top: 15vh;
+    @include media-breakpoint-up(lg) {
+      padding-top: 180px;
+    }
+  }
+
+  .content-and-arrow {
+    @include media-breakpoint-down(md) {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-top: 0 !important;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 100px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 250px;
+    }
+
+    color: $mainGreen;
+  }
 }
