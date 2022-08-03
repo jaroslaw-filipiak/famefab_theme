@@ -96,12 +96,20 @@
   &--close-btn {
     &-wrapper {
       position: absolute;
-      right: 21px;
-      top: 21px;
+      right: 20px;
+      top: 9px;
       width: 58px;
       height: 58px;
       cursor: pointer;
       opacity: 1;
+      transform: scale(0.7);
+      transform-origin: top right;
+
+      @include media-breakpoint-up(md) {
+        transform: scale(1);
+        right: 21px;
+        top: 21px;
+      }
     }
 
     display: flex;
@@ -131,8 +139,13 @@
 
   &--logo {
     position: absolute;
-    left: 40px;
-    top: 40px;
+    left: 20px;
+    top: 20px;
+
+    @include media-breakpoint-up(md) {
+      left: 40px;
+      top: 40px;
+    }
 
     a {
       cursor: pointer;

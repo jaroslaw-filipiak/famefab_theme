@@ -9,7 +9,19 @@
   font-family: 'Helvetica', sans-serif;
 }
 
-html,
+.font-green-default {
+  font-size: 16px;
+  color: $mainGreen;
+}
+
 body {
   font-family: 'Helvetica', sans-serif;
+}
+
+@mixin font-sans {
+  font-family: 'Helvetica', sans-serif;
+}
+
+@mixin font-serif {
+  font-family: 'Kaisei Opti', serif;
 }
