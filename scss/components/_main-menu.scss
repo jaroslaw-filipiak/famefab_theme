@@ -75,6 +75,10 @@
       position: relative;
       left: 0px;
 
+      @include media-breakpoint-only(xs) {
+        font-size: 63px;
+      }
+
       @include media-breakpoint-up(md) {
         font-size: 130px;
         line-height: 145px;
