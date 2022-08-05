@@ -1,8 +1,95 @@
 .influencers {
   height: 100vh;
   padding: 20px;
+  position: relative;
 
+  @include media-breakpoint-up(xl) {
+    padding: 40px 40px 0px 40px;
+  }
+
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    width: 100%;
+    text-align: left;
+    @include font-serif;
+    @include default-transition;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 100px;
+      line-height: 100px;
+      left: 20px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 130px;
+      line-height: 130px;
+    }
+  }
+
+  &--list-wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &--list {
+    @include media-breakpoint-up(lg) {
+      margin-top: 40vh;
+      display: flex;
+      justify-content: flex-end;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+
+      li {
+        font-size: 75px;
+        @include font-serif;
+        color: $mainGreen;
+        cursor: pointer;
+        opacity: 0.1;
+        @include default-transition;
+        transform: scale(1);
+        position: relative;
+        left: 0;
+        display: inline;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.03);
+          left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.influencer {
   @include media-breakpoint-up(lg) {
-    padding: 40px;
+    padding-bottom: 23vh;
+  }
+  &--photo {
+    width: 289px;
+    height: 389px;
+    background-color: red;
+    border-radius: 15px;
+  }
+
+  &--info {
+    position: absolute;
+    left: calc(289px + 40px);
+    top: 120px;
+    transform: translate(-50% -50%);
+    width: 260px;
+    text-transform: uppercase;
   }
 }

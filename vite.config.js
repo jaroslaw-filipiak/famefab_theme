@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         global: resolve(__dirname, 'index.html'), // main global + vendors
         homepage: resolve(__dirname, './front-pages/home/index.html'), // homepage
+        manage: resolve(__dirname, './front-pages/manage/index.html'), // homepage
       },
       output: {
         entryFileNames: `[name].js`,
