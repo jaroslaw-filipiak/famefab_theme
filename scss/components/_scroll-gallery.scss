@@ -1,0 +1,49 @@
+$offset_mobile: 20px;
+$offset: 10vh;
+
+.scroll-gallery {
+  @include media-breakpoint-up(xl) {
+    min-height: 100vh;
+  }
+
+  &--col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 15px;
+
+    @include media-breakpoint-up(lg) {
+      gap: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+      gap: 30px;
+    }
+
+    img {
+      border-radius: 25px;
+    }
+
+    &-1 {
+      padding-top: $offset_mobile;
+      @include media-breakpoint-up(xl) {
+        padding-top: $offset;
+      }
+    }
+    &-2 {
+      @include media-breakpoint-up(xl) {
+        padding-top: calc($offset + 100px);
+      }
+    }
+    &-3 {
+      @include media-breakpoint-up(xl) {
+        padding-top: calc($offset + 200px);
+      }
+    }
+    &-4 {
+      @include media-breakpoint-up(xl) {
+        padding-top: 100px;
+      }
+    }
+  }
+}

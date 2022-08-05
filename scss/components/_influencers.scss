@@ -1,0 +1,8 @@
+.influencers {
+  height: 100vh;
+  padding: 20px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+}

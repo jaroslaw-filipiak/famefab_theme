@@ -53,8 +53,12 @@ section {
 @import './scss/components/icons';
 @import './scss/components/main-menu';
 @import './scss/components/top-bar';
+@import './scss/components/blank-hero';
+@import './scss/components/scroll-gallery';
+@import './scss/components/influencers';
 
 @import './scss/pages/home';
+@import './scss/pages/over-ons';
 
 // dev
 @import './scss/abstracts/debug';
