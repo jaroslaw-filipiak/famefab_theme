@@ -40,3 +40,5 @@ export function handleCasesOnHover() {
 
 handleCasesOnHover();
 changeSVGcolors();
+
+console.log('make');

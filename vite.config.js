@@ -9,6 +9,7 @@ export default defineConfig({
         homepage: resolve(__dirname, './front-pages/home/index.html'), // homepage
         manage: resolve(__dirname, './front-pages/manage/index.html'),
         make: resolve(__dirname, './front-pages/make/index.html'),
+        contact: resolve(__dirname, './front-pages/contact-us/index.html'),
       },
       output: {
         entryFileNames: `[name].js`,

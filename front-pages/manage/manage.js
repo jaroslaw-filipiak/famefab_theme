@@ -23,3 +23,4 @@ export default function handleInfluencersOnHover() {
 }
 
 handleInfluencersOnHover();
+console.log('manage');
