@@ -1,7 +1,9 @@
-.influencers {
+.cases {
   height: 100vh;
   padding: 20px;
   position: relative;
+  @include default-transition;
+  background-image: none;
 
   @include media-breakpoint-up(xl) {
     padding: 40px 40px 0px 40px;
@@ -60,6 +62,7 @@
 
       div {
         font-size: 27px;
+        @include default-transition;
 
         @include media-breakpoint-up(sm) {
           font-size: 36px;
@@ -90,9 +93,14 @@
           opacity: 1;
           transform: scale(1.03);
           left: 5px;
+          @include default-transition;
 
-          .influencer--photo {
+          .case--photo {
             transform: scale(1.03);
+          }
+
+          .content-and-arrow {
+            border: 3px solid red !important;
           }
         }
       }
@@ -100,11 +108,12 @@
   }
 }
 
-.influencer {
+.case {
   @include media-breakpoint-up(lg) {
     padding-bottom: 23vh;
   }
   &--photo {
+    @include default-transition;
     width: 289px;
     height: 389px;
     background-color: $mainGreen;
@@ -112,6 +121,7 @@
   }
 
   &--info {
+    @include default-transition;
     position: absolute;
     left: calc(289px + 40px);
     top: 120px;

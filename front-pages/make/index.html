@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage </title>
+    <title>Make </title>
 </head>
 
 <body>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
-    <script type="module" src="./manage.js"></script>
+    <script type="module" src="./make.js"></script>
 
 </body>
 
@@ -54,7 +54,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="main-menu--dynamic-info">
+            <div class="main-menu--dynamic-info ">
                 <div class="main-menu--dynamic-info--content font-sans">
                     <p class="main-menu--dynamic-info--title"></p>
                     <p class="main-menu--dynamic-info--subtitle"></p>
@@ -66,7 +66,7 @@
           agency in Amsterdam. "><a href="#">Over Ons</a></li>
                 <li data-index="1" data-title="Manage" data-content="Wij werken samen met 
           de leukste  influencers 
-          & publishers"><a href="#">Manage</a></li>
+          & publishers"><a href="#">Make</a></li>
                 <li data-index="2" data-title="Make"
                     data-content="YouTube, Instagram en Facebook zijn de kanalen die ingezet kunnen worden om marketing campagnes op te zetten.">
                     <a href="#">Make</a>
@@ -180,11 +180,11 @@
             </div>
         </div>
     </div>
-    <h1 class="color-green">Manage</h1>
+    <h1 class="color-green">Make</h1>
 </section>
 
 <section class="blank-hero bg-cover bg-no-repeat bg-center"
-    style="background-image: url('/assets/img/manage-section-bg.jpg')">
+    style="background-image: url('/assets/img/make-section-bg.jpg')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
@@ -223,25 +223,26 @@
     </div>
 
 
-    <h1 class="color-yellow">Manage</h1>
+    <h1 class="color-yellow">Make</h1>
 </section>
 
-<section class="influencers">
+<section class="cases bg-cover bg-no-repeat bg-center">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div
-                class="col-2 d-none  d-md-flex align-items-end justify-content-start col-md-3  ps-0 h-100 influencer  ">
+            <div class="col-2 d-none  d-md-flex align-items-end justify-content-start col-md-3  ps-0 h-100 case  ">
                 <div style="position: relative;">
-                    <div class="d-none d-lg-flex influencer--photo"></div>
-                    <div class="d-none d-lg-flex influencer--info font-green-default">
+                    <div class="d-none d-lg-flex case--photo" style="visibility: hidden"></div>
+                    <div class="d-none d-lg-flex case--info font-green-default">
                         <div>
-                            <p><span class="influencer-hover-output--name"></span></p>
-                            <p><span class="influencer-hover-output"></span></p>
+                            <p><span class="case-hover-output--name"></span></p>
+                            <p><span class="case-hover-output">Wij werken samen met
+                                    de leukste influencers
+                                    & publishers</span></p>
                             <div></div>
 
                             <div
                                 class="pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
-                                <div class="pe-4"><small>see profile</small></div>
+                                <div class="pe-4"><small>see profile <div class="case-name"></div></small></div>
                                 <div class=" arrow-right-icon">
                                     <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,23 +264,25 @@
                 </div>
 
             </div>
-            <div class="col-12 col-md-9 text-end text-xl-center h-100 influencers--list-wrapper">
-                <div class="influencers--list">
+            <div class="col-12 col-md-9 text-end text-xl-center h-100 cases--list-wrapper">
+                <div class="cases--list">
                     <div class="d-inline-flex flex-column justify-content-end">
                         <div class="iterable">
 
                             <!-- 0 -->
                             <div data-index="0" data-info="Wij werken samen met
-                            de leukste influencers
-                            & publishers" data-bg="/assets/img/influencers/influencer-1.jpg" data-name="Lady Lemonade"
-                                class="influencers--list-item">Lady
-                                Lemonade</div>
+                            de leukste cases
+                            & publishers" data-bg="/assets/img/case-bg.jpg" data-name="Guts and Gutso"
+                                class="cases--list-item">Guts and Gutso
+                            </div>
 
                             <!-- 1 -->
                             <div data-index="1" data-info="Wij werken samen met
-                            de leukste influencers
-                            & publishers" data-bg="/assets/img/influencers/influencer-2.jpg" data-name="Rachel Meibergen
-                            " class="influencers--list-item">Rachel Meibergen
+                            de leukste cases
+                            & publishers" data-bg="/assets/img/make-bg.jpg" data-name="Albelli
+
+                            " class="cases--list-item">Albelli
+
                             </div>
 
                         </div>
@@ -289,7 +292,7 @@
             </div>
         </div>
     </div>
-    <h1 class="d-none d-lg-flex color-green">Influencers</h1>
+    <h1 class="d-none d-lg-flex color-green">cases</h1>
 </section>
 
 
