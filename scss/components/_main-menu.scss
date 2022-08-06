@@ -80,6 +80,20 @@
       }
 
       @include media-breakpoint-up(md) {
+        font-size: 90px;
+        line-height: 90px;
+        opacity: 0.1;
+        @include default-transition;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 90px;
+        line-height: 90px;
+        opacity: 0.1;
+        @include default-transition;
+      }
+
+      @include media-breakpoint-up(xxl) {
         font-size: 130px;
         line-height: 145px;
         opacity: 0.1;

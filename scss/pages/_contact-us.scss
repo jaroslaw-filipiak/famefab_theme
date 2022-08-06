@@ -44,12 +44,12 @@
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 270px;
-      line-height: 270px;
+      font-size: 230px;
+      line-height: 230px;
     }
 
     @include media-breakpoint-up(xxl) {
-      font-size: 300px;
+      font-size: $titleSizeMax;
       line-height: 300px;
     }
   }
