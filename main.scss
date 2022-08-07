@@ -57,10 +57,12 @@ section {
 @import './scss/components/scroll-gallery';
 @import './scss/components/influencers';
 @import './scss/components/cases';
+@import './scss/components/influencer-detail';
 
 @import './scss/pages/home';
 @import './scss/pages/over-ons';
 @import './scss/pages/contact-us';
+@import './scss/pages/case';
 
 // dev
 @import './scss/abstracts/debug';

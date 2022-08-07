@@ -1,0 +1,144 @@
+.detail-mobile-hero {
+  height: 100vh;
+
+  h1 {
+    font-size: 46px;
+    @include media-breakpoint-up(sm) {
+      font-size: 56px;
+    }
+    @include font-serif;
+    color: $yellow;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 24px;
+    @include font-sans;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 50px;
+  }
+}
+
+.detail-hero {
+  background-color: $lightGray;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+
+  &--title-absolute {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-size: 70px;
+    line-height: 70px;
+    color: $mainGreen;
+    @include font-serif;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 83px;
+      line-height: 83px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 130px;
+      line-height: 130px;
+    }
+  }
+
+  .container-fluid {
+    padding-top: 100px;
+    @include media-breakpoint-up(lg) {
+      padding-top: 15vh;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 25vh;
+    }
+  }
+
+  &--title--wrapper {
+    padding-bottom: 65px;
+  }
+
+  &--title {
+    font-size: 75px;
+  }
+
+  &--subtitle {
+    max-width: 300px;
+  }
+
+  &--content {
+    p {
+      color: $mainGreen !important;
+      line-height: 23px;
+      @include font-sans;
+    }
+  }
+
+  &--big-picture {
+    margin-top: 65px;
+    margin-bottom: 65px;
+    min-width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  &--full-picture {
+    min-width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  &--row-3 {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+}
+
+.detail-pagination {
+  background-color: $lightGray;
+  height: 100vh;
+  position: relative;
+
+  &-col {
+    position: relative;
+  }
+
+  .item-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+    }
+    padding: 0px 15vh;
+    .content-and-arrow {
+      margin-top: 0px !important;
+
+      width: 200px;
+
+      .arrow-right--circle {
+        transform: rotate(180);
+      }
+    }
+  }
+
+  .item-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+    padding: 0px 15vh;
+    .content-and-arrow {
+      margin-top: 0px !important;
+
+      width: 200px;
+    }
+  }
+}
