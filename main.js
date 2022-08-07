@@ -17,5 +17,4 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   init();
-  console.log('init / global scripts');
 });
