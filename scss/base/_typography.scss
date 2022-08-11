@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
 @import url('http://fonts.cdnfonts.com/css/helvetica-2');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 $titleSizeMax: 260px;
 
+@font-face {
+  font-family: 'TiemposFine-Light';
+  src: url('/public/fonts/tiempos/tiempos-fine-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-serif {
-  font-family: 'Kaisei Opti', serif;
+  // font-family: 'Kaisei Opti', serif;
+  font-family: 'TiemposFine-Light', serif;
 }
 
 .font-sans {
-  font-family: 'Helvetica', sans-serif;
+  // font-family: 'Helvetica', sans-serif;
+  // font-family: 'Helvetica LT W01 Roman';
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-sans {
+  // font-family: 'Helvetica', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-serif {
+  // font-family: 'Kaisei Opti', serif;
+  font-family: 'TiemposFine-Light', serif;
 }
 
 .font-default {
@@ -26,13 +48,6 @@ $titleSizeMax: 260px;
 }
 
 body {
-  font-family: 'Helvetica', sans-serif;
-}
-
-@mixin font-sans {
-  font-family: 'Helvetica', sans-serif;
-}
-
-@mixin font-serif {
-  font-family: 'Kaisei Opti', serif;
+  // font-family: 'Helvetica', sans-serif;
+  @include font-sans;
 }

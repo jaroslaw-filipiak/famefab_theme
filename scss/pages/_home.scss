@@ -4,6 +4,15 @@
   background-color: $fioletLight;
   position: relative;
 
+  &__logo-trigger {
+    position: absolute;
+    top: 10%;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    border: 1px dashed;
+  }
+
   &--get-started-area {
     @include media-breakpoint-only(xs) {
       width: 100%;
