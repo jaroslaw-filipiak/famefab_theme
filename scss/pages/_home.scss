@@ -1,7 +1,19 @@
+html {
+  --color: transparent;
+}
+
+body.frontpage {
+  // background-color: red;
+}
+
+body {
+  background: var(--color);
+}
+
 .hello {
   height: 100vh;
   padding-bottom: 20px;
-  background-color: $fioletLight;
+  // background-color: $fioletLight;
   position: relative;
 
   &__logo-trigger {

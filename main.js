@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 ScrollTrigger.defaults({
-  markers: true,
+  // markers: true,
 });
 
 // let tl = gsap.timeline({
