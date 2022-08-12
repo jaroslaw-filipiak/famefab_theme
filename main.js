@@ -104,9 +104,28 @@ ScrollTrigger.defaults({
 //   end: 'bottom 40px',
 // },
 
-const test = document.querySelector('#who-we-are');
-const button = document.querySelector('.link-to-who-we-are');
+// footer change bg
 
-button.addEventListener('click', () => {
-  scroll.scrollTo(test);
+gsap.to('.footer', {
+  '--footer-bg-color': '#e4e1f4',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: '+=100%',
+  },
+});
+
+gsap.from('.footer', {
+  scale: 0.4,
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: '+=100%',
+  },
 });

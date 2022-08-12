@@ -15,45 +15,6 @@
     padding: 40px;
   }
 
-  h1 {
-    font-size: 70px;
-    line-height: 70px;
-    position: absolute;
-    bottom: 0px;
-    left: 20px;
-    width: 100%;
-    text-align: left;
-    @include font-serif;
-    @include default-transition;
-
-    @include media-breakpoint-up(sm) {
-      font-size: 100px;
-      line-height: 100px;
-      text-align: center;
-      left: 0;
-    }
-
-    @include media-breakpoint-up(md) {
-      font-size: 140px;
-      line-height: 140px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      font-size: 200px;
-      line-height: 200px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      font-size: 230px;
-      line-height: 230px;
-    }
-
-    @include media-breakpoint-up(xxl) {
-      font-size: $titleSizeMax;
-      line-height: 300px;
-    }
-  }
-
   &-col-content {
     max-width: 360px;
     text-align: center;
@@ -182,5 +143,50 @@
         top: -39px;
       }
     }
+  }
+}
+
+// =============
+.contact-us__hero-gsap {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 20;
+  color: $mainGreen;
+  font-size: 70px;
+  line-height: 70px;
+  // position: absolute;
+  // bottom: 0px;
+  // left: 20px;
+  width: 100%;
+  text-align: left;
+  @include font-serif;
+  // @include default-transition;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 140px;
+    line-height: 140px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 200px;
+    line-height: 200px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 230px;
+    line-height: 230px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: $titleSizeMax;
+    line-height: 300px;
   }
 }

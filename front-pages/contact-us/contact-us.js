@@ -1,41 +1,126 @@
-import './../../scss/vendors/_cursor.scss';
 import gsap from 'gsap';
 
-import { handleAnimationsPageContact } from './../../js/handle-animations/contact-us/animations';
+gsap.from('.our-reach--counter', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.gsap__reveal-trigger__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'bottom',
+  },
+});
 
-handleAnimationsPageContact();
+gsap.to('#ourReachValue', {
+  innerText: 435,
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: 'body',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'bottom',
+  },
+});
 
-const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable');
+// contact us text
+gsap.from('.contact-us__hero-gsap', {
+  scrollTrigger: {
+    trigger: '.contact-us-hero',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    markers: false,
+    start: 'top bottom',
+  },
+  bottom: -200,
+  duration: 0.8,
+  ease: 'easeIn',
+  opacity: 0,
+});
 
-// Listeners
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
+gsap.to('.contact-us__hero-gsap', {
+  scrollTrigger: {
+    trigger: '.contact-us-hero',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    // markers: true,
+    start: 'top top',
+  },
+  xPercent: -300,
+});
 
-// Move the cursor
-function onMouseMove(e) {
-  gsap.to($bigBall, 0.4, {
-    x: e.pageX - 15,
-    y: e.pageY - 15,
-  });
-  gsap.to($smallBall, 0.1, {
-    x: e.pageX - 5,
-    y: e.pageY - 7,
-  });
-}
+// gsap.to('.contact-us__hero-gsap', {
+//   scrollTrigger: {
+//     trigger: '.blank-hero',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     // markers: true,
+//     start: 'top 90%',
+//   },
 
-// Hover an element
-function onMouseHover() {
-  gsap.to($bigBall, 0.3, {
-    scale: 4,
-  });
-}
-function onMouseHoverOut() {
-  gsap.to($bigBall, 0.3, {
-    scale: 1,
-  });
-}
+//   color: '#e7ffc8',
+//   ease: 'easeIn',
+//   // duration: 0.8,
+// });
+
+// gsap.to('.contact-us__hero-gsap', {
+//   scrollTrigger: {
+//     trigger: '.who-we-are__contact-us',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     // markers: true,
+//     start: 'top 120%',
+//   },
+
+//   color: '#e7ffc8',
+//   ease: 'easeIn',
+//   // duration: 0.8,
+//   opacity: 0,
+//   xPercent: -200,
+// });
+
+// blank hero bg scale
+gsap.to('.blank-hero', {
+  //   opacity: 0,
+  backgroundSize: '100%',
+  //   scale: 2.5,
+  scrollTrigger: {
+    trigger: '.blank-hero',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    // end: 'top center',
+  },
+});
+
+// who-we-are__contact-us--title
+gsap.from('.who-we-are__contact-us--title', {
+  scrollTrigger: {
+    trigger: '.who-we-are__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    // markers: true,
+    start: 'top bottom',
+    end: 'top 20%',
+  },
+  xPercent: -300,
+  yPercent: -30,
+  scale: 2,
+  opacity: 0,
+  ease: 'easeIn',
+});
+
+// who-we-are__contact-us--title
+gsap.from('.manage-gallery--title', {
+  scrollTrigger: {
+    trigger: '.manage-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    // markers: true,
+    start: 'top bottom',
+  },
+  xPercent: -300,
+  scale: 2,
+  opacity: 0,
+  ease: 'easeIn',
+});
