@@ -1,6 +1,7 @@
 .footer {
   padding: 20px;
-  background-color: $fioletLight;
+  // background-color: $fioletLight;
+  background-color: var(--footer-bg-color);
   position: relative;
   display: flex;
   align-items: flex-end;

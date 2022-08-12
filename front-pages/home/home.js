@@ -337,16 +337,47 @@ gsap.from('.contact-us-row-1', {
 
 // contact-us--title
 
+// make horizontal 2
 gsap.from('.contact-us--title', {
   scrollTrigger: {
     trigger: '.contact--trigger',
     scroller: '.smooth-scroll',
-    start: 'top center',
-    end: 'top 95%',
+    start: 'top bottom',
+    end: '90% top',
     scrub: true,
-    markers: false,
+
+    // start: '20px 80%',
+    // markers: true,
   },
-  yPercent: 100,
+
+  xPercent: -300,
+  opacity: 0,
   duration: 1,
   ease: 'easeIn',
+});
+
+// footer change bg
+
+gsap.to('.footer', {
+  '--footer-bg-color': '#e4e1f4',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: '+=100%',
+  },
+});
+
+gsap.from('.footer', {
+  scale: 0.4,
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: '+=100%',
+  },
 });
