@@ -23,17 +23,5 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <div id="page" class="site">
 
-        <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu"
-                aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'femmefab' ); ?></button>
-            <?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-        </nav><!-- #site-navigation -->
+    <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/main.js"></script>

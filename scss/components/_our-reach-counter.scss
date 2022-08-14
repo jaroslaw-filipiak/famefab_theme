@@ -11,7 +11,7 @@
   position: fixed;
   left: 5px;
   top: 40vh;
-  z-index: 999;
+  z-index: 200;
 
   @include media-breakpoint-up(lg) {
     left: 40px;

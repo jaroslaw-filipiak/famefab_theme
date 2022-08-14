@@ -139,16 +139,20 @@ add_action( 'widgets_init', 'femmefab_widgets_init' );
  */
 function femmefab_scripts() {
 	wp_enqueue_style( 'femmefab-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'femmefab-style_vite', get_theme_file_uri() . '/dist/index.css', array(), _S_VERSION );
+	wp_enqueue_style( 'femmefab-style_vite', get_theme_file_uri() . '/dist/main.css', array(), _S_VERSION );
 	
 
 	wp_enqueue_script( 'femmefab-navigation', get_theme_file_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	wp_enqueue_script( 'femmefab-vite', get_theme_file_uri() . '/dist/index.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'femmefab-vite', get_theme_file_uri() . '/dist/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// if(is_front_page() || is_home()) {
+	// 	wp_enqueue_script( 'femmefab-vite', get_theme_file_uri() . '/dist/homepage.js', array(), _S_VERSION, true );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'femmefab_scripts' );
 
@@ -178,3 +182,9 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * 	CPT
+ */
+
+require get_template_directory() . '/inc/cpt.php';
