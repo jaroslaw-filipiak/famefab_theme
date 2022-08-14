@@ -78,6 +78,8 @@ gsap.to('.total-reach-trigger', {
   },
 });
 
+// case-hover-output-gsap-pin
+
 export function changeSVGcolors(color) {
   const circle = document.querySelector(
     '.cases .arrow-right--circle svg circle'
