@@ -4,7 +4,8 @@
 
   @include media-breakpoint-up(md) {
     overflow: hidden;
-    min-height: 100vh;
+    // min-height: 100vh;
+    padding-top: 100px;
   }
 
   &--title-wrapper {
