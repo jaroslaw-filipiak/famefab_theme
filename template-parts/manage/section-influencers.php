@@ -22,8 +22,8 @@
                             <p><span class="influencer-hover-output"></span></p>
                             <div></div>
 
-                            <div
-                                class="pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
+                            <a href="#"
+                                class="link-green-unstyled influencer-dynamic-link pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
                                 <div class="pe-4"><small>see profile</small></div>
                                 <div class=" arrow-right-icon">
                                     <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58"
@@ -39,7 +39,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -51,22 +51,41 @@
                     <div class="d-inline-flex flex-column justify-content-end">
                         <div class="iterable">
 
-                            <!-- 0 -->
-                            <div data-index="0" data-info="Wij werken samen met
-                            de leukste influencers
-                            & publishers"
-                                data-bg="<?php echo get_theme_file_uri() ?>/dist/assets/img/influencers/influencer-1.jpg"
-                                data-name="Lady Lemonade" class="influencers--list-item">Lady
-                                Lemonade</div>
+                            <?php 
 
-                            <!-- 1 -->
-                            <div data-index="1" data-info="Wij werken samen met
+                                    $args = array(
+                                        'post_type' => 'influencer_post_type',
+                                        'posts_per_page' => 5,
+                                    );
+                                    // the query
+                                    $the_query = new WP_Query( $args ); ?>
+
+                            <?php if ( $the_query->have_posts() ) : ?>
+
+                            <!-- pagination here -->
+
+                            <!-- the loop -->
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+
+                            <div data-index="<?php echo $the_query->current_post +1;  ?>" data-info="Wij werken samen met
                             de leukste influencers
-                            & publishers"
-                                data-bg="<?php echo get_theme_file_uri() ?>/dist/assets/img/influencers/influencer-2.jpg"
-                                data-name="Rachel Meibergen
-                            " class="influencers--list-item">Rachel Meibergen
-                            </div>
+                            & publishers" data-link="<?php echo get_permalink() ?>"
+                                data-bg="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
+                                class="influencers--list-item"><?php the_title() ?></div>
+
+                            <?php endwhile; ?>
+                            <!-- end of the loop -->
+
+                            <!-- pagination here -->
+
+                            <?php wp_reset_postdata(); ?>
+
+                            <?php else : ?>
+                            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                            <?php endif; ?>
+
+
 
                         </div>
 

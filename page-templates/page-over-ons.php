@@ -8,6 +8,6 @@
 
 <!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-blank-hero' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-scroll-gallery' ); ?>
-<?php get_template_part( 'template-parts/over-ons/section-full-service-agency' ); ?>
+<!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-full-service-agency' ); ?>
 
 <?php get_footer() ?>

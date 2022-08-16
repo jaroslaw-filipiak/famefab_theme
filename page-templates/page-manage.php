@@ -7,7 +7,7 @@
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<?php get_template_part( 'template-parts/manage/section-blank-hero' ); ?>
+<!-- ✔️ --><?php get_template_part( 'template-parts/manage/section-blank-hero' ); ?>
 <?php get_template_part( 'template-parts/manage/section-influencers' ); ?>
 
 <?php get_footer() ?>

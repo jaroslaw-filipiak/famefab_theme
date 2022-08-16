@@ -66,11 +66,14 @@ export default function handleInfluencersOnHover() {
     '.influencer-hover-output--name'
   );
 
+  const dynamicLink = document.querySelector('.influencer-dynamic-link');
+
   influencersListArr.map((item) => {
     item.addEventListener('mouseover', () => {
       outputInfluencerName.innerHTML = item.dataset.name;
       outputInfo.innerHTML = item.dataset.info;
       outputPhoto.style.backgroundImage = `url(${item.dataset.bg})`;
+      dynamicLink.setAttribute('href', item.dataset.link);
     });
 
     // item.addEventListener('click', () => {

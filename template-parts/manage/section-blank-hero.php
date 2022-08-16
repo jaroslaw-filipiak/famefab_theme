@@ -15,48 +15,34 @@
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
                 <div class="blank-hero--content color-green">
-                    <h3>We manage
-                    </h3>
-                    <p>We werken nauw samen met 60 kwalitatieve influencers die allen een autoriteit zijn op
-                        eigen
-                        gebied. Ze hebben één gemeenschappelijke factor, namelijk de doelgroep vrouwen. Er is in
-                        de
-                        loop
-                        van de jaren een hechte band ontstaan met de influencers wat zorgt voor een fijne en
-                        betrouwbare
-                        samenwerking.
-                    </p>
+                    <?php the_field( 'page_manage_first_section_text_content' ); ?>
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="color-green">Manage</h1>
+    <h1 class="color-green"><?php the_field( 'page_manage_first_section_title' ); ?></h1>
 </section>
 
 <section class="blank-hero bg-cover bg-no-repeat bg-center blank-hero-title-trigger"
-    style="background-size: 130%; background-image: url('<?php echo get_theme_file_uri() ?>/dist/assets/img/manage-section-bg.jpg')">
+    style="background-size: 130%; background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  ">
                 <div class="blank-hero--content color-yellow" data-scroll data-scroll-speed="2">
-                    <h3>We manage
-                    </h3>
-                    <p>We werken nauw samen met 60 kwalitatieve influencers die allen een autoriteit zijn op
-                        eigen
-                        gebied. Ze hebben één gemeenschappelijke factor, namelijk de doelgroep vrouwen. Er is in
-                        de
-                        loop
-                        van de jaren een hechte band ontstaan met de influencers wat zorgt voor een fijne en
-                        betrouwbare
-                        samenwerking.
-                    </p>
+                    <?php the_field( 'page_manage_second_section_text_content' ); ?>
                 </div>
 
-                <div data-scroll data-scroll-speed="1"
-                    class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                <?php $page_manage_second_section_link_to_section = get_field( 'page_manage_second_section_link_to_section' ); ?>
+                <?php if ( $page_manage_second_section_link_to_section ) : ?>
+
+                <a href="<?php echo esc_url( $page_manage_second_section_link_to_section['url'] ); ?>" data-scroll
+                    data-scroll-speed="1"
+                    class="link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
-                    <div class="pe-4 mb-2 color-yellow"><small>go to cases</small></div>
+                    <div class="pe-4 mb-2 color-yellow">
+                        <small><?php echo esc_html( $page_manage_second_section_link_to_section['title'] ); ?></small>
+                    </div>
                     <div class="arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none">
                                 <circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
@@ -69,11 +55,13 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
 
-
-    <h1 class="color-yellow">Manage</h1>
+    <h1 class="color-yellow"><?php the_field( 'page_manage_first_section_title' ); ?></h1>
 </section>
