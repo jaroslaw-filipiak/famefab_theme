@@ -16,10 +16,7 @@
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-
-
-<?php get_template_part( 'template-parts/make/section-blank-hero' ); ?>
+<!-- ✔️ --><?php get_template_part( 'template-parts/make/section-blank-hero' ); ?>
 <?php get_template_part( 'template-parts/make/section-cases' ); ?>
-
 
 <?php get_footer() ?>

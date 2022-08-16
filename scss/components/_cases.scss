@@ -4,6 +4,7 @@
   position: relative;
   @include default-transition;
   background-image: none;
+  overflow: visible;
 
   @include media-breakpoint-up(xl) {
     padding: 40px 40px 0px 40px;
@@ -49,7 +50,7 @@
 
   &--list {
     @include media-breakpoint-up(lg) {
-      margin-top: 40vh;
+      // margin-top: 40vh;
       display: flex;
       justify-content: flex-end;
     }

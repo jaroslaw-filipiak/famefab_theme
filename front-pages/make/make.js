@@ -99,6 +99,7 @@ export function handleCasesOnHover() {
     const section = document.querySelector('.cases');
     const caseInfo = document.querySelector('.case-hover-output');
     const text = document.querySelector('.cases .content-and-arrow');
+    const link = document.querySelector('.cases .case-dynamic-link');
 
     item.addEventListener('mouseover', () => {
       name.innerHTML = item.dataset.name;
@@ -106,6 +107,7 @@ export function handleCasesOnHover() {
       caseInfo.classList.add('color-yellow');
       text.classList.add('color-yellow');
       item.classList.add('color-yellow');
+      link.setAttribute('href', item.dataset.link);
 
       changeSVGcolors('#e7ffc8');
     });
@@ -121,6 +123,6 @@ export function handleCasesOnHover() {
 }
 
 handleCasesOnHover();
-changeSVGcolors();
+changeSVGcolors('#214c2c');
 
 console.log('make');

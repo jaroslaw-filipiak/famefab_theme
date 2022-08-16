@@ -18,15 +18,14 @@
                     <div class="d-none d-lg-flex case--info font-green-default">
                         <div data-scroll data-scroll-speed="1">
                             <p><span class="case-hover-output--name"></span></p>
-                            <p><span class="case-hover-output case-hover-output-gsap-pin"> Wij werken samen met
-                                    de leukste influencers
-                                    & publishers</span></p>
+                            <p><span class="case-hover-output case-hover-output-gsap-pin">
+                                    <?php the_field( 'page_make_section_with_cases_text_content' ); ?></span></p>
                             <div></div>
 
-                            <div data-scroll data-scroll-speed=".3"
-                                class="pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
+                            <a href="#"
+                                class="case-dynamic-link link-green-unstyled pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
                                 <div class="pe-4"><small>see profile <div class="case-name"></div></small></div>
-                                <div class=" arrow-right-icon">
+                                <div class="arrow-right-icon">
                                     <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58"
                                             fill="none">
                                             <circle cx="29" cy="29" r="28.6" stroke="#214C2C" stroke-width="0.8" />
@@ -40,7 +39,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -52,22 +51,42 @@
                     <div class="d-inline-flex flex-column justify-content-end">
                         <div class="iterable">
 
+
+                            <?php 
+
+                                    $args = array(
+                                        'post_type' => 'case_post_type',
+                                        'posts_per_page' => 5,
+                                    );
+                                // the query
+                                $the_query = new WP_Query( $args ); ?>
+
+                            <?php if ( $the_query->have_posts() ) : ?>
+
+                            <!-- pagination here -->
+
+                            <!-- the loop -->
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
                             <!-- 0 -->
-                            <div data-scroll data-scroll-speed="1" data-index="0" data-info="Wij werken samen met
+                            <div data-scroll data-scroll-speed="1"
+                                data-index="<?php echo $the_query->current_post +1;  ?>" data-info="Wij werken samen met
                             de leukste cases
-                            & publishers" data-bg="<?php echo get_theme_file_uri() ?>/dist/assets/img/case-bg.jpg"
-                                data-name="Guts and Gutso" class="cases--list-item">Guts and Gutso
-                            </div>
+                            & publishers" data-bg="<?php echo get_the_post_thumbnail_url() ?>"
+                                data-link="<?php echo get_permalink() ?>" data-name="<?php the_title() ?>"
+                                class="cases--list-item">
+                                <?php the_title() ?> </div>
 
-                            <!-- 1 -->
-                            <div data-scroll data-scroll-speed="1" data-index="1" data-info="Wij werken samen met
-                            de leukste cases
-                            & publishers" data-bg="<?php echo get_theme_file_uri() ?>/dist/assets/img/make-bg.jpg"
-                                data-name="Albelli
+                            <?php endwhile; ?>
+                            <!-- end of the loop -->
 
-                            " class="cases--list-item">Albelli
+                            <!-- pagination here -->
 
-                            </div>
+                            <?php wp_reset_postdata(); ?>
+
+                            <?php else : ?>
+                            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                            <?php endif; ?>
 
                         </div>
 
@@ -76,5 +95,5 @@
             </div>
         </div>
     </div>
-    <h1 class="d-none d-lg-flex color-green">cases</h1>
+    <h1 class=" d-none d-lg-flex color-green">cases</h1>
 </section>

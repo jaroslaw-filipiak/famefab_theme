@@ -36,7 +36,7 @@ function cases_post_type() {
 		'label'                 => __( 'Case', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt' ),
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -52,6 +52,7 @@ function cases_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
+		'rewrite' => array('slug' => 'cases','with_front' => false),
 	);
 	register_post_type( 'case_post_type', $args );
 
