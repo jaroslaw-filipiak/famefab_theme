@@ -7,6 +7,8 @@
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
+
+
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-hello' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-who-we-are' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-home-manage' ); ?>

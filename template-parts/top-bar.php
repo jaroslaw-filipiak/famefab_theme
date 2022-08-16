@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="top-bar">
+<section class="top-bar" data-scroll data-scroll-sticky>
     <div class="container-fluid">
         <div class="row">
             <div class="col-4 col-md-3 d-flex align-items-center justify-content-start ps-0 top-bar--logo">
@@ -66,3 +66,6 @@
     </div>
 
 </section>
+
+<div class="smooth-scroll">
+    <!-- open smooth scroll -->
