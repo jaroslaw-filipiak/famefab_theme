@@ -1,7 +1,7 @@
 <?php
 /**
  * Section scroll gallery 
- * TODO: add isotope library for gallery 
+ * 
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,35 +10,27 @@
 
 ?>
 
-<section class="scroll-gallery bg-yellow">
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <div data-scroll data-scroll-speed="1"
-                class="scroll-gallery--col scroll-gallery--col-1 justify-content-between col-6 col-xl-3 h-100 ">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-1.jpg" alt="">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-2.jpg" alt="">
-            </div>
-            <div data-scroll data-scroll-speed="1.3"
-                class="d-none d-lg-flex scroll-gallery--col scroll-gallery--col-2 justify-content-between col-6 col-xl-3 h-100 ">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-3.jpg" alt="">
+<section class="scroll-gallery bg-yellow" style="height: 140vh; overflow: visible">
+    <div class="container-fluid h-100 d-flex align-items-center justify-content-between">
+        <div class="row scroll-gallery--grid h-100 mx-auto w-100">
 
-            </div>
-            <div data-scroll data-scroll-speed="3"
-                class="scroll-gallery--col scroll-gallery--col-3 justify-content-between col-6 col-xl-3 h-100 ">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-4.jpg" alt="">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-5.jpg" alt="">
+            <?php if( have_rows('page_over_ons_gallery_repeater') ): ?>
 
+            <?php while( have_rows('page_over_ons_gallery_repeater') ): the_row(); 
+                    $image = get_sub_field('img'); ?>
+
+            <!-- loop -->
+            <div data-scroll data-scroll-speed="<?php echo mt_rand(1 , 2)?>"
+                class="grid-area-photo<?php echo get_row_index() ?> bg-cover bg-no-repeat bg-center br-30"
+                style="opacity: 0;background-image: url('<?php echo $image ?>')">
             </div>
-            <div data-scroll data-scroll-speed="2"
-                class="d-none d-lg-flex scroll-gallery--col scroll-gallery--col-4 justify-content-start col-6 col-xl-3 h-100 ">
-                <img class="img-fluid"
-                    src="<?php echo get_theme_file_uri() ?>/dist/assets/img/scroll-gallery/scroll-gallery-6.jpg" alt="">
-            </div>
+            <!-- loop -->
+
+            <?php endwhile; ?>
+
+            <?php endif; ?>
+
         </div>
+
     </div>
 </section>

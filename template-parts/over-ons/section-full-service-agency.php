@@ -15,25 +15,30 @@
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
             <div class="col-10 col-md-9 full-service-agency--title-wrapper  d-flex flex-column align-items-start justify-content-start"
                 style="position: relative;">
-                <p data-scroll data-scroll-speed="2" class="full-service-agency--title font-serif">A full
-                    service agency
-                    by wo en, to women
+                <p data-scroll data-scroll-speed="2" class="full-service-agency--title font-serif">
+                    <?php the_field( 'page_over_ons_last_section_big_heading' ); ?>
 
                 </p>
                 <div data-scroll data-scroll-speed="1.4"
                     class="full-service-agency--subtitle font-green-default text-uppercase font-sans">
-                    YouTube, Instagram en Facebook zijn de kanalen die ingezet kunnen worden om marketing
-                    campagnes
-                    op
-                    te zetten.
+                    <?php the_field( 'page_over_ons_last_section_sub_heading' ); ?>
                 </div>
 
                 <div data-scroll data-scroll-speed="2"
                     class="full-service-agency--buttons d-flex align-content-center justify-content-start">
-                    <div class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+
+
+                    <?php $page_over_ons_last_section_link_to_section = get_field( 'page_over_ons_last_section_link_to_section' ); ?>
+                    <?php if ( $page_over_ons_last_section_link_to_section ) : ?>
+
+                    <a href="<?php echo esc_url( $page_over_ons_last_section_link_to_section['url'] ); ?>"
+                        data-scroll-to data-scroll data-scroll-speed=".3"
+                        class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                         style="margin-top: 80px;">
-                        <div class="pe-4 mb-2"><small>manage</small></div>
-                        <div class="arrow-right-icon">
+                        <div class="pe-4 mb-2"><small
+                                class="cursor-pointer"><?php echo esc_html( $page_over_ons_last_section_link_to_section['title'] ); ?></small>
+                        </div>
+                        <div class=" arrow-right-icon">
                             <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="29" cy="29" r="28.6" stroke="#214C2C" stroke-width="0.8" />
@@ -47,12 +52,21 @@
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div data-scroll data-scroll-speed="2.3"
+                    <?php endif; ?>
+
+                    <?php $page_over_ons_last_section_link_to_section_2 = get_field( 'page_over_ons_last_section_link_to_section_2' ); ?>
+                    <?php if ( $page_over_ons_last_section_link_to_section_2 ) : ?>
+
+
+                    <a href="<?php echo esc_url( $page_over_ons_last_section_link_to_section_2['url'] ); ?>" data-scroll
+                        data-scroll-speed="2.3"
                         class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                         style="margin-top: 80px;">
-                        <div class="pe-4 mb-2"><small>make</small></div>
+                        <div class="pe-4 mb-2">
+                            <small><?php echo esc_html( $page_over_ons_last_section_link_to_section_2['title'] ); ?></small>
+                        </div>
                         <div class="arrow-right-icon">
                             <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +81,13 @@
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <?php endif; ?>
+
+
+
+
+
                 </div>
 
 

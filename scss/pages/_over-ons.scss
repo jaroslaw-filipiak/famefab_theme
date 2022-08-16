@@ -118,3 +118,46 @@
     color: $mainGreen;
   }
 }
+
+.scroll-gallery--grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-areas:
+    'photo1 photo3 photo4 photo6'
+    'photo2 . photo5 .';
+  @include media-breakpoint-up(xl) {
+    padding: 100px 30px;
+  }
+}
+
+.grid-area-photo1 {
+  grid-area: photo1;
+}
+
+.grid-area-photo2 {
+  grid-area: photo2;
+  height: 140%;
+}
+
+.grid-area-photo3 {
+  grid-area: photo3;
+  height: 120%;
+  margin-top: 40%;
+}
+
+.grid-area-photo4 {
+  grid-area: photo4;
+}
+
+.grid-area-photo5 {
+  grid-area: photo5;
+}
+
+.grid-area-photo6 {
+  grid-area: photo6;
+  height: 130;
+  margin-top: 60%;
+}

@@ -54,3 +54,71 @@ gsap.to('.over-ons-title-trigger', {
     // end: 'top center',
   },
 });
+
+// gallery / wp / opacity + scale bg size
+
+gsap.to('.grid-area-photo1', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo1',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
+
+gsap.to('.grid-area-photo2', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo2',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
+
+gsap.to('.grid-area-photo3', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo3',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
+
+gsap.to('.grid-area-photo4', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo4',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
+
+gsap.to('.grid-area-photo5', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo5',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
+
+gsap.to('.grid-area-photo6', {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: '.grid-area-photo6',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top center',
+  },
+});
