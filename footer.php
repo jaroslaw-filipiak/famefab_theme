@@ -11,19 +11,15 @@
 
 ?>
 
-<footer>
+<footer id="end">
     <section class="footer">
         <div class="container-fluid">
             <div class="row">
                 <div data-scroll data-scroll-speed="1"
                     class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start  justify-content-start p-0">
-                    <h4>We are social</h4>
+
                     <div class="footer-col-content">
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Linkedin</a></li>
-                            <li><a href="#">TikTok</a></li>
-                        </ul>
+                        <?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
                     </div>
 
                 </div>

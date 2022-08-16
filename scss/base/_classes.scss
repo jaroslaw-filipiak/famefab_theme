@@ -31,3 +31,25 @@
 .cursor-pointer {
   cursor: pointer;
 }
+
+//
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.link-green-unstyled {
+  text-decoration: none !important;
+  color: $mainGreen;
+  &:hover {
+    color: $mainGreen;
+  }
+}
+
+.link-yellow-unstyled {
+  text-decoration: none !important;
+  color: $yellow;
+  &:hover {
+    color: $yellow;
+  }
+}

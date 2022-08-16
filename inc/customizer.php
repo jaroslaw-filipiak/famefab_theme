@@ -30,6 +30,8 @@ function femmefab_customize_register( $wp_customize ) {
 				'render_callback' => 'femmefab_customize_partial_blogdescription',
 			)
 		);
+
+		
 	}
 }
 add_action( 'customize_register', 'femmefab_customize_register' );

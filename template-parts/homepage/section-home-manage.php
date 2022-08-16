@@ -10,21 +10,27 @@
 ?>
 
 <section class="home-manage bg-cover bg-no-repeat bg-center gsap__manage-bg--scale"
-    style="background-size: 160%;background-image: url('<?php echo get_theme_file_uri() ?>/dist/assets/img/manage-bg.jpg');">
+    style="background-size: 160%;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
             <div class="col-10 col-md-9" style="position: relative;">
                 <div>
-                    <p data-scroll data-scroll-speed="1" class="home-manage--text-block">Wij werken samen met
-                        de leukste influencers
-                        & publishers</p>
+                    <p data-scroll data-scroll-speed="1" class="home-manage--text-block">
+                        <?php the_field( 'home_section_manage_with_bg_text_content' ); ?>
+                    </p>
                 </div>
 
-                <div data-scroll data-scroll-speed="1"
-                    class="content-and-arrow d-flex align-items-center justify-content-start p-0">
-                    <div class="pe-4 mb-2 mb-md-0"><small>go to influencers</small></div>
-                    <div class="arrow-right-icon ">
+                <?php $home_section_manage_with_bg_link_to_section = get_field( 'home_section_manage_with_bg_link_to_section' ); ?>
+                <?php if ( $home_section_manage_with_bg_link_to_section ) : ?>
+
+                <a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>" data-scroll-to
+                    data-scroll data-scroll-speed=".3"
+                    class="link-yellow-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
+                    <div class="pe-4"><small
+                            class="cursor-pointer"><?php echo esc_html( $home_section_manage_with_bg_link_to_section['title'] ); ?></small>
+                    </div>
+                    <div class=" arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
@@ -38,9 +44,14 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
+
+
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
-    <div class="home-manage--title gsap__title-horizontaly-scrub">Manage</div>
+    <div class="home-manage--title gsap__title-horizontaly-scrub">
+        <?php the_field( 'home_section_manage_with_bg_title' ); ?></div>
 </section>

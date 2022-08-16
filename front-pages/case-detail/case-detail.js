@@ -3,10 +3,10 @@ import gsap from 'gsap';
 gsap.from('.our-reach--counter', {
   opacity: 0,
   scrollTrigger: {
-    trigger: '.detail-hero--content',
+    trigger: '.gsap__reveal-counter',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top top',
+    start: 'top bottom',
     end: 'bottom',
   },
 });

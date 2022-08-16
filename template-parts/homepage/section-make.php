@@ -15,21 +15,24 @@
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
             <div class="col-10 col-md-9 make--title-wrapper  d-flex flex-column align-items-start justify-content-start"
                 style="position: relative;">
-                <p class="make--title font-serif scale-from-1-5-text">‘Humble in personality,
-                    badass in business’
-
+                <p class="make--title font-serif scale-from-1-5-text">
+                    <?php the_field( 'home_section_make_main_heading' ); ?>
                 </p>
                 <div class="make--subtitle font-green-default text-uppercase font-sans scale-from-1-5-text__smaller">
-                    YouTube, Instagram en Facebook zijn de kanalen die ingezet kunnen worden om marketing campagnes
-                    op
-                    te zetten.
+                    <?php the_field( 'home_section_make_main_subheading' ); ?>
                 </div>
 
-                <div data-scroll data-scroll-speed="1"
-                    class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+
+                <?php $home_section_make_link_to_section = get_field( 'home_section_make__link_to_section' ); ?>
+                <?php if ( $home_section_make_link_to_section ) : ?>
+                <a href="<?php echo esc_url( $home_section_make_link_to_section['url'] ); ?>" data-scroll-to data-scroll
+                    data-scroll-speed=".3"
+                    class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
-                    <div class="pe-4 mb-2"><small>go to cases</small></div>
-                    <div class="arrow-right-icon">
+                    <div class="pe-4"><small
+                            class="cursor-pointer"><?php echo esc_html( $home_section_make_link_to_section['title'] ); ?></small>
+                    </div>
+                    <div class=" arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="29" cy="29" r="28.6" stroke="#214C2C" stroke-width="0.8" />
@@ -43,7 +46,11 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
+
+
+                <?php endif; ?>
+
             </div>
         </div>
     </div>

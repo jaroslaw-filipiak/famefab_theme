@@ -31,6 +31,7 @@ function femmefab_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	
 	/*
 		* Let WordPress manage the document title.
 		* By adding theme support, we declare that this theme does not use a
@@ -99,6 +100,32 @@ function femmefab_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// wp block styles
+	add_theme_support( 'wp-block-styles' );
+
+	add_theme_support( 'editor-color-palette', array(
+        array(
+            'name'  => esc_attr__( 'strong magenta', 'themeLangDomain' ),
+            'slug'  => 'strong-magenta',
+            'color' => '#a156b4',
+        ),
+        array(
+            'name'  => esc_attr__( 'light grayish magenta', 'themeLangDomain' ),
+            'slug'  => 'light-grayish-magenta',
+            'color' => '#d0a5db',
+        ),
+        array(
+            'name'  => esc_attr__( 'very light gray', 'themeLangDomain' ),
+            'slug'  => 'very-light-gray',
+            'color' => '#eee',
+        ),
+        array(
+            'name'  => esc_attr__( 'very dark gray', 'themeLangDomain' ),
+            'slug'  => 'very-dark-gray',
+            'color' => '#444',
+        ),
+    ) );
 }
 add_action( 'after_setup_theme', 'femmefab_setup' );
 
@@ -124,6 +151,54 @@ function femmefab_widgets_init() {
 		array(
 			'name'          => esc_html__( 'Sidebar', 'femmefab' ),
 			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'femmefab' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer col-1', 'femmefab' ),
+			'id'            => 'sidebar-footer-col-1',
+			'description'   => esc_html__( 'Add widgets here.', 'femmefab' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer col-2', 'femmefab' ),
+			'id'            => 'sidebar-footer-col-2',
+			'description'   => esc_html__( 'Add widgets here.', 'femmefab' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer col-3', 'femmefab' ),
+			'id'            => 'sidebar-footer-col-3',
+			'description'   => esc_html__( 'Add widgets here.', 'femmefab' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer col-4', 'femmefab' ),
+			'id'            => 'sidebar-footer-col-4',
 			'description'   => esc_html__( 'Add widgets here.', 'femmefab' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

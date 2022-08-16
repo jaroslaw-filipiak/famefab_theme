@@ -4,7 +4,7 @@
 <div class="our-reach--counter">
     <p>our reach</p>
     <div class="d-flex">
-        <div id="ourReachValue" class="our-reach--counter-value">-140</div>
+        <div id="ourReachValue" class="our-reach--counter-value">-50</div>
         <p class="our-reach-unit">k</p>
     </div>
 
@@ -46,7 +46,7 @@
                         <div class="font-serif color-green detail-hero--title"><?php echo get_the_title() ?></div>
                     </div>
 
-                    <div style="display: none;" class="d-none col detail-hero--content text-start">
+                    <div style="display: none;" class="d-none col text-start">
                         <p>Lacus orci malesuada non turpis Nam odio non, at, Nullam venenatis ipsum Lorem
                             scelerisque
                             facilisis lacus, cursus adipiscing vitae ex dolor vehicula, ipsum commodo ex sed sed
@@ -68,9 +68,10 @@
                     </div>
                 </div>
 
+
                 <!-- content from wp  -->
 
-                <div class="row">
+                <div class="row gsap__reveal-counter ">
                     <?php the_content() ?>
                 </div>
 
@@ -78,12 +79,12 @@
         </div>
 
     </div>
-    <div class="detail-hero--title-absolute d-none d-lg-flex">
+    <div class="detail-hero--title-absolute d-none d-lg-flex detail-hero--content-new">
         Cases
     </div>
 </section>
 
-<section class="detail-pagination">
+<section class="detail-pagination ">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="bg-cover bg-no-repeat bg-center col  item-prev"

@@ -291,9 +291,111 @@ body {
     color: $mainGreen;
   }
 
+  // &--gallery {
+  //   position: relative;
+  //   padding-top: 15vh;
+
+  //   @include media-breakpoint-only(xs) {
+  //     left: 15vw;
+  //   }
+
+  //   @include media-breakpoint-up(lg) {
+  //     padding-right: 50px;
+  //     padding-top: 100px;
+  //     padding-bottom: 100px;
+  //   }
+
+  //   @include media-breakpoint-up(xxl) {
+  //     padding-right: 100px;
+  //     padding-top: 100px;
+  //     padding-bottom: 100px;
+  //   }
+
+  //   .manage-gallery-row-1 {
+  //     @include media-breakpoint-up(lg) {
+  //       padding-right: 20px;
+  //       padding-top: 180px;
+  //     }
+  //   }
+
+  //   .manage-gallery-row-2 {
+  //     @include media-breakpoint-up(lg) {
+  //       display: flex;
+  //       flex-direction: column;
+  //       gap: 20px;
+  //     }
+  //   }
+
+  //   .manage-gallery {
+  //     &--item {
+  //       width: 291px;
+  //       height: 360px;
+  //       background-size: cover;
+  //       background-repeat: no-repeat;
+  //       background-position: top center;
+  //       border-radius: 15px;
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       margin: 15px;
+
+  //       @include media-breakpoint-up(lg) {
+  //         margin: 0;
+  //       }
+
+  //       @include media-breakpoint-up(xxxl) {
+  //         width: 340px;
+  //         height: 460px;
+  //       }
+
+  //       &:hover {
+  //         .manage-gallery--item--content {
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: rgba(0, 0, 0, 0.5);
+  //           opacity: 1;
+  //           @include default-transition;
+  //         }
+  //       }
+
+  //       &--content {
+  //         border-radius: 20px;
+  //         width: 95%;
+  //         height: 95%;
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         font-size: 16px;
+  //         text-transform: uppercase;
+  //         color: $yellow;
+  //         opacity: 0;
+  //         @include default-transition;
+  //       }
+  //     }
+
+  //     div {
+  //       display: flex;
+  //       flex-direction: column;
+  //       height: 100%;
+
+  //       @include media-breakpoint-up(md) {
+  //         gap: 20px;
+  //       }
+  //     }
+  //   }
+  // }
+
   &--gallery {
     position: relative;
     padding-top: 15vh;
+    display: grid;
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
+    grid-template-columns: 290px 290px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'photo1 photo2'
+      'photo1 photo3';
 
     @include media-breakpoint-only(xs) {
       left: 15vw;
@@ -306,29 +408,15 @@ body {
     }
 
     @include media-breakpoint-up(xxl) {
-      padding-right: 100px;
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
-
-    .manage-gallery-row-1 {
-      @include media-breakpoint-up(lg) {
-        padding-right: 20px;
-        padding-top: 180px;
-      }
-    }
-
-    .manage-gallery-row-2 {
-      @include media-breakpoint-up(lg) {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
+      // padding-right: 100px;
+      // padding-top: 100px;
+      // padding-bottom: 100px;
+      grid-template-columns: 340px 340px;
     }
 
     .manage-gallery {
       &--item {
-        width: 291px;
+        // width: 291px;
         height: 360px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -344,7 +432,7 @@ body {
         }
 
         @include media-breakpoint-up(xxxl) {
-          width: 340px;
+          // width: 340px;
           height: 460px;
         }
 
@@ -370,6 +458,18 @@ body {
           color: $yellow;
           opacity: 0;
           @include default-transition;
+        }
+
+        &-1 {
+          grid-area: photo1;
+          position: relative;
+          top: 25%;
+        }
+        &-2 {
+          grid-area: photo2;
+        }
+        &-3 {
+          grid-area: photo3;
         }
       }
 
@@ -711,7 +811,7 @@ body {
         }
 
         &:hover {
-          .manage-gallery--item--content {
+          .make-gallery--item--content {
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);

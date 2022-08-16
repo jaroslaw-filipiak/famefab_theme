@@ -12,13 +12,17 @@
 <section class="hello">
     <div class="row hello--get-started-area">
 
-        <div data-scroll data-scroll-speed="1" class="col-6 p-0 font-sans gsap__reveal">Wij zijn Femmefab,
-            een influencer marketing
-            agency in Amsterdam. </div>
+        <div data-scroll data-scroll-speed="1" class="col-6 p-0 font-sans gsap__reveal">
+            <?php the_field( 'main_heading' ); ?>
+        </div>
 
-        <div data-scroll data-scroll-speed=".3"
-            class="link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
-            <div class="pe-4"><small class="cursor-pointer">get starded</small></div>
+        <?php $link_to_section = get_field( 'link_to_section' ); ?>
+
+        <?php if ( $link_to_section ) : ?>
+        <a href="<?php echo esc_url( $link_to_section['url'] ); ?>" data-scroll-to data-scroll data-scroll-speed=".3"
+            class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
+            <div class="pe-4"><small class="cursor-pointer"><?php echo esc_html( $link_to_section['title'] ); ?></small>
+            </div>
             <div class=" arrow-right-icon">
                 <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -33,8 +37,9 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </a>
 
+        <?php endif; ?>
 
     </div>
 
