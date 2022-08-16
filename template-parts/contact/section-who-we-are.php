@@ -15,22 +15,25 @@
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
             <div
                 class="col-10 col-md-9 who-we-are__contact-us--title-wrapper  d-flex flex-column align-items-start justify-content-start">
-                <p class="who-we-are__contact-us--title font-serif">Hi, we are the team.
-                    eet us, follow us, join us.
-
-
-
+                <p class="who-we-are__contact-us--title font-serif">
+                    <?php the_field( 'page_contact_section_with_big_heading_title' ); ?>
                 </p>
                 <div data-scroll data-scroll-speed="1"
                     class="who-we-are__contact-us--subtitle font-green-default text-uppercase font-sans">
-                    Want to be part of a strong team? See our latest jobs & Be part of the journey
+                    <?php the_field( 'page_contact_section_with_big_heading_subtitle' ); ?>
                 </div>
 
-                <div data-scroll data-scroll-speed="4"
-                    class="content-and-arrow col-6 d-none d-lg-flex align-items-center justify-content-start p-0"
+                <?php $page_contact_section_with_big_heading_link_to_section = get_field( 'page_contact_section_with_big_heading_link_to_section' ); ?>
+                <?php if ( $page_contact_section_with_big_heading_link_to_section ) : ?>
+
+                <a href="<?php echo esc_url( $page_contact_section_with_big_heading_link_to_section['url'] ); ?>"
+                    data-scroll-to data-scroll data-scroll-speed=".3"
+                    class="link-green-unstyled content-and-arrow col-6 d-none d-lg-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
-                    <div class="pe-4"><small>vaccature</small></div>
-                    <div class="arrow-right-icon">
+                    <div class="pe-4"><small
+                            class="cursor-pointer"><?php echo esc_html( $page_contact_section_with_big_heading_link_to_section['title'] ); ?></small>
+                    </div>
+                    <div class=" arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="29" cy="29" r="28.6" stroke="#214C2C" stroke-width="0.8" />
@@ -44,7 +47,12 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <?php endif; ?>
+
+
+
             </div>
         </div>
     </div>

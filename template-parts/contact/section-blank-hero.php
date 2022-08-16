@@ -9,25 +9,28 @@
 
 ?>
 
+<?php $page_contact_second_section_background_image = get_field( 'page_contact_second_section_background_image' ); ?>
+
 <section class="blank-hero bg-cover bg-no-repeat bg-center gsap__reveal-trigger__contact-us"
-    style="background-size: 200%; background-image: url('<?php echo get_theme_file_uri() ?>/dist/assets/img/contact-us-section-bg.jpg')">
+    style="background-size: 200%; background-image: url('<?php echo esc_url( $page_contact_second_section_background_image['url'] ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  ">
                 <div class="blank-hero--content color-yellow">
-                    <h3 data-scroll data-scroll-speed="1">Leave a message
-                    </h3>
-                    <p data-scroll data-scroll-speed="1.3">Let's connect!
-                        Vragen, samenwerken of gewoon zin in koffie? Neem contact met ons op
-                    </p>
+                    <?php the_field( 'page_contact_second_section_text_content' ); ?>
                 </div>
 
-                <div data-scroll data-scroll-speed="3"
-                    class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                <?php $page_contact_second_section_link_to_section = get_field( 'page_contact_second_section_link_to_section' ); ?>
+                <?php if ( $page_contact_second_section_link_to_section ) : ?>
+                <a href="<?php echo esc_url( $page_contact_second_section_link_to_section['url'] ); ?>" data-scroll-to
+                    data-scroll data-scroll-speed=".3"
+                    class="link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
-                    <div class="pe-4 mb-2 color-yellow"><small>go to cases</small></div>
-                    <div class="arrow-right-icon">
+                    <div class="pe-4 mb-2 color-yellow"><small
+                            class="cursor-pointer"><?php echo esc_html( $page_contact_second_section_link_to_section['title'] ); ?></small>
+                    </div>
+                    <div class=" arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
@@ -41,11 +44,11 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>
 
-
-    <!-- <h1 class="color-yellow">Contact us</h1> -->
 </section>
