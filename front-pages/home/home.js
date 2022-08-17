@@ -71,8 +71,10 @@ gsap.to('body', {
   },
 });
 
+var heroFirstScreenTimeline = gsap.timeline();
+
 // big logo reveal on load
-gsap.from('.logo_big', {
+heroFirstScreenTimeline.from('.logo_big', {
   scrollTrigger: {
     trigger: '.hello',
     scroller: '.smooth-scroll',
@@ -84,7 +86,8 @@ gsap.from('.logo_big', {
   ease: 'easeIn',
 });
 
-gsap.from('.gsap__reveal', {
+// subtitle
+heroFirstScreenTimeline.from('.hello--get-started-area', {
   scrollTrigger: {
     trigger: '.hello',
     scroller: '.smooth-scroll',
