@@ -13,11 +13,11 @@
     <div class="container-fluid h-100">
         <div class="row h-100" style="position: relative">
             <div class=" col-2 d-md-block col-md-3  ps-0"></div>
-            <div class=" col-10 col-md-9 d-flex justify-content-between">
+            <div class=" col-10 col-md-9 d-flex flex-column flex-lg-row justify-content-between">
                 <!-- text + arrow button -->
                 <div>
                     <div data-scroll data-scroll-speed="1"
-                        class="d-none d-lg-block contact-us--subtitle font-green-default text-uppercase font-sans">
+                        class="d-block contact-us--subtitle font-green-default text-uppercase font-sans">
                         <?php the_field( 'home_section_contact_small_text' ); ?>
                     </div>
                     <div class="contact--trigger" style="width: 1px ;height: 1px;"></div>

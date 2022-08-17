@@ -10,7 +10,7 @@
 ?>
 
 <section class="home-manage bg-cover bg-no-repeat bg-center gsap__manage-bg--scale"
-    style="background-size: 160%;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
+    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 160%' ?>;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-3  ps-0"></div>

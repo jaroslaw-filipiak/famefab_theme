@@ -10,7 +10,7 @@
 ?>
 
 <section class="gsap__make-with-bg--scale make-with-bg bg-no-repeat bg-center"
-    style="background-size: 170%;background-image: url('<?php the_field( 'home_section_make_with_bg_background_image' ); ?>');">
+    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 170%' ?>;background-image: url('<?php the_field( 'home_section_make_with_bg_background_image' ); ?>');">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
@@ -25,7 +25,7 @@
 
                 <a href="<?php echo esc_url( $home_section_make_with_bg_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed="1"
-                    class="link-green-unstyled content-and-arrow d-flex align-items-center justify-content-start p-0">
+                    class="d-none d-lg-flex link-green-unstyled content-and-arrow  align-items-center justify-content-start p-0">
                     <div class="pe-4"><small
                             class="cursor-pointer"><?php echo esc_html( $home_section_make_with_bg_link_to_section['title'] ); ?></small>
                     </div>

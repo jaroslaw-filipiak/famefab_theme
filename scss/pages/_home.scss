@@ -81,20 +81,17 @@ body {
   }
 
   &--title {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 55px;
+    line-height: 55px;
     color: $mainGreen;
     transform: scale(0.6);
     transform-origin: left;
     max-width: 780px;
 
-    @include media-breakpoint-up(sm) {
-      font-size: 85px;
-      line-height: 85px;
-    }
-
     @include media-breakpoint-up(md) {
       transform: scale(0.9);
+      font-size: 70px;
+      line-height: 70px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -131,8 +128,11 @@ body {
   }
 
   &--subtitle {
-    width: 300px;
+    max-width: 280px;
     padding-top: 50px;
+    @include media-breakpoint-up(md) {
+      max-width: 300px;
+    }
   }
 
   .m-letter {
@@ -153,8 +153,8 @@ body {
 //
 
 .home-manage {
-  height: 100vh;
   position: relative;
+  height: 100vh;
 
   &--text-block {
     padding-top: 15vh;
@@ -291,120 +291,46 @@ body {
     color: $mainGreen;
   }
 
-  // &--gallery {
-  //   position: relative;
-  //   padding-top: 15vh;
-
-  //   @include media-breakpoint-only(xs) {
-  //     left: 15vw;
-  //   }
-
-  //   @include media-breakpoint-up(lg) {
-  //     padding-right: 50px;
-  //     padding-top: 100px;
-  //     padding-bottom: 100px;
-  //   }
-
-  //   @include media-breakpoint-up(xxl) {
-  //     padding-right: 100px;
-  //     padding-top: 100px;
-  //     padding-bottom: 100px;
-  //   }
-
-  //   .manage-gallery-row-1 {
-  //     @include media-breakpoint-up(lg) {
-  //       padding-right: 20px;
-  //       padding-top: 180px;
-  //     }
-  //   }
-
-  //   .manage-gallery-row-2 {
-  //     @include media-breakpoint-up(lg) {
-  //       display: flex;
-  //       flex-direction: column;
-  //       gap: 20px;
-  //     }
-  //   }
-
-  //   .manage-gallery {
-  //     &--item {
-  //       width: 291px;
-  //       height: 360px;
-  //       background-size: cover;
-  //       background-repeat: no-repeat;
-  //       background-position: top center;
-  //       border-radius: 15px;
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //       margin: 15px;
-
-  //       @include media-breakpoint-up(lg) {
-  //         margin: 0;
-  //       }
-
-  //       @include media-breakpoint-up(xxxl) {
-  //         width: 340px;
-  //         height: 460px;
-  //       }
-
-  //       &:hover {
-  //         .manage-gallery--item--content {
-  //           width: 100%;
-  //           height: 100%;
-  //           background-color: rgba(0, 0, 0, 0.5);
-  //           opacity: 1;
-  //           @include default-transition;
-  //         }
-  //       }
-
-  //       &--content {
-  //         border-radius: 20px;
-  //         width: 95%;
-  //         height: 95%;
-  //         display: flex;
-  //         align-items: center;
-  //         justify-content: center;
-  //         font-size: 16px;
-  //         text-transform: uppercase;
-  //         color: $yellow;
-  //         opacity: 0;
-  //         @include default-transition;
-  //       }
-  //     }
-
-  //     div {
-  //       display: flex;
-  //       flex-direction: column;
-  //       height: 100%;
-
-  //       @include media-breakpoint-up(md) {
-  //         gap: 20px;
-  //       }
-  //     }
-  //   }
-  // }
-
   &--gallery {
-    position: relative;
-    padding-top: 15vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 20px;
+    // position: relative;
     display: grid;
     grid-column-gap: 28px;
     grid-row-gap: 28px;
-    grid-template-columns: 290px 290px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 65vw;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      'photo1 photo2'
-      'photo1 photo3';
+      'photo1 '
+      'photo2'
+      'photo3';
 
-    @include media-breakpoint-only(xs) {
-      left: 15vw;
+    // @include media-breakpoint-only(xs) {
+    //   left: 15vw;
+    // }
+
+    @include media-breakpoint-up(md) {
+      margin-right: 0px;
+      display: grid;
+      grid-column-gap: 28px;
+      grid-row-gap: 28px;
+      grid-template-columns: 290px 290px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        'photo1 photo2'
+        'photo1 photo3';
     }
 
     @include media-breakpoint-up(lg) {
       padding-right: 50px;
       padding-top: 100px;
       padding-bottom: 100px;
+      position: relative;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 15vh;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -425,7 +351,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 15px;
+        // margin: 15px;
 
         @include media-breakpoint-up(lg) {
           margin: 0;
@@ -462,8 +388,10 @@ body {
 
         &-1 {
           grid-area: photo1;
-          position: relative;
-          top: 25%;
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: 25%;
+          }
         }
         &-2 {
           grid-area: photo2;
@@ -509,17 +437,17 @@ body {
   }
 
   &--title {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 55px;
+    line-height: 55px;
     color: $mainGreen;
     transform: scale(0.6);
     transform-origin: left;
     max-width: 780px;
 
-    @include media-breakpoint-only(xs) {
-      position: relative;
-      top: -10vh;
-    }
+    // @include media-breakpoint-only(xs) {
+    //   position: relative;
+    //   top: -10vh;
+    // }
 
     @include media-breakpoint-up(sm) {
       font-size: 85px;
@@ -528,6 +456,8 @@ body {
 
     @include media-breakpoint-up(md) {
       transform: scale(0.9);
+      font-size: 70px;
+      line-height: 70px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -586,18 +516,24 @@ body {
   }
 
   .content-and-arrow {
-    @include media-breakpoint-down(md) {
-      width: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start !important;
-      justify-content: flex-start !important;
-      position: absolute;
-      left: -50px;
-      top: 50%;
-      transform: translate(0, -50%);
-      margin-top: 0 !important;
-    }
+    // @include media-breakpoint-only(xs) {
+    //   left: 12px;
+    //   top: 47%;
+    // }
+    // @include media-breakpoint-down(md) {
+    //   width: 100px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-start !important;
+    //   justify-content: flex-start !important;
+    //   position: absolute;
+    //   left: -50px;
+    //   top: 50%;
+    //   transform: translate(0, -50%);
+    //   margin-top: 0 !important;
+    // }
+
+    display: none !important;
 
     @include media-breakpoint-down(lg) {
       margin-top: 100px;
@@ -605,6 +541,7 @@ body {
 
     @include media-breakpoint-up(lg) {
       margin-top: 100px;
+      display: flex;
     }
 
     @include media-breakpoint-up(lg) {
@@ -691,6 +628,10 @@ body {
   background-color: $lightGray;
   position: relative;
 
+  @include media-breakpoint-up(lg) {
+    margin-right: 0px;
+  }
+
   &--col-right {
     @include media-breakpoint-up(lg) {
       padding-top: 100px;
@@ -770,9 +711,9 @@ body {
     position: relative;
     padding-top: 15vh;
 
-    @include media-breakpoint-only(xs) {
-      left: 15vw;
-    }
+    // @include media-breakpoint-only(xs) {
+    //   left: 15vw;
+    // }
 
     @include media-breakpoint-up(lg) {
       padding-right: 20px;
@@ -889,10 +830,12 @@ body {
   }
 
   &--subtitle {
-    width: 300px;
-    padding-top: 15vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
     @include media-breakpoint-up(lg) {
       padding-top: 180px;
+      padding-bottom: 0px;
+      width: 300px;
     }
   }
 
@@ -924,14 +867,14 @@ body {
   }
 
   &--gallery {
-    position: relative;
-    padding-top: 15vh;
+    // padding-top: 15vh;
 
-    @include media-breakpoint-only(xs) {
-      left: 15vw;
-    }
+    // @include media-breakpoint-only(xs) {
+    //   left: 15vw;
+    // }
 
     @include media-breakpoint-up(lg) {
+      position: relative;
       padding-right: 20px;
       top: 100px;
       padding-top: 0;

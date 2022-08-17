@@ -63,7 +63,7 @@
                         ?>
 
 
-                    <div class="manage-gallery--item manage-gallery--item-<?php echo $key +1 ?>"
+                    <div class="manage-gallery--item br-30 manage-gallery--item-<?php echo $key +1 ?>"
                         style="background-image: url('<?php echo $bgImg ? $bgImg : $bgPlaceholder ?>');">
                         <div class="manage-gallery--item--content">
                             <?php echo get_the_title($post_ids) ?>

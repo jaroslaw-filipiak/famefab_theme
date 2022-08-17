@@ -267,33 +267,37 @@ gsap.from('.make-with-bg--title__in-body', {
   ease: 'easeIn',
 });
 
-// gsap__mange-bg--scale
-gsap.to('.gsap__manage-bg--scale', {
-  //   opacity: 0,
-  backgroundSize: '100%',
-  //   scale: 2.5,
-  scrollTrigger: {
-    trigger: '.home-manage',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    // end: 'top center',
-  },
-});
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-// gsap__make-with-bg--scale
-gsap.to('.gsap__make-with-bg--scale', {
-  //   opacity: 0,
-  backgroundSize: '100%',
-  //   scale: 2.5,
-  scrollTrigger: {
-    trigger: '.gsap__make-with-bg--scale',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    // end: 'top center',
-  },
-});
+if (!isMobile) {
+  // gsap__mange-bg--scale
+  gsap.to('.gsap__manage-bg--scale', {
+    //   opacity: 0,
+    backgroundSize: '100%',
+    //   scale: 2.5,
+    scrollTrigger: {
+      trigger: '.home-manage',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      // end: 'top center',
+    },
+  });
+
+  // gsap__make-with-bg--scale
+  gsap.to('.gsap__make-with-bg--scale', {
+    //   opacity: 0,
+    backgroundSize: '100%',
+    //   scale: 2.5,
+    scrollTrigger: {
+      trigger: '.gsap__make-with-bg--scale',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      // end: 'top center',
+    },
+  });
+}
 
 // make-gallery-row-1
 // make-gallery
