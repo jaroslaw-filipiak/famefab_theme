@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import TextPlugin from 'gsap/TextPlugin';
 
 const test = document.querySelector('#who-we-are');
 const button = document.querySelector('.link-to-who-we-are');
@@ -586,5 +587,98 @@ gsap.to('.our-reach--counter', {
     scrub: true,
     start: () => 'top ' + window.innerWidth * 0.17,
     end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+// top-bar--page-title
+// dynamic change content / innerHTML
+
+function changeTextAndClass(value, addClass) {
+  const item = document.querySelector('.top-bar--page-title');
+  item.innerHTML = value;
+  item.classList = 'top-bar--page-title ' + addClass;
+}
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.home-manage',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Manage', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Who we are ', 'color-green'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.manage-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Manage', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Manage', 'color-yellow'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.make',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Make', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Manage', 'color-green'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Make', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Make', 'color-green'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Make', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Make', 'color-yellow'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  text: 'Manage',
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Contact us', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Make', 'color-green'),
   },
 });
