@@ -161,6 +161,7 @@ body {
 .home-manage {
   position: relative;
   height: 100vh;
+  padding: 40px;
 
   &--text-block {
     padding-top: 15vh;
@@ -231,6 +232,7 @@ body {
 .manage-gallery {
   background-color: $lightGray;
   position: relative;
+  padding: 40px;
 
   @include media-breakpoint-up(md) {
     overflow: hidden;
@@ -293,6 +295,7 @@ body {
     }
     @include media-breakpoint-up(lg) {
       margin-top: 120px;
+      margin-left: 10px;
     }
     @include media-breakpoint-up(xxl) {
       margin-top: 250px;
@@ -570,6 +573,7 @@ body {
 .make-with-bg {
   height: 100vh;
   position: relative;
+  padding: 40px;
 
   &--text-block {
     padding-top: 15vh;
@@ -637,6 +641,7 @@ body {
 .make-gallery {
   background-color: $lightGray;
   position: relative;
+  padding: 40px;
 
   @include media-breakpoint-up(lg) {
     margin-right: 0px;
@@ -647,6 +652,7 @@ body {
     @include media-breakpoint-up(lg) {
       padding-top: 100px;
       padding-bottom: 100px;
+      padding-left: 20px;
     }
   }
 
@@ -805,6 +811,7 @@ body {
 .contact-us {
   background-color: $lightGray;
   position: relative;
+  padding: 40px;
 
   @include media-breakpoint-up(md) {
     overflow: hidden;
