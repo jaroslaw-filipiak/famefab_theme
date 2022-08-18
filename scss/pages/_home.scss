@@ -1,6 +1,7 @@
 html {
   --color: transparent;
   --footer-bg-color: #214c2c;
+  --counter-color: #214c2c;
 }
 
 body.frontpage {
@@ -639,7 +640,7 @@ body {
 
   @include media-breakpoint-up(lg) {
     margin-right: 0px;
-    // margin-bottom: 30vh;
+    margin-bottom: 30vh;
   }
 
   &--col-right {

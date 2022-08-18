@@ -1,6 +1,6 @@
 .our-reach--counter {
   font-size: 10px;
-  color: $mainGreen;
+  color: var(--counter-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;

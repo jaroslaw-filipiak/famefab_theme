@@ -520,7 +520,7 @@ let brandImageNotPin = document.getElementById('brand-image-notPin');
 ScrollTrigger.create({
   trigger: '.make-gallery--col-right',
   scroller: '.smooth-scroll',
-  start: 'top 30%',
+  start: 'top 10%',
   end: 'bottom 20%',
   // the nect line (with the arrow function) is 'a functional value' () =>
   // end: () =>
@@ -535,4 +535,56 @@ ScrollTrigger.create({
   //   fontSize: '20px',
   //   indent: 200,
   // },
+});
+
+// our reach bg change color
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#e7ffc8',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.home-manage',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#214c2c',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.manage-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+// make-with-bg
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#e7ffc8',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#214c2c',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
 });

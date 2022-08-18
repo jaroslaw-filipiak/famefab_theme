@@ -10,10 +10,10 @@
 ?>
 
 <section class="make-gallery">
-    <div class="container-fluid h-100">
-        <div class="row h-100 " style="position: relative">
-            <div class=" col-2 d-md-block col-md-3  ps-0"></div>
-            <div class=" col-10 col-md-9 d-flex justify-content-between make-gallery--col-right">
+    <div class="container-fluid p-0">
+        <div class="row p-0">
+            <div class="p-0 col-2 d-md-block col-md-3 ps-0"></div>
+            <div class="p-0 col-10 col-md-9 d-flex justify-content-between make-gallery--col-right">
                 <!-- text + arrow button -->
                 <div id="brand-image-pin">
                     <div class="d-none d-lg-block make-gallery--subtitle font-green-default text-uppercase font-sans">
@@ -46,12 +46,13 @@
                     <?php endif; ?>
 
                 </div>
+
                 <!-- gallery on right side -->
-                <div id="brand-image-notPin" data-scroll data-scroll-speed="1"
+                <div id="brand-image-notPin"
                     class="make-gallery--gallery  d-flex flex-column flex-lg-row align-items-center justify-content-center align-items-lg-center justify-content-lg-center"
                     style="width:100%">
 
-                    <div class="make-gallery-row-1" style="overflow: hidden;">
+                    <div class="make-gallery-row-1 " style="overflow: hidden;">
                         <?php $home_section_make_gallery_img1 = get_field( 'home_section_make_gallery_img1' ); ?>
                         <?php $home_section_make_gallery_img2 = get_field( 'home_section_make_gallery_img2' ); ?>
                         <div class="make-gallery--item"
@@ -78,14 +79,8 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
-    <div class="make-gallery--title-wrapper">
 
-        <!-- <div class="make-gallery--title make-gallery--title_2">
-            <p> <?php the_field( 'home_section_make_gallery_title' ); ?></p>
-        </div> -->
-    </div>
 </section>
