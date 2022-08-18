@@ -16,7 +16,7 @@
             <div class="col-2 d-md-block col-md-3  ps-0"></div>
             <div class="col-10 col-md-9" style="position: relative;">
                 <div>
-                    <p data-scroll data-scroll-speed="1" class="make-with-bg--text-block">
+                    <p data-scroll data-scroll-speed="1" class="make-with-bg--text-block gsap__make-with-bg-reveal">
                         <?php the_field( 'home_section_make_with_bg_small_text' ); ?></p>
                 </div>
 
@@ -25,7 +25,7 @@
 
                 <a href="<?php echo esc_url( $home_section_make_with_bg_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed="1"
-                    class="d-none d-lg-flex link-green-unstyled content-and-arrow  align-items-center justify-content-start p-0">
+                    class="gsap__make-with-bg-reveal d-none d-lg-flex link-green-unstyled content-and-arrow  align-items-center justify-content-start p-0">
                     <div class="pe-4"><small
                             class="cursor-pointer"><?php echo esc_html( $home_section_make_with_bg_link_to_section['title'] ); ?></small>
                     </div>
@@ -50,5 +50,5 @@
             </div>
         </div>
     </div>
-    <div class="make-with-bg--title"><?php the_field( 'home_section_make_with_bg_big_title' ); ?></div>
+
 </section>

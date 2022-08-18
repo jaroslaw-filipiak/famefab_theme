@@ -68,7 +68,32 @@
 <h1 class="contact-us__hero-gsap"><?php the_field( 'page_contact_first_section_title' ); ?></h1>
 <?php } ?>
 
+<!-- manage title on homepage  -->
+<?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
+<div class="home-manage--title gsap__title-horizontaly-scrub">
+    <?php the_field( 'home_section_manage_with_bg_title' ); ?></div>
+<?php } ?>
 
+<!-- make title on homepage / section make with bg  -->
+<?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
+<div class="make-with-bg--title">
+    <?php the_field( 'home_section_make_with_bg_big_title' ); ?>
+</div>
+<?php } ?>
+
+<div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+        <svg height="30" width="30">
+            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+    </div>
+
+    <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+    </div>
+</div>
 </body>
 
 </html>

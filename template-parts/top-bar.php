@@ -12,7 +12,8 @@
 <section class="top-bar" data-scroll data-scroll-sticky>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-start ps-0 top-bar--logo">
+            <div
+                class="col-4 col-md-3 d-flex align-items-center justify-content-start ps-0 top-bar--logo gsap__section-indicator-home-page">
                 <a href="<?php echo get_home_url() ?>"> <svg width="120" height="20" viewBox="0 0 120 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -46,13 +47,27 @@
 
 
             </div>
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start">
-                <span class="top-bar--page-title ">Over ons</span>
+
+            <?php if(!is_page_template( 'page-templates/page-home.php' )) { ?>
+            <!-- section-indicator on other pages -->
+            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title ">Who we are</span>
             </div>
+            <?php } ?>
+
+
+            <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
+            <!-- section-indicator on homepage -->
+            <div
+                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
+                <span class="top-bar--page-title ">Who we are</span>
+            </div>
+            <?php } ?>
+
             <div class="col-4 col-md-6 d-flex align-items-center justify-content-end pe-0">
-                <a class="top-bar--contact-link d-none d-lg-inline-flex"
+                <a class="top-bar--contact-link d-none d-lg-inline-flex gsap__section-indicator-home-page"
                     href="<?php echo get_home_url('', 'contact') ?>">Contact us</a>
-                <div class="hamburger">
+                <div class="hamburger gsap__section-indicator-home-page">
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="19.9474" y1="0.5" x2="1.90735e-05" y2="0.5" stroke="#214D2C" />
                         <line x1="19.9474" y1="8.10693" x2="1.90735e-05" y2="8.10693" stroke="#214D2C" />

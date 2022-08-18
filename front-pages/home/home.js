@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const test = document.querySelector('#who-we-are');
 const button = document.querySelector('.link-to-who-we-are');
@@ -92,7 +93,7 @@ heroFirstScreenTimeline.from('.hello--get-started-area', {
     trigger: '.hello',
     scroller: '.smooth-scroll',
     // scrub: true,
-    // markers: true,
+    // markers: false,
   },
 
   opacity: 0,
@@ -107,7 +108,8 @@ gsap.from('.gsap__reveal-heading', {
     start: 'top center',
     // scrub: true,
     start: '20px 80%',
-    // markers: true,
+    // markers: false,
+    onEnter: () => console.log('enter'),
   },
   yPercent: 20,
   opacity: 0,
@@ -115,22 +117,112 @@ gsap.from('.gsap__reveal-heading', {
   ease: 'easeIn',
 });
 
-gsap.from('.gsap__title-horizontaly-scrub', {
-  scrollTrigger: {
-    trigger: '.home-manage',
-    scroller: '.smooth-scroll',
-    start: 'top center',
-    end: '90% top',
-    scrub: true,
-    start: '20px 80%',
-    // markers: true,
-  },
+var homeManageTimeline = gsap.timeline();
 
-  xPercent: -300,
-  opacity: 0,
-  duration: 1,
-  ease: 'easeIn',
+homeManageTimeline.from('.gsap__title-horizontaly-scrub', {
+  scrollTrigger: {
+    trigger: '#home-manage',
+    scroller: '.smooth-scroll',
+    start: 'top 70%',
+    end: 'top 10%',
+    scrub: true,
+    markers: false,
+    // pin: true,
+    duration: 1,
+  },
+  left: 2500,
+  // top: 0,
 });
+
+homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title', {
+  scrollTrigger: {
+    trigger: '#home-manage',
+    scroller: '.smooth-scroll',
+    start: 'top 10%',
+    end: 'top top',
+    scrub: true,
+    markers: false,
+    // pin: true,
+    duration: 1,
+  },
+  opacity: 0,
+  // top: 0,
+});
+
+homeManageTimeline.from('.gsap_reveal_home_manage_slide_content', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--item-2',
+    scroller: '.smooth-scroll',
+    start: 'top 60%',
+    end: 'top top',
+    scrub: true,
+    // markers: false,
+    // pin: true,
+    duration: 1,
+  },
+  opacity: 0,
+  // top: 0,
+});
+
+gsap.to('.home-manage--title', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--item-2',
+    scroller: '.smooth-scroll',
+    start: 'top 10%',
+    end: 'top -30%',
+    scrub: true,
+    // markers: false,
+    // pin: true,
+    // duration: 1,
+  },
+  opacity: 0,
+  // top: 0,
+});
+
+gsap.to('.gsap__title-horizontaly-scrub', {
+  scrollTrigger: {
+    trigger: '#home-manage',
+    scroller: '.smooth-scroll',
+    start: 'top -20%',
+    end: 'top -40%',
+    scrub: true,
+    markers: false,
+    // pin: true,
+    duration: 1,
+  },
+  color: '#214c2c',
+  // top: 0,
+});
+
+// .gsap__section-indicator-home-page
+
+gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
+  scrollTrigger: {
+    trigger: '.who-we-are .gsap__reveal-heading',
+    scroller: '.smooth-scroll',
+    start: 'top 60%',
+    end: 'top 20%',
+    scrub: true,
+    // markers: false,
+    // pin: true,
+  },
+  opacity: 0,
+});
+
+// gsap.from('.gsap__title-horizontaly-scrub', {
+//   scrollTrigger: {
+//     trigger: '.home-manage',
+//     scroller: '.smooth-scroll',
+//     start: 'top center',
+//     end: 'top -10%',
+//     scrub: true,
+//   },
+
+//   xPercent: 900,
+//   opacity: 0,
+//   duration: 1,
+//   ease: 'easeIn', // top: '-100%',
+// });
 
 gsap.from('.manage-gallery-row-2', {
   scrollTrigger: {
@@ -140,7 +232,7 @@ gsap.from('.manage-gallery-row-2', {
     // end: 'top bottom',
     scrub: true,
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   yPercent: 10,
@@ -159,7 +251,7 @@ gsap.from('.manage-gallery-row-1', {
     // end: 'top bottom',
     scrub: true,
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   yPercent: 5,
@@ -177,7 +269,7 @@ gsap.from('.gsap__we-love-to-manage-horizontaly__title', {
     end: '90% top',
     scrub: true,
     start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   //   yPercent: 200,
@@ -194,7 +286,7 @@ gsap.from('.gsap__we-love-to-manage-horizontaly', {
     end: '90% top',
     scrub: true,
     start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   xPercent: 300,
@@ -229,28 +321,76 @@ gsap.from('.scale-from-1-5-text__smaller', {
   },
 });
 
+// gsap__make-with-bg-reveal
+
+gsap.from('.gsap__make-with-bg-reveal', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 40%',
+    end: 'top 20%',
+  },
+});
+
 // make horizontal
 gsap.from('.make-with-bg--title', {
   scrollTrigger: {
-    trigger: '.make-with-bg--title__trigger',
+    trigger: '.make-with-bg',
     scroller: '.smooth-scroll',
     start: 'top bottom',
-    end: '90% top',
+    end: 'top 20%',
     scrub: true,
-    pin: true,
+    // pin: true,
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
-  xPercent: -300,
+  xPercent: 1400,
   opacity: 0,
   duration: 1,
   ease: 'easeIn',
 });
 
-// make-gallery--title_2
+// make horizontal
+gsap.to('.make-with-bg--title', {
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    start: 'top -10%',
+    end: 'top -40%',
+    scrub: true,
+    // pin: true,
+    // start: '20px 80%',
+    // markers: false,
+  },
+  color: '#214c2c',
+  ease: 'easeIn',
+});
 
-// .make-with-bg--title__in-body
+// make gallery section pin to top
+// make-with-bg
+
+// make horizontal
+gsap.to('.make-with-bg--title', {
+  scrollTrigger: {
+    trigger: '.make-gallery-row-1',
+    scroller: '.smooth-scroll',
+    start: 'top 70%',
+    end: 'top 3%',
+    scrub: true,
+    // pin: true,
+    // start: '20px 80%',
+    // markers: false,
+  },
+  // color: 'red',
+  // ease: 'easeIn',
+  left: -900,
+  // opacity: 1,
+});
+
+// make-gallery--title_2
 
 gsap.from('.make-with-bg--title__in-body', {
   scrollTrigger: {
@@ -261,7 +401,7 @@ gsap.from('.make-with-bg--title__in-body', {
     scrub: true,
     pin: true,
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   xPercent: -300,
@@ -305,17 +445,17 @@ if (!isMobile) {
 // make-gallery-row-1
 // make-gallery
 
-gsap.from('.make-gallery-row-1', {
-  opacity: 0,
-  scale: 1.6,
-  scrollTrigger: {
-    trigger: '.make-gallery',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top 5%',
-  },
-});
+// gsap.from('.make-gallery-row-1', {
+//   opacity: 0,
+//   scale: 1.6,
+//   scrollTrigger: {
+//     trigger: '.make-gallery',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     start: 'top bottom',
+//     end: 'top 5%',
+//   },
+// });
 
 // make horizontal 2
 gsap.from('.make-gallery--title_2', {
@@ -327,7 +467,7 @@ gsap.from('.make-gallery--title_2', {
     scrub: true,
 
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   xPercent: -300,
@@ -361,11 +501,38 @@ gsap.from('.contact-us--title', {
     scrub: true,
 
     // start: '20px 80%',
-    // markers: true,
+    // markers: false,
   },
 
   xPercent: -300,
   opacity: 0,
   duration: 1,
   ease: 'easeIn',
+});
+
+// section make gallery pin left side / on right side images are scrolled
+
+let brandImageBlock = document.getElementById('brand-two-images');
+let brandImagePin = document.getElementById('brand-image-pin');
+
+let brandImageNotPin = document.getElementById('brand-image-notPin');
+
+ScrollTrigger.create({
+  trigger: '.make-gallery--col-right',
+  scroller: '.smooth-scroll',
+  start: 'top 30%',
+  end: 'bottom 20%',
+  // the nect line (with the arrow function) is 'a functional value' () =>
+  // end: () =>
+  //   `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
+  // this line ensures the functional value gets recalculated on resize
+  invalidateOnRefresh: true,
+  pin: brandImagePin,
+  // pinSpacing: true,
+  // markers: {
+  //   startColor: 'purple',
+  //   endColor: 'fuschia',
+  //   fontSize: '20px',
+  //   indent: 200,
+  // },
 });

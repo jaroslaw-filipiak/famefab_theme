@@ -33,7 +33,7 @@
                 <?php if ( $home_second_section_link_to_section ) : ?>
                 <a href="<?php echo esc_url( $home_second_section_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed=".3"
-                    class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
+                    class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-start p-0 content-and-arrow__who-we-are-section">
                     <div class="pe-4"><small
                             class="cursor-pointer"><?php echo esc_html( $home_second_section_link_to_section['title'] ); ?></small>
                     </div>

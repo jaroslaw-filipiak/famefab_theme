@@ -7,7 +7,7 @@
 <div class="our-reach--counter">
     <p>our reach</p>
     <div class="d-flex">
-        <div id="ourReachValue" class="our-reach--counter-value">-140</div>
+        <div id="ourReachValue" class="our-reach--counter-value">0</div>
         <p class="our-reach-unit">k</p>
     </div>
 </div>
@@ -24,5 +24,7 @@
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-make-with-bg' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-make-gallery' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-contact-us' ); ?>
+
+
 
 <?php get_footer() ?>

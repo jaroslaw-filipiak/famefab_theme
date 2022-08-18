@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="manage-gallery">
+<section id="home-manage-gallery" class="manage-gallery">
     <div class="container-fluid h-100">
         <div class="row h-100" style="position: relative">
             <div class=" col-2 d-md-block col-md-3  ps-0"></div>
@@ -17,7 +17,7 @@
                 <!-- text + arrow button -->
                 <div>
                     <div data-scroll data-scroll-speed="1"
-                        class="d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
+                        class="gsap_reveal_home_manage_slide_content d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
                         <?php the_field( 'home_section_manage_gallery_text_content' ); ?>
                     </div>
                     <?php $home_section_manage_gallery_link_to_section = get_field( 'home_section_manage_gallery_link_to_section' ); ?>
@@ -25,7 +25,7 @@
 
                     <a href="<?php echo esc_url( $home_section_manage_gallery_link_to_section['url'] ); ?>"
                         data-scroll-to data-scroll data-scroll-speed=".3"
-                        class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
+                        class="gsap_reveal_home_manage_slide_content link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
                         <div class="pe-4"><small
                                 class="cursor-pointer"><?php echo esc_html( $home_section_manage_gallery_link_to_section['title'] ); ?></small>
                         </div>
@@ -79,11 +79,11 @@
             </div>
         </div>
     </div>
-    <div class="manage-gallery--title-wrapper">
+    <!-- <div class="manage-gallery--title-wrapper">
         <div class="font-small-green text-uppercase d-none d-lg-block gsap__we-love-to-manage-horizontaly__title ">
             <?php the_field( 'home_section_manage_gallery_pretitle' ); ?></div>
         <div class="manage-gallery--title gsap__we-love-to-manage-horizontaly ">
             <p><?php the_field( 'home_section_manage_gallery_title' ); ?></p>
         </div>
-    </div>
+    </div> -->
 </section>
