@@ -48,10 +48,10 @@
 
             </div>
 
-            <?php if(!is_page_template( 'page-templates/page-home.php' )) { ?>
-            <!-- section-indicator on other pages -->
+            <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
+            <!-- section-indicator on over ons page -->
             <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
-                <span class="top-bar--page-title ">Who we are</span>
+                <span class="top-bar--page-title ">Over ons</span>
             </div>
             <?php } ?>
 

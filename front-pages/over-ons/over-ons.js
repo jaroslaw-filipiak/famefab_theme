@@ -174,3 +174,37 @@ gsap.to('.work--title', {
   duration: 1,
   ease: 'easeIn',
 });
+
+// change dynamic title and class
+
+function changeTextAndClass(value, addClass) {
+  const item = document.querySelector('.top-bar--page-title');
+  item.innerHTML = value;
+  item.classList = 'top-bar--page-title ' + addClass;
+}
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.over-ons-title-trigger',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Over ons', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Over ons', 'color-green'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Over ons', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Over ons', 'color-yellow'),
+  },
+});
