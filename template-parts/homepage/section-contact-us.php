@@ -69,8 +69,6 @@
     </div>
     <div class="contact-us--title-wrapper">
 
-        <div class="contact-us--title">
-            <p><?php the_field( 'home_section_contact_title' ); ?></p>
-        </div>
+
     </div>
 </section>

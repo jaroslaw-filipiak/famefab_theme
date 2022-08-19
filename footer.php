@@ -81,6 +81,33 @@
 </div>
 <?php } ?>
 
+<!--  contact us title on homepage / section make with bg  -->
+<?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
+<div class="contact-us--title" style="opacity: 1;">
+    <p><?php the_field( 'home_section_contact_title' ); ?></p>
+</div>
+<?php } ?>
+
+<!--  over ons title on over ons page first slide  -->
+<?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
+
+<h1 class="over-ons--title color-green">
+    <?php the_field( 'page_over_ons_first_section_big_title' ); ?>
+</h1>
+<?php } ?>
+
+<!--  work title / over ons page  -->
+<?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
+
+<h1 class="work--title color-green">
+    Work
+</h1>
+<?php } ?>
+
+
+
+
+<!-- cursor -->
 <div class="cursor">
     <div class="cursor__ball cursor__ball--big ">
         <svg height="30" width="30">
@@ -93,7 +120,8 @@
             <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
         </svg>
     </div>
-</div>
+</div><!--  <-- cursor end -->
+
 </body>
 
 </html>

@@ -32,7 +32,7 @@
                     <?php if ( $page_over_ons_last_section_link_to_section ) : ?>
 
                     <a href="<?php echo esc_url( $page_over_ons_last_section_link_to_section['url'] ); ?>"
-                        data-scroll-to data-scroll data-scroll-speed=".3"
+                        data-scroll-to data-scroll data-scroll-speed="2.3"
                         class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                         style="margin-top: 80px;">
                         <div class="pe-4 mb-2"><small

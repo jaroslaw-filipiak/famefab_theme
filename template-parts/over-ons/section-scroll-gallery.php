@@ -20,7 +20,7 @@
                     $image = get_sub_field('img'); ?>
 
             <!-- loop -->
-            <div data-scroll data-scroll-speed="<?php echo mt_rand(1 , 2)?>"
+            <div data-scroll data-scroll-speed="1"
                 class="grid-area-photo<?php echo get_row_index() ?> bg-cover bg-no-repeat bg-center br-30"
                 style="opacity: 0;background-image: url('<?php echo $image ?>')">
             </div>

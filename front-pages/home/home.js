@@ -492,22 +492,40 @@ gsap.from('.contact-us-row-1', {
 
 // contact-us--title
 
+var contactUsTitleOnHomepage = gsap.timeline();
+
 // make horizontal 2
-gsap.from('.contact-us--title', {
+contactUsTitleOnHomepage.from('.contact-us--title', {
   scrollTrigger: {
     trigger: '.contact--trigger',
     scroller: '.smooth-scroll',
     start: 'top bottom',
-    end: '90% top',
+    end: 'top 50%',
     scrub: true,
-
     // start: '20px 80%',
-    // markers: false,
+    markers: false,
   },
 
-  xPercent: -300,
+  xPercent: 1400,
   opacity: 0,
   duration: 1,
+  ease: 'easeIn',
+});
+
+contactUsTitleOnHomepage.to('.contact-us--title', {
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    start: 'top bottom',
+    end: 'top 40%',
+    scrub: true,
+    // start: '20px 80%',
+    markers: false,
+  },
+
+  // xPercent: 1400,
+  opacity: 0,
+  // duration: 1,
   ease: 'easeIn',
 });
 
@@ -682,3 +700,20 @@ gsap.to('.top-bar--page-title', {
     onLeaveBack: () => changeTextAndClass('Make', 'color-green'),
   },
 });
+
+// contact us title horizontal
+// gsap.from('.contact-us--title', {
+//   scrollTrigger: {
+//     trigger: '.contact-us-row-1',
+//     scroller: '.smooth-scroll',
+//     start: 'top bottom',
+//     end: 'top 20%',
+//     scrub: true,
+//     markers: true,
+//   },
+
+//   xPercent: 1400,
+//   opacity: 0,
+//   duration: 1,
+//   ease: 'easeIn',
+// });

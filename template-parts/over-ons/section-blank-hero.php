@@ -9,31 +9,29 @@
 
 ?>
 
+
+<!-- <div class="pre--blank-hero"></div> -->
 <section class="blank-hero bg-violet">
+    <div class="blank-hero-color-overlay"></div>
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
-                <div class="blank-hero--content color-green">
-                    <?php the_field( 'page_over_ons_first_section_text_content' ); ?>
-                </div>
+
             </div>
         </div>
     </div>
-    <h1 class="color-green">
-        <?php the_field( 'page_over_ons_first_section_big_title' ); ?>
-    </h1>
 </section>
 
 <?php $page_over_ons_second_section_background_image = get_field( 'page_over_ons_second_section_background_image' ); ?>
 
-<section class="blank-hero bg-cover bg-no-repeat bg-center over-ons-title-trigger"
+<section id="notPin" class="blank-hero bg-cover bg-no-repeat bg-center over-ons-title-trigger over-ons-pin-trigger"
     style="background-size: 140%; background-image: url('<?php echo esc_url( $page_over_ons_second_section_background_image['url'] ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class=" col-10 col-md-9 text-center h-100  ">
-                <div class="blank-hero--content color-yellow">
+            <div class="col-10 col-md-9 text-center h-100 over-ons-content-pinned" id="pin">
+                <div class=" color-yellow blank-hero--content">
                     <?php the_field( 'page_over_ons_second_section_text_content' ); ?>
                 </div>
 
@@ -43,9 +41,9 @@
 
                 <a href="<?php echo esc_url( $page_over_ons_second_section_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed=".3"
-                    class="link-green-unstyled col-6 d-flex align-items-center justify-content-start p-0"
+                    class="blank-hero--content link-green-unstyled col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
-                    <div class="pe-4 mb-2 color-yellow"><small
+                    <div class="pe-4 mb-2 color-yellow text-uppercase"><small
                             class="cursor-pointer"><?php echo esc_html( $page_over_ons_second_section_link_to_section['title'] ); ?></small>
                     </div>
                     <div class=" arrow-right-icon">
@@ -70,5 +68,5 @@
         </div>
     </div>
 
-    <h1 class="color-yellow">Over ons</h1>
+    <!-- <h1 class="color-yellow">Over ons</h1> -->
 </section>

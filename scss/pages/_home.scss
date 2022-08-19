@@ -819,9 +819,6 @@ body {
   }
 
   &--title-wrapper {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -829,6 +826,10 @@ body {
   }
 
   &--title {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+
     p {
       font-size: 70px;
       line-height: 70px;

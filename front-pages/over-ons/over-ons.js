@@ -1,44 +1,65 @@
 import gsap from 'gsap';
 
-// blank-hero--content color-green
-// make title
+// title from bottom
+gsap.from('.over-ons--title', {
+  scrollTrigger: {
+    trigger: 'body',
+    scroller: '.smooth-scroll',
+    // scrub: true,
+    markers: false,
+    toggleActions: 'play none none reset',
+  },
+  bottom: '-400',
+  duration: 1,
+  ease: 'easeIn',
+});
+
+// title change color
+gsap.to('.over-ons--title', {
+  scrollTrigger: {
+    trigger: '.blank-hero--content',
+    scroller: '.smooth-scroll',
+    // scrub: true,
+    start: 'top bottom',
+    end: 'top bottom',
+    onEnter: () => changeOverOnsClass('color-yellow'),
+    onLeaveBack: () => changeOverOnsClass('color-green'),
+    toggleActions: 'play none none reset',
+  },
+});
+
+function changeOverOnsClass(className) {
+  console.log('change over ons class');
+  const title = document.querySelector('.over-ons--title');
+  title.classList = `over-ons--title ${className}`;
+}
+
+// title opacity to zero
+gsap.to('.over-ons--title', {
+  scrollTrigger: {
+    trigger: '.blank-hero--content',
+    scroller: '.smooth-scroll',
+    // scrub: true,
+    start: 'top 10%',
+    end: 'top top',
+
+    toggleActions: 'play none none reset',
+  },
+  opacity: 0,
+});
+
+// title opacity to zero
 gsap.from('.blank-hero--content', {
   scrollTrigger: {
-    trigger: '.blank-hero',
+    trigger: '.over-ons-pin-trigger',
     scroller: '.smooth-scroll',
     // scrub: true,
-    markers: false,
-  },
+    start: 'top 20%',
+    end: 'top 45%',
 
-  yPercent: -150,
-  duration: 1,
-  ease: 'easeIn',
-});
-
-// make title
-gsap.from('.blank-hero h1', {
-  scrollTrigger: {
-    trigger: '.blank-hero',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    markers: false,
+    toggleActions: 'play none none reset',
   },
-  yPercent: 200,
-  duration: 1,
-  ease: 'easeIn',
-});
-
-// make title
-gsap.to('.blank-hero h1', {
-  scrollTrigger: {
-    trigger: '.over-ons-title-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    markers: false,
-  },
-  xPercent: 200,
-  duration: 1,
-  ease: 'easeIn',
+  opacity: 0,
 });
 
 // bg scale
@@ -54,8 +75,6 @@ gsap.to('.over-ons-title-trigger', {
     // end: 'top center',
   },
 });
-
-// gallery / wp / opacity + scale bg size
 
 gsap.to('.grid-area-photo1', {
   opacity: 1,
@@ -121,4 +140,37 @@ gsap.to('.grid-area-photo6', {
     start: 'top bottom',
     end: 'top center',
   },
+});
+// work title
+gsap.to('.work--title', {
+  scrollTrigger: {
+    trigger: '.grid-area-photo4',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    // end: 'top center',
+    end: 'top top',
+    markers: false,
+  },
+  left: '20',
+  duration: 1,
+  ease: 'easeIn',
+});
+
+gsap.to('.work--title', {
+  scrollTrigger: {
+    trigger: '.grid-area-photo2',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    // end: 'top center',
+    end: 'top top',
+  },
+  opacity: 0,
+  duration: 1,
+  ease: 'easeIn',
 });
