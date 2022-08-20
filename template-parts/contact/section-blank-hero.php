@@ -17,7 +17,7 @@
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  ">
-                <div class="blank-hero--content color-yellow">
+                <div class="blank-hero--content color-yellow gsap__page-contact-content-reveal">
                     <?php the_field( 'page_contact_second_section_text_content' ); ?>
                 </div>
 
@@ -25,7 +25,7 @@
                 <?php if ( $page_contact_second_section_link_to_section ) : ?>
                 <a href="<?php echo esc_url( $page_contact_second_section_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed=".3"
-                    class="link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                    class="gsap__page-contact-content-reveal link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
                     <div class="pe-4 mb-2 color-yellow"><small
                             class="cursor-pointer"><?php echo esc_html( $page_contact_second_section_link_to_section['title'] ); ?></small>

@@ -1,5 +1,12 @@
-.cases {
+.case-area-pinned {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cases {
+  // height: 100vh;
   padding: 20px;
   position: relative;
   @include default-transition;
@@ -8,6 +15,17 @@
 
   @include media-breakpoint-up(xl) {
     padding: 40px 40px 0px 40px;
+  }
+
+  &--dynamic-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   h1 {
@@ -50,7 +68,7 @@
 
   &--list {
     @include media-breakpoint-up(lg) {
-      // margin-top: 40vh;
+      margin-top: 40vh;
       display: flex;
       justify-content: flex-end;
     }
@@ -71,10 +89,11 @@
 
         @include media-breakpoint-up(md) {
           font-size: 46px;
+          text-align: right;
         }
 
         @include media-breakpoint-up(lg) {
-          font-size: 5 6px;
+          font-size: 56px;
         }
         @include media-breakpoint-up(xl) {
           font-size: 75px;
@@ -91,18 +110,18 @@
         display: inline;
 
         &:hover {
-          opacity: 1;
-          transform: scale(1.03);
-          left: 5px;
-          @include default-transition;
+          // opacity: 1;
+          // transform: scale(1.03);
+          // left: 5px;
+          // @include default-transition;
 
-          .case--photo {
-            transform: scale(1.03);
-          }
+          // .case--photo {
+          //   transform: scale(1.03);
+          // }
 
-          .content-and-arrow {
-            border: 3px solid red !important;
-          }
+          // .content-and-arrow {
+          //   border: 3px solid red !important;
+          // }
         }
       }
     }
@@ -122,12 +141,12 @@
   }
 
   &--info {
-    @include default-transition;
-    position: absolute;
-    left: calc(289px + 40px);
-    top: 120px;
-    transform: translate(-50% -50%);
-    width: 260px;
-    text-transform: uppercase;
+    // @include default-transition;
+    // position: absolute;
+    // left: calc(289px + 40px);
+    // top: 120px;
+    // transform: translate(-50% -50%);
+    // width: 260px;
+    // text-transform: uppercase;
   }
 }

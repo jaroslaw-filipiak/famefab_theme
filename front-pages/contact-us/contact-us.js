@@ -23,31 +23,94 @@ gsap.to('#ourReachValue', {
   },
 });
 
-// contact us text
+// title from bottom
 gsap.from('.contact-us__hero-gsap', {
   scrollTrigger: {
-    trigger: '.contact-us-hero',
+    trigger: 'body',
     scroller: '.smooth-scroll',
-    scrub: true,
+    // scrub: true,
     markers: false,
-    start: 'top bottom',
+    toggleActions: 'play none none reset',
   },
-  bottom: -200,
-  duration: 0.8,
+  bottom: '-400',
+  duration: 1,
   ease: 'easeIn',
-  opacity: 0,
 });
+
+// title change color
+
+function changeContactUsClass(className) {
+  console.log('change over ons class');
+  const title = document.querySelector('.contact-us__hero-gsap');
+  title.classList = `contact-us__hero-gsap ${className}`;
+}
 
 gsap.to('.contact-us__hero-gsap', {
   scrollTrigger: {
-    trigger: '.contact-us-hero',
+    trigger: '.gsap__reveal-trigger__contact-us',
     scroller: '.smooth-scroll',
-    scrub: true,
-    // markers: true,
-    start: 'top top',
+    // scrub: true,
+    start: 'top bottom',
+    end: 'top bottom',
+    onEnter: () => changeContactUsClass('color-yellow'),
+    onLeaveBack: () => changeContactUsClass('color-green'),
+    toggleActions: 'play none none reset',
   },
-  xPercent: -300,
 });
+
+// title opacity to zero
+gsap.to('.contact-us__hero-gsap', {
+  scrollTrigger: {
+    trigger: '.gsap__reveal-trigger__contact-us',
+    scroller: '.smooth-scroll',
+    // scrub: true,
+    start: 'top 10%',
+    end: 'top top',
+
+    toggleActions: 'play none none reset',
+  },
+  opacity: 0,
+});
+
+// content from zero
+gsap.from('.gsap__page-contact-content-reveal', {
+  scrollTrigger: {
+    trigger: '.gsap__reveal-trigger__contact-us',
+    scroller: '.smooth-scroll',
+    // scrub: true,
+    start: 'top 20%',
+    end: 'top 45%',
+
+    toggleActions: 'play none none reset',
+  },
+  opacity: 0,
+});
+
+// contact us text
+// gsap.from('.contact-us__hero-gsap', {
+//   scrollTrigger: {
+//     trigger: '.contact-us-hero',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     markers: false,
+//     start: 'top bottom',
+//   },
+//   bottom: -200,
+//   duration: 0.8,
+//   ease: 'easeIn',
+//   opacity: 0,
+// });
+
+// gsap.to('.contact-us__hero-gsap', {
+//   scrollTrigger: {
+//     trigger: '.contact-us-hero',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     // markers: true,
+//     start: 'top top',
+//   },
+//   xPercent: -300,
+// });
 
 // gsap.to('.contact-us__hero-gsap', {
 //   scrollTrigger: {
@@ -123,4 +186,38 @@ gsap.from('.manage-gallery--title', {
   scale: 2,
   opacity: 0,
   ease: 'easeIn',
+});
+
+// change dynamic title and class
+
+function changeTextAndClass(value, addClass) {
+  const item = document.querySelector('.top-bar--page-title');
+  item.innerHTML = value;
+  item.classList = 'top-bar--page-title ' + addClass;
+}
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.gsap__reveal-trigger__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Contact', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Contact', 'color-green'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.who-we-are__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 5%',
+    end: 'top 3%',
+    onEnter: () => changeTextAndClass('Contact', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Contact', 'color-yellow'),
+  },
 });

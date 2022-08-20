@@ -104,20 +104,26 @@
 </h1>
 <?php } ?>
 
+<!--  work title /  page: make -->
+<?php if(is_page_template( 'page-templates/page-make.php' )) { ?>
+<h1 class="make--fixed-title color-green"><?php the_field( 'page_make_first_section_title' ); ?></h1>
+<div class="cases--dynamic-bg"></div>
+<?php } ?>
+
+
 <!-- page manage stuff -->
 
 <?php if(is_page_template( 'page-templates/page-manage.php' )) { ?>
 
 <h1 class="manage--title color-green"><?php the_field( 'page_manage_first_section_title' ); ?></h1>
-<?php } ?>
-
 <h1 class="d-none d-lg-flex color-green influencers--title">Influencers</h1>
-
 <div class="influencers--dynamic-bg"></div>
 
-
+<?php } ?>
 
 <!-- end page manage stuff -->
+
+
 
 <!-- cursor -->
 <div class="cursor">

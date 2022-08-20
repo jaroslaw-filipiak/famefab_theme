@@ -14,13 +14,10 @@
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
-                <div class="blank-hero--content color-green">
-                    <?php the_field( 'page_make_first_section_text_content' ); ?>
-                </div>
             </div>
         </div>
     </div>
-    <h1 class="color-green"><?php the_field( 'page_make_first_section_title' ); ?></h1>
+
 </section>
 
 
@@ -30,7 +27,8 @@
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  ">
-                <div class="blank-hero--content color-yellow" data-scroll data-scroll-speed="2">
+                <div class="gsap_content_opacity-from-zero blank-hero--content color-yellow" data-scroll
+                    data-scroll-speed="2">
                     <?php the_field( 'second_section_with_background_text_content' ); ?>
                 </div>
 
@@ -41,7 +39,7 @@
 
                 <a href="<?php echo esc_url( $second_section_with_background_link_to_section['url'] ); ?>" data-scroll
                     data-scroll-speed="3"
-                    class="link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                    class="gsap_content_opacity-from-zero blank-hero--content link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
                     <div class="pe-4 mb-2 color-yellow">
                         <small><?php echo esc_html( $second_section_with_background_link_to_section['title'] ); ?></small>
@@ -67,5 +65,5 @@
         </div>
     </div>
 
-    <h1 class="color-yellow">Make</h1>
+
 </section>

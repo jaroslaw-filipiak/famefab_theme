@@ -19,25 +19,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_62fb917660c1d",
-            "label": "Text Content",
-            "name": "page_make_first_section_text_content",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
             "key": "field_62fb917e60c1e",
             "label": "Title",
             "name": "page_make_first_section_title",
@@ -199,5 +180,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660662640
+    "modified": 1661003323
 }

@@ -141,6 +141,7 @@ gsap.to('.grid-area-photo6', {
     end: 'top center',
   },
 });
+
 // work title
 gsap.to('.work--title', {
   scrollTrigger: {

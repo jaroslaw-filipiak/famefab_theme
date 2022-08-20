@@ -74,6 +74,22 @@
             </div>
             <?php } ?>
 
+            <?php if(is_page_template( 'page-templates/page-make.php' )) { ?>
+            <!-- section-indicator on page: make-->
+            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title ">Make</span>
+            </div>
+            <?php } ?>
+
+            <?php if(is_page_template( 'page-templates/page-contact.php' )) { ?>
+            <!-- section-indicator on page: contact us-->
+            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title ">Contact</span>
+            </div>
+            <?php } ?>
+
+
+
             <div class="col-4 col-md-6 d-flex align-items-center justify-content-end pe-0">
                 <a class="top-bar--contact-link d-none d-lg-inline-flex gsap__section-indicator-home-page"
                     href="<?php echo get_home_url('', 'contact') ?>">Contact us</a>
