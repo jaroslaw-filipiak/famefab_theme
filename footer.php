@@ -104,8 +104,20 @@
 </h1>
 <?php } ?>
 
+<!-- page manage stuff -->
+
+<?php if(is_page_template( 'page-templates/page-manage.php' )) { ?>
+
+<h1 class="manage--title color-green"><?php the_field( 'page_manage_first_section_title' ); ?></h1>
+<?php } ?>
+
+<h1 class="d-none d-lg-flex color-green influencers--title">Influencers</h1>
+
+<div class="influencers--dynamic-bg"></div>
 
 
+
+<!-- end page manage stuff -->
 
 <!-- cursor -->
 <div class="cursor">

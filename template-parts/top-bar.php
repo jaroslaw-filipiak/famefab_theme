@@ -48,6 +48,17 @@
 
             </div>
 
+
+
+            <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
+            <!-- section-indicator on homepage -->
+            <div
+                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
+                <span class="top-bar--page-title ">Who we are</span>
+            </div>
+            <?php } ?>
+
+
             <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
             <!-- section-indicator on over ons page -->
             <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
@@ -56,11 +67,10 @@
             <?php } ?>
 
 
-            <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
-            <!-- section-indicator on homepage -->
-            <div
-                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
-                <span class="top-bar--page-title ">Who we are</span>
+            <?php if(is_page_template( 'page-templates/page-manage.php' )) { ?>
+            <!-- section-indicator on manage page -->
+            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title ">Manage</span>
             </div>
             <?php } ?>
 

@@ -9,13 +9,17 @@
 
 ?>
 
+
 <section class="influencers">
-    <div class="container-fluid h-100">
-        <div class="row h-100">
+
+    <div class="container-fluid">
+        <div class="row ">
+
+            <!-- influencer left side -->
             <div
-                class="col-2 d-none  d-md-flex align-items-end justify-content-start col-md-3  ps-0 h-100 influencer  ">
+                class="col-2 d-none d-md-flex align-items-start justify-content-start col-md-3  ps-0  influencer influencer-area-pinned">
                 <div style="position: relative;">
-                    <div data-scroll data-scroll-speed="3" class="d-none d-lg-flex influencer--photo"></div>
+                    <div class="d-none d-lg-flex influencer--photo bg-cover bg-no-repeat"></div>
                     <div class="d-none d-lg-flex influencer--info font-green-default">
                         <div>
                             <p><span class="influencer-hover-output--name"></span></p>
@@ -46,16 +50,18 @@
                 </div>
 
             </div>
-            <div class="col-12 col-md-9 text-end text-xl-center h-100 influencers--list-wrapper">
+
+            <!-- influencer right side -->
+            <div class="col text-end text-xl-center  influencers--list-wrapper influencer-area-scrollable">
                 <div class="influencers--list">
-                    <div class="d-inline-flex flex-column justify-content-end">
+                    <div class="d-flex flex-column justify-content-end iterable--wrapper">
                         <div class="iterable">
 
                             <?php 
 
                                     $args = array(
                                         'post_type' => 'influencer_post_type',
-                                        'posts_per_page' => 5,
+                                        'posts_per_page' => -1,
                                     );
                                     // the query
                                     $the_query = new WP_Query( $args ); ?>
@@ -68,11 +74,14 @@
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 
-                            <div data-index="<?php echo $the_query->current_post +1;  ?>" data-info="Wij werken samen met
-                            de leukste influencers
-                            & publishers" data-link="<?php echo get_permalink() ?>"
-                                data-bg="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
-                                class="influencers--list-item"><?php the_title() ?></div>
+                            <div data-index="<?php echo $the_query->current_post +1;  ?>"
+                                data-info="<?php the_field( 'page_manage_excerpt' ); ?>"
+                                data-link="<?php echo get_permalink() ?>"
+                                data-bg="<?php the_field( 'big_image_after_hover' ); ?>"
+                                data-thumb="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
+                                class="influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
+                                <?php the_title() ?>
+                            </div>
 
                             <?php endwhile; ?>
                             <!-- end of the loop -->
@@ -88,11 +97,9 @@
 
 
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="d-none d-lg-flex color-green">Influencers</h1>
 </section>

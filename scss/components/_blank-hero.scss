@@ -95,6 +95,7 @@
   &--content {
     text-align: left;
     margin-top: 15vh;
+    opacity: 1;
 
     @include media-breakpoint-up(lg) {
       width: 325px;

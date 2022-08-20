@@ -1,0 +1,40 @@
+.manage--title {
+  font-size: 70px;
+  line-height: 70px;
+  position: fixed;
+  bottom: -30px;
+  left: 50%;
+  width: 100%;
+  text-align: left;
+  @include font-serif;
+
+  // @include default-transition;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 140px;
+    line-height: 140px;
+    bottom: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 200px;
+    line-height: 200px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 230px;
+    line-height: 230px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: $titleSizeMax;
+    line-height: 300px;
+  }
+}

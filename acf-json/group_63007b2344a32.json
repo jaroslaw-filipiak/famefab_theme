@@ -1,0 +1,84 @@
+{
+    "key": "group_63007b2344a32",
+    "title": "Single: Influencer",
+    "fields": [
+        {
+            "key": "field_63007b2fd3ce5",
+            "label": "Excerpt",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63007b44d3ce6",
+            "label": "Page Manage excerpt",
+            "name": "page_manage_excerpt",
+            "type": "text",
+            "instructions": "Excerpt is visible on page manage , on hover ,  next to photo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6300b10cf7fb3",
+            "label": "Big Image After Hover",
+            "name": "big_image_after_hover",
+            "type": "image",
+            "instructions": "Big image after hover on page manage influencers list",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "influencer_post_type"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1660989814
+}
