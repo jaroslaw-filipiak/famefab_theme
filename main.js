@@ -75,10 +75,6 @@ window.addEventListener('DOMContentLoaded', () => {
   init();
 });
 
-ScrollTrigger.defaults({
-  // markers: true,
-});
-
 // let tl = gsap.timeline({
 //   scrollTrigger: {
 //     trigger: '.logo_big',
