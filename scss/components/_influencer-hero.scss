@@ -21,7 +21,7 @@
   z-index: 60;
   @include font-serif;
   display: inline-flex;
-  animation: influencer-heading 35s infinite;
+  animation: influencer-heading 55s infinite;
   span {
     display: inline-block;
     margin-right: 100px;
@@ -116,6 +116,8 @@
     text-align: left;
     margin-top: 15vh;
     opacity: 1;
+    position: relative;
+    top: 0;
 
     @include media-breakpoint-up(lg) {
       width: 325px;

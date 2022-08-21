@@ -64,6 +64,15 @@
             </div>
             <?php } ?>
 
+            <?php if('influencer_post_type' === get_post_type()) { ?>
+            <!-- section-indicator on single influencers -->
+            <div
+                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
+                <span class="top-bar--page-title color-yellow">Influencers</span>
+            </div>
+            <?php } ?>
+
+
 
             <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
             <!-- section-indicator on over ons page -->
