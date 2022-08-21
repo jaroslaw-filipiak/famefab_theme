@@ -1,0 +1,62 @@
+.single-influencer {
+  &--title {
+    color: $yellow;
+    font-size: 83px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    @include font-serif;
+    z-index: 60;
+    opacity: 1;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 130px;
+      left: 20px;
+      left: initial;
+    }
+  }
+
+  &--title-cases {
+    color: $yellow;
+    font-size: 83px;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    @include font-serif;
+    z-index: 60;
+    opacity: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 130px;
+      left: 20px;
+      left: initial;
+    }
+  }
+
+  &--case {
+    position: relative;
+
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 30px;
+      text-decoration: none;
+      opacity: 0;
+      @include default-transition;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+        @include default-transition;
+      }
+    }
+  }
+}

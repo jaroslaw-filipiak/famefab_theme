@@ -1,0 +1,78 @@
+.influencer-cases {
+  // height: 100vh;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px;
+  }
+
+  .second-row,
+  .third-row {
+    // min-height: 100vh;
+  }
+
+  .second-row {
+    // padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 70px;
+    line-height: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    width: 100%;
+    text-align: left;
+    @include font-serif;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 80px;
+      line-height: 80px;
+      text-align: center;
+      left: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 100px;
+      line-height: 100px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 100px;
+      line-height: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 130px;
+      line-height: 130px;
+    }
+  }
+
+  &--dynamic-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include font-sans;
+  }
+
+  &--dynamic-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    @include font-sans;
+  }
+
+  &--dynamic-link {
+    margin-top: 10vh;
+    margin-left: -20px;
+  }
+
+  &--content {
+    text-align: left;
+    // margin-top: 25vh;
+    opacity: 1;
+
+    @include media-breakpoint-up(lg) {
+      width: 325px;
+    }
+  }
+}

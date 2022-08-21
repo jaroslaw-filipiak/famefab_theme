@@ -56,6 +56,8 @@ section {
 @import './scss/components/main-menu';
 @import './scss/components/top-bar';
 @import './scss/components/blank-hero';
+@import './scss/components/influencer-hero';
+@import './scss/components/influencer-cases';
 @import './scss/components/scroll-gallery';
 @import './scss/components/influencers';
 @import './scss/components/cases';
@@ -68,6 +70,7 @@ section {
 @import './scss/pages/case';
 @import './scss/pages/manage';
 @import './scss/pages/make';
+@import './scss/pages/single-influencer';
 
 // dev
 @import './scss/abstracts/debug';

@@ -13,6 +13,10 @@ export default defineConfig({
         contact: resolve(__dirname, './front-pages/contact-us/index.html'),
         detail: resolve(__dirname, './front-pages/detail/index.html'),
         caseDetail: resolve(__dirname, './front-pages/case-detail/index.html'),
+        singleInfluencer: resolve(
+          __dirname,
+          './front-pages/single-influencer/index.html'
+        ),
       },
       output: {
         entryFileNames: `[name].js`,

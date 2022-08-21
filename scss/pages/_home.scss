@@ -183,7 +183,7 @@ body {
     left: 20px;
     bottom: 20px;
     @include font-serif;
-    z-index: 9999;
+    z-index: 60;
 
     @include media-breakpoint-up(lg) {
       font-size: 130px;
