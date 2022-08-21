@@ -28,7 +28,7 @@
                             <div></div>
 
                             <a href="#"
-                                class="link-green-unstyled case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0">
+                                class="link-green-unstyled case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0 opacity-0">
                                 <div class="pe-4"><small>see profile</small></div>
                                 <div class=" arrow-right-icon">
                                     <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58"

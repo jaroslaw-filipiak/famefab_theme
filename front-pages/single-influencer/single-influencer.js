@@ -14,6 +14,32 @@ gsap.registerPlugin(ScrollTrigger);
 //   },
 // });
 
+gsap.to('#FBValue', {
+  innerText: 435,
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: 'body',
+    scroller: '.influencer-hero',
+    // scrub: true,
+    // start: 'top top',
+    // end: 'top top ',
+  },
+  duration: 6,
+});
+
+gsap.to('#InstaValue', {
+  innerText: 28945,
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: 'body',
+    scroller: '.influencer-hero',
+    // scrub: true,
+    // start: 'top top',
+    // end: 'top top ',
+  },
+  duration: 6,
+});
+
 ScrollTrigger.create({
   trigger: '.influencer-hero',
   scroller: '.smooth-scroll',

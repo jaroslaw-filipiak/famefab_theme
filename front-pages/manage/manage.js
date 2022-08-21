@@ -179,9 +179,10 @@ function handleInfluencer(influencer) {
   outputInfluencerName.innerHTML = influencer.dataset.name;
   outputInfo.innerHTML = influencer.dataset.info;
   outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
+  dynamicLink.classList.remove('opacity-0');
   dynamicLink.setAttribute('href', influencer.dataset.link);
 
-  influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+  // influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
 
   influencersBG.classList = `influencers--dynamic-bg opacity-0`;
   outputInfluencerName.classList = `influencer-hover-output--name`;
@@ -189,14 +190,14 @@ function handleInfluencer(influencer) {
 
   const allInfluencersTitles = document.querySelectorAll('.influencer--title');
 
-  allInfluencersTitles.forEach((item) => {
-    item.classList = `influencer--title color-green`;
-  });
+  // allInfluencersTitles.forEach((item) => {
+  //   item.classList = `influencer--title color-green`;
+  // });
 
   setTimeout(() => {
-    influencersBG.classList = `influencers--dynamic-bg opacity-1`;
-    outputInfo.classList = `influencer-hover-output color-yellow`;
-    outputInfluencerName.classList = `influencer-hover-output--name color-yellow`;
+    // influencersBG.classList = `influencers--dynamic-bg opacity-1`;
+    // outputInfo.classList = `influencer-hover-output color-yellow`;
+    // outputInfluencerName.classList = `influencer-hover-output--name color-yellow`;
   }, 3000);
 }
 

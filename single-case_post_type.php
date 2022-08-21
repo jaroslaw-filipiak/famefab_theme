@@ -85,14 +85,27 @@
 </section>
 
 <section class="detail-pagination ">
+
+    <?php
+    
+    $prevPost = get_previous_post();
+    $prevThumbnail = get_the_post_thumbnail_url( $prevPost->ID );
+
+    $nextPost = get_previous_post();
+    $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
+
+?>
+
     <div class="container-fluid h-100">
         <div class="row h-100">
+
             <div class="bg-cover bg-no-repeat bg-center col  item-prev"
-                style="background-size: 160%; background-image: url('<?php echo get_theme_file_uri() ?>/dist/assets/img/prev-item.jpg')">
-                <div class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
-                    style="margin-top: 80px;">
+                style="background-size: 160%; background-image: url('<?php echo $prevThumbnail ?>')">
+                <a href="<?php echo get_permalink($prevPost->ID) ?>"
+                    class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
+                    style="margin-top: 80px; text-decoration: none;">
                     <div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
-                        <small>previous</small>
+                        <small>Prev</small>
                     </div>
                     <div data-scroll data-scroll-speed="1" class="arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
@@ -109,14 +122,16 @@
 
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="bg-cover bg-no-repeat bg-center col  item-next"
-                style="background-size: 160%; background-image: url('<?php echo get_theme_file_uri() ?>/dist/assets/img/next-item.jpg')">
-                <div class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
-                    style="margin-top: 80px;">
+
+            <div class="bg-cover bg-no-repeat bg-center col item-next"
+                style="background-size: 160%; background-image: url('<?php echo $nextThumbnail ?>')">
+                <a href="<?php echo get_permalink($nextPost->ID) ?>"
+                    class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                    style="margin-top: 80px; text-decoration: none">
                     <div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
-                        <small>next</small>
+                        <small>next </small>
                     </div>
                     <div data-scroll data-scroll-speed="1" class="arrow-right-icon">
                         <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
@@ -132,7 +147,7 @@
                             </svg>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

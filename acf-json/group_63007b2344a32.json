@@ -81,7 +81,7 @@
             "key": "field_63023621fcdfc",
             "label": "Facebook Counter",
             "name": "counter_facebook",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -94,13 +94,15 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_63023637fcdfd",
             "label": "Insta Counter",
             "name": "counter_insta",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -113,7 +115,9 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_63023518fcdf7",
@@ -391,5 +395,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1661089637
+    "modified": 1661101432
 }

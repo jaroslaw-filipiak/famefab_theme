@@ -162,7 +162,7 @@ ScrollTrigger.create({
 // TODO: change color to yellow fix
 
 function handleInfluencer(influencer) {
-  const influencersBG = document.querySelector('.cases--dynamic-bg');
+  // const influencersBG = document.querySelector('.cases--dynamic-bg');
   // const outputPhoto = document.querySelector('.case--photo');
   const outputInfo = document.querySelector('.case-hover-output');
   const outputInfluencerName = document.querySelector(
@@ -178,11 +178,12 @@ function handleInfluencer(influencer) {
   outputInfluencerName.innerHTML = influencer.dataset.name;
   outputInfo.innerHTML = influencer.dataset.info;
   // outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
+  dynamicLink.classList.remove('opacity-0');
   dynamicLink.setAttribute('href', influencer.dataset.link);
 
-  influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+  // influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
 
-  influencersBG.classList = `cases--dynamic-bg opacity-0`;
+  // influencersBG.classList = `cases--dynamic-bg opacity-0`;
   outputInfluencerName.classList = `case-hover-output--name`;
   outputInfo.classList = `case-hover-output`;
 
@@ -193,9 +194,9 @@ function handleInfluencer(influencer) {
   });
 
   setTimeout(() => {
-    influencersBG.classList = `cases--dynamic-bg opacity-1`;
-    outputInfo.classList = `case-hover-output color-yellow`;
-    outputInfluencerName.classList = `case-hover-output--name color-yellow`;
+    // influencersBG.classList = `cases--dynamic-bg opacity-1`;
+    // outputInfo.classList = `case-hover-output color-yellow`;
+    // outputInfluencerName.classList = `case-hover-output--name color-yellow`;
   }, 3000);
 }
 
