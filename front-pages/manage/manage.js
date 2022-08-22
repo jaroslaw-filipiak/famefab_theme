@@ -264,3 +264,13 @@ gsap.to('.top-bar--page-title', {
     onLeaveBack: () => changeTextAndClass('Manage ', 'color-yellow'),
   },
 });
+
+// page-manage-piniata
+
+ScrollTrigger.create({
+  trigger: '.page-manage-blank-hero__gsap-trigger',
+  scroller: '.smooth-scroll',
+  start: 'top top',
+  end: 'bottom 60%',
+  pin: '.page-manage-piniata',
+});

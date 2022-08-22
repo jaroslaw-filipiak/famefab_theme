@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="blank-hero bg-violet">
+<section class="blank-hero bg-second-violet">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
@@ -17,16 +17,16 @@
             </div>
         </div>
     </div>
-
 </section>
 
-<section class="blank-hero bg-cover bg-no-repeat bg-center blank-hero-title-trigger"
+<section
+    class="blank-hero page-manage-blank-hero__gsap-trigger bg-cover bg-no-repeat bg-center blank-hero-title-trigger "
     style="background-size: 130%; background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
-            <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class=" col-10 col-md-9 text-center h-100  ">
-                <div class="gsap_opacity-reveal__blank-hero blank-hero--content color-yellow" data-scroll
+            <div class=" col-2 d-md-block col-md-2  ps-0 h-100"></div>
+            <div class=" col-10 col-md-9 text-center h-100 page-manage-piniata ">
+                <div class="gsap_opacity-reveal__blank-hero blank-hero--content color-yellow " data-scroll
                     data-scroll-speed="2">
                     <?php the_field( 'page_manage_second_section_text_content' ); ?>
                 </div>
