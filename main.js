@@ -109,19 +109,7 @@ gsap.to('.footer', {
     trigger: '.footer',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top bottom',
-    end: '+=100%',
-  },
-});
-
-gsap.from('.footer', {
-  scale: 0.4,
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.footer',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
+    start: 'top 60%',
     end: '+=100%',
   },
 });

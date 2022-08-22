@@ -1,6 +1,6 @@
 html {
   --color: transparent;
-  --footer-bg-color: #214c2c;
+  --footer-bg-color: #f1f0ef;
   --counter-color: #214c2c;
 }
 
@@ -61,11 +61,14 @@ body {
 //
 
 .who-we-are {
-  min-height: 100vh;
   padding: 20px;
 
   @include media-breakpoint-up(md) {
     padding: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 100vh;
   }
 
   &--title-wrapper {
