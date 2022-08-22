@@ -9,12 +9,15 @@
 
 ?>
 
+
 <section id="home-manage" class="home-manage bg-cover bg-no-repeat bg-center gsap__manage-bg--scale"
     style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 160%' ?>;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
+
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3  ps-0"></div>
-            <div class="col-10 col-md-9" style="position: relative;">
+            <div class="col-2 d-md-block col-md-2  ps-0"></div>
+            <div class="col-10 col-md-10 border home-manage-elem-is-pinned" style="position: relative;">
+
                 <div>
                     <p data-scroll data-scroll-speed="1"
                         class="home-manage--text-block gsap-home-manage-reveal-timeline-after-title">
@@ -53,6 +56,10 @@
             </div>
         </div>
     </div>
-    <!-- <div class="home-manage--title gsap__title-horizontaly-scrub">
-        <?php the_field( 'home_section_manage_with_bg_title' ); ?></div> -->
+
+
+    <!-- manage gallery  -->
+    <div class="container-fluid d-none"></div>
+
+
 </section>

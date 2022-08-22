@@ -13,8 +13,8 @@
     style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 170%' ?>;background-image: url('<?php the_field( 'home_section_make_with_bg_background_image' ); ?>');">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3  ps-0"></div>
-            <div class="col-10 col-md-9" style="position: relative;">
+            <div class="col-2 d-md-block col-md-2  ps-0"></div>
+            <div class="col-10 col-md-10" style="position: relative;">
                 <div>
                     <p data-scroll data-scroll-speed="1" class="make-with-bg--text-block gsap__make-with-bg-reveal">
                         <?php the_field( 'home_section_make_with_bg_small_text' ); ?></p>

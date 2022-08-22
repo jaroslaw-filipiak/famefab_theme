@@ -12,8 +12,8 @@
 <section class="hello">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3 ps-0"></div>
-            <div class="col-10 col-md-9 d-flex align-items-center justify-content-start">
+            <div class="col-2 d-md-block col-md-2 ps-0 d-md-none"></div>
+            <div class="col-10 col-md-12 d-flex align-items-center justify-content-center hello-col-right">
 
                 <div
                     class="hello--get-started-area accordion-collapse d-flex align-items-start align-items-lg-center justify-content-start">
@@ -26,7 +26,7 @@
                     <?php if ( $link_to_section ) : ?>
                     <a href="<?php echo esc_url( $link_to_section['url'] ); ?>" data-scroll-to data-scroll
                         data-scroll-speed=".3"
-                        class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end p-0">
+                        class="link-green-unstyled link-to-who-we-are d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-center justify-content-xxl-end p-0">
                         <div class="pe-4"><small
                                 class="cursor-pointer"><?php echo esc_html( $link_to_section['title'] ); ?></small>
                         </div>
@@ -53,6 +53,6 @@
             </div>
         </div>
     </div>
-    <img class="img-fluid logo_big"
-        src="<?php echo get_theme_file_uri() ?>/dist/assets/img/logo/main-big/logo-main-big.svg" alt="">
+    <img class="logo_big" src="<?php echo get_theme_file_uri() ?>/dist/assets/img/logo/main-big/logo-main-big.svg"
+        alt="">
 </section>

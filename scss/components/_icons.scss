@@ -33,4 +33,9 @@
   text-transform: uppercase;
   @include font-sans;
   letter-spacing: 1px;
+
+  small {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
 }

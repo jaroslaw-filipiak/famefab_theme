@@ -12,8 +12,8 @@
 <section class="make-gallery">
     <div class="container-fluid p-0">
         <div class="row p-0">
-            <div class="p-0 col-2 d-md-block col-md-3 ps-0"></div>
-            <div class="col-10 col-md-9 d-flex justify-content-between make-gallery--col-right">
+            <div class="p-0 col-2 d-md-block col-md-2 ps-0"></div>
+            <div class="col-10 col-md-10 d-flex justify-content-between make-gallery--col-right">
                 <!-- text + arrow button -->
                 <div id="brand-image-pin">
                     <div class="d-none d-lg-block make-gallery--subtitle font-green-default text-uppercase font-sans">

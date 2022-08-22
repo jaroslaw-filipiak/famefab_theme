@@ -23,11 +23,15 @@ body {
   position: relative;
   padding: 40px;
 
+  &-col-right {
+  }
+
   .logo_big {
     position: absolute;
     left: 50%;
     bottom: 20px;
     transform: translate(-50%, 0);
+    width: 96vw;
   }
 
   &__logo-trigger {
@@ -77,8 +81,12 @@ body {
       padding-top: 60px;
     }
 
+    @include media-breakpoint-up(xl) {
+      padding-top: 16vh;
+    }
+
     @include media-breakpoint-up(xxl) {
-      padding-top: 160px;
+      padding-top: 21vh;
     }
   }
 
@@ -193,6 +201,7 @@ body {
       // top: 30px;
       left: 20px;
       left: initial;
+      padding-left: 38px;
       // border: 2px dashed red;
     }
   }
@@ -602,6 +611,7 @@ body {
       font-size: 130px;
       left: 20px;
       left: initial;
+      padding-left: 38px;
     }
   }
 
@@ -831,6 +841,10 @@ body {
     position: fixed;
     left: 20px;
     bottom: 20px;
+
+    @include media-breakpoint-up(lg) {
+      left: 38px;
+    }
 
     p {
       font-size: 70px;

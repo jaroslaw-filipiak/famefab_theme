@@ -12,9 +12,9 @@
 <section id="who-we-are" class="who-we-are">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3  ps-0"></div>
+            <div class="col-2 d-md-block col-md-2 ps-0"></div>
             <div data-scroll data-scroll-speed="1.5"
-                class="col-10 col-md-9 who-we-are--title-wrapper  d-flex flex-column align-items-start justify-content-start">
+                class="col-10 col-md-10 who-we-are--title-wrapper  d-flex flex-column align-items-start justify-content-start">
                 <p class="who-we-are--title font-serif gsap__reveal-heading">
                     <?php the_field( 'home_second_section_main_heading' ); ?>
 

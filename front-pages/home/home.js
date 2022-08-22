@@ -128,7 +128,6 @@ homeManageTimeline.from('.gsap__title-horizontaly-scrub', {
     end: 'top 10%',
     scrub: true,
     markers: false,
-    // pin: true,
     duration: 1,
   },
   left: 2500,
@@ -143,7 +142,7 @@ homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title', {
     end: 'top top',
     scrub: true,
     markers: false,
-    // pin: true,
+
     duration: 1,
   },
   opacity: 0,
@@ -158,7 +157,7 @@ homeManageTimeline.from('.gsap_reveal_home_manage_slide_content', {
     end: 'top top',
     scrub: true,
     // markers: false,
-    // pin: true,
+
     duration: 1,
   },
   opacity: 0,
@@ -173,7 +172,7 @@ gsap.to('.home-manage--title', {
     end: 'top -30%',
     scrub: true,
     // markers: false,
-    // pin: true,
+
     // duration: 1,
   },
   opacity: 0,
@@ -188,7 +187,7 @@ gsap.to('.gsap__title-horizontaly-scrub', {
     end: 'top -40%',
     scrub: true,
     markers: false,
-    // pin: true,
+
     duration: 1,
   },
   color: '#214c2c',
@@ -205,7 +204,6 @@ gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
     end: 'top 20%',
     scrub: true,
     // markers: false,
-    // pin: true,
   },
   opacity: 0,
 });
@@ -343,7 +341,7 @@ gsap.from('.make-with-bg--title', {
     start: 'top bottom',
     end: 'top 20%',
     scrub: true,
-    // pin: true,
+
     // start: '20px 80%',
     // markers: false,
   },
@@ -362,7 +360,7 @@ gsap.to('.make-with-bg--title', {
     start: 'top -10%',
     end: 'top -40%',
     scrub: true,
-    // pin: true,
+
     // start: '20px 80%',
     // markers: false,
   },
@@ -381,7 +379,7 @@ gsap.to('.make-with-bg--title', {
     start: 'top 70%',
     end: 'top 3%',
     scrub: true,
-    // pin: true,
+
     // start: '20px 80%',
     // markers: false,
   },
@@ -716,4 +714,12 @@ gsap.to('.top-bar--page-title', {
 //   opacity: 0,
 //   duration: 1,
 //   ease: 'easeIn',
+// });
+
+// ScrollTrigger.create({
+//   trigger: '.pre-home-manage',
+//   scroller: '.smooth-scroll',
+//   start: 'top top',
+//   end: 'bottom 150px',
+//   pin: '.home-manage-elem-is-pinned',
 // });

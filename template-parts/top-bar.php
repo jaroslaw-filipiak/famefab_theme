@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div
-                class="col-4 col-md-3 d-flex align-items-center justify-content-start ps-0 top-bar--logo gsap__section-indicator-home-page">
+                class="col-4 col-md-2 d-flex align-items-center justify-content-start ps-0 top-bar--logo gsap__section-indicator-home-page">
                 <a href="<?php echo get_home_url() ?>">
                     <svg width="118" height="19" viewBox="0 0 118 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -51,7 +51,6 @@
 
                 </a>
 
-
             </div>
 
 
@@ -59,7 +58,7 @@
             <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
             <!-- section-indicator on homepage -->
             <div
-                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
+                class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
                 <span class="top-bar--page-title ">Who we are</span>
             </div>
             <?php } ?>
@@ -67,7 +66,7 @@
             <?php if('influencer_post_type' === get_post_type()) { ?>
             <!-- section-indicator on single influencers -->
             <div
-                class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
+                class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
                 <span class="top-bar--page-title color-yellow">Influencers</span>
             </div>
             <?php } ?>
@@ -76,7 +75,7 @@
 
             <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
             <!-- section-indicator on over ons page -->
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title ">Over ons</span>
             </div>
             <?php } ?>
@@ -84,25 +83,24 @@
 
             <?php if(is_page_template( 'page-templates/page-manage.php' )) { ?>
             <!-- section-indicator on manage page -->
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title ">Manage</span>
             </div>
             <?php } ?>
 
             <?php if(is_page_template( 'page-templates/page-make.php' )) { ?>
             <!-- section-indicator on page: make-->
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title ">Make</span>
             </div>
             <?php } ?>
 
             <?php if(is_page_template( 'page-templates/page-contact.php' )) { ?>
             <!-- section-indicator on page: contact us-->
-            <div class="col-4 col-md-3 d-flex align-items-center justify-content-center justify-content-md-start ">
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title ">Contact</span>
             </div>
             <?php } ?>
-
 
 
             <div class="col-4 col-md-6 d-flex align-items-center justify-content-end pe-0">

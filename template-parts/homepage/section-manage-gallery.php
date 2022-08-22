@@ -12,8 +12,8 @@
 <section id="home-manage-gallery" class="manage-gallery">
     <div class="container-fluid h-100">
         <div class="row h-100" style="position: relative">
-            <div class=" col-2 d-md-block col-md-3  ps-0"></div>
-            <div class=" col-10 col-md-9 d-flex justify-content-between">
+            <div class=" col-2 d-md-block col-md-2  ps-0"></div>
+            <div class=" col-10 col-md-10 d-flex justify-content-between">
                 <!-- text + arrow button -->
                 <div>
                     <div data-scroll data-scroll-speed="1"
