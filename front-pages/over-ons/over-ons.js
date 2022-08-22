@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // title from bottom
 gsap.from('.over-ons--title', {
@@ -76,105 +77,21 @@ gsap.to('.over-ons-title-trigger', {
   },
 });
 
-gsap.to('.grid-area-photo1', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo1',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-gsap.to('.grid-area-photo2', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo2',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-gsap.to('.grid-area-photo3', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo3',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-gsap.to('.grid-area-photo4', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo4',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-gsap.to('.grid-area-photo5', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo5',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-gsap.to('.grid-area-photo6', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.grid-area-photo6',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top center',
-  },
-});
-
-// work title
-gsap.to('.work--title', {
-  scrollTrigger: {
-    trigger: '.grid-area-photo4',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    markers: false,
-    toggleActions: 'play none none reset',
-    // endTrigger: 'grid-area-photo2',
-    // end: 'top center',
-    end: 'top top',
-    markers: false,
-  },
-  left: '20',
-  duration: 1,
-  ease: 'easeIn',
-});
-
-gsap.to('.work--title', {
-  scrollTrigger: {
-    trigger: '.grid-area-photo2',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    markers: false,
-    toggleActions: 'play none none reset',
-    // endTrigger: 'grid-area-photo2',
-    // end: 'top center',
-    end: 'top top',
-  },
-  opacity: 0,
-  duration: 1,
-  ease: 'easeIn',
-});
+// gsap.to('.work--title', {
+//   scrollTrigger: {
+//     trigger: '.grid-area-photo2',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     markers: false,
+//     toggleActions: 'play none none reset',
+//     // endTrigger: 'grid-area-photo2',
+//     // end: 'top center',
+//     end: 'top bottom',
+//   },
+//   opacity: 0,
+//   duration: 1,
+//   ease: 'easeIn',
+// });
 
 // change dynamic title and class
 
@@ -208,4 +125,121 @@ gsap.to('.top-bar--page-title', {
     onEnter: () => changeTextAndClass('Over ons', 'color-green'),
     onLeaveBack: () => changeTextAndClass('Over ons', 'color-yellow'),
   },
+});
+
+ScrollTrigger.create({
+  trigger: '.over-ons-pin-trigger',
+  scroller: '.smooth-scroll',
+  start: 'top 5%',
+  end: 'bottom 60%',
+  pin: '.over-ons-content-pinned',
+});
+
+// work title
+// gsap.to('.work--title', {
+//   scrollTrigger: {
+//     trigger: '.scroll-gallery',
+//     scroller: '.smooth-scroll',
+//     scrub: false,
+//     markers: false,
+//     toggleActions: 'play none none reset',
+//     // endTrigger: 'grid-area-photo2',
+//     start: 'top center',
+//     // end: 'top top',
+//   },
+//   left: '31vw',
+//   duration: 0.3,
+//   ease: 'easeInOut',
+// });
+
+// grid-area-photo-1
+
+gsap.to('.grid-area-photo1', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -250,
+  opacity: 1,
+});
+
+gsap.to('.grid-area-photo2', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -250,
+  opacity: 1,
+});
+
+gsap.to('.grid-area-photo3', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -150,
+  opacity: 1,
+});
+
+gsap.to('.grid-area-photo4', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -250,
+  opacity: 1,
+});
+
+gsap.to('.grid-area-photo5', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -250,
+  opacity: 1,
+});
+
+gsap.to('.grid-area-photo6', {
+  scrollTrigger: {
+    trigger: '.scroll-gallery',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    markers: false,
+    toggleActions: 'play none none reset',
+    // endTrigger: 'grid-area-photo2',
+    start: 'top center',
+    // end: 'top top',
+  },
+  top: -250,
+  opacity: 1,
 });

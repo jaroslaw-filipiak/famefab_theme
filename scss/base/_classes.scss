@@ -18,6 +18,10 @@
   background-color: $fioletLight;
 }
 
+.bg-second-violet {
+  background-color: $secondFiolet;
+}
+
 .bg-light-gray {
   background-color: $lightGray;
 }
@@ -48,6 +52,18 @@
   &:hover {
     color: $mainGreen;
   }
+
+  .arrow-right--circle {
+    svg circle {
+      stroke: $mainGreen;
+    }
+  }
+
+  .arrow-right--arrow {
+    svg path {
+      fill: $mainGreen;
+    }
+  }
 }
 
 .link-yellow-unstyled {
@@ -55,6 +71,18 @@
   color: $yellow;
   &:hover {
     color: $yellow;
+  }
+
+  .arrow-right--circle {
+    svg circle {
+      stroke: $yellow;
+    }
+  }
+
+  .arrow-right--arrow {
+    svg path {
+      fill: $yellow;
+    }
   }
 }
 

@@ -206,10 +206,10 @@
 
 .scroll-gallery--grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 30% 24% 16% 30%;
   grid-template-rows: 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 20px;
+  column-gap: 40px;
+  row-gap: 40px;
   grid-template-areas:
     'photo1 photo3 photo4 photo6'
     'photo2 . photo5 .';
@@ -220,29 +220,52 @@
 
 .grid-area-photo1 {
   grid-area: photo1;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 24%;
+  }
 }
 
 .grid-area-photo2 {
   grid-area: photo2;
   height: 140%;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 39%;
+  }
 }
 
 .grid-area-photo3 {
   grid-area: photo3;
   height: 120%;
-  margin-top: 40%;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 74%;
+  }
 }
 
 .grid-area-photo4 {
   grid-area: photo4;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 29%;
+  }
 }
 
 .grid-area-photo5 {
   grid-area: photo5;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 59%;
+  }
 }
 
 .grid-area-photo6 {
   grid-area: photo6;
   height: 130;
-  margin-top: 60%;
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    top: 44%;
+    height: 190%;
+  }
 }

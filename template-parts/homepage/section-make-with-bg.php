@@ -25,7 +25,7 @@
 
                 <a href="<?php echo esc_url( $home_section_make_with_bg_link_to_section['url'] ); ?>" data-scroll-to
                     data-scroll data-scroll-speed="1"
-                    class="gsap__make-with-bg-reveal d-none d-lg-flex link-green-unstyled content-and-arrow  align-items-center justify-content-start p-0">
+                    class="gsap__make-with-bg-reveal d-none d-lg-flex link-yellow-unstyled content-and-arrow  align-items-center justify-content-start p-0">
                     <div class="pe-4"><small
                             class="cursor-pointer"><?php echo esc_html( $home_section_make_with_bg_link_to_section['title'] ); ?></small>
                     </div>

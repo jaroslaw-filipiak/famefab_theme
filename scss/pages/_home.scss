@@ -177,12 +177,12 @@ body {
     padding-top: 15vh;
     font-size: 16px;
     text-transform: uppercase;
-    color: $yellow;
+    // color: $yellow;
     width: 200px;
     @include font-sans;
 
     @include media-breakpoint-up(lg) {
-      padding-top: 180px;
+      // padding-top: 180px;
     }
   }
 
@@ -234,8 +234,6 @@ body {
     @include media-breakpoint-up(xxxl) {
       margin-top: 250px;
     }
-
-    color: $yellow;
   }
 }
 
@@ -361,7 +359,7 @@ body {
       // padding-right: 100px;
       // padding-top: 100px;
       // padding-bottom: 100px;
-      grid-template-columns: 340px 340px;
+      grid-template-columns: 380px 380px;
     }
 
     .manage-gallery {
@@ -776,8 +774,8 @@ body {
         }
 
         @include media-breakpoint-up(xxxl) {
-          width: 610px;
-          height: 377px;
+          width: 700px;
+          height: 450px;
         }
 
         &:hover {

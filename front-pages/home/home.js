@@ -149,6 +149,21 @@ homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title', {
   // top: 0,
 });
 
+homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title__link', {
+  scrollTrigger: {
+    trigger: '#home-manage',
+    scroller: '.smooth-scroll',
+    start: 'top 10%',
+    end: 'top top',
+    scrub: true,
+    markers: false,
+
+    duration: 1,
+  },
+  opacity: 0,
+  // top: 0,
+});
+
 homeManageTimeline.from('.gsap_reveal_home_manage_slide_content', {
   scrollTrigger: {
     trigger: '.manage-gallery--item-2',
@@ -572,7 +587,7 @@ gsap.to('.our-reach--counter', {
   '--counter-color': '#214c2c',
   immediateRender: false,
   scrollTrigger: {
-    trigger: '.manage-gallery',
+    trigger: '.manage-gallery--row',
     scroller: '.smooth-scroll',
     scrub: true,
     start: () => 'top ' + window.innerWidth * 0.17,
@@ -581,7 +596,6 @@ gsap.to('.our-reach--counter', {
 });
 
 // make-with-bg
-
 gsap.to('.our-reach--counter', {
   '--counter-color': '#e7ffc8',
   immediateRender: false,
@@ -594,6 +608,7 @@ gsap.to('.our-reach--counter', {
   },
 });
 
+//
 gsap.to('.our-reach--counter', {
   '--counter-color': '#214c2c',
   immediateRender: false,
@@ -629,11 +644,13 @@ gsap.to('.top-bar--page-title', {
   },
 });
 
+// manage-gallery--row"
+
 gsap.to('.top-bar--page-title', {
   text: 'Manage',
   snap: 'innerText',
   scrollTrigger: {
-    trigger: '.manage-gallery',
+    trigger: '.manage-gallery--row',
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top 5%',
@@ -716,10 +733,55 @@ gsap.to('.top-bar--page-title', {
 //   ease: 'easeIn',
 // });
 
-// ScrollTrigger.create({
-//   trigger: '.pre-home-manage',
-//   scroller: '.smooth-scroll',
-//   start: 'top top',
-//   end: 'bottom 150px',
-//   pin: '.home-manage-elem-is-pinned',
-// });
+ScrollTrigger.create({
+  trigger: '.home-manage-and-manage-gallery-wrapper',
+  scroller: '.smooth-scroll',
+  start: 'top top',
+  end: 'bottom 70%',
+  pin: '.home-manage-elem-is-pinned',
+});
+
+function changeHomeManageContentClass(addClass) {
+  const item = document.querySelector(
+    '.gsap-home-manage-reveal-timeline-after-title'
+  );
+  item.classList =
+    'home-manage--text-block gsap-home-manage-reveal-timeline-after-title ' +
+    addClass;
+}
+
+function changeArrowColor(addClass) {
+  const item = document.querySelector(
+    '.gsap-home-manage-reveal-timeline-after-title__link'
+  );
+  item.classList =
+    'd-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-start p-0 gsap-home-manage-reveal-timeline-after-title__link ' +
+    addClass;
+}
+
+// home-manage--text-block gsap-home-manage-reveal-timeline-after-title color-green
+gsap.to('.home-manage--text-block', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--row',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 25%',
+    end: 'top 8%',
+    onEnter: () => changeHomeManageContentClass('color-green'),
+    onLeaveBack: () => changeHomeManageContentClass('color-yellow'),
+  },
+});
+
+// link-green-unstyled d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-start p-0 gsap-home-manage-reveal-timeline-after-title
+
+gsap.to('.home-manage--text-block', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--row',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 45%',
+    end: 'top 48%',
+    onEnter: () => changeArrowColor('link-green-unstyled'),
+    onLeaveBack: () => changeArrowColor('link-yellow-unstyled'),
+  },
+});

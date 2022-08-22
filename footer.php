@@ -99,9 +99,9 @@
 <!--  work title / over ons page  -->
 <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
 
-<h1 class="work--title color-green">
+<!-- <h1 class="work--title color-green">
     Work
-</h1>
+</h1> -->
 <?php } ?>
 
 <!--  work title /  page: make -->

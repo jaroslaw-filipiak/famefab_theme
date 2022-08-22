@@ -4,6 +4,7 @@ $offset: 10vh;
 .scroll-gallery {
   @include media-breakpoint-up(xl) {
     min-height: 100vh;
+    padding-top: 40vh;
   }
 
   &--col {
