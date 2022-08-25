@@ -112,9 +112,7 @@ gsap.from('.gsap__reveal-heading', {
   ease: 'easeIn',
 });
 
-var homeManageTimeline = gsap.timeline();
-
-homeManageTimeline.from('.gsap__title-horizontaly-scrub', {
+gsap.from('.gsap__title-horizontaly-scrub', {
   scrollTrigger: {
     trigger: '#home-manage',
     scroller: '.smooth-scroll',
@@ -128,7 +126,22 @@ homeManageTimeline.from('.gsap__title-horizontaly-scrub', {
   // top: 0,
 });
 
-homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title', {
+gsap.to('.gsap__title-horizontaly-scrub', {
+  scrollTrigger: {
+    trigger: '#home-manage',
+    scroller: '.smooth-scroll',
+    start: 'top -20%',
+    end: 'top -40%',
+    scrub: true,
+    markers: false,
+
+    duration: 1,
+  },
+  color: '#214c2c',
+  // top: 0,
+});
+
+gsap.from('.gsap-home-manage-reveal-timeline-after-title', {
   scrollTrigger: {
     trigger: '#home-manage',
     scroller: '.smooth-scroll',
@@ -143,7 +156,7 @@ homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title', {
   // top: 0,
 });
 
-homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title__link', {
+gsap.from('.gsap-home-manage-reveal-timeline-after-title__link', {
   scrollTrigger: {
     trigger: '#home-manage',
     scroller: '.smooth-scroll',
@@ -158,7 +171,7 @@ homeManageTimeline.from('.gsap-home-manage-reveal-timeline-after-title__link', {
   // top: 0,
 });
 
-homeManageTimeline.from('.gsap_reveal_home_manage_slide_content', {
+gsap.from('.gsap_reveal_home_manage_slide_content', {
   scrollTrigger: {
     trigger: '.manage-gallery--item-2',
     scroller: '.smooth-scroll',
@@ -188,21 +201,6 @@ gsap.to('.home-manage--title', {
   // top: 0,
 });
 
-gsap.to('.gsap__title-horizontaly-scrub', {
-  scrollTrigger: {
-    trigger: '#home-manage',
-    scroller: '.smooth-scroll',
-    start: 'top -20%',
-    end: 'top -40%',
-    scrub: true,
-    markers: false,
-
-    duration: 1,
-  },
-  color: '#214c2c',
-  // top: 0,
-});
-
 // .gsap__section-indicator-home-page
 
 gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
@@ -216,21 +214,6 @@ gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
   },
   opacity: 0,
 });
-
-// gsap.from('.gsap__title-horizontaly-scrub', {
-//   scrollTrigger: {
-//     trigger: '.home-manage',
-//     scroller: '.smooth-scroll',
-//     start: 'top center',
-//     end: 'top -10%',
-//     scrub: true,
-//   },
-
-//   xPercent: 900,
-//   opacity: 0,
-//   duration: 1,
-//   ease: 'easeIn', // top: '-100%',
-// });
 
 gsap.from('.manage-gallery-row-2', {
   scrollTrigger: {
@@ -499,7 +482,7 @@ gsap.from('.contact-us-row-1', {
 
 var contactUsTitleOnHomepage = gsap.timeline();
 
-// make horizontal 2
+// contact-us--title
 contactUsTitleOnHomepage.from('.contact-us--title', {
   scrollTrigger: {
     trigger: '.contact--trigger',
@@ -512,20 +495,20 @@ contactUsTitleOnHomepage.from('.contact-us--title', {
   },
 
   xPercent: 1400,
-  opacity: 0,
+  // opacity: 0,
   duration: 1,
   ease: 'easeIn',
 });
 
 contactUsTitleOnHomepage.to('.contact-us--title', {
   scrollTrigger: {
-    trigger: '.footer',
+    trigger: '.contact-us--item',
     scroller: '.smooth-scroll',
-    start: 'top bottom',
-    end: 'top 40%',
+    start: 'top 60%',
+    end: 'top 10%',
     scrub: true,
     // start: '20px 80%',
-    markers: false,
+    markers: true,
   },
 
   // xPercent: 1400,
