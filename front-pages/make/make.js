@@ -86,7 +86,7 @@ gsap.from('.our-reach--counter', {
   scrollTrigger: {
     trigger: '.total-reach-trigger',
     scroller: '.smooth-scroll',
-    scrub: true,
+    scrub: false,
     start: 'top bottom',
     end: 'bottom',
   },
@@ -163,45 +163,65 @@ ScrollTrigger.create({
 
 // ===============
 
-// TODO: change color to yellow fix
-
 function handleInfluencer(influencer) {
-  // const influencersBG = document.querySelector('.cases--dynamic-bg');
-  // const outputPhoto = document.querySelector('.case--photo');
+  const casesSection = document.querySelector('.cases');
+  const influencersBG = document.querySelector('.cases--dynamic-bg');
   const outputInfo = document.querySelector('.case-hover-output');
   const outputInfluencerName = document.querySelector(
     '.case-hover-output--name'
   );
 
   const activeIndex = influencer.classList[1];
-  const influencerTitle = document.querySelector(`.${activeIndex} span`);
-  // console.log('title===> ' + influencerTitle);
-
   const dynamicLink = document.querySelector('.case-dynamic-link');
 
   outputInfluencerName.innerHTML = influencer.dataset.name;
-  outputInfo.innerHTML = influencer.dataset.info;
-  // outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
   dynamicLink.classList.remove('opacity-0');
   dynamicLink.setAttribute('href', influencer.dataset.link);
 
-  // influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+  influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
 
-  // influencersBG.classList = `cases--dynamic-bg opacity-0`;
+  influencersBG.classList = `cases--dynamic-bg opacity-0`;
   outputInfluencerName.classList = `case-hover-output--name`;
   outputInfo.classList = `case-hover-output`;
 
-  const allInfluencersTitles = document.querySelectorAll('.case--title');
+  casesSection.classList = `cases`;
 
-  allInfluencersTitles.forEach((item) => {
-    item.classList = `case--title color-green`;
+  dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-green-unstyled`;
+
+  gsap.to('.our-reach--counter', {
+    '--counter-color': '#214c2c',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.cases',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: () => 'top ' + window.innerWidth * 0.17,
+      end: () => 'top ' + window.innerWidth * 0.2,
+    },
   });
 
   setTimeout(() => {
-    // influencersBG.classList = `cases--dynamic-bg opacity-1`;
-    // outputInfo.classList = `case-hover-output color-yellow`;
-    // outputInfluencerName.classList = `case-hover-output--name color-yellow`;
-  }, 3000);
+    casesSection.classList = `cases cases__is-bg-visible`;
+  }, 1800);
+
+  setTimeout(() => {
+    influencersBG.classList = `cases--dynamic-bg opacity-1`;
+    outputInfo.classList = `case-hover-output color-yellow`;
+    dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
+    outputInfluencerName.classList = `case-hover-output--name color-yellow`;
+
+    gsap.to('.our-reach--counter', {
+      '--counter-color': '#e7ffc8',
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: '.cases',
+        scroller: '.smooth-scroll',
+        scrub: true,
+        start: () => 'top ' + window.innerWidth * 0.17,
+        end: () => 'top ' + window.innerWidth * 0.2,
+      },
+    });
+  }, 2000);
 }
 
 const influencers = gsap.utils.toArray('.cases--list-item');
@@ -236,7 +256,7 @@ gsap.to('.top-bar--page-title', {
   scrollTrigger: {
     trigger: '.total-reach-trigger',
     scroller: '.smooth-scroll',
-    scrub: true,
+    scrub: false,
     start: 'top 5%',
     end: 'top 3%',
     onEnter: () => changeTextAndClass('Make', 'color-yellow'),
@@ -249,10 +269,36 @@ gsap.to('.top-bar--page-title', {
   scrollTrigger: {
     trigger: '.cases',
     scroller: '.smooth-scroll',
-    scrub: true,
+    scrub: false,
     start: 'top 5%',
     end: 'top 3%',
-    onEnter: () => changeTextAndClass('', 'color-green'),
-    onLeaveBack: () => changeTextAndClass('Make', 'color-yellow'),
+    start: 'top',
+    end: 'bottom',
+  },
+});
+
+// our reach bg change color
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#e7ffc8',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.total-reach-trigger',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#214c2c',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.cases',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
   },
 });

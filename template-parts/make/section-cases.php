@@ -79,7 +79,7 @@
                                 data-info="<?php the_field( 'page_manage_excerpt' ); ?>"
                                 data-link="<?php echo get_permalink() ?>" data-bg="<?php the_field( 'data_bg_img' ); ?>"
                                 data-thumb="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
-                                class="cases--list-item cases--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
+                                class="cases--list-item cases--list-item-<?php echo $the_query->current_post +1; ?> w-100 color-green">
                                 <?php the_title() ?>
                             </div>
 

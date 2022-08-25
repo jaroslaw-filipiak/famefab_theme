@@ -17,6 +17,16 @@
     padding: 40px 40px 0px 40px;
   }
 
+  .cases--list-item {
+    color: $mainGreen !important;
+  }
+
+  &__is-bg-visible {
+    .cases--list-item {
+      color: $yellow !important;
+    }
+  }
+
   &--dynamic-bg {
     position: fixed;
     left: 0;
@@ -100,7 +110,7 @@
         }
 
         @include font-serif;
-        color: $mainGreen;
+        // color: $mainGreen;
         cursor: pointer;
         opacity: 0.1;
         @include default-transition;
