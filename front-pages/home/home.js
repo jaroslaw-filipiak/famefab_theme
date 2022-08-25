@@ -22,7 +22,7 @@ gsap.to('#ourReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top bottom',
-    end: '75%',
+    end: '55%',
   },
 });
 
@@ -476,7 +476,6 @@ contactUsTitleOnHomepage.to('.contact-us--title', {
     end: 'top 10%',
     scrub: true,
     // start: '20px 80%',
-    markers: true,
   },
 
   // xPercent: 1400,
@@ -668,7 +667,6 @@ gsap.to('.top-bar--page-title', {
 //     start: 'top bottom',
 //     end: 'top 20%',
 //     scrub: true,
-//     markers: true,
 //   },
 
 //   xPercent: 1400,
