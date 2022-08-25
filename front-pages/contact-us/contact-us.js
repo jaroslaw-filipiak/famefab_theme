@@ -1,5 +1,7 @@
 import gsap from 'gsap';
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 gsap.from('.our-reach--counter', {
   opacity: 0,
   scrollTrigger: {
@@ -22,6 +24,22 @@ gsap.to('#ourReachValue', {
     end: 'bottom',
   },
 });
+
+if (!isMobile) {
+  // blank hero bg scale
+  gsap.to('.blank-hero', {
+    //   opacity: 0,
+    backgroundSize: '100%',
+    //   scale: 2.5,
+    scrollTrigger: {
+      trigger: '.blank-hero',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      // end: 'top center',
+    },
+  });
+}
 
 // title from bottom
 gsap.from('.contact-us__hero-gsap', {
@@ -141,20 +159,6 @@ gsap.from('.gsap__page-contact-content-reveal', {
 //   opacity: 0,
 //   xPercent: -200,
 // });
-
-// blank hero bg scale
-gsap.to('.blank-hero', {
-  //   opacity: 0,
-  backgroundSize: '100%',
-  //   scale: 2.5,
-  scrollTrigger: {
-    trigger: '.blank-hero',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    // end: 'top center',
-  },
-});
 
 // who-we-are__contact-us--title
 gsap.from('.who-we-are__contact-us--title', {

@@ -22,7 +22,7 @@
 
 
 <section class="blank-hero bg-cover bg-no-repeat bg-center total-reach-trigger"
-    style="background-size: 140%; background-image: url('<?php the_field( 'second_section_with_background_background_image' ); ?>')">
+    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 140%;' ?> background-image: url('<?php the_field( 'second_section_with_background_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>

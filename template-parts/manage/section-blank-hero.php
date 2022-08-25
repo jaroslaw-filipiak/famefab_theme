@@ -21,13 +21,13 @@
 
 <section
     class="blank-hero page-manage-blank-hero__gsap-trigger bg-cover bg-no-repeat bg-center blank-hero-title-trigger "
-    style="background-size: 130%; background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
+    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 130%; ' ?>background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-2  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100 page-manage-piniata ">
-                <div class="gsap_opacity-reveal__blank-hero blank-hero--content color-yellow " data-scroll
-                    data-scroll-speed="2">
+                <div
+                    class="gsap_opacity-reveal__blank-hero blank-hero--content blank-hero--content__page-manage color-yellow ">
                     <?php the_field( 'page_manage_second_section_text_content' ); ?>
                 </div>
 

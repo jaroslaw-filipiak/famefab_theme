@@ -1,13 +1,7 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import TextPlugin from 'gsap/TextPlugin';
 
-const test = document.querySelector('#who-we-are');
-const button = document.querySelector('.link-to-who-we-are');
-
-button.addEventListener('click', () => {
-  scroll.scrollTo(test);
-});
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 // const counterWrapper = document.querySelector('#ourReachValue');
 
@@ -424,8 +418,6 @@ gsap.from('.make-with-bg--title__in-body', {
   ease: 'easeIn',
 });
 
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
 if (!isMobile) {
   // gsap__mange-bg--scale
   gsap.to('.gsap__manage-bg--scale', {
@@ -733,13 +725,15 @@ gsap.to('.top-bar--page-title', {
 //   ease: 'easeIn',
 // });
 
-ScrollTrigger.create({
-  trigger: '.home-manage-and-manage-gallery-wrapper',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 70%',
-  pin: '.home-manage-elem-is-pinned',
-});
+if (!isMobile) {
+  ScrollTrigger.create({
+    trigger: '.home-manage-and-manage-gallery-wrapper',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'bottom 70%',
+    pin: '.home-manage-elem-is-pinned',
+  });
+}
 
 function changeHomeManageContentClass(addClass) {
   const item = document.querySelector(

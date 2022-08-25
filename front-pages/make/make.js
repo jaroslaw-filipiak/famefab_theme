@@ -1,40 +1,71 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// title from bottom
-gsap.from('.make--fixed-title', {
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    markers: false,
-    toggleActions: 'play none none reset',
-  },
-  bottom: '-400',
-  duration: 1,
-  ease: 'easeIn',
-});
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-// title change color
+if (!isMobile) {
+  // title from bottom
+  gsap.from('.make--fixed-title', {
+    scrollTrigger: {
+      trigger: 'body',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      markers: false,
+      toggleActions: 'play none none reset',
+    },
+    bottom: '-400',
+    duration: 1,
+    ease: 'easeIn',
+  });
 
-function changeMakeClass(className) {
-  console.log('change over ons class');
-  const title = document.querySelector('.make--fixed-title');
-  title.classList = `make--fixed-title ${className}`;
-}
+  // section with bg , content opacity from zero
+  gsap.from('.gsap_content_opacity-from-zero', {
+    scrollTrigger: {
+      trigger: '.total-reach-trigger',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      start: 'top 30%',
+      end: 'top 75%',
+      toggleActions: 'play none none reverse',
+    },
+    opacity: 0,
+  });
 
-gsap.to('.make--fixed-title', {
-  scrollTrigger: {
-    trigger: '.total-reach-trigger',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top bottom',
-    end: 'top bottom',
-    onEnter: () => changeMakeClass('color-yellow'),
-    onLeaveBack: () => changeMakeClass('color-green'),
-    toggleActions: 'play none none reset',
-  },
-});
+  // bg scale
+  gsap.to('.total-reach-trigger', {
+    //   opacity: 0,
+    backgroundSize: '100%',
+    //   scale: 2.5,
+    scrollTrigger: {
+      trigger: '.total-reach-trigger',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      // end: 'top center',
+    },
+  });
+
+  // title change color
+
+  function changeMakeClass(className) {
+    console.log('change over ons class');
+    const title = document.querySelector('.make--fixed-title');
+    title.classList = `make--fixed-title ${className}`;
+  }
+
+  gsap.to('.make--fixed-title', {
+    scrollTrigger: {
+      trigger: '.total-reach-trigger',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      start: 'top bottom',
+      end: 'top bottom',
+      onEnter: () => changeMakeClass('color-yellow'),
+      onLeaveBack: () => changeMakeClass('color-green'),
+      toggleActions: 'play none none reset',
+    },
+  });
+} // !isMobile
 
 // title opacity to zero
 gsap.to('.make--fixed-title', {
@@ -46,19 +77,6 @@ gsap.to('.make--fixed-title', {
     end: 'top top',
 
     toggleActions: 'play none none reset',
-  },
-  opacity: 0,
-});
-
-// section with bg , content opacity from zero
-gsap.from('.gsap_content_opacity-from-zero', {
-  scrollTrigger: {
-    trigger: '.total-reach-trigger',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top 30%',
-    end: 'top 75%',
-    toggleActions: 'play none none reverse',
   },
   opacity: 0,
 });
@@ -83,20 +101,6 @@ gsap.to('#totalReachValue', {
     scrub: true,
     start: 'top bottom',
     end: 'bottom',
-  },
-});
-
-// bg scale
-gsap.to('.total-reach-trigger', {
-  //   opacity: 0,
-  backgroundSize: '100%',
-  //   scale: 2.5,
-  scrollTrigger: {
-    trigger: '.total-reach-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    // end: 'top center',
   },
 });
 

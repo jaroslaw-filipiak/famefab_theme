@@ -1,9 +1,9 @@
 .manage--title {
   font-size: 70px;
   line-height: 70px;
-  position: fixed;
-  bottom: -30px;
-  left: 50%;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
   width: 100%;
   text-align: left;
   @include font-serif;
@@ -15,6 +15,12 @@
     line-height: 100px;
     text-align: center;
     left: 0;
+  }
+
+  @include media-breakpoint-only(md) {
+    position: fixed;
+    bottom: -30px;
+    left: 50%;
   }
 
   @include media-breakpoint-up(md) {
@@ -37,4 +43,8 @@
     font-size: $titleSizeMax;
     line-height: 300px;
   }
+}
+
+.blank-hero--content__page-manage {
+  margin-top: 20vh;
 }

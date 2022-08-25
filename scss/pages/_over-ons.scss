@@ -5,16 +5,28 @@
   // margin-top: -50vh;
 }
 
+.blank-hero__with-bg {
+  @include media-breakpoint-down(md) {
+    height: 100vh;
+  }
+}
+
 .over-ons--title {
   font-size: 70px;
   line-height: 70px;
   position: fixed;
-  bottom: -30px;
+
   left: 50%;
   width: 100%;
   text-align: left;
   @include font-serif;
   // @include default-transition;
+
+  @include media-breakpoint-only(xs) {
+    position: absolute;
+    top: 85vh !important;
+    left: 20px !important;
+  }
 
   @include media-breakpoint-up(sm) {
     font-size: 100px;
@@ -26,6 +38,7 @@
   @include media-breakpoint-up(md) {
     font-size: 140px;
     line-height: 140px;
+    bottom: -30px;
   }
 
   @include media-breakpoint-up(lg) {
@@ -84,15 +97,18 @@
 }
 
 .full-service-agency {
-  min-height: 100vh;
   padding: 20px;
 
   @include media-breakpoint-up(md) {
     padding: 40px;
+    min-height: 100vh;
   }
 
   &--title-wrapper {
-    padding-top: 15vh;
+    @include media-breakpoint-up(md) {
+      padding-top: 15vh;
+    }
+
     @include media-breakpoint-up(lg) {
       padding-top: 60px;
     }
@@ -103,17 +119,12 @@
   }
 
   &--title {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 55px;
+    line-height: 55px;
     color: $mainGreen;
-    transform: scale(0.6);
     transform-origin: left;
     max-width: 780px;
-
-    @include media-breakpoint-only(xs) {
-      position: relative;
-      top: -10vh;
-    }
+    // transform: scale(0.6);
 
     @include media-breakpoint-up(sm) {
       font-size: 85px;
@@ -158,10 +169,10 @@
   }
 
   &--subtitle {
-    padding-top: 50px;
-    max-width: 70%;
     @include media-breakpoint-up(lg) {
       max-width: 300px;
+      padding-top: 50px;
+      max-width: 70%;
     }
   }
 
@@ -206,13 +217,23 @@
 
 .scroll-gallery--grid {
   display: grid;
-  grid-template-columns: 30% 24% 16% 30%;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 230px 160px 110px 130px;
+  column-gap: 20px;
+  row-gap: 20px;
   grid-template-areas:
-    'photo1 photo3 photo4 photo6'
-    'photo2 . photo5 .';
+    'photo1 photo3'
+    'photo5 photo4'
+    'photo2 photo4'
+    'photo2 photo6';
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 30% 24% 16% 30%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'photo1 photo3 photo4 photo6'
+      'photo2 . photo5 .';
+  }
   @include media-breakpoint-up(xl) {
     padding: 100px 30px;
   }
@@ -228,8 +249,9 @@
 
 .grid-area-photo2 {
   grid-area: photo2;
-  height: 140%;
+
   @include media-breakpoint-up(xl) {
+    height: 140%;
     position: relative;
     top: 39%;
   }
@@ -237,8 +259,9 @@
 
 .grid-area-photo3 {
   grid-area: photo3;
-  height: 120%;
+
   @include media-breakpoint-up(xl) {
+    height: 120%;
     position: relative;
     top: 74%;
   }
@@ -262,7 +285,7 @@
 
 .grid-area-photo6 {
   grid-area: photo6;
-  height: 130;
+
   @include media-breakpoint-up(xl) {
     position: relative;
     top: 44%;

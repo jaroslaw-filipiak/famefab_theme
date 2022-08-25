@@ -33,7 +33,7 @@
 
                     <a href="<?php echo esc_url( $page_over_ons_last_section_link_to_section['url'] ); ?>"
                         data-scroll-to data-scroll data-scroll-speed="2.3"
-                        class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                        class="link-green-unstyled content-and-arrow col-6 d-none d-md-flex align-items-center justify-content-start p-0"
                         style="margin-top: 80px;">
                         <div class="pe-4 mb-2"><small
                                 class="cursor-pointer"><?php echo esc_html( $page_over_ons_last_section_link_to_section['title'] ); ?></small>
@@ -62,7 +62,7 @@
 
                     <a href="<?php echo esc_url( $page_over_ons_last_section_link_to_section_2['url'] ); ?>" data-scroll
                         data-scroll-speed="2.3"
-                        class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                        class="link-green-unstyled content-and-arrow col-6 d-none d-md-flex align-items-center justify-content-start p-0"
                         style="margin-top: 80px;">
                         <div class="pe-4 mb-2">
                             <small><?php echo esc_html( $page_over_ons_last_section_link_to_section_2['title'] ); ?></small>

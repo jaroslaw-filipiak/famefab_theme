@@ -1,35 +1,86 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 gsap.registerPlugin(ScrollTrigger);
 
-//  title from bottom
-gsap.from('.manage--title', {
+gsap.from('.our-reach--counter', {
+  opacity: 0,
   scrollTrigger: {
-    trigger: 'body',
+    trigger: '.influencers',
     scroller: '.smooth-scroll',
-    // scrub: true,
-    markers: false,
-    toggleActions: 'play none none reset',
+    scrub: true,
+    start: 'top 200%',
+    end: 'top top',
   },
-  bottom: '-400',
-  duration: 1,
-  ease: 'easeIn',
 });
 
-// title change color
-gsap.to('.manage--title', {
+gsap.from('#ourReachValue', {
+  innerText: 0,
+  snap: 'innerText',
   scrollTrigger: {
-    trigger: '.blank-hero-title-trigger',
+    trigger: '.influencers',
     scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top 80%',
-    end: 'top bottom',
-    onEnter: () => changeOverOnsClass('color-yellow'),
-    onLeaveBack: () => changeOverOnsClass('color-green'),
-    toggleActions: 'play none none reset',
+    scrub: true,
+    start: 'top 200%',
+    end: 'top top',
   },
 });
+
+if (!isMobile) {
+  //  title from bottom
+  gsap.from('.manage--title', {
+    scrollTrigger: {
+      trigger: 'body',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      markers: false,
+      toggleActions: 'play none none reset',
+    },
+    bottom: '-400',
+    duration: 1,
+    ease: 'easeIn',
+  });
+
+  // title change color
+  gsap.to('.manage--title', {
+    scrollTrigger: {
+      trigger: '.blank-hero-title-trigger',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      start: 'top 80%',
+      end: 'top bottom',
+      onEnter: () => changeOverOnsClass('color-yellow'),
+      onLeaveBack: () => changeOverOnsClass('color-green'),
+      toggleActions: 'play none none reset',
+    },
+  });
+
+  // bg scale
+  gsap.to('.blank-hero-title-trigger', {
+    //   opacity: 0,
+    backgroundSize: '100%',
+    //   scale: 2.5,
+    scrollTrigger: {
+      trigger: '.blank-hero-title-trigger',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      // end: 'top center',
+    },
+  });
+
+  // page-manage-piniata
+
+  ScrollTrigger.create({
+    trigger: '.page-manage-blank-hero__gsap-trigger',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'bottom 60%',
+    pin: '.page-manage-piniata',
+  });
+} // wp_is_mobile
 
 function changeOverOnsClass(className) {
   console.log('change over ons class');
@@ -64,20 +115,6 @@ gsap.from('.gsap_opacity-reveal__blank-hero', {
     toggleActions: 'play none none reverse',
   },
   opacity: 0,
-});
-
-// bg scale
-gsap.to('.blank-hero-title-trigger', {
-  //   opacity: 0,
-  backgroundSize: '100%',
-  //   scale: 2.5,
-  scrollTrigger: {
-    trigger: '.blank-hero-title-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    // end: 'top center',
-  },
 });
 
 export default function handleInfluencersOnHover() {
@@ -265,12 +302,28 @@ gsap.to('.top-bar--page-title', {
   },
 });
 
-// page-manage-piniata
+// / our reach bg change color
 
-ScrollTrigger.create({
-  trigger: '.page-manage-blank-hero__gsap-trigger',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 60%',
-  pin: '.page-manage-piniata',
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#e7ffc8',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.page-manage-blank-hero__gsap-trigger',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#214c2c',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.influencers',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
 });

@@ -27,7 +27,7 @@
                 <?php if ( $home_section_make_link_to_section ) : ?>
                 <a href="<?php echo esc_url( $home_section_make_link_to_section['url'] ); ?>" data-scroll-to data-scroll
                     data-scroll-speed=".3"
-                    class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                    class="link-green-unstyled content-and-arrow col-6 d-none d-md-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
                     <div class="pe-4"><small
                             class="cursor-pointer"><?php echo esc_html( $home_section_make_link_to_section['title'] ); ?></small>

@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="scroll-gallery bg-yellow" style="height: 140vh; overflow: visible">
+<section class="scroll-gallery bg-yellow" style=" overflow: visible">
     <div class="container-fluid h-100 d-flex align-items-center justify-content-between">
         <div class="row scroll-gallery--grid h-100 mx-auto w-100">
 
@@ -22,7 +22,7 @@
             <!-- loop -->
             <div data-scroll data-scroll-speed="1"
                 class="grid-area-photo<?php echo get_row_index() ?> bg-cover bg-no-repeat bg-center br-30"
-                style="opacity: 0;background-image: url('<?php echo $image ?>')">
+                style="<?php echo wp_is_mobile() ? 'opacity: 1;' : 'opacity: 0;' ?>background-image: url('<?php echo $image ?>')">
             </div>
             <!-- loop -->
 

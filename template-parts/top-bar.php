@@ -54,7 +54,6 @@
             </div>
 
 
-
             <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
             <!-- section-indicator on homepage -->
             <div
@@ -88,6 +87,15 @@
             </div>
             <?php } ?>
 
+            <?php if(is_page_template( 'page-templates/page-influencer-list.php' )) { ?>
+            <!-- section-indicator on influencer list page -->
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title ">Influencers</span>
+            </div>
+            <?php } ?>
+
+
+
             <?php if(is_page_template( 'page-templates/page-make.php' )) { ?>
             <!-- section-indicator on page: make-->
             <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
@@ -106,6 +114,20 @@
             <div class="col-4 col-md-6 d-flex align-items-center justify-content-end pe-0">
                 <a class="top-bar--contact-link d-none d-lg-inline-flex gsap__section-indicator-home-page"
                     href="<?php echo get_home_url('', 'contact') ?>">Contact us</a>
+
+                <?php if('influencer_post_type' === get_post_type()) { ?>
+                <!--if is single influencer -->
+                <a href="<?php echo get_home_url('', 'influencer-list') ?>" class="cross__single-influencer">
+                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="20.2741" y1="19.7678" x2="39.2741" y2="37.6502" stroke="#E7FFC8" stroke-width="0.8" />
+                        <line x1="19.7172" y1="37.9423" x2="38.1668" y2="19.4926" stroke="#E7FFC8" stroke-width="0.8" />
+                        <circle cx="29" cy="29" r="28.6" stroke="#E7FFC8" stroke-width="0.8" />
+                    </svg>
+                </a>
+                <?php } ?>
+
+                <?php if('influencer_post_type' !== get_post_type()) { ?>
+                <!--if is NOT single influencer -->
                 <div class="hamburger gsap__section-indicator-home-page">
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="19.9474" y1="0.5" x2="1.90735e-05" y2="0.5" stroke="#214D2C" />
@@ -113,7 +135,7 @@
                         <line x1="19.9474" y1="15.7144" x2="1.90735e-05" y2="15.7144" stroke="#214D2C" />
                     </svg>
                 </div>
-
+                <?php } ?>
 
             </div>
         </div>

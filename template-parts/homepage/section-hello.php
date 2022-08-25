@@ -13,7 +13,8 @@
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-2 ps-0 d-md-none"></div>
-            <div class="col-10 col-md-12 d-flex align-items-center justify-content-center hello-col-right">
+            <div
+                class="col-10 col-md-12 d-flex align-items-center justify-content-center hello-col-right pt-5 mt-5 mt-md-0 pt-md-0">
 
                 <div
                     class="hello--get-started-area accordion-collapse d-flex align-items-start align-items-lg-center justify-content-start">

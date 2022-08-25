@@ -67,6 +67,10 @@ body {
 .who-we-are {
   padding: 20px;
 
+  @include media-breakpoint-down(md) {
+    height: 100vh;
+  }
+
   @include media-breakpoint-up(md) {
     padding: 40px;
   }
@@ -180,6 +184,10 @@ body {
     // color: $yellow;
     width: 200px;
     @include font-sans;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 10vh;
+    }
 
     @include media-breakpoint-up(lg) {
       // padding-top: 180px;
@@ -434,6 +442,12 @@ body {
       }
     }
   }
+
+  &--row {
+    @include media-breakpoint-down(md) {
+      position: relative;
+    }
+  }
 }
 
 //
@@ -585,12 +599,16 @@ body {
   padding: 40px;
 
   &--text-block {
-    padding-top: 15vh;
+    padding-top: 10vh;
     font-size: 16px;
     text-transform: uppercase;
     color: $yellow;
     width: 200px;
     @include font-sans;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 15vh;
+    }
 
     @include media-breakpoint-up(lg) {
       padding-top: 180px;
@@ -822,6 +840,10 @@ body {
   background-color: $lightGray;
   position: relative;
   padding: 40px;
+
+  @include media-breakpoint-down(md) {
+    height: 100vh;
+  }
 
   @include media-breakpoint-up(md) {
     overflow: hidden;

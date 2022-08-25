@@ -1,9 +1,9 @@
 .make--fixed-title {
   font-size: 70px;
   line-height: 70px;
-  position: fixed;
-  bottom: -30px;
-  left: 50%;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
   width: 100%;
   text-align: left;
   @include font-serif;
@@ -19,6 +19,9 @@
   @include media-breakpoint-up(md) {
     font-size: 140px;
     line-height: 140px;
+    position: fixed;
+    bottom: -30px;
+    left: 50%;
   }
 
   @include media-breakpoint-up(lg) {

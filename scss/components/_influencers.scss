@@ -57,7 +57,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    // background-color: red;
+    background-color: #f1f0ef;
     z-index: -1;
     width: 100vw;
     height: 100vh;
@@ -144,6 +144,10 @@
           font-size: 75px;
         }
 
+        @include media-breakpoint-up(xxxl) {
+          font-size: 100px;
+        }
+
         @include font-serif;
         color: $mainGreen;
         // cursor: pointer;
@@ -174,25 +178,50 @@
     margin-top: 14vh;
   }
 
+  @include media-breakpoint-up(xl) {
+    // padding-bottom: 23vh;
+    margin-top: 33vh;
+  }
+
   @include media-breakpoint-up(xxl) {
     padding-bottom: 30vh;
-    margin-top: 24vh;
+    margin-top: 32vh;
   }
   &--photo {
     width: 289px;
     height: 389px;
     background-color: transparent;
     border-radius: 15px;
+
+    @include media-breakpoint-up(xl) {
+      width: 203px;
+      height: 273px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 289px;
+      height: 389px;
+    }
   }
 
   &--info {
     position: absolute;
-    left: calc(289px + 40px);
+    left: 314px;
     top: 120px;
     transform: translate(-50% -50%);
     width: 260px;
     text-transform: uppercase;
     z-index: 798;
+
+    @include media-breakpoint-up(xl) {
+      left: 224px;
+      top: 46px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: 314px;
+      top: 120px;
+    }
   }
 
   &--title {

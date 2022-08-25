@@ -10,7 +10,7 @@
 ?>
 
 
-<section class="influencers">
+<section id="influencers" class="influencers">
 
     <div class="container-fluid">
         <div class="row ">
