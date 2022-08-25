@@ -39,7 +39,7 @@ gsap.to('#ourReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top bottom',
-    end: 'bottom',
+    end: '75%',
   },
 });
 
