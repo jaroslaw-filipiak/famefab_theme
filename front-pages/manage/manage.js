@@ -271,9 +271,10 @@ gsap.to('.influencers--dynamic-bg', {
 // dynamic change content / innerHTML
 
 function changeTextAndClass(value, addClass) {
-  const item = document.querySelector('.top-bar--page-title');
-  item.innerHTML = value;
-  item.classList = 'top-bar--page-title ' + addClass;
+  const topBar = document.querySelector('.top-bar');
+  const title = document.querySelector('.top-bar--page-title ');
+  title.innerHTML = value;
+  topBar.classList = 'top-bar ' + addClass;
 }
 
 gsap.to('.top-bar--page-title', {

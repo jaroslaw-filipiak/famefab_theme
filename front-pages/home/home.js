@@ -3,23 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-// const counterWrapper = document.querySelector('#ourReachValue');
-
-// let counter = {
-//   value: 0,
-// };
-
-// gsap.to(counter, {
-//   value: 10,
-//   onUpdate: () => {
-//     console.log(counter.value);
-//     counterWrapper.innerText = Math.round(counter.value);
-//   },
-// });
-
-// gsap.to('#ourReachValue', { innerText: 200, snap: 'innerText' });
-// ourReachValue
-
 gsap.from('.our-reach--counter', {
   opacity: 0,
   scrollTrigger: {
@@ -431,21 +414,6 @@ if (!isMobile) {
   });
 }
 
-// make-gallery-row-1
-// make-gallery
-
-// gsap.from('.make-gallery-row-1', {
-//   opacity: 0,
-//   scale: 1.6,
-//   scrollTrigger: {
-//     trigger: '.make-gallery',
-//     scroller: '.smooth-scroll',
-//     scrub: true,
-//     start: 'top bottom',
-//     end: 'top 5%',
-//   },
-// });
-
 // make horizontal 2
 gsap.from('.make-gallery--title_2', {
   scrollTrigger: {
@@ -600,9 +568,10 @@ gsap.to('.our-reach--counter', {
 // dynamic change content / innerHTML
 
 function changeTextAndClass(value, addClass) {
-  const item = document.querySelector('.top-bar--page-title');
-  item.innerHTML = value;
-  item.classList = 'top-bar--page-title ' + addClass;
+  const topBar = document.querySelector('.top-bar');
+  const title = document.querySelector('.top-bar--page-title ');
+  title.innerHTML = value;
+  topBar.classList = 'top-bar ' + addClass;
 }
 
 gsap.to('.top-bar--page-title', {

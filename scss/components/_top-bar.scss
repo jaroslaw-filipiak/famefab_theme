@@ -78,3 +78,18 @@
     }
   }
 }
+
+.color-yellow {
+  .top-bar--contact-link,
+  .top-bar--page-title {
+    color: $yellow !important;
+  }
+
+  svg line {
+    stroke: $yellow !important;
+  }
+
+  svg path {
+    fill: $yellow !important;
+  }
+}
