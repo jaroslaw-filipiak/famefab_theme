@@ -72,6 +72,52 @@
 <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
 <div class="home-manage--title gsap__title-horizontaly-scrub">
     <?php the_field( 'home_section_manage_with_bg_title' ); ?></div>
+
+
+<!-- go to influencers -->
+<a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>"
+    class="link-green-unstyled d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-influencers"
+    style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center;">
+    <div class="pe-4" style="width: 140px; margin-top: 10px;"><small class="cursor-pointer">go to influencers</small>
+    </div>
+    <div class="arrow-right-icon">
+        <div class="arrow-right--circle home-manage-arrow-right__circle"><svg width="58" height="58" viewBox="0 0 58 58"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
+            </svg>
+        </div>
+        <div class="arrow-right--arrow home-manage-arrow-right__arrow"><svg width="24" height="6" viewBox="0 0 24 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M23.2828 3.28284C23.4391 3.12663 23.4391 2.87337 23.2828 2.71716L20.7373 0.171573C20.581 0.0153632 20.3278 0.0153632 20.1716 0.171573C20.0154 0.327783 20.0154 0.581048 20.1716 0.737258L22.4343 3L20.1716 5.26274C20.0154 5.41895 20.0154 5.67222 20.1716 5.82843C20.3278 5.98464 20.581 5.98464 20.7373 5.82843L23.2828 3.28284ZM0 3.4H23V2.6H0V3.4Z"
+                    fill="#e7ffc8" />
+            </svg>
+        </div>
+    </div>
+</a>
+
+<!-- go to cases -->
+<a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>"
+    class="link-yellow-unstyled d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-make"
+    style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center;">
+    <div class="pe-4" style="width: 140px; margin-top: 10px;"><small class="cursor-pointer">go to cases</small>
+    </div>
+    <div class="arrow-right-icon">
+        <div class="arrow-right--circle home-manage-arrow-right__circle"><svg width="58" height="58" viewBox="0 0 58 58"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
+            </svg>
+        </div>
+        <div class="arrow-right--arrow home-manage-arrow-right__arrow"><svg width="24" height="6" viewBox="0 0 24 6"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M23.2828 3.28284C23.4391 3.12663 23.4391 2.87337 23.2828 2.71716L20.7373 0.171573C20.581 0.0153632 20.3278 0.0153632 20.1716 0.171573C20.0154 0.327783 20.0154 0.581048 20.1716 0.737258L22.4343 3L20.1716 5.26274C20.0154 5.41895 20.0154 5.67222 20.1716 5.82843C20.3278 5.98464 20.581 5.98464 20.7373 5.82843L23.2828 3.28284ZM0 3.4H23V2.6H0V3.4Z"
+                    fill="#e7ffc8" />
+            </svg>
+        </div>
+    </div>
+</a>
+
 <?php } ?>
 
 <!-- make title on homepage / section make with bg  -->

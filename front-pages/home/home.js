@@ -729,3 +729,79 @@ gsap.to('.home-manage--text-block', {
     onLeaveBack: () => changeArrowColor('link-yellow-unstyled'),
   },
 });
+
+//
+gsap.from('.mobile__go-to-influencers', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.manage-gallery--row',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 50%',
+    end: 'top 45%',
+  },
+});
+
+gsap.to('.mobile__go-to-influencers', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.make',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 50%',
+    end: 'top 45%',
+  },
+});
+
+gsap.from('.mobile__go-to-make', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 45%',
+    end: 'top 45%',
+  },
+});
+
+function changeGoToMakeClass(newClass) {
+  console.log('changeGoToMakeClass');
+  const item = document.querySelector('.mobile__go-to-make');
+  item.classList = `d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-make ${newClass}`;
+}
+
+// change color/class to yellow
+gsap.from('.mobile__go-to-make', {
+  scrollTrigger: {
+    trigger: '.make-with-bg',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top center',
+    end: '+=100',
+    onEnter: () => changeGoToMakeClass('link-yellow-unstyled'),
+    onEnterBack: () => changeGoToMakeClass('link-green-unstyled'),
+  },
+});
+
+gsap.from('.mobile__go-to-make', {
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top center',
+    end: '+=100',
+    onEnter: () => changeGoToMakeClass('link-green-unstyled'),
+    onEnterBack: () => changeGoToMakeClass('link-yellow-unstyled'),
+  },
+});
+
+gsap.to('.mobile__go-to-make', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'bottom top',
+  },
+});
