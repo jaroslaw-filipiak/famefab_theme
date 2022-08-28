@@ -178,15 +178,27 @@ caseItemsArr.forEach((item) => {
 // dynamic change content / innerHTML
 
 function changeTextAndClass(value, addClass) {
-  const item = document.querySelector('.top-bar--page-title');
-  item.innerHTML = value;
-  item.classList = 'top-bar--page-title ' + addClass;
+  const topBar = document.querySelector('.top-bar');
+  const title = document.querySelector('.top-bar--page-title ');
+  title.innerHTML = value;
+  topBar.classList = 'top-bar ' + addClass;
 }
 
 gsap.to('.top-bar--page-title', {
   snap: 'innerText',
   scrollTrigger: {
-    trigger: '.influencer-hero .second-row',
+    trigger: '.influencer-hero',
+    scroller: '.smooth-scroll',
+
+    onEnter: () => changeTextAndClass('Influencers', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Influencers', 'color-yellow'),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.second-row',
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top 5%',

@@ -9,6 +9,12 @@
 
 ?>
 
+<?php 
+
+$influencerPage = 'influencer_post_type' === get_post_type();
+
+?>
+
 <section class="top-bar" data-scroll data-scroll-sticky>
     <div class="container-fluid">
         <div class="row">
@@ -53,7 +59,6 @@
 
             </div>
 
-
             <?php if(is_page_template( 'page-templates/page-home.php' )) { ?>
             <!-- section-indicator on homepage -->
             <div
@@ -66,7 +71,7 @@
             <!-- section-indicator on single influencers -->
             <div
                 class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start gsap__section-indicator-home-page">
-                <span class="top-bar--page-title color-yellow">Influencers</span>
+                <span class="top-bar--page-title">Influencers</span>
             </div>
             <?php } ?>
 

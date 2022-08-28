@@ -77,6 +77,20 @@
       }
     }
   }
+
+  .cross__single-influencer {
+    svg line {
+      stroke: $mainGreen !important;
+    }
+
+    svg {
+      stroke: $mainGreen !important;
+    }
+
+    svg circle {
+      stroke: $mainGreen !important;
+    }
+  }
 }
 
 .color-yellow {
@@ -92,4 +106,26 @@
   svg path {
     fill: $yellow !important;
   }
+
+  .cross__single-influencer {
+    svg line {
+      stroke: $yellow !important;
+    }
+
+    svg {
+      stroke: $yellow !important;
+    }
+
+    svg circle {
+      stroke: $yellow !important;
+    }
+  }
 }
+
+// <a href="<?php echo get_home_url('', 'influencer-list') ?>" class="cross__single-influencer">
+// <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <line x1="20.2741" y1="19.7678" x2="39.2741" y2="37.6502" stroke="#E7FFC8" stroke-width="0.8" />
+//     <line x1="19.7172" y1="37.9423" x2="38.1668" y2="19.4926" stroke="#E7FFC8" stroke-width="0.8" />
+//     <circle cx="29" cy="29" r="28.6" stroke="#E7FFC8" stroke-width="0.8" />
+// </svg>
+// </a>
