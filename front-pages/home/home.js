@@ -26,8 +26,9 @@ gsap.to('#ourReachValue', {
   },
 });
 
+// d5d0f3
 gsap.to('body', {
-  '--color': '#e4e1f4',
+  '--color': '#d5d0f3',
   immediateRender: false,
   scrollTrigger: {
     trigger: '.hello',
@@ -39,14 +40,14 @@ gsap.to('body', {
 });
 
 gsap.to('body', {
-  '--color': '#f1f0ef',
+  '--color': '#F1F0EF',
   immediateRender: false,
   scrollTrigger: {
     trigger: '.who-we-are',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 20%',
-    end: '+=100%',
+    start: 'top 80%',
+    end: 'top 5%',
   },
 });
 

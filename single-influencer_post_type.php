@@ -10,7 +10,6 @@
         <div id="FBValue" class="our-reach--counter-value"></div>
         <p class="our-reach-unit">k</p>
     </div>
-
 </div>
 
 <!-- insta -->

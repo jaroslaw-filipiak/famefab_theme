@@ -54,6 +54,5 @@
             </div>
         </div>
     </div>
-    <img class="logo_big" src="<?php echo get_theme_file_uri() ?>/dist/assets/img/logo/main-big/logo-main-big.svg"
-        alt="">
+    <img class="logo_big" src="<?php echo get_theme_file_uri() ?>/dist/assets/img/femmefab-logo.svg" alt="">
 </section>

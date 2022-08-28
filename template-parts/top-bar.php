@@ -103,6 +103,13 @@
             </div>
             <?php } ?>
 
+            <?php if("case_post_type" == get_post_type()) { ?>
+            <!-- section-indicator on page: make-->
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title "></span>
+            </div>
+            <?php } ?>
+
             <?php if(is_page_template( 'page-templates/page-contact.php' )) { ?>
             <!-- section-indicator on page: contact us-->
             <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">

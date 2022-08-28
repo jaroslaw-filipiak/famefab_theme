@@ -201,6 +201,16 @@
 
 <?php } ?>
 
+<?php if('case_post_type' == get_post_type()) { ?>
+
+<div class="single-case--title color-green">
+    Cases</div>
+
+<?php } ?>
+
+
+
+
 <!-- cursor -->
 <div class="cursor">
     <div class="cursor__ball cursor__ball--big ">
