@@ -4,16 +4,24 @@
   position: absolute;
   left: 20px;
   bottom: 10px;
-  width: 100%;
-  text-align: left;
+  text-align: center;
   @include font-serif;
   // @include default-transition;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-only(xs) {
     font-size: 100px;
     line-height: 100px;
     text-align: center;
     left: 0;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-only(sm) {
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    left: 0;
+    max-width: 100%;
   }
 
   @include media-breakpoint-up(md) {
@@ -22,6 +30,7 @@
     position: fixed;
     bottom: -30px;
     left: 0;
+    width: 100%;
   }
 
   @include media-breakpoint-up(lg) {
