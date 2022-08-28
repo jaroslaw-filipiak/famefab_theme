@@ -15,7 +15,12 @@ $offset: 10vh;
 
   @include media-breakpoint-up(xl) {
     min-height: 100vh;
-    padding-top: 40vh;
+    padding-top: 25vh;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-height: 100vh;
+    padding-top: 20vh;
   }
 
   &--col {

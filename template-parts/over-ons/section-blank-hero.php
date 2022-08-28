@@ -11,7 +11,7 @@
 
 
 <!-- <div class="pre--blank-hero"></div> -->
-<section class="blank-hero bg-second-violet">
+<section class="blank-hero bg-second-violet total-reach-trigger">
     <div class="blank-hero-color-overlay"></div>
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
@@ -26,7 +26,7 @@
 <?php $page_over_ons_second_section_background_image = get_field( 'page_over_ons_second_section_background_image' ); ?>
 
 <section id="notPin"
-    class="blank-hero blank-hero__with-bg bg-cover bg-no-repeat bg-center over-ons-title-trigger over-ons-pin-trigger"
+    class="blank-hero blank-hero__with-bg bg-cover bg-no-repeat bg-center  over-ons-title-trigger over-ons-pin-trigger our-reach-change-bg-trigger"
     style="<?php echo wp_is_mobile() ? 'background-size: cover;'  : 'background-size: 140%;'?>  background-image: url('<?php echo esc_url( $page_over_ons_second_section_background_image['url'] ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">

@@ -22,7 +22,7 @@ gsap.to('#ourReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top bottom',
-    end: '55%',
+    end: '78%',
   },
 });
 

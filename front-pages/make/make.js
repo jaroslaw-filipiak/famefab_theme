@@ -100,7 +100,7 @@ gsap.to('#totalReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top bottom',
-    end: 'bottom',
+    end: '48%',
   },
 });
 

@@ -21,7 +21,31 @@ gsap.to('#ourReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top bottom',
-    end: 'bottom',
+    end: '54%',
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#e7ffc8',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.gsap__reveal-trigger__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
+  },
+});
+
+gsap.to('.our-reach--counter', {
+  '--counter-color': '#214c2c',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.who-we-are__contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: () => 'top ' + window.innerWidth * 0.17,
+    end: () => 'top ' + window.innerWidth * 0.2,
   },
 });
 

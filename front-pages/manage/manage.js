@@ -24,7 +24,7 @@ gsap.from('#ourReachValue', {
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top 200%',
-    end: 'top top',
+    end: 'top -120%',
   },
 });
 
