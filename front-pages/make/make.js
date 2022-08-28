@@ -151,8 +151,6 @@ export function handleCasesOnHover() {
 handleCasesOnHover();
 changeSVGcolors('#214c2c');
 
-console.log('make');
-
 ScrollTrigger.create({
   trigger: '.cases',
   scroller: '.smooth-scroll',
@@ -178,9 +176,11 @@ function handleInfluencer(influencer) {
   dynamicLink.classList.remove('opacity-0');
   dynamicLink.setAttribute('href', influencer.dataset.link);
 
-  influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+  if (!isMobile) {
+    influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+    influencersBG.classList = `cases--dynamic-bg opacity-0`;
+  }
 
-  influencersBG.classList = `cases--dynamic-bg opacity-0`;
   outputInfluencerName.classList = `case-hover-output--name`;
   outputInfo.classList = `case-hover-output`;
 
@@ -188,30 +188,9 @@ function handleInfluencer(influencer) {
 
   dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-green-unstyled`;
 
-  gsap.to('.our-reach--counter', {
-    '--counter-color': '#214c2c',
-    immediateRender: false,
-    scrollTrigger: {
-      trigger: '.cases',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: () => 'top ' + window.innerWidth * 0.17,
-      end: () => 'top ' + window.innerWidth * 0.2,
-    },
-  });
-
-  setTimeout(() => {
-    casesSection.classList = `cases cases__is-bg-visible`;
-  }, 1800);
-
-  setTimeout(() => {
-    influencersBG.classList = `cases--dynamic-bg opacity-1`;
-    outputInfo.classList = `case-hover-output color-yellow`;
-    dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
-    outputInfluencerName.classList = `case-hover-output--name color-yellow`;
-
+  if (!isMobile) {
     gsap.to('.our-reach--counter', {
-      '--counter-color': '#e7ffc8',
+      '--counter-color': '#214c2c',
       immediateRender: false,
       scrollTrigger: {
         trigger: '.cases',
@@ -221,7 +200,32 @@ function handleInfluencer(influencer) {
         end: () => 'top ' + window.innerWidth * 0.2,
       },
     });
-  }, 2000);
+  }
+
+  if (!isMobile) {
+    setTimeout(() => {
+      casesSection.classList = `cases cases__is-bg-visible`;
+    }, 1800);
+
+    setTimeout(() => {
+      influencersBG.classList = `cases--dynamic-bg opacity-1`;
+      outputInfo.classList = `case-hover-output color-yellow`;
+      dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
+      outputInfluencerName.classList = `case-hover-output--name color-yellow`;
+
+      gsap.to('.our-reach--counter', {
+        '--counter-color': '#e7ffc8',
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: '.cases',
+          scroller: '.smooth-scroll',
+          scrub: true,
+          start: () => 'top ' + window.innerWidth * 0.17,
+          end: () => 'top ' + window.innerWidth * 0.2,
+        },
+      });
+    }, 2000);
+  }
 }
 
 const influencers = gsap.utils.toArray('.cases--list-item');
@@ -232,7 +236,7 @@ influencers.forEach((influencer) => {
       scroller: '.smooth-scroll',
       trigger: influencer,
       start: 'top center',
-      end: '+=100',
+      end: `${isMobile ? '+=20' : '+=120'}`,
       scrub: false,
       toggleClass: 'influencer-is-active',
       onEnter: () => handleInfluencer(influencer),
@@ -257,7 +261,7 @@ gsap.to('.top-bar--page-title', {
     trigger: '.total-reach-trigger',
     scroller: '.smooth-scroll',
     scrub: false,
-    start: 'top 5%',
+    start: `top 5%`,
     end: 'top 3%',
     onEnter: () => changeTextAndClass('Make', 'color-yellow'),
     onLeaveBack: () => changeTextAndClass('Make ', 'color-green'),
@@ -279,26 +283,59 @@ gsap.to('.top-bar--page-title', {
 
 // our reach bg change color
 
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#e7ffc8',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.total-reach-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
+if (!isMobile) {
+  gsap.to('.our-reach--counter', {
+    '--counter-color': '#e7ffc8',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.total-reach-trigger',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: () => 'top ' + window.innerWidth * 0.17,
+      end: () => 'top ' + window.innerWidth * 0.2,
+      markers: false,
+    },
+  });
+}
 
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#214c2c',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.cases',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
+if (isMobile) {
+  gsap.to('.our-reach--counter', {
+    '--counter-color': '#e7ffc8',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.total-reach-trigger',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top 68%',
+      end: ' top 65%',
+    },
+  });
+}
+
+if (!isMobile) {
+  gsap.to('.our-reach--counter', {
+    '--counter-color': '#214c2c',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.cases',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: () => 'top ' + window.innerWidth * 0.17,
+      end: () => 'top ' + window.innerWidth * 0.2,
+    },
+  });
+}
+
+if (isMobile) {
+  gsap.to('.our-reach--counter', {
+    '--counter-color': '#214c2c',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.cases',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top 68%',
+      end: ' top 65%',
+    },
+  });
+}
