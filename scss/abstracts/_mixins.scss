@@ -1,3 +1,9 @@
 @mixin default-transition {
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+@mixin horizontal {
+  @media (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 450px) {
+    @content;
+  }
+}
