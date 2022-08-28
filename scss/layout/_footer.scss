@@ -26,8 +26,12 @@
 
   &-col-content {
     max-width: 360px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
 
     @include media-breakpoint-up(lg) {
       text-align: left;

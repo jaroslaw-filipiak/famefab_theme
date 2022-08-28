@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div data-scroll data-scroll-speed="1"
-                    class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-istart align-items-lg-start  justify-content-start ">
 
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
@@ -24,7 +24,7 @@
 
                 </div>
                 <div data-scroll data-scroll-speed="1.3"
-                    class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
                     </div>
@@ -32,14 +32,14 @@
 
                 </div>
                 <div data-scroll data-scroll-speed="1.6"
-                    class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
                     </div>
 
                 </div>
                 <div data-scroll data-scroll-speed="1"
-                    class="col-12 col-sm-6 col-lg-3 d-flex flex-column align-items-center align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
                     </div>
@@ -210,6 +210,7 @@
 
 
 
+<?php if(!wp_is_mobile()) { ?>
 
 <!-- cursor -->
 <div class="cursor">
@@ -224,8 +225,10 @@
             <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
         </svg>
     </div>
-</div><!--  <-- cursor end -->
+</div>
+<!--  <-- cursor end -->
 
+<?php } ?>
 
 
 
