@@ -15,9 +15,8 @@
   font-size: 70px;
   line-height: 70px;
   position: fixed;
-
   left: 50%;
-  width: 100%;
+
   text-align: left;
   @include font-serif;
   // @include default-transition;
@@ -26,6 +25,14 @@
     position: absolute;
     top: 85vh !important;
     left: 20px !important;
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-only(sm) {
+    position: absolute;
+    top: 85vh !important;
+    left: 20px !important;
+    max-width: 100%;
   }
 
   @include media-breakpoint-up(sm) {
@@ -39,6 +46,7 @@
     font-size: 140px;
     line-height: 140px;
     bottom: -30px;
+    width: 100%;
   }
 
   @include media-breakpoint-up(lg) {

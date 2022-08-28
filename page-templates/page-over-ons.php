@@ -14,7 +14,7 @@
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-blank-hero' ); ?>
+<!-- ✔️ --><?php  get_template_part( 'template-parts/over-ons/section-blank-hero' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-scroll-gallery' ); ?>
 <!-- ✔️ --><?php get_template_part( 'template-parts/over-ons/section-full-service-agency' ); ?>
 

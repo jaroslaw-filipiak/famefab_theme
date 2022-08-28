@@ -213,47 +213,67 @@ function handleInfluencer(influencer) {
 
   const dynamicLink = document.querySelector('.influencer-dynamic-link');
 
-  outputInfluencerName.innerHTML = influencer.dataset.name;
-  outputInfo.innerHTML = influencer.dataset.info;
-  outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
-  dynamicLink.classList.remove('opacity-0');
-  dynamicLink.setAttribute('href', influencer.dataset.link);
+  if (!isMobile) {
+    outputInfluencerName.innerHTML = influencer.dataset.name;
+    outputInfo.innerHTML = influencer.dataset.info;
+    outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
+    dynamicLink.classList.remove('opacity-0');
+    dynamicLink.setAttribute('href', influencer.dataset.link);
 
-  // influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
+    // influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
 
-  influencersBG.classList = `influencers--dynamic-bg opacity-0`;
-  outputInfluencerName.classList = `influencer-hover-output--name`;
-  outputInfo.classList = `influencer-hover-output`;
+    influencersBG.classList = `influencers--dynamic-bg opacity-0`;
+    outputInfluencerName.classList = `influencer-hover-output--name`;
+    outputInfo.classList = `influencer-hover-output`;
 
-  const allInfluencersTitles = document.querySelectorAll('.influencer--title');
+    const allInfluencersTitles =
+      document.querySelectorAll('.influencer--title');
 
-  // allInfluencersTitles.forEach((item) => {
-  //   item.classList = `influencer--title color-green`;
-  // });
+    // allInfluencersTitles.forEach((item) => {
+    //   item.classList = `influencer--title color-green`;
+    // });
 
-  setTimeout(() => {
-    // influencersBG.classList = `influencers--dynamic-bg opacity-1`;
-    // outputInfo.classList = `influencer-hover-output color-yellow`;
-    // outputInfluencerName.classList = `influencer-hover-output--name color-yellow`;
-  }, 3000);
+    setTimeout(() => {
+      // influencersBG.classList = `influencers--dynamic-bg opacity-1`;
+      // outputInfo.classList = `influencer-hover-output color-yellow`;
+      // outputInfluencerName.classList = `influencer-hover-output--name color-yellow`;
+    }, 3000);
+  }
 }
 
 const influencers = gsap.utils.toArray('.influencers--list-item');
 
-influencers.forEach((influencer) => {
-  gsap.to(influencer, {
-    scrollTrigger: {
-      scroller: '.smooth-scroll',
-      trigger: influencer,
-      start: 'top center',
-      end: '+=100',
-      scrub: false,
-      toggleClass: 'influencer-is-active',
-      onEnter: () => handleInfluencer(influencer),
-      onEnterBack: () => handleInfluencer(influencer),
-    },
+if (!isMobile) {
+  influencers.forEach((influencer) => {
+    gsap.to(influencer, {
+      scrollTrigger: {
+        scroller: '.smooth-scroll',
+        trigger: influencer,
+        start: 'top center',
+        end: '+=120',
+        scrub: false,
+        toggleClass: 'influencer-is-active',
+        onEnter: () => handleInfluencer(influencer),
+        onEnterBack: () => handleInfluencer(influencer),
+      },
+    });
   });
-});
+} else if (isMobile) {
+  influencers.forEach((influencer) => {
+    gsap.to(influencer, {
+      scrollTrigger: {
+        scroller: '.smooth-scroll',
+        trigger: influencer,
+        start: 'top center',
+        end: '+=40',
+        scrub: false,
+        toggleClass: 'influencer-is-active',
+        onEnter: () => handleInfluencer(influencer),
+        onEnterBack: () => handleInfluencer(influencer),
+      },
+    });
+  });
+}
 
 gsap.to('.influencers--dynamic-bg', {
   scrollTrigger: {

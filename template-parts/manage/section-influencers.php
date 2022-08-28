@@ -55,7 +55,9 @@
             <div class="col text-end text-xl-center  influencers--list-wrapper influencer-area-scrollable">
                 <div class="influencers--list">
                     <div class="d-flex flex-column justify-content-end iterable--wrapper">
-                        <div class="iterable">
+
+                        <!-- desktop -->
+                        <div class="iterable d-none d-lg-flex">
 
                             <?php 
 
@@ -97,6 +99,58 @@
 
 
                         </div>
+
+                        <!-- mobile -->
+
+                        <?php if(wp_is_mobile()) ?>
+
+                        <div class="d-flex">
+                            <div class="col-3"></div>
+
+                            <div class="iterable d-block d-lg-none col-9">
+
+                                <?php 
+
+                                    $args = array(
+                                        'post_type' => 'influencer_post_type',
+                                        'posts_per_page' => -1,
+                                    );
+                                    // the query
+                                    $the_query = new WP_Query( $args ); ?>
+
+                                <?php if ( $the_query->have_posts() ) : ?>
+
+                                <!-- pagination here -->
+
+                                <!-- the loop -->
+                                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+
+                                <a href="<?php echo get_permalink() ?>"
+                                    class="mobile-item influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
+                                    <span> <?php the_title() ?></span>
+
+                                </a>
+
+                                <?php endwhile; ?>
+                                <!-- end of the loop -->
+
+                                <!-- pagination here -->
+
+                                <?php wp_reset_postdata(); ?>
+
+                                <?php else : ?>
+                                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                                <?php endif; ?>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>

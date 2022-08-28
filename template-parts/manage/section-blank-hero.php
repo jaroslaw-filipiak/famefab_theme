@@ -24,8 +24,8 @@
     style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 130%; ' ?>background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
-            <div class=" col-2 d-md-block col-md-2  ps-0 h-100"></div>
-            <div class=" col-10 col-md-9 text-center h-100 page-manage-piniata ">
+            <div class="col-3 col-sm-2 d-md-block col-md-2  ps-0 h-100"></div>
+            <div class="col-9 col-sm-10 col-md-9 text-center h-100 page-manage-piniata">
                 <div
                     class="gsap_opacity-reveal__blank-hero blank-hero--content blank-hero--content__page-manage color-yellow ">
                     <?php the_field( 'page_manage_second_section_text_content' ); ?>
@@ -36,7 +36,7 @@
 
                 <a href="<?php echo esc_url( $page_manage_second_section_link_to_section['url'] ); ?>" data-scroll
                     data-scroll-speed="1"
-                    class="gsap_opacity-reveal__blank-hero link-yellow-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+                    class="gsap_opacity-reveal__blank-hero link-yellow-unstyled content-and-arrow col-12 col-md-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px;">
                     <div class="pe-4 mb-2 color-yellow">
                         <small><?php echo esc_html( $page_manage_second_section_link_to_section['title'] ); ?></small>

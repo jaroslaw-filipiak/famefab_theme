@@ -125,7 +125,19 @@
       align-items: self-end;
       justify-content: flex-end;
 
-      div {
+      a {
+        @include media-breakpoint-down(lg) {
+          text-decoration: none;
+          color: $mainGreen;
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 20px !important;
+          font-size: 36px;
+        }
+      }
+
+      div,
+      .mobile-item {
         font-size: 27px;
         text-align: right;
 
