@@ -135,6 +135,10 @@
   min-height: 100vh;
   padding: 20px;
 
+  @include media-breakpoint-only(xs) {
+    padding-bottom: 20vh;
+  }
+
   @include media-breakpoint-up(md) {
     padding: 40px;
   }

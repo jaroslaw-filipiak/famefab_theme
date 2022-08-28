@@ -18,7 +18,8 @@
                 <p class="who-we-are__contact-us--title font-serif">
                     <?php the_field( 'page_contact_section_with_big_heading_title' ); ?>
                 </p>
-                <div data-scroll data-scroll-speed="1"
+                <div style="<?php echo wp_is_mobile() ? 'margin-top: 20vh; marign-bottom: 20vh;' : '' ?>" data-scroll
+                    data-scroll-speed="1"
                     class="who-we-are__contact-us--subtitle font-green-default text-uppercase font-sans">
                     <?php the_field( 'page_contact_section_with_big_heading_subtitle' ); ?>
                 </div>

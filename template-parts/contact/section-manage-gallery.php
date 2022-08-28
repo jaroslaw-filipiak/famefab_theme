@@ -25,8 +25,8 @@
                     <?php if ( $page_contact_section_with_photos_link_to_section ) : ?>
 
                     <a href="<?php echo esc_url( $page_contact_section_with_photos_link_to_section['url'] ); ?>"
-                        data-scroll-to data-scroll data-scroll-speed=".3"
-                        class="link-green-unstyled content-and-arrow d-flex align-items-center justify-content-start p-0">
+                        data-scroll data-scroll-speed=".3"
+                        class="d-none d-lg-flex link-green-unstyled content-and-arrow align-items-center justify-content-start p-0">
                         <div class="pe-4 mb-2 mb-md-0"><small
                                 class="cursor-pointer"><?php echo esc_html( $page_contact_section_with_photos_link_to_section['title'] ); ?></small>
                         </div>
@@ -77,7 +77,8 @@
             </div>
             <div class="manage-gallery--title-wrapper">
                 <div class="manage-gallery--title">
-                    <p><?php the_field( 'page_contact_section_with_photos_title' ); ?></p>
+                    <p style="<?php echo wp_is_mobile() ? 'font-size: 60px;' : ''?>">
+                        <?php the_field( 'page_contact_section_with_photos_title' ); ?></p>
                 </div>
             </div>
 
