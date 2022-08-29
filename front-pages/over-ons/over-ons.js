@@ -50,6 +50,17 @@ gsap.to('.our-reach--counter', {
   },
 });
 
+gsap.to('.our-reach--counter', {
+  left: -300,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top 80%',
+  },
+});
+
 if (!isMobile) {
   // title from bottom
   gsap.from('.over-ons--title', {

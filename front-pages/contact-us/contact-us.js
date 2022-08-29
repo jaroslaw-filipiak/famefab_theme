@@ -55,6 +55,17 @@ gsap.to('.our-reach--counter', {
   },
 });
 
+gsap.to('.our-reach--counter', {
+  left: -300,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 70%',
+    end: 'top 40%',
+  },
+});
+
 if (!isMobile) {
   // blank hero bg scale
   gsap.to('.blank-hero', {

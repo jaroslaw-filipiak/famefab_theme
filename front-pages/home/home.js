@@ -26,6 +26,17 @@ gsap.to('#ourReachValue', {
   },
 });
 
+gsap.to('.our-reach--counter', {
+  left: -300,
+  scrollTrigger: {
+    trigger: '.contact-us',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 80%',
+    end: 'top center',
+  },
+});
+
 // d5d0f3
 gsap.to('body', {
   '--color': '#d5d0f3',

@@ -341,3 +341,14 @@ if (!isMobile) {
     },
   });
 }
+
+gsap.to('.our-reach--counter', {
+  left: -300,
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 70%',
+    end: 'top 40%',
+  },
+});
