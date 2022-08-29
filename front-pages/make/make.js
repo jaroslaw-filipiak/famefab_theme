@@ -3,6 +3,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+function changeMakeClass(className) {
+  console.log('change make ons class');
+  const title = document.querySelector('.make--fixed-title');
+  title.classList = `make--fixed-title ${className}`;
+}
+
 if (!isMobile) {
   // title from bottom
   gsap.from('.make--fixed-title', {
@@ -46,25 +52,6 @@ if (!isMobile) {
   });
 
   // title change color
-
-  function changeMakeClass(className) {
-    console.log('change over ons class');
-    const title = document.querySelector('.make--fixed-title');
-    title.classList = `make--fixed-title ${className}`;
-  }
-
-  gsap.to('.make--fixed-title', {
-    scrollTrigger: {
-      trigger: '.total-reach-trigger',
-      scroller: '.smooth-scroll',
-      // scrub: true,
-      start: 'top bottom',
-      end: 'top bottom',
-      onEnter: () => changeMakeClass('color-yellow'),
-      onLeaveBack: () => changeMakeClass('color-green'),
-      toggleActions: 'play none none reset',
-    },
-  });
 } // !isMobile
 
 // title opacity to zero
@@ -336,6 +323,21 @@ if (isMobile) {
       scrub: true,
       start: 'top 68%',
       end: ' top 65%',
+    },
+  });
+}
+
+if (!isMobile) {
+  gsap.to('.make--fixed-title', {
+    scrollTrigger: {
+      trigger: '.change-make-title-color-trigger',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      start: 'top 98%',
+      end: 'top 70%',
+      onEnter: () => changeMakeClass('color-yellow '),
+      onLeaveBack: () => changeMakeClass('color-green '),
+      toggleActions: 'play none none reset',
     },
   });
 }

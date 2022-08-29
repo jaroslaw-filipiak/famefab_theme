@@ -86,7 +86,7 @@
 </h1> -->
 <?php } ?>
 
-<!--  work title /  page: make -->
+<!--  make title /  page: make -->
 <?php if(is_page_template( 'page-templates/page-make.php' )) { ?>
 <h1 class="make--fixed-title color-green"><?php the_field( 'page_make_first_section_title' ); ?></h1>
 <div class="cases--dynamic-bg"></div>
