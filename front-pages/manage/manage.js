@@ -80,7 +80,7 @@ if (!isMobile) {
     end: 'bottom 60%',
     pin: '.page-manage-piniata',
   });
-} // wp_is_mobile
+} // !wp_is_mobile
 
 function changeOverOnsClass(className) {
   console.log('change over ons class');
@@ -88,20 +88,22 @@ function changeOverOnsClass(className) {
   title.classList = `manage--title ${className}`;
 }
 
-// title opacity to zero
-gsap.to('.manage--title', {
-  scrollTrigger: {
-    trigger: '.blank-hero--content',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top 30%',
-    end: 'top 20%',
+if (!isMobile) {
+  // title opacity to zero
+  gsap.to('.manage--title', {
+    scrollTrigger: {
+      trigger: '.blank-hero--content',
+      scroller: '.smooth-scroll',
+      // scrub: true,
+      start: 'top 30%',
+      end: 'top 20%',
 
-    toggleActions: 'play none none reverse',
-  },
-  opacity: 0,
-  display: 'none',
-});
+      toggleActions: 'play none none reverse',
+    },
+    opacity: 0,
+    display: 'none',
+  });
+}
 
 // blank-hero--content
 

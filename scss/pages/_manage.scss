@@ -57,3 +57,25 @@
 .blank-hero--content__page-manage {
   margin-top: 20vh;
 }
+
+.blank-hero--manage__mobile-content {
+  @include media-breakpoint-down(lg) {
+    padding-top: 20vh;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    @include font-sans;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include font-sans;
+    text-align: left;
+    font-weight: 500;
+  }
+}
