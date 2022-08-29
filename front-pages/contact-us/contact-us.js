@@ -2,6 +2,12 @@ import gsap from 'gsap';
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+function changeContactUsClass(className) {
+  console.log('change over ons class');
+  const title = document.querySelector('.contact-us__hero-gsap');
+  title.classList = `contact-us__hero-gsap ${className}`;
+}
+
 gsap.from('.our-reach--counter', {
   opacity: 0,
   scrollTrigger: {
@@ -81,19 +87,13 @@ gsap.from('.contact-us__hero-gsap', {
 
 // title change color
 
-function changeContactUsClass(className) {
-  console.log('change over ons class');
-  const title = document.querySelector('.contact-us__hero-gsap');
-  title.classList = `contact-us__hero-gsap ${className}`;
-}
-
 gsap.to('.contact-us__hero-gsap', {
   scrollTrigger: {
-    trigger: '.gsap__reveal-trigger__contact-us',
+    trigger: '.contact-us-title-change-color-trigger',
     scroller: '.smooth-scroll',
     // scrub: true,
-    start: 'top bottom',
-    end: 'top bottom',
+    start: 'top 99%',
+    end: 'top 80%',
     onEnter: () => changeContactUsClass('color-yellow'),
     onLeaveBack: () => changeContactUsClass('color-green'),
     toggleActions: 'play none none reset',

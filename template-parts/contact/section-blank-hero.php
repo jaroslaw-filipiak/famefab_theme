@@ -11,7 +11,8 @@
 
 <?php $page_contact_second_section_background_image = get_field( 'page_contact_second_section_background_image' ); ?>
 
-<section class="blank-hero bg-cover bg-no-repeat bg-center gsap__reveal-trigger__contact-us"
+<section
+    class="blank-hero bg-cover bg-no-repeat bg-center gsap__reveal-trigger__contact-us contact-us-title-change-color-trigger"
     style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 200%;' ?> background-image: url('<?php echo esc_url( $page_contact_second_section_background_image['url'] ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
