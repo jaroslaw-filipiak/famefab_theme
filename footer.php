@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div data-scroll data-scroll-speed="1"
-                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-istart align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
 
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
@@ -24,7 +24,7 @@
 
                 </div>
                 <div data-scroll data-scroll-speed="1.3"
-                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
                     </div>
@@ -32,14 +32,14 @@
 
                 </div>
                 <div data-scroll data-scroll-speed="1.6"
-                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
                     </div>
 
                 </div>
                 <div data-scroll data-scroll-speed="1"
-                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-lg-start  justify-content-start ">
+                    class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
                     <div class="footer-col-content">
                         <?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
                     </div>

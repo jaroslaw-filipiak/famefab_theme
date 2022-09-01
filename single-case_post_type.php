@@ -65,14 +65,14 @@
 
 <section class="detail-hero">
     <div class="container-fluid ">
-        <div class="row d-flex align-items-start" style="border: 1px solid transparent">
+        <div class="row d-flex align-items-start flex-lg-nowrap" style="border: 1px solid transparent">
 
-            <div class="col-3 col-md-2 d-md-block  ps-0">
+            <div class=" col-3 col-md-2 d-md-block  ps-0" style="border: 1px solid transparent">
             </div>
 
-            <div
-                class="col col-md-4 d-none d-md-flex justify-content-start justify-content-lg-center  gsap__detail-piniata">
-                <div class="col-lg-8">
+            <div class=" overflow-visible col col-md-4 d-none d-md-flex justify-content-start justify-content-lg-center  gsap__detail-piniata"
+                style="border: 1px solid transparent">
+                <div class="col col-lg-8">
                     <div class="detail-info">
                         <?php echo get_the_title() ?> CASE </br>
                     </div>
@@ -111,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="col-9 col-md-6  text-center ps-xl-5 ps-xxl-0">
+            <div class="col-9 col-md-6 text-center ps-xl-5 ps-xxl-0">
 
                 <div style="max-width: 610px; margin: 0 auto;">
                     <!-- row 1 -->
@@ -163,9 +163,9 @@
         </div>
 
     </div>
-    <div class="detail-hero--title-absolute d-none d-lg-flex detail-hero--content-new">
+    <!-- <div class="detail-hero--title-absolute d-none d-lg-flex detail-hero--content-new">
         Cases
-    </div>
+    </div> -->
 </section>
 
 <section class="detail-pagination ">
