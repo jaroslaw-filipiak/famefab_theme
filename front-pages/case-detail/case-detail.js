@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 gsap.to('.single-case--title', {
   left: -350,
   opacity: 0,
@@ -29,9 +31,9 @@ gsap.from('.our-reach--counter', {
   scrollTrigger: {
     trigger: '.gsap__reveal-counter',
     scroller: '.smooth-scroll',
-    // scrub: true,
+    scrub: true,
     start: 'top bottom',
-    end: 'bottom',
+    end: 'top top',
   },
   duration: 0.3,
 });
@@ -42,7 +44,7 @@ gsap.to('#InfluencersValue', {
   scrollTrigger: {
     trigger: 'body',
     scroller: '.smooth-scroll',
-    // scrub: true,
+    scrub: true,
     start: 'top bottom',
     end: 'bottom',
   },
@@ -55,7 +57,7 @@ gsap.to('#totalReachValue', {
   scrollTrigger: {
     trigger: 'body',
     scroller: '.smooth-scroll',
-    // scrub: true,
+    scrub: true,
     start: 'top bottom',
     end: 'bottom',
   },
@@ -68,7 +70,7 @@ gsap.to('#EngagementValue', {
   scrollTrigger: {
     trigger: 'body',
     scroller: '.smooth-scroll',
-    // scrub: true,
+    scrub: true,
     start: 'top bottom',
     end: 'bottom',
   },
@@ -142,13 +144,15 @@ gsap.from('.detail-hero--subtitle ', {
 //   },
 // });
 
-ScrollTrigger.create({
-  trigger: '.detail-hero',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 99%',
-  pin: '.gsap__detail-piniata',
-});
+if (!isMobile) {
+  ScrollTrigger.create({
+    trigger: '.detail-hero',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'bottom 99%',
+    pin: '.gsap__detail-piniata',
+  });
+}
 
 function changeTextAndClass(value, addClass) {
   const topBar = document.querySelector('.top-bar');

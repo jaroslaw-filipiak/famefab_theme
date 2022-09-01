@@ -28,7 +28,7 @@ gsap.to('#FBValue', {
 });
 
 gsap.to('#InstaValue', {
-  innerText: 28945,
+  innerText: 28,
   snap: 'innerText',
   scrollTrigger: {
     trigger: 'body',
@@ -248,8 +248,8 @@ gsap.to('.our-reach--counter__facebook', {
     trigger: '.influencer-hero .second-row',
     scroller: '.smooth-scroll',
     // scrub: true,
-    start: 'top 30%',
-    end: 'top 30%',
+    start: 'top 36%',
+    end: 'top 36%',
     onEnter: () => changeFBclass('color-green '),
     onLeaveBack: () => changeFBclass('color-yellow'),
   },
@@ -294,8 +294,8 @@ gsap.to('.our-reach--counter__insta', {
     trigger: '.influencer-hero .second-row',
     scroller: '.smooth-scroll',
     // scrub: true,
-    start: 'top 50%',
-    end: 'top 50%',
+    start: 'top 56%',
+    end: 'top 56%',
     onEnter: () => changeInstaClass('color-green '),
     onLeaveBack: () => changeInstaClass('color-yellow'),
   },

@@ -56,8 +56,6 @@
             <div class="col h-100 d-flex align-items-center jutify-content-center">
                 <div style="width: 100%;" class="d-flex flex-column align-items-end justify-content-end">
                     <h1 class="text-end"><?php echo get_the_title() ?></h1>
-                    <h3 class="color-yellow">
-                        <?php echo get_the_excerpt() ?></h3>
                 </div>
             </div>
         </div>
@@ -67,11 +65,14 @@
 
 <section class="detail-hero">
     <div class="container-fluid ">
-        <div class="row d-flex align-items-start">
-            <div class=" col-2 d-md-block col-md-2 ps-0">
+        <div class="row d-flex align-items-start" style="border: 1px solid transparent">
+
+            <div class="col-3 col-md-2 d-md-block  ps-0">
             </div>
-            <div class="d-flex justify-content-center col-md-4 gsap__detail-piniata">
-                <div class="col-8">
+
+            <div
+                class="col col-md-4 d-none d-md-flex justify-content-start justify-content-lg-center  gsap__detail-piniata">
+                <div class="col-lg-8">
                     <div class="detail-info">
                         <?php echo get_the_title() ?> CASE </br>
                     </div>
@@ -110,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="col-10 col-md-6 text-center ps-xl-5 ps-xxl-0">
+            <div class="col-9 col-md-6  text-center ps-xl-5 ps-xxl-0">
 
                 <div style="max-width: 610px; margin: 0 auto;">
                     <!-- row 1 -->
@@ -146,7 +147,13 @@
                     </div>
                     <!-- content from wp  -->
 
-                    <div class="row gsap__reveal-counter ">
+                    <div class="row gsap__reveal-counter">
+                        <div class="d-md-none">
+                            <p class="text-uppercase" style="text-align: left; margin-bottom: 60px">
+                                <?php echo get_the_title() ?> CASE </br>
+                            </p>
+                        </div>
+
                         <?php the_content() ?>
                     </div>
 

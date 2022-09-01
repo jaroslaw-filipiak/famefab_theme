@@ -23,6 +23,7 @@
 
 </div>
 
+
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
@@ -31,8 +32,8 @@
     <div class="container-fluid first-row bg-cover bg-no-repeat"
         style="background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
         <div class="row h-100 d-flex align-items-end">
-            <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class=" col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
+            <div class=" col-3 d-md-block col-md-3  ps-0 h-100"></div>
+            <div class=" col-9 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
                 <div class="influencer-hero--content color-yellow pl-3">
                     <?php the_field( 'influencer_first_section_text_content' ); ?>
 

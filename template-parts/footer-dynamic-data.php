@@ -163,9 +163,8 @@
 
 <?php if('case_post_type' == get_post_type()) { ?>
 
-<div class="single-case--title color-green">
+<div class="d-none d-xl-flex single-case--title color-green">
     Cases</div>
-
 <?php } ?>
 
 

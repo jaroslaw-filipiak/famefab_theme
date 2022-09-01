@@ -17,7 +17,7 @@
                 class="col-10 col-md-12 d-flex align-items-center justify-content-center hello-col-right pt-5 mt-5 mt-md-0 pt-md-0">
 
                 <div
-                    class="hello--get-started-area accordion-collapse d-flex align-items-start align-items-lg-center justify-content-start">
+                    class="hello--get-started-area accordion-collapse d-flex align-items-center align-items-lg-center justify-content-start">
                     <div data-scroll data-scroll-speed="1" class="col-12 col-lg-6 p-0 font-sans gsap__reveal">
                         <?php the_field( 'main_heading' ); ?>
                     </div>

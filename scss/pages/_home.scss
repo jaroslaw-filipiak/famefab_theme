@@ -32,6 +32,10 @@ body {
     bottom: 20px;
     transform: translate(-50%, 0);
     width: 96vw;
+
+    @include media-breakpoint-down(md) {
+      bottom: 100px;
+    }
   }
 
   &__logo-trigger {
@@ -267,9 +271,6 @@ body {
   }
 
   &--title {
-
-    
-
     p {
       font-size: 70px;
       line-height: 70px;
@@ -287,8 +288,6 @@ body {
       }
     }
   }
-
-  
 
   &--subtitle {
     width: 300px;

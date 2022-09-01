@@ -138,7 +138,10 @@
 }
 
 .detail-link {
-  margin-top: 120px;
+  margin-top: 40px;
+  @include media-breakpoint-up(lg) {
+    margin-top: 120px;
+  }
 }
 
 .detail-pagination {
