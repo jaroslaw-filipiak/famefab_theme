@@ -93,6 +93,22 @@ if (!isMobile) {
   });
 } // !wp_is_mobile
 
+// if(isMobile) {
+  
+
+//   ScrollTrigger.create({
+//     trigger: '.gsap__blank-hero-mobile-piniata--trigger',
+//     scroller: '.smooth-scroll',
+//     start: 'top bottom',
+//     end: 'bottom 70%',
+//     pin: '.gsap__blank-hero-mobile-piniata',
+//     markers: true
+//   });
+
+// }
+
+// gsap__blank-hero-mobile-piniata
+
 function changeOverOnsClass(className) {
   console.log('change over ons class');
   const title = document.querySelector('.manage--title');

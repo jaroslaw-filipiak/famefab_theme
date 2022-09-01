@@ -212,20 +212,67 @@ gsap.from('.who-we-are__contact-us--title', {
   ease: 'easeIn',
 });
 
-// who-we-are__contact-us--title
-gsap.from('.manage-gallery--title', {
-  scrollTrigger: {
-    trigger: '.manage-gallery',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    // markers: true,
-    start: 'top bottom',
-  },
-  xPercent: -300,
-  scale: 2,
-  opacity: 0,
-  ease: 'easeIn',
-});
+if (!isMobile) {
+  // who-we-are__contact-us--title
+  gsap.from('.manage-gallery--title', {
+    scrollTrigger: {
+      trigger: '.manage-gallery',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      // markers: true,
+      start: 'top bottom',
+    },
+    xPercent: -300,
+    scale: 2,
+    opacity: 0,
+    ease: 'easeIn',
+  });
+}
+
+if (isMobile) {
+  // who-we-are__contact-us--title
+  gsap.from('.manage-gallery--title', {
+    scrollTrigger: {
+      trigger: '.manage-gallery',
+      scroller: '.smooth-scroll',
+      scrub: true,
+
+      start: 'top bottom',
+      end: 'top center',
+    },
+    xPercent: -300,
+    scale: 2,
+    opacity: 0,
+    ease: 'easeIn',
+  });
+}
+
+if (isMobile) {
+  gsap.from('.mobile__manage-gallery--vaccatures', {
+    scrollTrigger: {
+      trigger: '.manage-gallery',
+      scroller: '.smooth-scroll',
+      scrub: true,
+
+      start: 'top bottom',
+      end: 'top 30%',
+    },
+    xPercent: -300,
+    ease: 'easeIn',
+  });
+
+  gsap.to('.mobile__manage-gallery--vaccatures', {
+    scrollTrigger: {
+      trigger: '.manage-gallery',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'bottom 70%',
+      end: 'bottom 60%',
+    },
+    opacity: 0,
+    ease: 'easeIn',
+  });
+}
 
 // change dynamic title and class
 

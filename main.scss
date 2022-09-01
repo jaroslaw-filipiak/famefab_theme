@@ -80,3 +80,13 @@ body {
     border: 2px solid red;
   }
 }
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: $fioletLight;
+}

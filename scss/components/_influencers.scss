@@ -49,6 +49,13 @@
   padding: 20px;
   position: relative;
 
+  @include media-breakpoint-down(md) {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @include media-breakpoint-up(xl) {
     padding: 40px 40px 0px 40px;
   }

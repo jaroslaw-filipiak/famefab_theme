@@ -18,7 +18,7 @@
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-3 col-md-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-9 col-md-10 col-md-9 text-center h-100  ">
-                <div class="blank-hero--content color-yellow gsap__page-contact-content-reveal">
+                <div class="blank-hero--content color-yellow gsap__page-contact-content-reveal" style="<?php echo wp_is_mobile() ? 'padding-right: 30px; margin-top: 17vh;' : ''; ?>">
                     <?php the_field( 'page_contact_second_section_text_content' ); ?>
                 </div>
 

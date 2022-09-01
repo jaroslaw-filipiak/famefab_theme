@@ -76,7 +76,7 @@
 
             </div>
             <div class="manage-gallery--title-wrapper">
-                <div class="manage-gallery--title">
+                <div class="manage-gallery--title manage-gallery--title__page-contact">
                     <p style="<?php echo wp_is_mobile() ? 'font-size: 60px;' : ''?>">
                         <?php the_field( 'page_contact_section_with_photos_title' ); ?></p>
                 </div>

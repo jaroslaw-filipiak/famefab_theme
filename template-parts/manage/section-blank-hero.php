@@ -14,7 +14,7 @@
         <div class="row h-100 d-flex align-items-end">
             <div class="col-3 col-md-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div
-                class="col-9 col-md-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start blank-hero--manage__mobile-content color-green">
+                class="col-9 col-md-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start blank-hero--manage__mobile-content color-green" style="<?php echo wp_is_mobile() ? 'padding-right: 30px;' : ''; ?>">
 
                 <div style="<?php echo wp_is_mobile() ? 'z-index: 22;' : '' ?>"
                     class="gsap__blank-hero-mobile-piniata flex flex-column  align-items-start justify-content-start  ">

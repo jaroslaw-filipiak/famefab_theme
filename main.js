@@ -70,6 +70,15 @@ window.addEventListener('DOMContentLoaded', () => {
     handleHamburgerClick();
     handleClosemenu();
     checkUserZoomValue();
+
+    setTimeout(() => {
+      gsap.to('.preloader', {
+        top: -3000,
+        opacity: 0,
+        duration: 1,
+        ease: 'cubic-bezier(0.25, 0.1, 0.25, 1.0)',
+      });
+    }, 300);
   }
 
   init();
