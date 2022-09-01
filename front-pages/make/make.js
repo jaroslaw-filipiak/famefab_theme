@@ -71,9 +71,9 @@ gsap.to('.make--fixed-title', {
 gsap.from('.our-reach--counter', {
   opacity: 0,
   scrollTrigger: {
-    trigger: '.total-reach-trigger',
+    trigger: '.change-make-title-color-trigger',
     scroller: '.smooth-scroll',
-    scrub: false,
+    scrub: true,
     start: 'top bottom',
     end: 'bottom',
   },
