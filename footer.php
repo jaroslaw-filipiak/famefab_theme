@@ -9,9 +9,12 @@
  * @package femmefab
  */
 
+$isInfluencerPostType = 'influencer_post_type' == get_post_type();
+
+
 ?>
 
-<footer id="end">
+<footer id="end" class="<?php echo $isInfluencerPostType ? 'd-none' : ''; ?>" role="content">
     <section class="footer">
         <div class="container-fluid">
             <div class="row">
@@ -61,6 +64,8 @@
 
 </div> <!-- <---- close smooth scroll -->
 <?php get_template_part( 'template-parts/footer-dynamic-data'); ?>
+<?php get_template_part( 'template-parts/cookies'); ?>
+
 
 </body>
 

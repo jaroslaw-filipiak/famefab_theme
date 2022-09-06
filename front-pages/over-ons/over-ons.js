@@ -3,64 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-gsap.from('.our-reach--counter', {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: '.total-reach-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'bottom 80%',
-    end: 'bottom -60%',
-  },
-});
-
-gsap.to('#ourReachValue', {
-  innerText: 137,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top',
-    end: '68%',
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#e7ffc8',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.our-reach-change-bg-trigger',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#214c2c',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.scroll-gallery',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  left: -300,
-  scrollTrigger: {
-    trigger: '.footer',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top 80%',
-  },
-});
-
 if (!isMobile) {
   // title from bottom
   gsap.from('.over-ons--title', {

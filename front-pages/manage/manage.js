@@ -11,33 +11,33 @@ gsap.from('.our-reach--counter', {
     trigger: '.influencers',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 200%',
+    start: 'top center',
     end: 'top top',
   },
 });
 
-gsap.from('#ourReachValue', {
-  innerText: 0,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: '.influencers',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top 200%',
-    end: 'top -120%',
-  },
-});
+// gsap.from('#ourReachValue', {
+//   innerText: 0,
+//   snap: 'innerText',
+//   scrollTrigger: {
+//     trigger: '.influencers',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     start: 'top 200%',
+//     end: 'top -120%',
+//   },
+// });
 
-gsap.to('.our-reach--counter', {
-  left: -300,
-  scrollTrigger: {
-    trigger: '.footer',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top 70%',
-    end: 'top 40%',
-  },
-});
+// gsap.to('.our-reach--counter', {
+//   left: -300,
+//   scrollTrigger: {
+//     trigger: '.footer',
+//     scroller: '.smooth-scroll',
+//     scrub: true,
+//     start: 'top 70%',
+//     end: 'top 40%',
+//   },
+// });
 
 if (!isMobile) {
   //  title from bottom
@@ -94,7 +94,6 @@ if (!isMobile) {
 } // !wp_is_mobile
 
 // if(isMobile) {
-  
 
 //   ScrollTrigger.create({
 //     trigger: '.gsap__blank-hero-mobile-piniata--trigger',
@@ -156,6 +155,8 @@ export default function handleInfluencersOnHover() {
   const outputInfluencerName = document.querySelector(
     '.influencer-hover-output--name'
   );
+
+  const outputInfluencerReach = document.querySelector('.our-reach__dynamic');
 
   const dynamicLink = document.querySelector('.influencer-dynamic-link');
 
@@ -242,7 +243,19 @@ function handleInfluencer(influencer) {
 
   const dynamicLink = document.querySelector('.influencer-dynamic-link');
 
+  const outputInfluencerReach = document.querySelector('.our-reach__dynamic');
+  const reachWrapper = document.querySelector('.our-reach--counter');
+  const reachUnit = document.querySelector('.our-reach-unit');
+  const reachTitle = document.querySelector('.our-reach-title');
+
   if (!isMobile) {
+    // reachWrapper.classList = `our-reach--counter opacity-1`;
+    outputInfluencerReach.classList = `our-reach--counter-value our-reach__dynamic `;
+    outputInfluencerReach.innerHTML = influencer.dataset.reach
+      ? influencer.dataset.reach
+      : '';
+    reachUnit.innerHTML = influencer.dataset.reach ? 'k' : '';
+    reachTitle.innerHTML = influencer.dataset.reach ? 'our reach' : '';
     outputInfluencerName.innerHTML = influencer.dataset.name;
     outputInfo.innerHTML = influencer.dataset.info;
     outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;

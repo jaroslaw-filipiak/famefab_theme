@@ -77,7 +77,7 @@ section {
 
 body {
   @include horizontal {
-    border: 2px solid red;
+    // border: 2px solid red;
   }
 }
 
@@ -85,9 +85,9 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 99;
+  z-index: 99999;
   width: 100vw;
   height: 100vh;
-  // background-color: $fioletLight;
-  background-color: tomato;
+  background-color: $fioletLight;
+  // background-color: tomato;
 }

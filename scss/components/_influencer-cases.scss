@@ -4,15 +4,7 @@
 
   @include media-breakpoint-up(lg) {
     padding: 40px;
-  }
-
-  .second-row,
-  .third-row {
-    // min-height: 100vh;
-  }
-
-  .second-row {
-    // padding-top: 100px;
+    padding-right: 7vw;
   }
 
   h1 {

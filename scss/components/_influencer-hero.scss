@@ -75,8 +75,11 @@
     min-height: 100vh;
   }
 
-  .second-row {
-    padding-top: 100px;
+  .second-row,
+  .third-row {
+    @include media-breakpoint-up(lg) {
+      padding-right: 7vw;
+    }
   }
 
   h1 {
@@ -121,17 +124,27 @@
 
     @include media-breakpoint-up(lg) {
       width: 325px;
+      margin-top: 19vh;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 325px;
+      margin-top: 20vh;
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 24px;
       text-transform: uppercase;
       margin-bottom: 30px;
       @include font-sans;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 110px;
+      }
     }
 
     p {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 20px;
       @include font-sans;
     }

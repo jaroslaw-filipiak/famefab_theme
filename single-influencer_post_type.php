@@ -1,6 +1,11 @@
 <?php get_header() ?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"
+    integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/singleInfluencer.js"></script>
+
 
 <!-- facebook -->
 
@@ -23,6 +28,42 @@
 
 </div>
 
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.to('#FBValue', {
+        innerText: <?php the_field( 'counter_facebook' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.influencer-hero',
+        },
+        duration: 3,
+    });
+
+    gsap.to('#InstaValue', {
+        innerText: <?php the_field( 'counter_insta' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.influencer-hero',
+        },
+        duration: 3,
+    });
+
+    gsap.to('.our-reach--counter', {
+        left: -500,
+        scrollTrigger: {
+            trigger: '.detail-pagination ',
+            scroller: '.smooth-scroll',
+            scrub: true,
+            start: 'top bottom',
+            end: 'top 60%',
+        },
+    });
+
+})
+</script>
+
 
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
@@ -33,10 +74,9 @@
         style="background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-3 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class=" col-9 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start">
+            <div class=" col-9 col-md-9 text-center h-100  d-flex align-items-start justify-content-start">
                 <div class="influencer-hero--content color-yellow pl-3">
                     <?php the_field( 'influencer_first_section_text_content' ); ?>
-
                 </div>
             </div>
         </div>
@@ -92,7 +132,7 @@
 
                     </div>
                     <a href="#" data-scroll-to data-scroll data-scroll-speed=".3"
-                        class="link-green-unstyled  d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-end influencer-cases--dynamic-link opacity-0">
+                        class="link-green-unstyled  d-none d-lg-flex content-and-arrow  align-items-center justify-content-end influencer-cases--dynamic-link opacity-0">
                         <div class="pe-4"><small class="cursor-pointer">Read Case</small>
                         </div>
                         <div class=" arrow-right-icon">
@@ -163,7 +203,7 @@
         <div class="row h-100">
 
             <div class="bg-cover bg-no-repeat bg-center col  item-prev"
-                style="background-size: 160%; background-image: url('<?php echo $prevThumbnail ?>')">
+                style="background-image: url('<?php echo $prevThumbnail ?>')">
                 <a href="<?php echo get_permalink($prevPost->ID) ?>"
                     class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
                     style="margin-top: 80px; text-decoration: none;">
@@ -189,7 +229,7 @@
             </div>
 
             <div class="bg-cover bg-no-repeat bg-center col item-next"
-                style="background-size: 160%; background-image: url('<?php echo $nextThumbnail ?>')">
+                style="background-image: url('<?php echo $nextThumbnail ?>')">
                 <a href="<?php echo get_permalink($nextPost->ID) ?>"
                     class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
                     style="margin-top: 80px; text-decoration: none">

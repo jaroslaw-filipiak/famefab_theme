@@ -80,6 +80,7 @@
                                 data-info="<?php the_field( 'page_manage_excerpt' ); ?>"
                                 data-link="<?php echo get_permalink() ?>"
                                 data-bg="<?php the_field( 'big_image_after_hover' ); ?>"
+                                data-reach="<?php the_field( 'reach_value' ); ?>"
                                 data-thumb="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
                                 class="influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
                                 <?php the_title() ?>

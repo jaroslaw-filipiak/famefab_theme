@@ -5,10 +5,10 @@
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/manage.js"></script>
 
 <div class="our-reach--counter">
-    <p>our reach</p>
+    <p class="our-reach-title"></p>
     <div class="d-flex">
-        <div id="ourReachValue" class="our-reach--counter-value">556</div>
-        <p class="our-reach-unit">k</p>
+        <div id="ourReachValue" class="our-reach--counter-value our-reach__dynamic "></div>
+        <p class="our-reach-unit"></p>
     </div>
 </div>
 

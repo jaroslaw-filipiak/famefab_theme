@@ -158,9 +158,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include media-breakpoint-up(lg) {
-      justify-content: flex-start;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   justify-content: flex-start;
+    // }
     // padding: 0px 15vh;
     .content-and-arrow {
       margin-top: 0px !important;
@@ -177,9 +177,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include media-breakpoint-up(lg) {
-      justify-content: flex-end;
-    }
+    // @include media-breakpoint-up(lg) {
+    //   justify-content: flex-end;
+    // }
     // padding: 0px 15vh;
     .content-and-arrow {
       margin-top: 0px !important;

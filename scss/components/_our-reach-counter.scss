@@ -65,3 +65,17 @@
     top: 67vh;
   }
 }
+
+// single influencer page counter
+
+body.single-influencer_post_type {
+  .our-reach--counter {
+    &__facebook {
+      top: 24vh;
+    }
+
+    &__insta {
+      top: 47vh;
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,32 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 //     end: 'bottom',
 //   },
 // });
-
-gsap.to('#FBValue', {
-  innerText: 435,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.influencer-hero',
-    // scrub: true,
-    // start: 'top top',
-    // end: 'top top ',
-  },
-  duration: 6,
-});
-
-gsap.to('#InstaValue', {
-  innerText: 28,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.influencer-hero',
-    // scrub: true,
-    // start: 'top top',
-    // end: 'top top ',
-  },
-  duration: 6,
-});
 
 ScrollTrigger.create({
   trigger: '.influencer-hero',
