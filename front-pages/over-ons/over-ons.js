@@ -32,20 +32,6 @@ if (!isMobile) {
     },
   });
 
-  // bg scale
-  gsap.to('.over-ons-title-trigger', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.over-ons-title-trigger',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-
   ScrollTrigger.create({
     trigger: '.over-ons-pin-trigger',
     scroller: '.smooth-scroll',

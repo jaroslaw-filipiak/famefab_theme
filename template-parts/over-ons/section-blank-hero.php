@@ -27,7 +27,7 @@
 
 <section id="notPin"
     class="blank-hero blank-hero__with-bg bg-cover bg-no-repeat bg-center  over-ons-title-trigger over-ons-pin-trigger our-reach-change-bg-trigger"
-    style="<?php echo wp_is_mobile() ? 'background-size: cover;'  : 'background-size: 140%;'?>  background-image: url('<?php echo esc_url( $page_over_ons_second_section_background_image['url'] ); ?>')">
+    style="background-size: cover; background-image: url('<?php echo esc_url( $page_over_ons_second_section_background_image['url'] ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class=" col-2 d-md-block col-md-2 ps-0 h-100"></div>
