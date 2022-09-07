@@ -66,22 +66,6 @@ gsap.to('.our-reach--counter', {
   },
 });
 
-if (!isMobile) {
-  // blank hero bg scale
-  gsap.to('.blank-hero', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.blank-hero',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-}
-
 // title from bottom
 gsap.from('.contact-us__hero-gsap', {
   scrollTrigger: {
