@@ -145,7 +145,7 @@ gsap.to('.home-manage--title', {
     start: 'top 5%',
     end: 'top -10%',
     scrub: true,
-    markers: true,
+    markers: false,
     // duration: 1,
   },
   marginLeft: -500,
