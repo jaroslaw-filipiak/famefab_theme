@@ -204,7 +204,7 @@ gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
     scroller: '.smooth-scroll',
     start: 'top 60%',
     end: 'top 20%',
-    scrub: true,
+    scrub: false,
     // markers: false,
   },
   opacity: 0,
