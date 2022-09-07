@@ -11,12 +11,11 @@
 
 
 <section class="home-manage-and-manage-gallery-wrapper">
-
     <!-- home manage -->
     <div class="container-fluid ">
 
         <div id="home-manage" class="home-manage row bg-cover bg-no-repeat bg-center gsap__manage-bg--scale"
-            style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 160%' ?>;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
+            style="background-size: cover;background-image: url('<?php the_field( 'home_section_manage_with_bg_background_image' ); ?>');">
             <div class="d-flex flex-nowrap flex-row align-items-start ">
                 <div class="col-2 d-md-block col-md-2 ps-0"></div>
                 <div class="col-10 col-md-10 home-manage-elem-is-pinned ps-1" style="position: relative;">
@@ -99,7 +98,4 @@
             </div>
         </div>
     </div>
-
-
-
 </section>

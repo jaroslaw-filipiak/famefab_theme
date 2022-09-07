@@ -9,8 +9,8 @@
 
 ?>
 
-<section class="gsap__make-with-bg--scale make-with-bg bg-no-repeat bg-center"
-    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 170%' ?>;background-image: url('<?php the_field( 'home_section_make_with_bg_background_image' ); ?>');">
+<section class="make-with-bg bg-no-repeat bg-center"
+    style="background-size: cover;;background-image: url('<?php the_field( 'home_section_make_with_bg_background_image' ); ?>');">
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-2  ps-0"></div>

@@ -396,36 +396,6 @@ gsap.from('.make-with-bg--title__in-body', {
   ease: 'easeIn',
 });
 
-if (!isMobile) {
-  // gsap__mange-bg--scale
-  gsap.to('.gsap__manage-bg--scale', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.home-manage',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-
-  // gsap__make-with-bg--scale
-  gsap.to('.gsap__make-with-bg--scale', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.gsap__make-with-bg--scale',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-}
-
 // make horizontal 2
 gsap.from('.make-gallery--title_2', {
   scrollTrigger: {
@@ -443,19 +413,6 @@ gsap.from('.make-gallery--title_2', {
   opacity: 0,
   duration: 1,
   ease: 'easeIn',
-});
-
-// contact
-gsap.from('.contact-us-row-1', {
-  opacity: 0,
-  scale: 2,
-  scrollTrigger: {
-    trigger: '.contact-us',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top 5%',
-  },
 });
 
 // contact-us--title
