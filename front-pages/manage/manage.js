@@ -68,20 +68,6 @@ if (!isMobile) {
     },
   });
 
-  // bg scale
-  gsap.to('.blank-hero-title-trigger', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.blank-hero-title-trigger',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-
   // page-manage-piniata
 
   ScrollTrigger.create({

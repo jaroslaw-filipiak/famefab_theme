@@ -13,8 +13,8 @@
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class="col-3 col-md-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div
-                class="col-9 col-md-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start blank-hero--manage__mobile-content color-green" style="<?php echo wp_is_mobile() ? 'padding-right: 30px;' : ''; ?>">
+            <div class="col-9 col-md-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start blank-hero--manage__mobile-content color-green"
+                style="<?php echo wp_is_mobile() ? 'padding-right: 30px;' : ''; ?>">
 
                 <div style="<?php echo wp_is_mobile() ? 'z-index: 22;' : '' ?>"
                     class="gsap__blank-hero-mobile-piniata flex flex-column  align-items-start justify-content-start  ">
@@ -63,7 +63,7 @@
 
 <section
     class="gsap__blank-hero-mobile-piniata--trigger blank-hero page-manage-blank-hero__gsap-trigger bg-cover bg-no-repeat bg-center blank-hero-title-trigger "
-    style="<?php echo wp_is_mobile() ? 'background-size: cover;' : 'background-size: 130%; ' ?>background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
+    style="background-size; cover; background-image: url('<?php the_field( 'page_manage_second_section_background_image' ); ?>')">
     <div class="container-fluid h-100">
         <div class="row h-100 d-flex align-items-end">
             <div class="col-3 col-sm-2 d-md-block col-md-2  ps-0 h-100"></div>

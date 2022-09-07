@@ -37,20 +37,6 @@ if (!isMobile) {
     opacity: 0,
   });
 
-  // bg scale
-  gsap.to('.total-reach-trigger', {
-    //   opacity: 0,
-    backgroundSize: '100%',
-    //   scale: 2.5,
-    scrollTrigger: {
-      trigger: '.total-reach-trigger',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      // end: 'top center',
-    },
-  });
-
   // title change color
 } // !isMobile
 
