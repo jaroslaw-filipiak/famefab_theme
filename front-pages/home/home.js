@@ -111,8 +111,8 @@ gsap.from('.gsap__title-horizontaly-scrub', {
   scrollTrigger: {
     trigger: '#home-manage',
     scroller: '.smooth-scroll',
-    start: 'top 70%',
-    end: 'top 10%',
+    start: 'top bottom',
+    end: 'top top',
     scrub: true,
     markers: false,
     duration: 1,
@@ -121,18 +121,34 @@ gsap.from('.gsap__title-horizontaly-scrub', {
   // top: 0,
 });
 
+// manage change color
 gsap.to('.gsap__title-horizontaly-scrub', {
   scrollTrigger: {
     trigger: '#home-manage',
     scroller: '.smooth-scroll',
-    start: 'top -20%',
-    end: 'top -40%',
+    start: 'top -15%',
+    end: 'top -20%',
     scrub: true,
     markers: false,
 
-    duration: 1,
+    // duration: 1,
   },
   color: '#214c2c',
+  // top: 0,
+});
+
+// manage out from screen
+gsap.to('.home-manage--title', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--gallery',
+    scroller: '.smooth-scroll',
+    start: 'top 5%',
+    end: 'top -10%',
+    scrub: true,
+    markers: true,
+    // duration: 1,
+  },
+  marginLeft: -500,
   // top: 0,
 });
 
@@ -181,20 +197,20 @@ gsap.from('.gsap_reveal_home_manage_slide_content', {
   // top: 0,
 });
 
-gsap.to('.home-manage--title', {
-  scrollTrigger: {
-    trigger: '.manage-gallery--item-2',
-    scroller: '.smooth-scroll',
-    start: 'top 10%',
-    end: 'top -30%',
-    scrub: true,
-    // markers: false,
+// gsap.to('.home-manage--title', {
+//   scrollTrigger: {
+//     trigger: '.manage-gallery--item-2',
+//     scroller: '.smooth-scroll',
+//     start: 'top 10%',
+//     end: 'top -30%',
+//     scrub: true,
+//     // markers: false,
 
-    // duration: 1,
-  },
-  opacity: 0,
-  // top: 0,
-});
+//     // duration: 1,
+//   },
+//   opacity: 0,
+//   // top: 0,
+// });
 
 // .gsap__section-indicator-home-page
 
@@ -279,32 +295,6 @@ gsap.from('.gsap__we-love-to-manage-horizontaly', {
   opacity: 0,
   duration: 1,
   ease: 'easeIn',
-});
-
-// make--title
-gsap.from('.scale-from-1-5-text', {
-  opacity: 0,
-  scale: 1.5,
-  scrollTrigger: {
-    trigger: '.make',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top 5%',
-  },
-});
-
-// make--title
-gsap.from('.scale-from-1-5-text__smaller', {
-  opacity: 0,
-  scale: 2.5,
-  scrollTrigger: {
-    trigger: '.make',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'top 5%',
-  },
 });
 
 // gsap__make-with-bg-reveal

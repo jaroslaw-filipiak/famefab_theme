@@ -15,10 +15,10 @@
             <div class="col-2 d-md-block col-md-2  ps-0"></div>
             <div class="col-10 col-md-10 make--title-wrapper  d-flex flex-column align-items-start justify-content-start j"
                 style="position: relative;">
-                <p class="make--title font-serif scale-from-1-5-text">
+                <p class="make--title font-serif ">
                     <?php the_field( 'home_section_make_main_heading' ); ?>
                 </p>
-                <div class="make--subtitle font-green-default text-uppercase font-sans scale-from-1-5-text__smaller">
+                <div class="make--subtitle font-green-default text-uppercase font-sans ">
                     <?php the_field( 'home_section_make_main_subheading' ); ?>
                 </div>
 
