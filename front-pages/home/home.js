@@ -310,26 +310,24 @@ gsap.from('.gsap__make-with-bg-reveal', {
   },
 });
 
-// make horizontal
+// make horizontal in
 gsap.from('.make-with-bg--title', {
   scrollTrigger: {
     trigger: '.make-with-bg',
     scroller: '.smooth-scroll',
     start: 'top bottom',
-    end: 'top 20%',
+    end: 'top top',
     scrub: true,
 
     // start: '20px 80%',
-    // markers: false,
+    markers: false,
   },
-
-  xPercent: 1400,
-  opacity: 0,
-  duration: 1,
+  xPercent: 800,
+  // duration: 1,
   ease: 'easeIn',
 });
 
-// make horizontal
+// make horizontal color
 gsap.to('.make-with-bg--title', {
   scrollTrigger: {
     trigger: '.make-with-bg',
@@ -348,17 +346,17 @@ gsap.to('.make-with-bg--title', {
 // make gallery section pin to top
 // make-with-bg
 
-// make horizontal
+// make horizontal out
 gsap.to('.make-with-bg--title', {
   scrollTrigger: {
-    trigger: '.make-gallery-row-1',
+    trigger: '.contact-us',
     scroller: '.smooth-scroll',
-    start: 'top 70%',
-    end: 'top 3%',
+    start: 'top bottom',
+    end: 'top 80%',
     scrub: true,
 
     // start: '20px 80%',
-    // markers: false,
+    markers: false,
   },
   // color: 'red',
   // ease: 'easeIn',
