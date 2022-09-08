@@ -3,6 +3,14 @@
 <?php if(is_page_template( 'page-templates/page-contact.php' )) { ?>
 <h1 class="contact-us__hero-gsap"><?php the_field( 'page_contact_first_section_title' ); ?></h1>
 
+<div class="manage-gallery--title-wrapper is-contact-title-pinned">
+    <div class="manage-gallery--title manage-gallery--title__page-contact">
+        <p style="<?php echo wp_is_mobile() ? 'font-size: 60px;' : ''?>">
+            <?php the_field( 'page_contact_section_with_photos_title' ); ?></p>
+    </div>
+</div>
+
+
 <!-- vaccatures /  -->
 
 <a href="#"

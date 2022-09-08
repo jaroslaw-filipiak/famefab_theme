@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-
+import ScrollTrigger from 'gsap/ScrollTrigger';
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function changeContactUsClass(className) {
@@ -171,13 +171,23 @@ if (!isMobile) {
       trigger: '.manage-gallery',
       scroller: '.smooth-scroll',
       scrub: true,
-      // markers: true,
+      markers: false,
       start: 'top bottom',
+      end: 'top top',
     },
-    xPercent: -300,
-    scale: 2,
-    opacity: 0,
+    xPercent: -800,
+
     ease: 'easeIn',
+  });
+
+  // is-contact-title-pinned
+
+  ScrollTrigger.create({
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    start: 'top bottom',
+    end: 'top 70%',
+    pin: '.is-contact-title-pinned',
   });
 }
 
