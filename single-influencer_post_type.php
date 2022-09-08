@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<section class="influencer-hero">
+<section class="influencer-hero" style="background-color: #f1f0ef;">
 
     <div class="container-fluid first-row bg-cover bg-no-repeat"
         style="background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 </section>
 
-<section class="influencer-cases">
+<section class="influencer-cases" style="background-color: #f1f0ef;">
 
     <div class="container-fluid first-row bg-cover bg-no-repeat">
         <div class="row h-100 d-flex align-items-end">
@@ -255,9 +255,6 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </section>
-
-
-
 
 
 <?php get_footer() ?>

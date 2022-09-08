@@ -50,11 +50,38 @@ gsap.to('body', {
   },
 });
 
+// #F1F0EF
 gsap.to('body', {
   '--color': '#F1F0EF',
   immediateRender: false,
   scrollTrigger: {
     trigger: '.who-we-are',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 80%',
+    end: 'top 5%',
+  },
+});
+
+// d5d0f3
+gsap.to('body', {
+  '--color': '#d5d0f3',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.make',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: '+=100%',
+  },
+});
+
+// #F1F0EF
+gsap.to('body', {
+  '--color': '#F1F0EF',
+  immediateRender: false,
+  scrollTrigger: {
+    trigger: '.make-with-bg',
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top 80%',

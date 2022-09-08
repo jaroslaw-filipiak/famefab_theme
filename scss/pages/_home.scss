@@ -1,6 +1,7 @@
 html {
   --color: transparent;
-  --footer-bg-color: #d5d0f3;
+  // --footer-bg-color: #d5d0f3;
+  // --footer-bg-color: #f1f0ef;
   --counter-color: #214c2c;
 }
 
@@ -256,7 +257,7 @@ body {
 
 //
 .manage-gallery {
-  background-color: $lightGray;
+  // background-color: $lightGray;
   position: relative;
   padding: 40px;
 
@@ -459,7 +460,7 @@ body {
 
 .make {
   padding: 20px;
-  background-color: $fioletLight;
+  // background-color: $fioletLight;
   min-height: 100vh;
 
   @include media-breakpoint-up(md) {
@@ -854,7 +855,7 @@ body {
 //
 
 .contact-us {
-  background-color: $lightGray;
+  // background-color: $lightGray;
   position: relative;
   padding: 40px;
 

@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 gsap.registerPlugin(ScrollTrigger);
 
 const scroll = new LocomotiveScroll({
@@ -111,18 +113,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // footer change bg
 
-gsap.to('.footer', {
-  '--footer-bg-color': '#e4e1f4',
+// #d5d0f3 fiolet footer
+gsap.to('body', {
+  '--color': '#d5d0f3',
   immediateRender: false,
   scrollTrigger: {
     trigger: '.footer',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 60%',
-    end: '+=100%',
+    start: 'top 30%',
+    end: 'top 5%',
   },
 });
-
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-console.log('isMobile' + isMobile);
