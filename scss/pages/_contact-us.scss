@@ -151,12 +151,14 @@
 
   &--title-wrapper {
     padding-top: 15vh;
+
     @include media-breakpoint-up(lg) {
-      padding-top: 60px;
+      padding-top: 16vh;
     }
 
     @include media-breakpoint-up(xxl) {
-      padding-top: 160px;
+      padding-top: 19vh;
+      margin-top: -2px;
     }
   }
 

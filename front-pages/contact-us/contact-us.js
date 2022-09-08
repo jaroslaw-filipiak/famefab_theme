@@ -81,7 +81,6 @@ gsap.from('.contact-us__hero-gsap', {
 });
 
 // title change color
-
 gsap.to('.contact-us__hero-gsap', {
   scrollTrigger: {
     trigger: '.contact-us-title-change-color-trigger',
@@ -103,20 +102,6 @@ gsap.to('.contact-us__hero-gsap', {
     // scrub: true,
     start: 'top 10%',
     end: 'top top',
-
-    toggleActions: 'play none none reset',
-  },
-  opacity: 0,
-});
-
-// content from zero
-gsap.from('.gsap__page-contact-content-reveal', {
-  scrollTrigger: {
-    trigger: '.gsap__reveal-trigger__contact-us',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top 20%',
-    end: 'top 45%',
 
     toggleActions: 'play none none reset',
   },
@@ -178,23 +163,6 @@ gsap.from('.gsap__page-contact-content-reveal', {
 //   opacity: 0,
 //   xPercent: -200,
 // });
-
-// who-we-are__contact-us--title
-gsap.from('.who-we-are__contact-us--title', {
-  scrollTrigger: {
-    trigger: '.who-we-are__contact-us',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    // markers: true,
-    start: 'top bottom',
-    end: 'top 20%',
-  },
-  xPercent: -300,
-  yPercent: -30,
-  scale: 2,
-  opacity: 0,
-  ease: 'easeIn',
-});
 
 if (!isMobile) {
   // who-we-are__contact-us--title

@@ -413,7 +413,7 @@ contactUsTitleOnHomepage.from('.contact-us--title', {
     trigger: '.contact--trigger',
     scroller: '.smooth-scroll',
     start: 'top bottom',
-    end: 'top 50%',
+    end: 'top top',
     scrub: true,
     // start: '20px 80%',
     markers: false,

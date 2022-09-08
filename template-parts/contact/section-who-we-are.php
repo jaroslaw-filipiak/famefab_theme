@@ -12,10 +12,10 @@
 <section class="who-we-are__contact-us">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3  ps-0"></div>
+            <div class="col-2 d-md-block col-md-3 ps-0"></div>
             <div
                 class="col-10 col-md-9 who-we-are__contact-us--title-wrapper  d-flex flex-column align-items-start justify-content-start">
-                <p class="who-we-are__contact-us--title font-serif">
+                <p class="who-we-are__contact-us--title font-serif" data-scroll-to data-scroll data-scroll-speed=".3">
                     <?php the_field( 'page_contact_section_with_big_heading_title' ); ?>
                 </p>
                 <div style="<?php echo wp_is_mobile() ? 'margin-top: 20vh; marign-bottom: 20vh;' : '' ?>" data-scroll
