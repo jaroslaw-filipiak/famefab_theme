@@ -13,7 +13,7 @@
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-2 d-md-block col-md-2  ps-0"></div>
-            <div class="col-10 col-md-10 make--title-wrapper  d-flex flex-column align-items-start justify-content-start j"
+            <div class="col-10 col-md-10 make--title-wrapper  d-flex flex-column align-items-start justify-content-start"
                 style="position: relative;">
                 <p class="make--title font-serif ">
                     <?php the_field( 'home_section_make_main_heading' ); ?>

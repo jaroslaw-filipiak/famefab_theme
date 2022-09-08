@@ -147,7 +147,7 @@ body {
 
   &--subtitle {
     max-width: 280px;
-    padding-top: 50px;
+
     @include media-breakpoint-up(md) {
       max-width: 300px;
     }
@@ -185,7 +185,6 @@ body {
     padding-top: 15vh;
     font-size: 16px;
     text-transform: uppercase;
-    // color: $yellow;
     width: 200px;
     @include font-sans;
 
@@ -194,7 +193,13 @@ body {
     }
 
     @include media-breakpoint-up(lg) {
-      // padding-top: 180px;
+      padding-top: 18vh;
+      margin-top: -4px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 20vh;
+      margin-top: -6px;
     }
   }
 
@@ -291,10 +296,6 @@ body {
 
   &--subtitle {
     width: 300px;
-    padding-top: 15vh;
-    @include media-breakpoint-up(lg) {
-      padding-top: 180px;
-    }
   }
 
   .content-and-arrow {
@@ -467,18 +468,15 @@ body {
 
   &--title-wrapper {
     padding-top: 15vh;
-    @include media-breakpoint-up(lg) {
-      padding-top: 60px;
-    }
 
-    @include media-breakpoint-up(xl) {
-      // padding-top: 160px;
-      // padding-top: 0px;
+    @include media-breakpoint-up(lg) {
+      padding-top: 17vh;
+      margin-top: -3px;
     }
 
     @include media-breakpoint-up(xxl) {
-      padding-top: 130px;
-      // padding-top: 0px;
+      padding-top: 20vh;
+      margin-top: -8px;
     }
   }
 
@@ -540,7 +538,6 @@ body {
   }
 
   &--subtitle {
-    padding-top: 50px;
     max-width: 70%;
     @include media-breakpoint-up(lg) {
       max-width: 300px;
@@ -621,7 +618,11 @@ body {
     }
 
     @include media-breakpoint-up(lg) {
-      padding-top: 180px;
+      padding-top: 20vh;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 23vh;
     }
   }
 
@@ -677,7 +678,7 @@ body {
 //
 
 .make-gallery {
-  background-color: $lightGray;
+  // background-color: $lightGray;
   position: relative;
   padding: 40px;
 
@@ -729,9 +730,15 @@ body {
 
   &--subtitle {
     width: 300px;
-    padding-top: 15vh;
+    // padding-top: 15vh;
+
     @include media-breakpoint-up(lg) {
-      padding-top: 180px;
+      margin-top: -7px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: -18px;
+      padding-top: 4vh;
     }
   }
 
@@ -895,11 +902,7 @@ body {
   }
 
   &--subtitle {
-    padding-top: 40px;
-    padding-bottom: 40px;
     @include media-breakpoint-up(lg) {
-      padding-top: 180px;
-      padding-bottom: 0px;
       width: 300px;
     }
   }
@@ -1010,5 +1013,17 @@ body {
         }
       }
     }
+  }
+}
+
+#brand-image-pin {
+  overflow: visible !important;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 19vh;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 17vh;
   }
 }

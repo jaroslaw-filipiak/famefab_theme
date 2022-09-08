@@ -16,14 +16,14 @@
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
 
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-hello' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-who-we-are' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-home-manage' );  // + manage gallery ?>
-<!-- ✔️ --><?php // get_template_part( 'template-parts/homepage/section-manage-gallery' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-make' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-make-with-bg' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-make-gallery' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/homepage/section-contact-us' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-hello' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-who-we-are' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-home-manage' );  // + manage gallery ?>
+<?php // get_template_part( 'template-parts/homepage/section-manage-gallery' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-make' ); ?>
+<?php // get_template_part( 'template-parts/homepage/section-make-with-bg' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-make-gallery' ); ?>
+<?php get_template_part( 'template-parts/homepage/section-contact-us' ); ?>
 
 
 

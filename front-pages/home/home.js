@@ -449,23 +449,63 @@ let brandImagePin = document.getElementById('brand-image-pin');
 let brandImageNotPin = document.getElementById('brand-image-notPin');
 
 ScrollTrigger.create({
-  trigger: '.make-gallery--col-right',
+  trigger: '.make-with-bg',
   scroller: '.smooth-scroll',
-  start: 'top 10%',
-  end: 'bottom 20%',
-  // the nect line (with the arrow function) is 'a functional value' () =>
-  // end: () =>
-  //   `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-  // this line ensures the functional value gets recalculated on resize
+  start: 'top top',
+  end: 'top bottom',
+  endTrigger: '.contact-us',
   invalidateOnRefresh: true,
   pin: brandImagePin,
-  // pinSpacing: true,
-  // markers: {
-  //   startColor: 'purple',
-  //   endColor: 'fuschia',
-  //   fontSize: '20px',
-  //   indent: 200,
-  // },
+});
+
+// brand image pin change color to green
+
+function changeBrandImagePinContentClass(addClass) {
+  const elem = document.querySelector(
+    '#brand-image-pin .make-gallery--subtitle'
+  );
+  elem.classList = `d-none d-lg-block make-gallery--subtitle ${addClass} text-uppercase font-sans`;
+}
+
+function changeBrandImagePinLinkClass(addClass) {
+  const elem = document.querySelector('#brand-image-pin a');
+  elem.classList = `${addClass} content-and-arrow d-none d-lg-flex align-items-center justify-content-start p-0 is-inview`;
+}
+
+gsap.to('#brand-image-pin a', {
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 55%',
+    end: 'top 45%',
+    onEnter: () => changeBrandImagePinLinkClass('link-green-unstyled'),
+    onLeaveBack: () => changeBrandImagePinLinkClass('link-yellow-unstyled'),
+  },
+});
+
+gsap.to('#brand-image-pin .make-gallery--subtitle', {
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 25%',
+    end: 'top 15%',
+    onEnter: () => changeBrandImagePinContentClass('font-green-default'),
+    onLeaveBack: () => changeBrandImagePinContentClass('font-yellow-default'),
+  },
+});
+
+gsap.to('#brand-image-pin .make-gallery--subtitle', {
+  scrollTrigger: {
+    trigger: '.make-gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 55%',
+    end: 'top 45%',
+    onEnter: () => changeBrandImagePinLinkClass('link-green-unstyled'),
+    onLeaveBack: () => changeBrandImagePinLinkClass('link-yellow-unstyled'),
+  },
 });
 
 // our reach bg change color

@@ -21,8 +21,7 @@
                 <div class="col-10 col-md-10 home-manage-elem-is-pinned ps-1" style="position: relative;">
 
                     <div>
-                        <p data-scroll data-scroll-speed="1"
-                            class="home-manage--text-block gsap-home-manage-reveal-timeline-after-title color-yellow">
+                        <p class="home-manage--text-block gsap-home-manage-reveal-timeline-after-title color-yellow">
                             <?php the_field( 'home_section_manage_with_bg_text_content' ); ?>
                         </p>
                     </div>
