@@ -452,19 +452,21 @@ contactUsTitleOnHomepage.from('.contact-us--title', {
   ease: 'easeIn',
 });
 
+// contact-us--title
 contactUsTitleOnHomepage.to('.contact-us--title', {
   scrollTrigger: {
-    trigger: '.contact-us--item',
+    trigger: '.footer',
     scroller: '.smooth-scroll',
     start: 'top 60%',
     end: 'top 10%',
     scrub: true,
     // start: '20px 80%',
+    markers: false,
   },
 
-  // xPercent: 1400,
-  opacity: 0,
-  // duration: 1,
+  left: -900,
+  // opacity: 0,
+  duration: 1,
   ease: 'easeIn',
 });
 
