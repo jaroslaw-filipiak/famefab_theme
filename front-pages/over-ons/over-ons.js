@@ -36,7 +36,7 @@ if (!isMobile) {
     trigger: '.over-ons-pin-trigger',
     scroller: '.smooth-scroll',
     start: 'top 5%',
-    end: 'bottom 60%',
+    end: 'bottom 80%',
     pin: '.over-ons-content-pinned',
   });
 
