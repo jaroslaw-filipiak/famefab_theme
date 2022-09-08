@@ -9,11 +9,10 @@
 
 ?>
 
-
 <section id="influencers" class="influencers">
 
     <div class="container-fluid">
-        <div class="row ">
+        <div class="row">
 
             <!-- influencer left side -->
             <div class="col-2 d-none d-md-flex align-items-start justify-content-start col-md-3  ps-0  influencer influencer-area-pinned"

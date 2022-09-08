@@ -176,7 +176,7 @@ ScrollTrigger.create({
   trigger: '.influencers',
   scroller: '.smooth-scroll',
   start: 'top top',
-  end: 'bottom 150px',
+  end: 'bottom 90%',
   pin: '.influencer-area-pinned',
 });
 

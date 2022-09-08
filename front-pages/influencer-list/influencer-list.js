@@ -5,13 +5,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 console.log('inflencer list ');
 
-ScrollTrigger.create({
-  trigger: '.influencers',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 150px',
-  pin: '.influencer-area-pinned',
-});
+// ScrollTrigger.create({
+//   trigger: '.influencers',
+//   scroller: '.smooth-scroll',
+//   start: 'top top',
+//   end: 'bottom 150px',
+//   pin: '.influencer-area-pinned',
+// });
 
 gsap.to('.influencers--title', {
   scrollTrigger: {
