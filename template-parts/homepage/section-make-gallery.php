@@ -57,7 +57,7 @@
     </div>
 
     <!-- make gallery -->
-    <div class="make-gallery">
+    <div id="make-gallery" class="make-gallery">
 
         <div class="container-fluid p-0">
             <div class="row p-0">

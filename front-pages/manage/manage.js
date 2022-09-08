@@ -132,35 +132,43 @@ gsap.from('.gsap_opacity-reveal__blank-hero', {
 });
 
 export default function handleInfluencersOnHover() {
-  const influencersWrapper = document.querySelector('.influencers');
-  const influencersList = document.querySelectorAll('.influencers--list-item');
-  const influencersListArr = [...influencersList];
-
   const outputPhoto = document.querySelector('.influencer--photo');
   const outputInfo = document.querySelector('.influencer-hover-output');
   const outputInfluencerName = document.querySelector(
     '.influencer-hover-output--name'
   );
-
-  const outputInfluencerReach = document.querySelector('.our-reach__dynamic');
-
   const dynamicLink = document.querySelector('.influencer-dynamic-link');
 
-  influencersListArr.map((item) => {
-    item.addEventListener('mouseover', () => {
-      outputInfluencerName.innerHTML = item.dataset.name;
-      outputInfo.innerHTML = item.dataset.info;
-      outputPhoto.style.backgroundImage = `url(${item.dataset.bg})`;
-      dynamicLink.setAttribute('href', item.dataset.link);
-    });
+  const list = document.querySelectorAll(
+    '#influencers .iterable__desktop .influencers--list-item'
+  );
 
-    // item.addEventListener('click', () => {
-    //   influencersWrapper.style.backgroundImage = `url(${item.dataset.bg})`;
-    // });
+  const listArr = [...list];
+  listArr.map((item) => {
+    // mouseover start
+    item.addEventListener('mouseover', (e) => {
+      // remove all active classes
+      listArr.map((item) => {
+        item.classList.remove('influencer-is-active');
+      });
+
+      e.target.classList.add('influencer-is-active');
+      outputInfluencerName.innerHTML = e.target.dataset.name;
+      outputInfo.innerHTML = e.target.dataset.info;
+      outputPhoto.style.backgroundImage = `url(${e.target.dataset.thumb})`;
+      dynamicLink.setAttribute('href', e.target.dataset.link);
+    });
+    // mouseover end
+
+    // click start
+    item.addEventListener('click', (e) => {
+      window.location.href = e.target.dataset.link;
+    });
+    // click end
   });
 }
 
-// handleInfluencersOnHover();
+handleInfluencersOnHover();
 console.log('manage');
 
 // container element as trigger

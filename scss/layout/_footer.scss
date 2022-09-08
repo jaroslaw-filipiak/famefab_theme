@@ -18,6 +18,16 @@
     height: 100vh;
   }
 
+  &--columns-wrapper {
+    @include media-breakpoint-up(lg) {
+      padding-left: 5%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-left: 7%;
+    }
+  }
+
   &--logo {
     margin-top: 30px;
 

@@ -56,7 +56,7 @@
                     <div class="d-flex flex-column justify-content-end iterable--wrapper">
 
                         <!-- desktop -->
-                        <div class="iterable d-none d-lg-flex">
+                        <div class="iterable d-none d-lg-flex iterable__desktop">
 
                             <?php 
 
@@ -81,7 +81,7 @@
                                 data-bg="<?php the_field( 'big_image_after_hover' ); ?>"
                                 data-reach="<?php the_field( 'reach_value' ); ?>"
                                 data-thumb="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
-                                class="influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
+                                class="cursor-pointer influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> ">
                                 <?php the_title() ?>
                             </div>
 

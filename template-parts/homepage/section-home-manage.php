@@ -29,8 +29,8 @@
                     <?php $home_section_manage_with_bg_link_to_section = get_field( 'home_section_manage_with_bg_link_to_section' ); ?>
                     <?php if ( $home_section_manage_with_bg_link_to_section ) : ?>
 
-                    <a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>"
-                        data-scroll-to data-scroll data-scroll-speed=".3"
+                    <a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>" data-scroll
+                        data-scroll-speed=".3"
                         class="link-yellow-unstyled d-none d-lg-flex content-and-arrow col-6 align-items-center justify-content-start p-0 gsap-home-manage-reveal-timeline-after-title__link">
                         <div class="pe-4"><small
                                 class="cursor-pointer"><?php echo esc_html( $home_section_manage_with_bg_link_to_section['title'] ); ?></small>
@@ -59,7 +59,7 @@
 
         </div>
 
-        <div class="row manage-gallery--row">
+        <div id="home-influencers" class="row manage-gallery--row">
             <div class="col-2 d-md-block col-md-2 ps-0"></div>
             <div class="col-10 col-md-10 d-flex justify-content-between">
                 <!-- text + arrow button -->
