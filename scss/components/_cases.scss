@@ -18,7 +18,7 @@
   }
 
   .cases--list-item {
-    color: $mainGreen !important;
+    // color: $mainGreen;
 
     &__mobile {
       display: block;
@@ -32,7 +32,8 @@
 
   &__is-bg-visible {
     .cases--list-item {
-      color: $yellow !important;
+      // color: $yellow !important;
+      opacity: 1;
     }
   }
 
@@ -87,7 +88,7 @@
 
   &--list {
     @include media-breakpoint-up(lg) {
-      margin-top: 40vh;
+      margin-top: 10vh;
       display: flex;
       justify-content: flex-end;
     }
@@ -119,7 +120,7 @@
         }
 
         @include font-serif;
-        // color: $mainGreen;
+        color: $mainGreen;
         cursor: pointer;
         opacity: 0.1;
         @include default-transition;

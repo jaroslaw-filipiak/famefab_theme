@@ -89,39 +89,6 @@ export function changeSVGcolors(color) {
   circle.setAttribute('stroke', color);
 }
 
-export function handleCasesOnHover() {
-  const casesList = document.querySelectorAll('.cases--list-item');
-  const casesListArr = [...casesList];
-
-  casesListArr.map((item) => {
-    const name = document.querySelector('.case-name');
-    const section = document.querySelector('.cases');
-    const caseInfo = document.querySelector('.case-hover-output');
-    const text = document.querySelector('.cases .content-and-arrow');
-    const link = document.querySelector('.cases .case-dynamic-link');
-
-    item.addEventListener('mouseover', () => {
-      name.innerHTML = item.dataset.name;
-      section.style.backgroundImage = `url(${item.dataset.bg})`;
-      caseInfo.classList.add('color-yellow');
-      text.classList.add('color-yellow');
-      item.classList.add('color-yellow');
-      link.setAttribute('href', item.dataset.link);
-
-      changeSVGcolors('#e7ffc8');
-    });
-
-    item.addEventListener('mouseleave', () => {
-      caseInfo.classList.remove('color-yellow');
-      text.classList.remove('color-yellow');
-      item.classList.remove('color-yellow');
-      changeSVGcolors('#214c2c');
-      section.style.backgroundImage = `none`;
-    });
-  });
-}
-
-handleCasesOnHover();
 changeSVGcolors('#214c2c');
 
 ScrollTrigger.create({
@@ -135,19 +102,22 @@ ScrollTrigger.create({
 // ===============
 
 function handleInfluencer(influencer) {
-  const casesSection = document.querySelector('.cases');
-  const influencersBG = document.querySelector('.cases--dynamic-bg');
-  const outputInfo = document.querySelector('.case-hover-output');
-  const outputInfluencerName = document.querySelector(
-    '.case-hover-output--name'
-  );
+  const casesSection = document.querySelector('.cases'),
+    influencersBG = document.querySelector('.cases--dynamic-bg'),
+    outputInfo = document.querySelector('.case-hover-output'),
+    outputInfluencerName = document.querySelector('.case-hover-output--name');
 
   const activeIndex = influencer.classList[1];
   const dynamicLink = document.querySelector('.case-dynamic-link');
 
-  outputInfluencerName.innerHTML = influencer.dataset.name;
-  dynamicLink.classList.remove('opacity-0');
-  dynamicLink.setAttribute('href', influencer.dataset.link);
+  outputInfluencerName.innerHTML = influencer.dataset.name
+    ? influencer.dataset.name
+    : '';
+
+  if ((influencer.dataset.link = !undefined)) {
+    dynamicLink.classList.remove('opacity-0');
+    dynamicLink.setAttribute('href', influencer.dataset.link);
+  }
 
   if (!isMobile) {
     influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
@@ -176,28 +146,42 @@ function handleInfluencer(influencer) {
   }
 
   if (!isMobile) {
-    setTimeout(() => {
-      casesSection.classList = `cases cases__is-bg-visible`;
-    }, 1800);
+    casesSection.classList = `cases cases__is-bg-visible`;
+    influencersBG.classList = `cases--dynamic-bg opacity-1`;
+    outputInfo.classList = `case-hover-output color-yellow`;
+    dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
+    outputInfluencerName.classList = `case-hover-output--name color-yellow`;
 
-    setTimeout(() => {
-      influencersBG.classList = `cases--dynamic-bg opacity-1`;
-      outputInfo.classList = `case-hover-output color-yellow`;
-      dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
-      outputInfluencerName.classList = `case-hover-output--name color-yellow`;
+    gsap.to('.our-reach--counter', {
+      '--counter-color': '#e7ffc8',
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: '.cases',
+        scroller: '.smooth-scroll',
+        scrub: true,
+        start: () => 'top ' + window.innerWidth * 0.17,
+        end: () => 'top ' + window.innerWidth * 0.2,
+      },
+    });
 
-      gsap.to('.our-reach--counter', {
-        '--counter-color': '#e7ffc8',
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: '.cases',
-          scroller: '.smooth-scroll',
-          scrub: true,
-          start: () => 'top ' + window.innerWidth * 0.17,
-          end: () => 'top ' + window.innerWidth * 0.2,
-        },
+    const influencerNamesList = document.querySelectorAll('.cases--list-item');
+    console.log('handle influencer..');
+
+    const influencerNamesListArr = [...influencerNamesList];
+
+    console.log(influencer.dataset.bg);
+
+    if (influencer.dataset.bg) {
+      // check acvive ..
+
+      influencerNamesListArr.map((item) => {
+        item.classList.add('opacity-0');
+        item.classList.remove('color-green');
       });
-    }, 2000);
+
+      influencer.classList.add('color-yellow');
+      influencer.classList.add('opacity-1');
+    }
   }
 }
 
@@ -210,10 +194,12 @@ influencers.forEach((influencer) => {
       trigger: influencer,
       start: 'top center',
       end: `${isMobile ? '+=20' : '+=120'}`,
-      scrub: false,
+      scrub: true,
+      markers: false,
       toggleClass: 'influencer-is-active',
       onEnter: () => handleInfluencer(influencer),
       onEnterBack: () => handleInfluencer(influencer),
+      // invalidateOnRefresh: true,
     },
   });
 });
@@ -336,5 +322,48 @@ gsap.to('.our-reach--counter', {
     scrub: true,
     start: 'top 70%',
     end: 'top 40%',
+  },
+});
+
+function disableBG(isBack) {
+  const influencersBG = document.querySelector('.cases--dynamic-bg');
+  const pin = document.querySelector('.pin-spacer');
+
+  influencersBG.classList.remove('opacity-1');
+  influencersBG.classList.add('opacity-0');
+  influencersBG.classList.add('h-0');
+
+  // pin.classList.add('d-none');
+
+  isBack ? pin.classList.remove('d-none') : pin.classList.add('d-none');
+
+  console.log('disableBG');
+  console.log(influencersBG);
+}
+
+gsap.to('.footer', {
+  scrollTrigger: {
+    scroller: '.smooth-scroll',
+    trigger: '.footer',
+    start: 'top 60%',
+    end: `top 50%`,
+    scrub: true,
+    markers: false,
+    // toggleClass: 'influencer-is-active',
+    onEnter: () => disableBG(false),
+    onLeaveBack: () => disableBG(true),
+  },
+});
+
+gsap.to('.top-bar--page-title', {
+  snap: 'innerText',
+  scrollTrigger: {
+    trigger: '.footer',
+    scroller: '.smooth-scroll',
+    scrub: false,
+    start: 'top 60%',
+    end: `top 50%`,
+    onEnter: () => changeTextAndClass('Make', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Make ', 'color-yellow'),
   },
 });
