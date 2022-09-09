@@ -14,10 +14,15 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
+    padding-left: 5%;
   }
 
   @include media-breakpoint-up(xl) {
     padding: 40px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 7%;
   }
 
   &-col-content {

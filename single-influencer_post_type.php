@@ -73,8 +73,8 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="container-fluid first-row bg-cover bg-no-repeat"
         style="background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
         <div class="row h-100 d-flex align-items-end">
-            <div class=" col-3 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class=" col-9 col-md-9 text-center h-100  d-flex align-items-start justify-content-start">
+            <div class="col-3 d-md-block col-md-2  ps-0 h-100"></div>
+            <div class="col-9 col-md-10 text-center h-100  d-flex align-items-start justify-content-start">
                 <div class="influencer-hero--content color-yellow pl-3">
                     <?php the_field( 'influencer_first_section_text_content' ); ?>
                 </div>
@@ -88,7 +88,8 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div data-scroll data-scroll-speed="1"
                 class="single-influencer-fixed-heading__gsap-trigger col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-end">
-                <img src="<?php the_field( 'first_big_image' ); ?>" alt="">
+                <img class="single-influencer--big-photo" style="border-radius: 30px;"
+                    src="<?php the_field( 'first_big_image' ); ?>" alt="">
             </div>
         </div>
     </div>
@@ -96,18 +97,20 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="container-fluid third-row ">
         <div class="row h-100 d-flex align-items-end">
             <div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class="col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end">
+            <div
+                class="influencer--photos-grid col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end">
                 <div style="max-width: 610px;" class="d-flex align-items-start justify-content-end gap-4 flex-wrap">
 
-                    <img data-scroll data-scroll-speed="1.3" src="<?php the_field( 'image_#2' ); ?>" alt="">
+                    <img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+                        src="<?php the_field( 'image_#2' ); ?>" alt="">
 
-                    <img class="pt-5 mt-5" data-scroll data-scroll-speed="2.3" src="<?php the_field( 'image_#3' ); ?>"
-                        alt="">
+                    <img style="border-radius: 30px;" class="mt-5" data-scroll data-scroll-speed=".3"
+                        src="<?php the_field( 'image_#3' ); ?>" alt="">
 
-                    <img style="margin-top: -150px" data-scroll data-scroll-speed="2"
+                    <img style="margin-top: -50px; border-radius: 30px;" data-scroll data-scroll-speed=".3"
                         src="<?php the_field( 'image_#4' ); ?>" alt="">
 
-                    <img style="margin-top: -20px" data-scroll data-scroll-speed="1"
+                    <img style="margin-top: -20px; border-radius: 30px;" data-scroll data-scroll-speed=".3"
                         src="<?php the_field( 'image_#5' ); ?>" alt="">
                 </div>
 

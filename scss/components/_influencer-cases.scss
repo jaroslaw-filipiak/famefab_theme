@@ -62,6 +62,8 @@
     text-align: left;
     // margin-top: 25vh;
     opacity: 1;
+    position: relative;
+    left: -100px;
 
     @include media-breakpoint-up(lg) {
       width: 325px;

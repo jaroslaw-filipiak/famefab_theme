@@ -1,4 +1,17 @@
+.influencer--photos-grid {
+  @include media-breakpoint-only(xl) {
+    transform: scale(0.8);
+    transform-origin: center right;
+  }
+}
+
 .single-influencer {
+  &--big-photo {
+    @include media-breakpoint-only(xl) {
+      transform: scale(0.8);
+      transform-origin: center right;
+    }
+  }
   &--title {
     color: $yellow;
     font-size: 83px;

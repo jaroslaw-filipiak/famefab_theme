@@ -118,7 +118,7 @@
             "name": "counter_facebook",
             "type": "number",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -139,7 +139,7 @@
             "name": "counter_insta",
             "type": "number",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -430,5 +430,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662098773
+    "modified": 1662711935
 }

@@ -18,7 +18,7 @@ ScrollTrigger.create({
   trigger: '.influencer-hero',
   scroller: '.smooth-scroll',
   start: 'top top',
-  end: 'bottom center',
+  end: 'bottom 70%',
   pin: '.influencer-hero--content',
 });
 
@@ -27,7 +27,6 @@ ScrollTrigger.create({
   scroller: '.smooth-scroll',
   start: 'top top',
   pin: '.influencer-cases--content',
-  // toggleActions: 'play none none none',
 });
 
 // influencer-hero--content

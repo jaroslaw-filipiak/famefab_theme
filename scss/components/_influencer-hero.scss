@@ -139,6 +139,10 @@
       @include font-sans;
 
       @include media-breakpoint-up(lg) {
+        margin-bottom: 60px;
+      }
+
+      @include media-breakpoint-up(xxl) {
         margin-bottom: 110px;
       }
     }

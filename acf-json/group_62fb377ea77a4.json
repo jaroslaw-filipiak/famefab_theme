@@ -306,7 +306,7 @@
             },
             "collapsed": "",
             "min": 3,
-            "max": 3,
+            "max": 7,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
@@ -423,5 +423,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660637117
+    "modified": 1662709992
 }

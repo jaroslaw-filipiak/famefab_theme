@@ -435,6 +435,34 @@ body {
         &-3 {
           grid-area: photo3;
         }
+
+        &-4 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+
+        &-6 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+
+        &-8 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+
+        &-10 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
       }
 
       div {
