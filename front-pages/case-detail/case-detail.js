@@ -1,5 +1,7 @@
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -36,58 +38,6 @@ gsap.from('.our-reach--counter', {
     end: 'top top',
   },
   duration: 0.3,
-});
-
-gsap.to('#InfluencersValue', {
-  innerText: 4,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'bottom',
-  },
-  duration: 2,
-});
-
-gsap.to('#totalReachValue', {
-  innerText: 376,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'bottom',
-  },
-  duration: 2,
-});
-
-gsap.to('#EngagementValue', {
-  innerText: 12,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'bottom',
-  },
-  duration: 2,
-});
-
-gsap.to('#ClicksValue', {
-  innerText: 869,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    // scrub: true,
-    start: 'top bottom',
-    end: 'bottom',
-  },
-  duration: 2,
 });
 
 // detail-hero--title

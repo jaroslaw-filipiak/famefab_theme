@@ -1,5 +1,66 @@
 <?php get_header() ?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"
+    integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/caseDetail.js"></script>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    gsap.to('#InfluencersValue', {
+        innerText: <?php the_field( 'influencers_value' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.smooth-scroll',
+            // scrub: true,
+            start: 'top bottom',
+            end: 'bottom',
+        },
+        duration: 2,
+    });
+
+    gsap.to('#totalReachValue', {
+        innerText: <?php the_field( 'total_reach_value' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.smooth-scroll',
+            scrub: false,
+            start: 'top bottom',
+            end: 'bottom',
+        },
+        duration: 2,
+    });
+
+    gsap.to('#EngagementValue', {
+        innerText: <?php the_field( 'engagement_value' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.smooth-scroll',
+            scrub: false,
+            start: 'top bottom',
+            end: 'bottom',
+        },
+        duration: 2,
+    });
+
+    gsap.to('#ClicksValue', {
+        innerText: <?php the_field( 'total_clicks_value' ); ?>,
+        snap: 'innerText',
+        scrollTrigger: {
+            trigger: 'body',
+            scroller: '.smooth-scroll',
+            // scrub: true,
+            start: 'top bottom',
+            end: 'bottom',
+        },
+        duration: 2,
+    });
+})
+</script>
 
 
 <div class="counter-items gsap__counter-items-piniata">
@@ -19,7 +80,7 @@
         <p>Total reach</p>
         <div class="d-flex">
             <div id="totalReachValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit">k</p>
+            <p class="our-reach-unit"></p>
         </div>
     </div>
 
@@ -29,7 +90,7 @@
         <p>Engagement</p>
         <div class="d-flex">
             <div id="EngagementValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit">k</p>
+            <p class="our-reach-unit"></p>
         </div>
     </div>
 
@@ -39,7 +100,7 @@
         <p>Total clicks</p>
         <div class="d-flex">
             <div id="ClicksValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit">k</p>
+            <p class="our-reach-unit"></p>
         </div>
     </div>
 </div>
