@@ -114,10 +114,11 @@ function handleInfluencer(influencer) {
     ? influencer.dataset.name
     : '';
 
-  if ((influencer.dataset.link = !undefined)) {
+  
     dynamicLink.classList.remove('opacity-0');
-    dynamicLink.setAttribute('href', influencer.dataset.link);
-  }
+    dynamicLink.setAttribute('href', influencer.dataset.link ? influencer.dataset.link : null );
+
+  
 
   if (!isMobile) {
     influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
