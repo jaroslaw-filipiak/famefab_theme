@@ -241,17 +241,17 @@ gsap.from('.gsap_reveal_home_manage_slide_content', {
 
 // .gsap__section-indicator-home-page
 
-gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
-  scrollTrigger: {
-    trigger: '.who-we-are .gsap__reveal-heading',
-    scroller: '.smooth-scroll',
-    start: 'top 60%',
-    end: 'top 20%',
-    scrub: false,
-    // markers: false,
-  },
-  opacity: 0,
-});
+// gsap.from('.page-template-page-home .gsap__section-indicator-home-page', {
+//   scrollTrigger: {
+//     trigger: '.who-we-are .gsap__reveal-heading',
+//     scroller: '.smooth-scroll',
+//     start: 'top 60%',
+//     end: 'top 20%',
+//     scrub: false,
+//     // markers: false,
+//   },
+//   opacity: 0,
+// });
 
 gsap.from('.manage-gallery-row-2', {
   scrollTrigger: {
