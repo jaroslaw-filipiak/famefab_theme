@@ -24,11 +24,11 @@
 <section class="blank-hero bg-cover bg-no-repeat bg-center total-reach-trigger change-make-title-color-trigger"
     style="background-size: cover; background-image: url('<?php the_field( 'second_section_with_background_background_image' ); ?>')">
     <div class="container-fluid h-100">
-        <div class="row h-100 d-flex align-items-end">
+        <div class="row h-100 d-flex flex-nowrap align-items-center">
             <div class="col-3 col-md-2 d-md-block col-md-3  ps-0 h-100"></div>
-            <div class="col-9 col-md-10 col-md-9 text-center h-100  ">
-                <div class="gsap_content_opacity-from-zero blank-hero--content color-yellow" data-scroll
-                    data-scroll-speed="2">
+            <div class="col-9 col-md-10 col-md-8 text-center h-100">
+                <div class="gsap_content_opacity-from-zero blank-hero--content blank-hero--content__page-make color-yellow"
+                    data-scroll data-scroll-speed="2">
                     <?php the_field( 'second_section_with_background_text_content' ); ?>
                 </div>
 
