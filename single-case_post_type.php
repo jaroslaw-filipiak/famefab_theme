@@ -6,11 +6,22 @@
 
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/caseDetail.js"></script>
 
+<?php 
+
+$hasInfluencerValue =  get_field( 'influencers_value' );
+$hasTotalReachValue =  get_field( 'total_reach_value' );
+$hasEngagementValue =  get_field( 'engagement_value' );
+$hasTotalClicksValue = get_field( 'total_clicks_value' );
+
+?>
+
 <script>
 window.addEventListener("DOMContentLoaded", () => {
     gsap.to('#InfluencersValue', {
-        innerText: <?php the_field( 'influencers_value' ); ?>,
-        snap: 'innerText',
+        textContent: <?php echo $hasInfluencerValue ? $hasInfluencerValue : '1'; ?>,
+        snap: {
+            textContent: .1
+        },
         scrollTrigger: {
             trigger: 'body',
             scroller: '.smooth-scroll',
@@ -22,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.to('#totalReachValue', {
-        innerText: <?php the_field( 'total_reach_value' ); ?>,
+        innerText: <?php echo $hasTotalReachValue ? $hasTotalReachValue : '1'; ?>,
         snap: 'innerText',
         scrollTrigger: {
             trigger: 'body',
@@ -35,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.to('#EngagementValue', {
-        innerText: <?php the_field( 'engagement_value' ); ?>,
+        innerText: <?php echo $hasEngagementValue ? $hasEngagementValue : '1'; ?>,
         snap: 'innerText',
         scrollTrigger: {
             trigger: 'body',
@@ -48,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.to('#ClicksValue', {
-        innerText: <?php the_field( 'total_clicks_value' ); ?>,
+        innerText: <?php echo $hasTotalClicksValue ? $hasTotalClicksValue : '1'; ?>,
         snap: 'innerText',
         scrollTrigger: {
             trigger: 'body',
@@ -66,41 +77,45 @@ window.addEventListener("DOMContentLoaded", () => {
 <div class="counter-items gsap__counter-items-piniata">
     <!-- influencers  24vh-->
 
-    <div class="our-reach--counter our-reach--counter__influencers color-green">
+    <div
+        class="our-reach--counter our-reach--counter__influencers color-green <?php echo $hasInfluencerValue ? '' : 'd-none' ?>">
         <p>Influencers</p>
         <div class="d-flex">
             <div id="InfluencersValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit"></p>
+            <p class="our-reach-unit"><?php the_field( 'influencers_unit' ); ?></p>
         </div>
     </div>
 
     <!-- total reach   40vh-->
 
-    <div class="our-reach--counter our-reach--counter__total-reach-single_case color-green">
+    <div
+        class="our-reach--counter our-reach--counter__total-reach-single_case color-green <?php echo $hasTotalReachValue ? '' : 'd-none' ?>">
         <p>Total reach</p>
         <div class="d-flex">
             <div id="totalReachValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit"></p>
+            <p class="our-reach-unit"><?php the_field( 'total_reach_unit' ); ?></p>
         </div>
     </div>
 
     <!-- engagement   40vh-->
 
-    <div class="our-reach--counter our-reach--counter__engagement color-green">
+    <div
+        class="our-reach--counter our-reach--counter__engagement color-green <?php echo $hasEngagementValue ? '' : 'd-none' ?>">
         <p>Engagement</p>
         <div class="d-flex">
             <div id="EngagementValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit"></p>
+            <p class="our-reach-unit"><?php the_field( 'engagement_unit' ); ?></p>
         </div>
     </div>
 
     <!-- total clicks   40vh-->
 
-    <div class="our-reach--counter our-reach--counter__clicks color-green">
+    <div
+        class="our-reach--counter our-reach--counter__clicks color-green <?php echo $hasTotalClicksValue ? '' : 'd-none' ?>">
         <p>Total clicks</p>
         <div class="d-flex">
             <div id="ClicksValue" class="our-reach--counter-value"></div>
-            <p class="our-reach-unit"></p>
+            <p class="our-reach-unit"><?php the_field( 'total_clicks_unit' ); ?></p>
         </div>
     </div>
 </div>
@@ -110,7 +125,7 @@ window.addEventListener("DOMContentLoaded", () => {
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
 <!-- mobile -->
-<section class="detail-mobile-hero d-md-none bg-cover bg-no-repeat bg-center"
+<section class=" detail-mobile-hero d-md-none bg-cover bg-no-repeat bg-center"
     style="background-image:url('<?php echo get_theme_file_uri() ?>/dist/assets/img/case-hero-mobile.jpg')">
     <div class="container-fluid h-100">
         <div class="row h-100">
@@ -125,6 +140,7 @@ window.addEventListener("DOMContentLoaded", () => {
 <!-- mobile -->
 
 <section class="detail-hero">
+
     <div class="container-fluid ">
         <div class="row d-flex align-items-start flex-lg-nowrap" style="border: 1px solid transparent">
 
@@ -182,20 +198,24 @@ window.addEventListener("DOMContentLoaded", () => {
                             <div
                                 class="d-none detail-hero--subtitle font-default-green text-uppercase font-sans text-start color-green">
                                 <?php echo get_the_excerpt() ?></div>
-                            <div class="font-serif color-green detail-hero--title"><?php echo get_the_title() ?></div>
+                            <div class="font-serif color-green detail-hero--title"><?php echo get_the_title() ?>
+                            </div>
                         </div>
 
                         <div style="display: none;" class="d-none col text-start">
                             <p>Lacus orci malesuada non turpis Nam odio non, at, Nullam venenatis ipsum Lorem
                                 scelerisque
-                                facilisis lacus, cursus adipiscing vitae ex dolor vehicula, ipsum commodo ex sed sed
+                                facilisis lacus, cursus adipiscing vitae ex dolor vehicula, ipsum commodo ex sed
+                                sed
                                 viverra
                                 elementum ipsum nisl. eget venenatis efficitur. tempor vitae sit Nunc ipsum at
                                 ultrices est.
-                                Nunc efficitur. tincidunt non gravida Lacus orci malesuada non turpis Nam odio non,
+                                Nunc efficitur. tincidunt non gravida Lacus orci malesuada non turpis Nam odio
+                                non,
                                 at,
                                 Nullam
-                                venenatis ipsum Lorem scelerisque facilisis lacus, cursus adipiscing vitae ex dolor
+                                venenatis ipsum Lorem scelerisque facilisis lacus, cursus adipiscing vitae ex
+                                dolor
                                 vehicula,
                                 ipsum commodo ex sed sed viverra elementum ipsum nisl. eget venenatis efficitur.
                                 tempor

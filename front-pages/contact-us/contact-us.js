@@ -175,8 +175,20 @@ if (!isMobile) {
       start: 'top bottom',
       end: 'top top',
     },
-    xPercent: -800,
+    xPercent: 1800,
+    ease: 'easeIn',
+  });
 
+  gsap.to('.manage-gallery--title', {
+    scrollTrigger: {
+      trigger: '.manage-gallery--gallery',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      markers: false,
+      start: 'bottom bottom',
+      end: 'bottom 70%',
+    },
+    marginLeft: -900,
     ease: 'easeIn',
   });
 

@@ -209,6 +209,23 @@ gsap.from('.gsap-home-manage-reveal-timeline-after-title__link', {
   // top: 0,
 });
 
+// manage-gallery--item
+
+gsap.from('.manage-gallery--item', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--item',
+    scroller: '.smooth-scroll',
+    start: 'top bottom',
+    end: 'top 70%',
+    scrub: true,
+    markers: false,
+
+    // duration: 1,
+  },
+  opacity: 0,
+  // top: 0,
+});
+
 gsap.from('.gsap_reveal_home_manage_slide_content', {
   scrollTrigger: {
     trigger: '.manage-gallery--item-2',
@@ -216,11 +233,26 @@ gsap.from('.gsap_reveal_home_manage_slide_content', {
     start: 'top 60%',
     end: 'top top',
     scrub: true,
-    // markers: false,
+    markers: false,
 
     duration: 1,
   },
-  opacity: 0,
+  // opacity: 0,
+  // top: 0,
+});
+
+gsap.from('.gsap_reveal_home_manage_slide_content', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--item-2',
+    scroller: '.smooth-scroll',
+    start: 'top 60%',
+    end: 'top top',
+    scrub: true,
+    markers: false,
+
+    duration: 1,
+  },
+  // opacity: 0,
   // top: 0,
 });
 

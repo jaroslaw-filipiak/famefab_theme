@@ -38,9 +38,47 @@
             "maxlength": ""
         },
         {
+            "key": "field_6321b3389680a",
+            "label": "Influencers unit",
+            "name": "influencers_unit",
+            "type": "text",
+            "instructions": "For example : k , m",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_631ed456d1c09",
             "label": "Total reach",
             "name": "total_reach_value",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6321b34e9680b",
+            "label": "Total reach unit",
+            "name": "total_reach_unit",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -76,9 +114,47 @@
             "maxlength": ""
         },
         {
+            "key": "field_6321b3599680c",
+            "label": "Engagement unit",
+            "name": "engagement_unit",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_631ed477d1c0b",
             "label": "Total clicks",
             "name": "total_clicks_value",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6321b36a9680d",
+            "label": "Total clicks",
+            "name": "total_clicks_unit",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -184,5 +260,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662964865
+    "modified": 1663153020
 }
