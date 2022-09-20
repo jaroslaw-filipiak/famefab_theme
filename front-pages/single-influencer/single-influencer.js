@@ -250,7 +250,7 @@ gsap.to('.our-reach--counter__facebook', {
     // scrub: true,
     start: 'top 30%',
     end: 'top 30%',
-    onEnter: () => changeFBclass('opacity-0'),
+    // onEnter: () => changeFBclass('opacity-0'),
     onLeaveBack: () => changeFBclass('opacity-100 color-yellow'),
   },
 });
@@ -296,7 +296,7 @@ gsap.to('.our-reach--counter__insta', {
     // scrub: true,
     start: 'top 50%',
     end: 'top 50%',
-    onEnter: () => changeInstaClass('opacity-0'),
+    // onEnter: () => changeInstaClass('opacity-0'),
     onLeaveBack: () => changeInstaClass('opacity-100 color-yellow'),
   },
 });
