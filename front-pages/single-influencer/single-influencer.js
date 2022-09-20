@@ -55,7 +55,8 @@ gsap.to('.influencer-hero--content', {
     trigger: '.influencer-hero .second-row',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 16%',
+    start: 'top 46%',
+    markers: false,
 
     onEnter: () => changeClass('color-green'),
     onLeaveBack: () => changeClass('color-yellow'),
