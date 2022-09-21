@@ -8,64 +8,6 @@ function changeContactUsClass(className) {
   title.classList = `contact-us__hero-gsap ${className}`;
 }
 
-gsap.from('.our-reach--counter', {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: '.gsap__reveal-trigger__contact-us',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: 'bottom',
-  },
-});
-
-gsap.to('#ourReachValue', {
-  innerText: 435,
-  snap: 'innerText',
-  scrollTrigger: {
-    trigger: 'body',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top bottom',
-    end: '54%',
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#e7ffc8',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.gsap__reveal-trigger__contact-us',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  '--counter-color': '#214c2c',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.who-we-are__contact-us',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: () => 'top ' + window.innerWidth * 0.17,
-    end: () => 'top ' + window.innerWidth * 0.2,
-  },
-});
-
-gsap.to('.our-reach--counter', {
-  left: -300,
-  scrollTrigger: {
-    trigger: '.footer',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top 70%',
-    end: 'top 40%',
-  },
-});
-
 // title from bottom
 gsap.from('.contact-us__hero-gsap', {
   scrollTrigger: {

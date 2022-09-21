@@ -101,17 +101,29 @@ window.addEventListener('DOMContentLoaded', () => {
                 <div style="max-width: 610px;"
                     class="d-flex align-items-start justify-content-end gap-4 flex-wrap single-influencer--img-list">
 
-                    <img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
-                        src="<?php the_field( 'image_#2' ); ?>" alt="">
+                    <!-- first photo in second row -->
+                    <?php if(get_field( 'image_#2' )) { ?>
+                    <img style="<?php echo get_field('image_#4') ? '' : 'position: relative; top: 234px;' ?>border-radius: 30px;"
+                        data-scroll data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
+                    <?php } ?>
 
+                    <?php if(get_field( 'image_#3' )) { ?>
                     <img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
                         src="<?php the_field( 'image_#3' ); ?>" alt="">
+                    <?php } ?>
 
+                    <!-- if is disable go to 1 and add pos rel -->
+                    <?php if(get_field( 'image_#4' )) { ?>
                     <img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
                         src="<?php the_field( 'image_#4' ); ?>" alt="">
+                    <?php } ?>
 
+                    <?php if(get_field( 'image_#5' )) { ?>
                     <img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
                         src="<?php the_field( 'image_#5' ); ?>" alt="">
+                    <?php } ?>
+
+
                 </div>
 
             </div>

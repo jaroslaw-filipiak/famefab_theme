@@ -12,7 +12,7 @@
 <section class="who-we-are__contact-us">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-2 d-md-block col-md-3 ps-0"></div>
+            <div class="col-2 d-md-block col-md-2 ps-0"></div>
             <div
                 class="col-10 col-md-9 who-we-are__contact-us--title-wrapper  d-flex flex-column align-items-start justify-content-start">
                 <p class="who-we-are__contact-us--title font-serif" data-scroll-to data-scroll data-scroll-speed=".3">
