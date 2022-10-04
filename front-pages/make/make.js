@@ -3,8 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+gsap.registerPlugin(ScrollTrigger);
+
 function changeMakeClass(className) {
-  console.log('change make ons class');
   const title = document.querySelector('.make--fixed-title');
   title.classList = `make--fixed-title ${className}`;
 }
@@ -19,7 +20,7 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
     },
-    bottom: '-400',
+    left: '-5400',
     duration: 1,
     ease: 'easeIn',
   });
@@ -79,131 +80,17 @@ gsap.to('#totalReachValue', {
 
 // case-hover-output-gsap-pin
 
-export function changeSVGcolors(color) {
-  const circle = document.querySelector(
-    '.cases .arrow-right--circle svg circle'
-  ); //stroke
-  const arrow = document.querySelector('.cases .arrow-right--arrow svg path'); //fill
+// export function changeSVGcolors(color) {
+//   const circle = document.querySelector(
+//     '.cases .arrow-right--circle svg circle'
+//   ); //stroke
+//   const arrow = document.querySelector('.cases .arrow-right--arrow svg path'); //fill
 
-  arrow.setAttribute('fill', color);
-  circle.setAttribute('stroke', color);
-}
+//   arrow.setAttribute('fill', color);
+//   circle.setAttribute('stroke', color);
+// }
 
-changeSVGcolors('#214c2c');
-
-ScrollTrigger.create({
-  trigger: '.cases',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 150px',
-  pin: '.case-area-pinned',
-});
-
-// ===============
-
-function handleInfluencer(influencer) {
-  const casesSection = document.querySelector('.cases'),
-    influencersBG = document.querySelector('.cases--dynamic-bg'),
-    outputInfo = document.querySelector('.case-hover-output'),
-    outputInfluencerName = document.querySelector('.case-hover-output--name');
-
-  const activeIndex = influencer.classList[1];
-  const dynamicLink = document.querySelector('.case-dynamic-link');
-
-  outputInfluencerName.innerHTML = influencer.dataset.name
-    ? influencer.dataset.name
-    : '';
-
-  
-    dynamicLink.classList.remove('opacity-0');
-    dynamicLink.setAttribute('href', influencer.dataset.link ? influencer.dataset.link : null );
-
-  
-
-  if (!isMobile) {
-    influencersBG.style.backgroundImage = `url(${influencer.dataset.bg})`;
-    influencersBG.classList = `cases--dynamic-bg opacity-0`;
-  }
-
-  outputInfluencerName.classList = `case-hover-output--name`;
-  outputInfo.classList = `case-hover-output`;
-
-  casesSection.classList = `cases`;
-
-  dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-green-unstyled`;
-
-  if (!isMobile) {
-    gsap.to('.our-reach--counter', {
-      '--counter-color': '#214c2c',
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: '.cases',
-        scroller: '.smooth-scroll',
-        scrub: true,
-        start: () => 'top ' + window.innerWidth * 0.17,
-        end: () => 'top ' + window.innerWidth * 0.2,
-      },
-    });
-  }
-
-  if (!isMobile) {
-    casesSection.classList = `cases cases__is-bg-visible`;
-    influencersBG.classList = `cases--dynamic-bg opacity-1`;
-    outputInfo.classList = `case-hover-output color-yellow`;
-    dynamicLink.classList = `case-dynamic-link pt-3 d-none d-lg-flex content-and-arrow align-items-center justify-content-start p-0 link-yellow-unstyled`;
-    outputInfluencerName.classList = `case-hover-output--name color-yellow`;
-
-    gsap.to('.our-reach--counter', {
-      '--counter-color': '#e7ffc8',
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: '.cases',
-        scroller: '.smooth-scroll',
-        scrub: true,
-        start: () => 'top ' + window.innerWidth * 0.17,
-        end: () => 'top ' + window.innerWidth * 0.2,
-      },
-    });
-
-    const influencerNamesList = document.querySelectorAll('.cases--list-item');
-    console.log('handle influencer..');
-
-    const influencerNamesListArr = [...influencerNamesList];
-
-    console.log(influencer.dataset.bg);
-
-    if (influencer.dataset.bg) {
-      // check acvive ..
-
-      influencerNamesListArr.map((item) => {
-        item.classList.add('opacity-0');
-        item.classList.remove('color-green');
-      });
-
-      influencer.classList.add('color-yellow');
-      influencer.classList.add('opacity-1');
-    }
-  }
-}
-
-const influencers = gsap.utils.toArray('.cases--list-item');
-
-influencers.forEach((influencer) => {
-  gsap.to(influencer, {
-    scrollTrigger: {
-      scroller: '.smooth-scroll',
-      trigger: influencer,
-      start: 'top center',
-      end: `${isMobile ? '+=20' : '+=120'}`,
-      scrub: true,
-      markers: false,
-      toggleClass: 'influencer-is-active',
-      onEnter: () => handleInfluencer(influencer),
-      onEnterBack: () => handleInfluencer(influencer),
-      // invalidateOnRefresh: true,
-    },
-  });
-});
+// changeSVGcolors('#214c2c');
 
 // top-bar--page-title
 // dynamic change content / innerHTML
@@ -231,7 +118,7 @@ gsap.to('.top-bar--page-title', {
 gsap.to('.top-bar--page-title', {
   snap: 'innerText',
   scrollTrigger: {
-    trigger: '.cases',
+    trigger: '.influencers',
     scroller: '.smooth-scroll',
     scrub: false,
     start: 'top 5%',
@@ -277,7 +164,7 @@ if (!isMobile) {
     '--counter-color': '#214c2c',
     immediateRender: false,
     scrollTrigger: {
-      trigger: '.cases',
+      trigger: '.influencers',
       scroller: '.smooth-scroll',
       scrub: true,
       start: () => 'top ' + window.innerWidth * 0.17,
@@ -291,7 +178,7 @@ if (isMobile) {
     '--counter-color': '#214c2c',
     immediateRender: false,
     scrollTrigger: {
-      trigger: '.cases',
+      trigger: '.influencers',
       scroller: '.smooth-scroll',
       scrub: true,
       start: 'top 68%',
@@ -326,22 +213,6 @@ gsap.to('.our-reach--counter', {
   },
 });
 
-function disableBG(isBack) {
-  const influencersBG = document.querySelector('.cases--dynamic-bg');
-  const pin = document.querySelector('.pin-spacer');
-
-  influencersBG.classList.remove('opacity-1');
-  influencersBG.classList.add('opacity-0');
-  influencersBG.classList.add('h-0');
-
-  // pin.classList.add('d-none');
-
-  isBack ? pin.classList.remove('d-none') : pin.classList.add('d-none');
-
-  console.log('disableBG');
-  console.log(influencersBG);
-}
-
 gsap.to('.footer', {
   scrollTrigger: {
     scroller: '.smooth-scroll',
@@ -351,8 +222,6 @@ gsap.to('.footer', {
     scrub: true,
     markers: false,
     // toggleClass: 'influencer-is-active',
-    onEnter: () => disableBG(false),
-    onLeaveBack: () => disableBG(true),
   },
 });
 
@@ -367,4 +236,53 @@ gsap.to('.top-bar--page-title', {
     onEnter: () => changeTextAndClass('Make', 'color-green'),
     onLeaveBack: () => changeTextAndClass('Make ', 'color-yellow'),
   },
+});
+
+// =============
+export default function handleInfluencersOnHover() {
+  const outputPhoto = document.querySelector('.influencer--photo');
+  const outputInfo = document.querySelector('.influencer-hover-output');
+  const outputInfluencerName = document.querySelector(
+    '.influencer-hover-output--name'
+  );
+  const dynamicLink = document.querySelector('.influencer-dynamic-link');
+
+  const list = document.querySelectorAll(
+    '#influencers .iterable__desktop .influencers--list-item'
+  );
+
+  const listArr = [...list];
+  listArr.map((item) => {
+    // mouseover start
+    item.addEventListener('mouseover', (e) => {
+      // remove all active classes
+      listArr.map((item) => {
+        item.classList.remove('influencer-is-active');
+      });
+
+      e.target.classList.add('influencer-is-active');
+      outputInfluencerName.innerHTML = e.target.dataset.name;
+      outputInfo.innerHTML = e.target.dataset.info;
+      outputPhoto.style.backgroundImage = `url(${e.target.dataset.thumb})`;
+      dynamicLink.setAttribute('href', e.target.dataset.link);
+    });
+    // mouseover end
+
+    // click start
+    item.addEventListener('click', (e) => {
+      window.location.href = e.target.dataset.link;
+    });
+    // click end
+  });
+}
+
+handleInfluencersOnHover();
+
+ScrollTrigger.create({
+  trigger: '.influencers',
+  scroller: '.smooth-scroll',
+  start: 'top top',
+  end: 'bottom 90%',
+  pin: '.influencer-area-pinned',
+  markers: false,
 });

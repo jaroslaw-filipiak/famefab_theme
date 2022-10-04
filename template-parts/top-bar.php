@@ -109,7 +109,7 @@ $influencerPage = 'influencer_post_type' === get_post_type();
             <?php } ?>
 
             <?php if("case_post_type" == get_post_type()) { ?>
-            <!-- section-indicator on page: make-->
+            <!-- section-indicator on page: case post type-->
             <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title "></span>
             </div>
@@ -119,6 +119,13 @@ $influencerPage = 'influencer_post_type' === get_post_type();
             <!-- section-indicator on page: contact us-->
             <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
                 <span class="top-bar--page-title ">Contact</span>
+            </div>
+            <?php } ?>
+
+            <?php if(is_page_template( 'page-templates/default.php' )) { ?>
+            <!-- section-indicator on simple text page template -->
+            <div class="col-4 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
+                <span class="top-bar--page-title "></span>
             </div>
             <?php } ?>
 

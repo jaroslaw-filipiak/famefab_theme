@@ -1,7 +1,7 @@
 <?php
 /**
- * Section cases
- * 
+ * Section influencers
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package femmefab
@@ -9,26 +9,24 @@
 
 ?>
 
-
-
-<section class="cases">
+<section id="influencers" class="influencers">
 
     <div class="container-fluid">
-        <div class="row ">
+        <div class="row">
 
-            <!-- case left side -->
-            <div
-                class="col-2 d-none d-md-flex align-items-center justify-content-end col-md-3  ps-0  case case-area-pinned">
-                <div>
-
-                    <div class="d-none d-lg-flex case--info font-green-default">
+            <!-- influencer left side -->
+            <div class="col-2 d-none d-md-flex align-items-start justify-content-start col-md-3  ps-0  influencer influencer-area-pinned"
+                style="overflow: visible; border: 1px solid transparent">
+                <div style="position: relative;">
+                    <div class="d-none d-lg-flex influencer--photo bg-cover bg-no-repeat"></div>
+                    <div class="d-none d-lg-flex influencer--info font-green-default">
                         <div>
-                            <p><span class="case-hover-output--name"></span></p>
-                            <p><span class="case-hover-output"></span></p>
+                            <p><span class="influencer-hover-output--name"></span></p>
+                            <p><span class="influencer-hover-output"></span></p>
                             <div></div>
 
                             <a href="#"
-                                class="link-green-unstyled case-dynamic-link pt-3 d-none d-lg-flex  content-and-arrow  align-items-center justify-content-start p-0 opacity-0">
+                                class="link-green-unstyled influencer-dynamic-link pt-3 d-none d-lg-flex content-and-arrow  align-items-center justify-content-start p-0 opacity-0">
                                 <div class="pe-4"><small>see profile</small></div>
                                 <div class=" arrow-right-icon">
                                     <div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58"
@@ -52,14 +50,13 @@
 
             </div>
 
-            <!-- case right side -->
-            <div class="col text-end text-xl-center  cases--list-wrapper case-area-scrollable">
-                <div class="cases--list">
+            <!-- influencer right side -->
+            <div class="col text-end text-xl-center  influencers--list-wrapper influencer-area-scrollable">
+                <div class="influencers--list">
                     <div class="d-flex flex-column justify-content-end iterable--wrapper">
 
-
                         <!-- desktop -->
-                        <div class="iterable d-none d-lg-flex">
+                        <div class="iterable d-none d-lg-flex iterable__desktop">
 
                             <?php 
 
@@ -79,10 +76,11 @@
 
 
                             <div data-index="<?php echo $the_query->current_post +1;  ?>"
-                                data-info="<?php the_field( 'page_manage_excerpt' ); ?>"
-                                data-link="<?php echo get_permalink() ?>" data-bg="<?php the_field( 'data_bg_img' ); ?>"
-                                data-thumb="<?php echo get_the_post_thumbnail_url() ?>" data-name="<?php the_title() ?>"
-                                class="cases--list-item cases--list-item-<?php echo $the_query->current_post +1; ?> w-100 color-green">
+                                data-info="<?php echo get_the_excerpt() ?>" data-link="<?php echo get_permalink() ?>"
+                                data-bg="<?php the_field( 'big_image_after_hover' ); ?>"
+                                data-reach="<?php the_field( 'reach_value' ); ?>"
+                                data-thumb="<?php the_field('data_bg_img') ?>" data-name="<?php the_title() ?>"
+                                class="cursor-pointer influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> ">
                                 <?php the_title() ?>
                             </div>
 
@@ -113,7 +111,7 @@
                                 <?php 
 
                                     $args = array(
-                                        'post_type' => 'case_post_type',
+                                        'post_type' => 'influencer_post_type',
                                         'posts_per_page' => -1,
                                     );
                                     // the query
@@ -128,8 +126,9 @@
 
 
                                 <a href="<?php echo get_permalink() ?>"
-                                    class="cases--list-item cases--list-item__mobile cases--list-item-<?php echo $the_query->current_post +1; ?> w-100 color-green">
-                                    <?php the_title() ?>
+                                    class="mobile-item influencers--list-item influencers--list-item-<?php echo $the_query->current_post +1; ?> w-100 ">
+                                    <span> <?php the_title() ?></span>
+
                                 </a>
 
                                 <?php endwhile; ?>
@@ -144,16 +143,16 @@
                                 <?php endif; ?>
 
 
+
                             </div>
 
                         </div>
-                        <!-- mobile -->
+
+
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 </section>

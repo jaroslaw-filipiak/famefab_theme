@@ -139,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div class=" col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start ">
                 <div class="influencer-cases--content influencer-cases--content__dynamic d-flex flex-column align-items-start justify-content-center color-green"
-                    style="height: 100%; z-index: 98; padding-top:  20%">
+                    style="height: 100%; z-index: 98; padding-top:  20%; opacity: 0;">
                     <div class="influencer-cases--dynamic-title">
 
                     </div>

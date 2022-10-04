@@ -1,0 +1,45 @@
+.content-page-hero {
+  padding-bottom: 80px;
+
+  h1 {
+    font-size: 55px;
+    line-height: 65px;
+    color: $mainGreen;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 85px;
+      line-height: 100px;
+      max-width: 600px;
+    }
+  }
+
+  &--title-wrapper {
+    padding-top: 15vh;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 17vh;
+      margin-top: -3px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-top: 20vh;
+      margin-top: -8px;
+    }
+  }
+
+  &--excerpt {
+    max-width: 350px;
+  }
+}
+
+.content-page {
+  &--content {
+    padding-bottom: 80px;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 160px;
+      padding-bottom: 0px;
+    }
+    font-size: 14px;
+  }
+}

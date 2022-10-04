@@ -17,7 +17,7 @@ gsap.from('.contact-us__hero-gsap', {
     markers: false,
     toggleActions: 'play none none reset',
   },
-  bottom: '-400',
+  left: '-5400',
   duration: 1,
   ease: 'easeIn',
 });

@@ -103,6 +103,21 @@ gsap.to('.single-influencer--title', {
   opacity: 0,
 });
 
+// Influencer Detail Page - always load the first read case when a user reaches cases section
+// influencer-cases--content__dynamic
+
+gsap.to('.influencer-cases--content__dynamic', {
+  scrollTrigger: {
+    trigger: '.single-influencer--case-1',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 80%',
+    end: 'top 40%',
+    toggleActions: 'play none none reset',
+  },
+  opacity: 1,
+});
+
 // cases title to opacity 1
 gsap.to('.single-influencer--title-cases', {
   scrollTrigger: {
@@ -147,6 +162,22 @@ caseItemsArr.forEach((item) => {
     link.classList.remove('opacity-0');
   });
 });
+
+function addDataToFirstCaseDynamic(itemClass) {
+  console.log('add data to first case item');
+  console.log(itemClass);
+
+  const item = document.querySelector(`.${itemClass}`);
+
+  console.log(item);
+
+  title.innerHTML = item.dataset.title;
+  subtitle.innerHTML = item.dataset.subtitle;
+  link.setAttribute('href', item.dataset.link);
+  link.classList.remove('opacity-0');
+}
+
+addDataToFirstCaseDynamic('single-influencer--case-1');
 
 // top-bar--page-title
 // dynamic change content / innerHTML
