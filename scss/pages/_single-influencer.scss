@@ -6,6 +6,11 @@
 }
 
 .single-influencer {
+  .wp-block-video video {
+    width: 100%;
+    border-radius: 30px;
+  }
+
   &--big-photo {
     @include media-breakpoint-only(xl) {
       transform: scale(0.8);
