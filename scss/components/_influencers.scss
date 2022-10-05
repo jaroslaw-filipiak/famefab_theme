@@ -30,6 +30,13 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    font-size: 110px;
+    line-height: 80px;
+    text-align: center;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(xxxl) {
     font-size: 130px;
     line-height: 130px;
     text-align: center;

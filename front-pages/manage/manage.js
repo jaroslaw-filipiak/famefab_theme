@@ -79,8 +79,6 @@ if (!isMobile) {
   });
 } // !wp_is_mobile
 
-// if(isMobile) {
-
 //   ScrollTrigger.create({
 //     trigger: '.gsap__blank-hero-mobile-piniata--trigger',
 //     scroller: '.smooth-scroll',
@@ -131,6 +129,33 @@ gsap.from('.gsap_opacity-reveal__blank-hero', {
   opacity: 0,
 });
 
+function SetInitialInfluencerData(data) {
+  const photo = document.querySelector('.influencer--photo'),
+    info = document.querySelector('.influencer-hover-output'),
+    name = document.querySelector('.influencer-hover-output--name'),
+    link = document.querySelector('.influencer-dynamic-link'),
+    list = document.querySelectorAll(
+      '#influencers .iterable__desktop .influencers--list-item'
+    );
+
+  const listArr = [...list];
+
+  console.log('listarr[0]', listArr[0]);
+
+  listArr[0].classList.add('influencer-is-active');
+
+  name.innerHTML = listArr[0].dataset.name;
+  info.innerHTML = listArr[0].dataset.info;
+  photo.style.backgroundImage = `url(${listArr[0].dataset.thumb})`;
+  link.setAttribute('href', listArr[0].dataset.link);
+
+  console.log('name', listArr[0].dataset.name);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  SetInitialInfluencerData();
+});
+
 export default function handleInfluencersOnHover() {
   const outputPhoto = document.querySelector('.influencer--photo');
   const outputInfo = document.querySelector('.influencer-hover-output');
@@ -144,6 +169,7 @@ export default function handleInfluencersOnHover() {
   );
 
   const listArr = [...list];
+
   listArr.map((item) => {
     // mouseover start
     item.addEventListener('mouseover', (e) => {
@@ -158,6 +184,7 @@ export default function handleInfluencersOnHover() {
       outputPhoto.style.backgroundImage = `url(${e.target.dataset.thumb})`;
       dynamicLink.setAttribute('href', e.target.dataset.link);
     });
+
     // mouseover end
 
     // click start
@@ -168,7 +195,10 @@ export default function handleInfluencersOnHover() {
   });
 }
 
-handleInfluencersOnHover();
+if (!isMobile) {
+  handleInfluencersOnHover();
+}
+
 console.log('manage');
 
 // container element as trigger
@@ -183,7 +213,7 @@ console.log('manage');
 ScrollTrigger.create({
   trigger: '.influencers',
   scroller: '.smooth-scroll',
-  start: 'top top',
+  start: 'top -2%',
   end: 'bottom 90%',
   pin: '.influencer-area-pinned',
 });

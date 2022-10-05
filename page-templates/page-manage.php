@@ -4,7 +4,7 @@
 
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/manage.js"></script>
 
-<div class="our-reach--counter" style="z-index: 0">
+<div class="our-reach--counter our-reach--counter__page-manage" style="z-index: 0">
     <p class="our-reach-title"></p>
     <div class="d-flex">
         <div id="ourReachValue" class="our-reach--counter-value our-reach__dynamic "></div>

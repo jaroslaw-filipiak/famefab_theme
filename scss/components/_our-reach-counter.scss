@@ -66,6 +66,13 @@
   }
 }
 
+.our-reach--counter__page-manage {
+  @include media-breakpoint-up(lg) {
+    left: 40px;
+    top: 19vh;
+  }
+}
+
 // single influencer page counter
 
 body.single-influencer_post_type {

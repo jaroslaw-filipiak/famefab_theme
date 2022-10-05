@@ -17,7 +17,7 @@
             <!-- influencer left side -->
             <div class="col-2 d-none d-md-flex align-items-start justify-content-start col-md-3  ps-0  influencer influencer-area-pinned"
                 style="overflow: visible; border: 1px solid transparent">
-                <div style="position: relative;">
+                <div style="position: relative; top: -30px;">
                     <div class="d-none d-lg-flex influencer--photo bg-cover bg-no-repeat"></div>
                     <div class="d-none d-lg-flex influencer--info font-green-default">
                         <div>
