@@ -324,21 +324,6 @@ if (!isMobile) {
       },
     });
   });
-} else if (isMobile) {
-  influencers.forEach((influencer) => {
-    gsap.to(influencer, {
-      scrollTrigger: {
-        scroller: '.smooth-scroll',
-        trigger: influencer,
-        start: 'top center',
-        end: '+=40',
-        scrub: false,
-        toggleClass: 'influencer-is-active',
-        onEnter: () => handleInfluencer(influencer),
-        onEnterBack: () => handleInfluencer(influencer),
-      },
-    });
-  });
 }
 
 gsap.to('.influencers--dynamic-bg', {
