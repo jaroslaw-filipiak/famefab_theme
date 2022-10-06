@@ -276,7 +276,9 @@ export default function handleInfluencersOnHover() {
   });
 }
 
-handleInfluencersOnHover();
+if (!isMobile) {
+  handleInfluencersOnHover();
+}
 
 ScrollTrigger.create({
   trigger: '.influencers',
