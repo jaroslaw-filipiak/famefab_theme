@@ -111,7 +111,7 @@
                                 <?php 
 
                                     $args = array(
-                                        'post_type' => 'influencer_post_type',
+                                        'post_type' => 'case_post_type',
                                         'posts_per_page' => -1,
                                     );
                                     // the query
