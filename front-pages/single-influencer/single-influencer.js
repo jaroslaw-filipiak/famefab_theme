@@ -2,7 +2,7 @@
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 // gsap.from('.our-reach--counter', {
 //   opacity: 0,
 //   scrollTrigger: {
@@ -14,13 +14,15 @@ gsap.registerPlugin(ScrollTrigger);
 //   },
 // });
 
-ScrollTrigger.create({
-  trigger: '.influencer-hero',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'bottom 70%',
-  pin: '.influencer-hero--content',
-});
+if (!isMobile) {
+  ScrollTrigger.create({
+    trigger: '.influencer-hero',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'bottom 70%',
+    pin: '.influencer-hero--content',
+  });
+}
 
 ScrollTrigger.create({
   trigger: '.influencer-cases',
