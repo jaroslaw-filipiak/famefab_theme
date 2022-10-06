@@ -154,6 +154,7 @@
       .mobile-item {
         font-size: 27px;
         text-align: right;
+        display: inline-block;
 
         &:hover {
           color: $mainGreen;
@@ -170,6 +171,7 @@
 
         @include media-breakpoint-up(lg) {
           font-size: 5 6px;
+          display: inline;
         }
         @include media-breakpoint-up(xl) {
           font-size: 75px;
@@ -187,7 +189,6 @@
         transform: scale(1);
         position: relative;
         left: 0;
-        display: inline;
 
         // &:hover {
         //   opacity: 1;
