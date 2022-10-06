@@ -70,11 +70,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 <section class="influencer-hero" style="background-color: #f1f0ef;">
 
-    <div class="container-fluid first-row bg-cover bg-no-repeat"
-        style="background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
-        <div class="row h-100 d-flex align-items-end">
+    <div class="container-fluid first-row bg-cover bg-no-repeat single-influencer--bg"
+        style="background-position: center ;background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
+        <div class="row  influencer-hero--inner">
             <div class="col-3 d-md-block col-md-2  ps-0 h-100"></div>
-            <div class="col-9 col-md-10 text-center h-100  d-flex align-items-start justify-content-start">
+            <div
+                class="col-9 col-md-10 text-center h-100  d-flex align-items-center align-items-lg-start justify-content-start">
                 <div class="influencer-hero--content color-yellow pl-3">
                     <?php the_field( 'influencer_first_section_text_content' ); ?>
                 </div>
@@ -87,8 +88,8 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
             <div data-scroll data-scroll-speed="1"
                 class="single-influencer-fixed-heading__gsap-trigger col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-end">
-                <img class="single-influencer--big-photo" style="border-radius: 30px;"
-                    src="<?php the_field( 'first_big_image' ); ?>" alt="">
+                <img class="single-influencer--big-photo img-max-w-245__mobile mt-5 mt-lg-0"
+                    style="border-radius: 30px;" src="<?php the_field( 'first_big_image' ); ?>" alt="">
             </div>
         </div>
     </div>
@@ -103,8 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
                     <!-- first photo in second row -->
                     <?php if(get_field( 'image_#2' )) { ?>
-                    <img style="<?php echo get_field('image_#4') ? '' : 'position: relative; top: 234px;' ?>border-radius: 30px;"
-                        data-scroll data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
+                    <img style="border-radius: 30px;"
+                        class="<?php echo get_field('image_#4') ? '' : 'second-row-image_2' ?>" data-scroll
+                        data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
                     <?php } ?>
 
                     <?php if(get_field( 'image_#3' )) { ?>
@@ -182,7 +184,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 <?php setup_postdata ( $post ); ?>
 
                 <!-- loop -->
-                <div style="width: 610px; height: 321px; background-image: url(<?php echo get_the_post_thumbnail_url($post -> ID , 'full') ?>); background-size: cover; background-repeat: no-repeat; border-radius: 30px;"
+                <div style="background-image: url(<?php echo get_the_post_thumbnail_url($post -> ID , 'full') ?>); background-size: cover; background-repeat: no-repeat; border-radius: 30px;"
                     class="single-influencer--case single-influencer--case-1" data-title="<?php echo the_title() ?>"
                     data-subtitle="<?php echo the_excerpt() ?>" data-link="<?php echo the_permalink() ?>">
                     <a class="text-uppercase color-yellow" href="#"><?php echo the_title() ?></a>

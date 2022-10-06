@@ -1,4 +1,10 @@
 .influencer--photos-grid {
+  img {
+    @include media-breakpoint-down(md) {
+      max-width: 245px;
+    }
+  }
+
   @include media-breakpoint-only(xl) {
     transform: scale(0.8);
     transform-origin: center right;
@@ -50,6 +56,13 @@
 
   &--case {
     position: relative;
+    width: 245px;
+    height: 321px;
+
+    @include media-breakpoint-up(lg) {
+      width: 610px;
+      height: 321px;
+    }
 
     a {
       position: absolute;
@@ -79,4 +92,51 @@
 .wp-block-video video {
   width: 100%;
   border-radius: 30px !important;
+}
+
+.single-influencer--bg {
+  position: relative;
+
+  &::before {
+    @include media-breakpoint-down(md) {
+      content: '';
+      width: 100vw;
+      height: 100vh;
+      background: #000000a8;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.influencer-hero--inner {
+  @include media-breakpoint-down(lg) {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+  }
+}
+
+.second-row-image_2 {
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    top: 234px;
+  }
+}
+
+.img-max-w-245__mobile {
+  @include media-breakpoint-down(md) {
+    max-width: 245px;
+    margin-bottom: 20px;
+  }
 }
