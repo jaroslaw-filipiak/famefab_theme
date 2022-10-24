@@ -61,13 +61,11 @@
 }
 
 .influencer-hero {
-  // height: 100vh;
-
   position: relative;
 
-  // @include media-breakpoint-up(lg) {
-  //   padding: 40px;
-  // }
+  @include media-breakpoint-up(lg) {
+    padding-right: 7vw;
+  }
 
   .first-row,
   .second-row,

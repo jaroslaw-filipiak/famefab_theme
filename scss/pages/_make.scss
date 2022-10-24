@@ -34,18 +34,8 @@
   }
 
   @include media-breakpoint-up(lg) {
-    font-size: 200px;
-    line-height: 200px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: 230px;
-    line-height: 230px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    font-size: $titleSizeMax;
-    line-height: 300px;
+    font-size: 170px;
+    line-height: 170px;
   }
 }
 
