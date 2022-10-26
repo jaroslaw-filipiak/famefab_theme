@@ -14,17 +14,24 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <?php wp_head(); ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
+
+	<script>
+	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+	if (isSafari) {
+		$('head').append('<link rel="stylesheet" type="text/css" href="<?php echo get_theme_file_uri() ?>/safari.css">')
+	};
+	</script>
 
 
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
+	<?php wp_body_open(); ?>
 
-    <div class="preloader"></div>
+	<div class="preloader"></div>
 
-    <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/main.js"></script>
+	<script type="module" src="<?php echo get_theme_file_uri() ?>/dist/main.js"></script>
