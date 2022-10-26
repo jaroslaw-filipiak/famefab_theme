@@ -19,12 +19,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 
-	<script>
-	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-	if (isSafari) {
-		$('head').append('<link rel="stylesheet" type="text/css" href="<?php echo get_theme_file_uri() ?>/safari.css">')
-	};
-	</script>
+
 
 
 </head>

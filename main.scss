@@ -92,3 +92,11 @@ body {
   height: 100vh;
   background-color: $fioletLight;
 }
+
+@media screen {
+  _::-webkit-full-page-media,
+  _:future,
+  :root .safari_only {
+    border: 3px dashed tomato;
+  }
+}
