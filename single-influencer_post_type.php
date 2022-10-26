@@ -73,16 +73,19 @@ window.addEventListener('DOMContentLoaded', () => {
 	<div class="container-fluid first-row bg-cover bg-no-repeat single-influencer--bg bg-violet"
 		style="background-position: center;">
 		<div class="row  influencer-hero--inner">
-			<div class=" col-3 d-md-block col-md-2  ps-0 h-100">11</div>
+			<div class="col-3 d-md-block col-md-2  ps-0 h-100"></div>
 			<div
-				class=" col-9 col-md-3 text-center h-100  d-flex align-items-center align-items-lg-start justify-content-start">
+				class="col-9 col-md-10 col-lg-3 text-center h-100  d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-start">
 				<div class="influencer-hero--content color-green pl-3">
-					22
+
 					<?php the_field( 'influencer_first_section_text_content' ); ?>
 				</div>
+				<div><img style="border-radius: 30px;" class="mt-5 img-fluid d-lg-none"
+						src="<?php the_field( 'influencer_first_section_main_image' ); ?>" alt=""></div>
+
 			</div>
-			<div class="h-100 d-none d-md-flex col-md-7 pe-4 justify-content-end mt-5 ">
-				<img style="border-radius: 30px;" class="img-fluid mt-5"
+			<div class="h-100 d-none d-lg-flex col-md-7 pe-4 justify-content-end mt-5 ps-5 ">
+				<img style="border-radius: 30px;" class="mt-5 img-fluid"
 					src="<?php the_field( 'influencer_first_section_main_image' ); ?>" alt="">
 			</div>
 		</div>

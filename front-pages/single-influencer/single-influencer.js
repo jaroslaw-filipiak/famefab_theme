@@ -22,14 +22,14 @@ if (!isMobile) {
     end: 'bottom 70%',
     pin: '.influencer-hero--content',
   });
-}
 
-ScrollTrigger.create({
-  trigger: '.influencer-cases',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  pin: '.influencer-cases--content',
-});
+  ScrollTrigger.create({
+    trigger: '.influencer-cases',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    pin: '.influencer-cases--content',
+  });
+}
 
 // influencer-hero--content
 
