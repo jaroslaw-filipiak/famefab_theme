@@ -254,31 +254,33 @@
   @include font-serif;
   // @include default-transition;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(xs) {
     font-size: 100px;
     line-height: 100px;
     text-align: center;
     left: 0;
   }
 
+  @include media-breakpoint-only(sm) {
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    left: 0;
+    max-width: 100%;
+  }
+
   @include media-breakpoint-up(md) {
     font-size: 140px;
     line-height: 140px;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
   }
 
   @include media-breakpoint-up(lg) {
-    font-size: 200px;
-    line-height: 200px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: 230px;
-    line-height: 230px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    font-size: $titleSizeMax;
-    line-height: 300px;
+    font-size: 170px;
+    line-height: 170px;
   }
 }
 

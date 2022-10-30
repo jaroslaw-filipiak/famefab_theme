@@ -19,10 +19,10 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 <footer id="end" class="<?php echo $isInfluencerPostType ? 'd-none' : ''; ?>" role="content">
 	<section class="footer">
 		<div class="container-fluid">
-			<div class="row footer--columns-wrapper">
+			<div class="row footer--columns-wrapper d-flex align-items-start justify-content-between">
 
 				<div data-scroll data-scroll-speed="1"
-					class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
+					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start ">
 
 					<div class="footer-col-content ">
 						<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
@@ -30,23 +30,23 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 
 				</div>
 
-				<div data-scroll data-scroll-speed="1.3"
-					class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-center  justify-content-start ">
+				<div data-scroll data-scroll-speed="1"
+					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-sm-center align-items-lg-start  justify-content-start">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 					</div>
 
 
 				</div>
-				<div data-scroll data-scroll-speed="1.6"
-					class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-center  justify-content-start ">
+				<div data-scroll data-scroll-speed="1"
+					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-sm-center align-items-lg-center  justify-content-start ">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 					</div>
 
 				</div>
 				<div data-scroll data-scroll-speed="1"
-					class="col-6 col-sm-6 col-lg-3 d-flex flex-column align-items-start align-items-sm-center align-items-lg-end  justify-content-start ">
+					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-sm-center align-items-lg-end  justify-content-start ">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
 					</div>

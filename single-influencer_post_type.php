@@ -9,7 +9,7 @@
 
 <!-- facebook -->
 
-<div class="our-reach--counter our-reach--counter__facebook color-green">
+<div class="our-reach--counter our-reach--counter__facebook color-yellow">
 	<p>Facebook</p>
 	<div class="d-flex">
 		<div id="FBValue" class="our-reach--counter-value"></div>
@@ -19,7 +19,7 @@
 
 <!-- insta -->
 
-<div class="our-reach--counter our-reach--counter__insta color-green">
+<div class="our-reach--counter our-reach--counter__insta color-yellow">
 	<p>Instagram</p>
 	<div class="d-flex">
 		<div id="InstaValue" class="our-reach--counter-value"></div>
@@ -68,25 +68,17 @@ window.addEventListener('DOMContentLoaded', () => {
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<section class="influencer-hero">
+<section class="influencer-hero" style="background-color: #f1f0ef;">
 
-	<div class="container-fluid first-row bg-cover bg-no-repeat single-influencer--bg bg-violet"
-		style="background-position: center;">
+	<div class="container-fluid first-row bg-cover bg-no-repeat single-influencer--bg"
+		style="background-position: center ;background-image: url(<?php the_field( 'influencer_first_section_main_image' ); ?>);">
 		<div class="row  influencer-hero--inner">
 			<div class="col-3 d-md-block col-md-2  ps-0 h-100"></div>
 			<div
-				class="col-9 col-md-10 col-lg-3 text-center h-100  d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-start">
-				<div class="influencer-hero--content color-green pl-3">
-
+				class="col-9 col-md-10 text-center h-100  d-flex align-items-center align-items-lg-start justify-content-start">
+				<div class="influencer-hero--content color-yellow pl-3">
 					<?php the_field( 'influencer_first_section_text_content' ); ?>
 				</div>
-				<div><img style="border-radius: 30px;" class="mt-5 img-fluid d-lg-none"
-						src="<?php the_field( 'influencer_first_section_main_image' ); ?>" alt=""></div>
-
-			</div>
-			<div class="h-100 d-none d-lg-flex col-md-7 pe-4 justify-content-end mt-5 ps-5 ">
-				<img style="border-radius: 30px;" class="mt-5 img-fluid"
-					src="<?php the_field( 'influencer_first_section_main_image' ); ?>" alt="">
 			</div>
 		</div>
 	</div>

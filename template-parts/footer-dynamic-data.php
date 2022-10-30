@@ -154,7 +154,7 @@
 
 <?php if('influencer_post_type' == get_post_type()) { ?>
 
-<h1 class="color-green h1__small single-influencer-fixed-heading"><span>Shopping</span>
+<h1 class="color-yellow h1__small single-influencer-fixed-heading"><span>Shopping</span>
 	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
 	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
 	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>

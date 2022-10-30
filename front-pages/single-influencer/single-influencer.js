@@ -22,14 +22,14 @@ if (!isMobile) {
     end: 'bottom 70%',
     pin: '.influencer-hero--content',
   });
-
-  ScrollTrigger.create({
-    trigger: '.influencer-cases',
-    scroller: '.smooth-scroll',
-    start: 'top top',
-    pin: '.influencer-cases--content',
-  });
 }
+
+ScrollTrigger.create({
+  trigger: '.influencer-cases',
+  scroller: '.smooth-scroll',
+  start: 'top top',
+  pin: '.influencer-cases--content',
+});
 
 // influencer-hero--content
 
@@ -61,7 +61,7 @@ gsap.to('.influencer-hero--content', {
     markers: false,
 
     onEnter: () => changeClass('color-green'),
-    onLeaveBack: () => changeClass('color-green'),
+    onLeaveBack: () => changeClass('color-yellow'),
   },
 });
 
@@ -197,8 +197,8 @@ gsap.to('.top-bar--page-title', {
     trigger: '.influencer-hero',
     scroller: '.smooth-scroll',
 
-    onEnter: () => changeTextAndClass('Influencers', 'color-green'),
-    onLeaveBack: () => changeTextAndClass('Influencers', 'color-green'),
+    onEnter: () => changeTextAndClass('Influencers', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Influencers', 'color-yellow'),
   },
 });
 
@@ -211,7 +211,7 @@ gsap.to('.top-bar--page-title', {
     start: 'top 5%',
     end: 'top 3%',
     onEnter: () => changeTextAndClass('Influencers', 'color-green'),
-    onLeaveBack: () => changeTextAndClass('Influencers', 'color-green'),
+    onLeaveBack: () => changeTextAndClass('Influencers', 'color-yellow'),
   },
 });
 
@@ -223,7 +223,7 @@ gsap.to('.top-bar--page-title', {
     scrub: true,
     start: 'top 5%',
     end: 'top 3%',
-    onEnter: () => changeTextAndClass('Influencers', 'color-green'),
+    onEnter: () => changeTextAndClass('Influencers', 'color-yellow'),
     onLeaveBack: () => changeTextAndClass('Influencers', 'color-green'),
   },
 });
@@ -236,8 +236,8 @@ gsap.to('.top-bar--page-title', {
     scrub: true,
     start: 'top 5%',
     end: 'top 3%',
-    onEnter: () => changeTextAndClass('', 'color-green'),
-    onLeaveBack: () => changeTextAndClass('Influencers', 'color-green'),
+    onEnter: () => changeTextAndClass('', 'color-yellow'),
+    onLeaveBack: () => changeTextAndClass('Influencers', 'color-yellow'),
   },
 });
 
@@ -258,7 +258,7 @@ gsap.to('.our-reach--counter__facebook', {
     start: 'top 36%',
     end: 'top 36%',
     onEnter: () => changeFBclass('color-green '),
-    onLeaveBack: () => changeFBclass('color-green'),
+    onLeaveBack: () => changeFBclass('color-yellow'),
   },
 });
 
@@ -270,7 +270,7 @@ gsap.to('.our-reach--counter__facebook', {
     // scrub: true,
     start: 'top 30%',
     end: 'top 30%',
-    onEnter: () => changeFBclass('color-green'),
+    onEnter: () => changeFBclass('color-yellow'),
     onLeaveBack: () => changeFBclass('color-green'),
   },
 });
@@ -284,7 +284,7 @@ gsap.to('.our-reach--counter__facebook', {
     start: 'top 30%',
     end: 'top 30%',
     // onEnter: () => changeFBclass('opacity-0'),
-    onLeaveBack: () => changeFBclass('opacity-100 color-green'),
+    onLeaveBack: () => changeFBclass('opacity-100 color-yellow'),
   },
 });
 
@@ -304,7 +304,7 @@ gsap.to('.our-reach--counter__insta', {
     start: 'top 56%',
     end: 'top 56%',
     onEnter: () => changeInstaClass('color-green '),
-    onLeaveBack: () => changeInstaClass('color-green'),
+    onLeaveBack: () => changeInstaClass('color-yellow'),
   },
 });
 
@@ -330,6 +330,6 @@ gsap.to('.our-reach--counter__insta', {
     start: 'top 50%',
     end: 'top 50%',
     // onEnter: () => changeInstaClass('opacity-0'),
-    onLeaveBack: () => changeInstaClass('opacity-100 color-green'),
+    onLeaveBack: () => changeInstaClass('opacity-100 color-yellow'),
   },
 });
