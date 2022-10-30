@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    padding-left: 5%;
+    // padding-left: 5%;
   }
 
   @include media-breakpoint-up(xl) {
@@ -22,7 +22,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    padding-left: 7%;
+    // padding-left: 7%;
   }
 
   &-col-content {
@@ -69,6 +69,8 @@
   }
 
   .row-mobile-grid {
+    justify-content: space-between;
+
     @include media-breakpoint-down(md) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

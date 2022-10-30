@@ -73,14 +73,15 @@
     margin: 0;
     padding: 0;
   }
+}
 
-  .footer-col-xl-fixed-width {
-    @include media-breakpoint-up(md) {
-      width: 190px !important;
-    }
+// footer + section-contact-us-hero
+.footer-col-xl-fixed-width {
+  @include media-breakpoint-up(md) {
+    width: 190px !important;
+  }
 
-    @include media-breakpoint-up(lg) {
-      width: 270px !important;
-    }
+  @include media-breakpoint-up(lg) {
+    width: 270px !important;
   }
 }

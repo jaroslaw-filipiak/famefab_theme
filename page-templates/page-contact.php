@@ -7,9 +7,9 @@
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<!-- ✔️ --><?php get_template_part( 'template-parts/contact/section-contact-us-hero' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/contact/section-blank-hero' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/contact/section-who-we-are' ); ?>
-<!-- ✔️ --><?php get_template_part( 'template-parts/contact/section-manage-gallery' ); ?>
+<!-- ✔️ --><?php   get_template_part( 'template-parts/contact/section-contact-us-hero' ); ?>
+<!-- ✔️ --><?php //  get_template_part( 'template-parts/contact/section-blank-hero' ); ?>
+<!-- ✔️ --><?php //  get_template_part( 'template-parts/contact/section-who-we-are' ); ?>
+<!-- ✔️ --><?php //  get_template_part( 'template-parts/contact/section-manage-gallery' ); ?>
 
 <?php get_footer() ?>
