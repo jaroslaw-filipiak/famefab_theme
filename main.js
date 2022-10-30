@@ -114,14 +114,32 @@ window.addEventListener('DOMContentLoaded', () => {
 // footer change bg
 
 // #d5d0f3 fiolet footer
-gsap.to('body', {
-  '--color': '#d5d0f3',
-  immediateRender: false,
-  scrollTrigger: {
-    trigger: '.footer',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top 30%',
-    end: 'top 5%',
-  },
-});
+
+if (!isMobile) {
+  gsap.to('body', {
+    '--color': '#d5d0f3',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.footer',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top 30%',
+      end: 'top 5%',
+    },
+  });
+}
+
+if (isMobile) {
+  gsap.to('body', {
+    '--color': '#d5d0f3',
+    immediateRender: false,
+    scrollTrigger: {
+      trigger: '.footer',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top 30%',
+      end: 'top 5%',
+      markers: false,
+    },
+  });
+}
