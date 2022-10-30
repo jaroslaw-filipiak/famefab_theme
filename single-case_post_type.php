@@ -250,8 +250,9 @@ window.addEventListener("DOMContentLoaded", () => {
     </div> -->
 </section>
 
-<section class="detail-pagination ">
-	<?php
+<section class="single-case-pagination-and-footer-wrapper" style="position: relative;">
+	<section class="detail-pagination">
+		<?php
 
     $next_post = get_adjacent_post( false, '', false);
     $next_post_url = get_the_permalink($next_post);
@@ -264,62 +265,63 @@ window.addEventListener("DOMContentLoaded", () => {
     ?>
 
 
-	<div class="container-fluid h-100">
-		<div class="row h-100">
+		<div class="container-fluid h-100">
+			<div class="row h-100">
 
-			<div class="bg-cover bg-no-repeat bg-center col  item-prev"
-				style="background-image: url('<?php echo $previous_post_thumbnail ?>')">
-				<a href="<?php echo $previous_post_url ?>"
-					class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
-					style="margin-top: 80px; text-decoration: none;">
-					<div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
-						<small>Prev</small>
-					</div>
-					<div data-scroll data-scroll-speed="1" class="arrow-right-icon">
-						<div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
-							</svg>
+				<div class="bg-cover bg-no-repeat bg-center col  item-prev"
+					style="background-image: url('<?php echo $previous_post_thumbnail ?>')">
+					<a href="<?php echo $previous_post_url ?>"
+						class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
+						style="margin-top: 80px; text-decoration: none;">
+						<div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
+							<small>Prev</small>
 						</div>
-						<div class="arrow-left--arrow"><svg width="24" height="6" viewBox="0 0 24 6" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M0.717159 2.71716C0.560949 2.87336 0.560949 3.12663 0.717159 3.28284L3.26274 5.82843C3.41895 5.98463 3.67222 5.98464 3.82843 5.82843C3.98464 5.67222 3.98464 5.41895 3.82843 5.26274L1.56569 3L3.82843 0.737256C3.98464 0.581047 3.98464 0.327781 3.82843 0.171571C3.67222 0.0153614 3.41895 0.0153614 3.26274 0.171571L0.717159 2.71716ZM24 2.6L1 2.6L1 3.4L24 3.4L24 2.6Z"
-									fill="#E7FFC8" />
-							</svg>
+						<div data-scroll data-scroll-speed="1" class="arrow-right-icon">
+							<div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
+								</svg>
+							</div>
+							<div class="arrow-left--arrow"><svg width="24" height="6" viewBox="0 0 24 6" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M0.717159 2.71716C0.560949 2.87336 0.560949 3.12663 0.717159 3.28284L3.26274 5.82843C3.41895 5.98463 3.67222 5.98464 3.82843 5.82843C3.98464 5.67222 3.98464 5.41895 3.82843 5.26274L1.56569 3L3.82843 0.737256C3.98464 0.581047 3.98464 0.327781 3.82843 0.171571C3.67222 0.0153614 3.41895 0.0153614 3.26274 0.171571L0.717159 2.71716ZM24 2.6L1 2.6L1 3.4L24 3.4L24 2.6Z"
+										fill="#E7FFC8" />
+								</svg>
 
+							</div>
 						</div>
-					</div>
-				</a>
-			</div>
+					</a>
+				</div>
 
-			<div class="bg-cover bg-no-repeat bg-center col item-next"
-				style="background-image: url('<?php echo $next_post_thumbnail ?>')">
-				<a href="<?php echo $next_post_url;?>"
-					class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
-					style="margin-top: 80px; text-decoration: none">
-					<div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
-						<small>next </small>
-					</div>
-					<div data-scroll data-scroll-speed="1" class="arrow-right-icon">
-						<div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
-							</svg>
+				<div class="bg-cover bg-no-repeat bg-center col item-next"
+					style="background-image: url('<?php echo $next_post_thumbnail ?>')">
+					<a href="<?php echo $next_post_url;?>"
+						class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+						style="margin-top: 80px; text-decoration: none">
+						<div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
+							<small>next </small>
 						</div>
-						<div class="arrow-right--arrow"><svg width="24" height="6" viewBox="0 0 24 6" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M23.2828 3.28284C23.4391 3.12663 23.4391 2.87337 23.2828 2.71716L20.7373 0.171573C20.581 0.0153632 20.3278 0.0153632 20.1716 0.171573C20.0154 0.327783 20.0154 0.581048 20.1716 0.737258L22.4343 3L20.1716 5.26274C20.0154 5.41895 20.0154 5.67222 20.1716 5.82843C20.3278 5.98464 20.581 5.98464 20.7373 5.82843L23.2828 3.28284ZM0 3.4H23V2.6H0V3.4Z"
-									fill="#e7ffc8" />
-							</svg>
+						<div data-scroll data-scroll-speed="1" class="arrow-right-icon">
+							<div class="arrow-right--circle"><svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<circle cx="29" cy="29" r="28.6" stroke="#e7ffc8" stroke-width="0.8" />
+								</svg>
+							</div>
+							<div class="arrow-right--arrow"><svg width="24" height="6" viewBox="0 0 24 6" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.2828 3.28284C23.4391 3.12663 23.4391 2.87337 23.2828 2.71716L20.7373 0.171573C20.581 0.0153632 20.3278 0.0153632 20.1716 0.171573C20.0154 0.327783 20.0154 0.581048 20.1716 0.737258L22.4343 3L20.1716 5.26274C20.0154 5.41895 20.0154 5.67222 20.1716 5.82843C20.3278 5.98464 20.581 5.98464 20.7373 5.82843L23.2828 3.28284ZM0 3.4H23V2.6H0V3.4Z"
+										fill="#e7ffc8" />
+								</svg>
+							</div>
 						</div>
-					</div>
-				</a>
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<?php get_footer('single-case') ?>
+
 </section>
-
-
-<?php get_footer() ?>
