@@ -204,9 +204,8 @@ window.addEventListener('DOMContentLoaded', () => {
     $nextPost = get_next_post();
     $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
 
-	$next = next_post_link(); 
+	// $next = next_post_link(); 
 
-	var_dump($next)
 
 
 ?>
