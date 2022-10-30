@@ -94,22 +94,22 @@ window.addEventListener('DOMContentLoaded', () => {
 					<?php if(get_field( 'image_#2' )) { ?>
 					<img style="border-radius: 30px;"
 						class="<?php echo get_field('image_#4') ? '' : 'second-row-image_2' ?>" data-scroll
-						data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
+						data-scroll-speed=".6" src="<?php the_field( 'image_#2' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#3' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1"
 						src="<?php the_field( 'image_#3' ); ?>" alt="">
 					<?php } ?>
 
 					<!-- if is disable go to 1 and add pos rel -->
 					<?php if(get_field( 'image_#4' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1.3"
 						src="<?php the_field( 'image_#4' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#5' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed="2"
 						src="<?php the_field( 'image_#5' ); ?>" alt="">
 					<?php } ?>
 
@@ -205,7 +205,6 @@ window.addEventListener('DOMContentLoaded', () => {
     $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
 
 	// $next = next_post_link(); 
-
 
 
 ?>
