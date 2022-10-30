@@ -399,3 +399,17 @@ gsap.to('.our-reach--counter', {
     end: () => 'top ' + window.innerWidth * 0.2,
   },
 });
+
+if (!isMobile) {
+  gsap.to('.our-reach-page-manage-not-overlapping', {
+    left: -300,
+    scrollTrigger: {
+      trigger: '.footer',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      start: 'top bottom',
+      end: 'top 80%',
+      markers: false,
+    },
+  });
+}
