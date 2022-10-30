@@ -21,6 +21,7 @@ if (!isMobile) {
     start: 'top top',
     end: 'bottom 70%',
     pin: '.influencer-hero--content',
+    markers: false,
   });
 }
 
@@ -28,7 +29,9 @@ ScrollTrigger.create({
   trigger: '.influencer-cases',
   scroller: '.smooth-scroll',
   start: 'top top',
+  end: 'bottom 95%',
   pin: '.influencer-cases--content',
+  markers: false,
 });
 
 // influencer-hero--content

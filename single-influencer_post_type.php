@@ -7,25 +7,24 @@
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/singleInfluencer.js"></script>
 
 
-<!-- facebook -->
+<!-- element #1  Counter #1 -->
 
 <div class="our-reach--counter our-reach--counter__facebook color-yellow">
-	<p>Facebook</p>
+	<p><?php echo get_field('counter_1_title') ?></p>
 	<div class="d-flex">
 		<div id="FBValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
 	</div>
 </div>
 
-<!-- insta -->
+<!-- element #2 Counter #2 -->
 
 <div class="our-reach--counter our-reach--counter__insta color-yellow">
-	<p>Instagram</p>
+	<p><?php echo get_field('counter_2_title') ?></p>
 	<div class="d-flex">
 		<div id="InstaValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
 	</div>
-
 </div>
 
 <script>
@@ -84,18 +83,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	</div>
 
 	<div class="container-fluid second-row">
-		<div class="row h-100 d-flex align-items-end">
-			<div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
-			<div data-scroll data-scroll-speed="1"
-				class="single-influencer-fixed-heading__gsap-trigger col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-end">
-				<img class="single-influencer--big-photo img-max-w-245__mobile mt-5 mt-lg-0"
-					style="border-radius: 30px;" src="<?php the_field( 'first_big_image' ); ?>" alt="">
-			</div>
-		</div>
-	</div>
-
-	<div class="container-fluid third-row">
-		<div class="row h-100 d-flex align-items-end">
+		<div class="row h-100 d-flex align-items-end single-influencer-fixed-heading__gsap-trigger">
 			<div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
 			<div
 				class="influencer--photos-grid col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end">
@@ -131,6 +119,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			</div>
 		</div>
 	</div>
+
+
 
 </section>
 
@@ -211,8 +201,13 @@ window.addEventListener('DOMContentLoaded', () => {
     $prevPost = get_previous_post();
     $prevThumbnail = get_the_post_thumbnail_url( $prevPost->ID );
 
-    $nextPost = get_previous_post();
+    $nextPost = get_next_post();
     $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
+
+	$next = next_post_link(); 
+
+	var_dump($next)
+
 
 ?>
 

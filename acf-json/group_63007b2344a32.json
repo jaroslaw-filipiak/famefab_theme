@@ -114,7 +114,7 @@
         },
         {
             "key": "field_63023621fcdfc",
-            "label": "Facebook Counter",
+            "label": "Counter #1",
             "name": "counter_facebook",
             "type": "number",
             "instructions": "",
@@ -134,8 +134,27 @@
             "step": ""
         },
         {
+            "key": "field_635e75bbdbfe3",
+            "label": "Counter #1 title",
+            "name": "counter_1_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Facebook",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_63023637fcdfd",
-            "label": "Insta Counter",
+            "label": "Counter #2",
             "name": "counter_insta",
             "type": "number",
             "instructions": "",
@@ -153,6 +172,25 @@
             "min": "",
             "max": 999,
             "step": ""
+        },
+        {
+            "key": "field_635e75eadbfe4",
+            "label": "Counter #2 title",
+            "name": "counter_2_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Instagram",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_63023518fcdf7",
@@ -430,5 +468,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662711935
+    "modified": 1667134984
 }
