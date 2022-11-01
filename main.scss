@@ -109,6 +109,26 @@ body {
   }
 }
 
+@media screen {
+  _::-webkit-full-page-media,
+  _:future,
+  :root .safari-justify-content-between-up-to-lg {
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen {
+  _::-webkit-full-page-media,
+  _:future,
+  :root .safari-justify-content-end-down-to-lg {
+    @include media-breakpoint-down(lg) {
+      justify-content: flex-end;
+    }
+  }
+}
+
 .cookie-bar {
   z-index: 9999 !important;
 }

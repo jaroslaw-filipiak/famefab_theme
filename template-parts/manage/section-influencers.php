@@ -12,7 +12,7 @@
 <section id="influencers" class="influencers">
 
 	<div class="container-fluid">
-		<div class="row safari-justify-content-between">
+		<div class="row safari-justify-content-between-up-to-lg safari-justify-content-end-down-to-lg">
 
 			<!-- influencer left side -->
 			<div class="col-2 d-none d-md-flex align-items-start justify-content-start col-md-3  ps-0  influencer influencer-area-pinned"
