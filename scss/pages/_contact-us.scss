@@ -255,6 +255,7 @@
   text-align: left;
   @include font-serif;
   // @include default-transition;
+  display: none;
 
   @include media-breakpoint-up(xs) {
     font-size: 100px;
@@ -283,6 +284,7 @@
   @include media-breakpoint-up(lg) {
     font-size: 170px;
     line-height: 170px;
+    display: block;
   }
 }
 
