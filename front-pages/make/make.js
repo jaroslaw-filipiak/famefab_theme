@@ -222,8 +222,8 @@ gsap.to('.our-reach--counter', {
     trigger: '.footer',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 70%',
-    end: 'top 40%',
+    start: 'top 90%',
+    end: 'top 80%',
   },
 });
 
