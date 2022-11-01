@@ -106,6 +106,19 @@ gsap.to('.contact-us__hero-gsap', {
 //   xPercent: -200,
 // });
 
+gsap.to('.manage-gallery--title', {
+  scrollTrigger: {
+    trigger: '.manage-gallery--gallery',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    markers: false,
+    start: 'bottom bottom',
+    end: 'bottom 70%',
+  },
+  marginLeft: -900,
+  ease: 'easeIn',
+});
+
 if (!isMobile) {
   // who-we-are__contact-us--title
   gsap.from('.manage-gallery--title', {
@@ -118,19 +131,6 @@ if (!isMobile) {
       end: 'top top',
     },
     xPercent: 1800,
-    ease: 'easeIn',
-  });
-
-  gsap.to('.manage-gallery--title', {
-    scrollTrigger: {
-      trigger: '.manage-gallery--gallery',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      markers: false,
-      start: 'bottom bottom',
-      end: 'bottom 70%',
-    },
-    marginLeft: -900,
     ease: 'easeIn',
   });
 
