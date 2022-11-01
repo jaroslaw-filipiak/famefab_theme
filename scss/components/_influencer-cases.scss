@@ -63,10 +63,12 @@
     // margin-top: 25vh;
     opacity: 1;
     position: relative;
-    left: -100px;
+    margin-bottom: 20%;
 
     @include media-breakpoint-up(lg) {
       width: 325px;
+      left: -100px;
+      margin-bottom: 0%;
     }
   }
 }
