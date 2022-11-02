@@ -14,6 +14,14 @@ const scroll = new LocomotiveScroll({
 
 scroll.on('scroll', ScrollTrigger.update);
 
+// scroll.on('scroll', () => {
+//   $(window).trigger('resize');
+// });
+
+// scroll.on('scroll', () => {
+//   scroll.update();
+// });
+
 // tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
 ScrollTrigger.scrollerProxy('.smooth-scroll', {
   scrollTop(value) {

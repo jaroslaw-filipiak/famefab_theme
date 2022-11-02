@@ -163,7 +163,7 @@
 	<span>Entertainment</span> <span>Sport</span>
 </h1>
 
-<div class="single-influencer--title color-green">
+<div class="single-influencer--title color-green ">
 	About</div>
 
 

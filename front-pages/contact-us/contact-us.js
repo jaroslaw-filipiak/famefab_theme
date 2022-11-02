@@ -3,7 +3,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function changeContactUsClass(className) {
-  console.log('change over ons class');
   const title = document.querySelector('.contact-us__hero-gsap');
   title.classList = `contact-us__hero-gsap ${className}`;
 }

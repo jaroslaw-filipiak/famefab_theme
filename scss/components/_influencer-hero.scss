@@ -161,6 +161,7 @@
   .second-row {
     @include media-breakpoint-down(md) {
       margin-bottom: 30px;
+      padding-top: 170px;
     }
   }
 }

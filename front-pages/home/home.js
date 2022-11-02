@@ -126,7 +126,6 @@ gsap.from('.gsap__reveal-heading', {
     // scrub: true,
     start: '20px 80%',
     // markers: false,
-    onEnter: () => console.log('enter'),
   },
   yPercent: 20,
   opacity: 0,

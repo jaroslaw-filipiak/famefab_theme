@@ -145,7 +145,7 @@
 <?php wp_footer(); ?>
 
 </div> <!-- <---- close smooth scroll -->
-<?php get_template_part( 'template-parts/footer-dynamic-data'); ?>
+<?php // get_template_part( 'template-parts/footer-dynamic-data'); ?>
 <?php get_template_part( 'template-parts/cookies'); ?>
 
 

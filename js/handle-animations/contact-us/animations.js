@@ -3,9 +3,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 
 export const handleAnimationsPageContact = () => {
-  console.log('handle js animations : page contact us');
-  console.log(gsap);
-  console.log(ScrollTrigger);
+  //console.log('handle js animations : page contact us');
+  //console.log(gsap);
+  //console.log(ScrollTrigger);
 
   gsap.registerPlugin(ScrollTrigger);
 

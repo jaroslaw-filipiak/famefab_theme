@@ -70,6 +70,10 @@ window.addEventListener("DOMContentLoaded", () => {
 		},
 		duration: 2,
 	});
+
+	$(function() {
+		$(window).resize();
+	});
 })
 </script>
 
@@ -125,7 +129,7 @@ window.addEventListener("DOMContentLoaded", () => {
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
 <!-- mobile -->
-<section class=" detail-mobile-hero d-md-none bg-cover bg-no-repeat bg-center"
+<section class="detail-mobile-hero d-md-none bg-cover bg-no-repeat bg-center"
 	style="background-image:url('<?php echo get_theme_file_uri() ?>/dist/assets/img/case-hero-mobile.jpg')">
 	<div class="container-fluid h-100">
 		<div class="row h-100">
@@ -141,14 +145,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
 <section class="detail-hero">
 
-	<div class="container-fluid ">
-		<div class="row d-flex align-items-start flex-lg-nowrap" style="border: 1px solid transparent">
+	<div class="container-fluid">
+		<div class="row d-flex align-items-start flex-lg-nowrap">
 
-			<div class=" col-3 col-md-2 d-md-block  ps-0" style="border: 1px solid transparent">
+			<div class="col-3 col-md-2 d-md-block  ps-0">
 			</div>
 
-			<div class=" overflow-visible col col-md-4 d-none d-md-flex justify-content-start justify-content-lg-center  gsap__detail-piniata"
-				style="border: 1px solid transparent">
+			<div
+				class="overflow-visible col col-md-4 d-none d-md-flex justify-content-start justify-content-lg-center  gsap__detail-piniata">
 				<div class="col col-lg-8">
 					<div class="detail-info">
 						<?php echo get_the_title() ?> CASE </br>
@@ -189,13 +193,15 @@ window.addEventListener("DOMContentLoaded", () => {
 				</div>
 			</div>
 
+			<!-- here start -->
+
 			<div class="col-9 col-md-6 text-center ps-xl-5 ps-xxl-0">
 
-				<div style="max-width: 610px; margin: 0 auto;">
+				<div style="margin: 0 auto;">
 					<!-- row 1 -->
 					<div
 						class="d-none d-md-flex row  flex-column align-items-start justify-content-center detail-hero--row-1">
-						<div class="col  d-flex align-items-start justify-content-end detail-hero--title--wrapper">
+						<div class="col d-flex align-items-start justify-content-end detail-hero--title--wrapper">
 							<div
 								class="d-none detail-hero--subtitle font-default-green text-uppercase font-sans text-start color-green">
 								<?php echo get_the_excerpt() ?></div>
@@ -203,51 +209,27 @@ window.addEventListener("DOMContentLoaded", () => {
 							</div>
 						</div>
 
-						<div style="display: none;" class="d-none col text-start">
-							<p>Lacus orci malesuada non turpis Nam odio non, at, Nullam venenatis ipsum Lorem
-								scelerisque
-								facilisis lacus, cursus adipiscing vitae ex dolor vehicula, ipsum commodo ex sed
-								sed
-								viverra
-								elementum ipsum nisl. eget venenatis efficitur. tempor vitae sit Nunc ipsum at
-								ultrices est.
-								Nunc efficitur. tincidunt non gravida Lacus orci malesuada non turpis Nam odio
-								non,
-								at,
-								Nullam
-								venenatis ipsum Lorem scelerisque facilisis lacus, cursus adipiscing vitae ex
-								dolor
-								vehicula,
-								ipsum commodo ex sed sed viverra elementum ipsum nisl. eget venenatis efficitur.
-								tempor
-								vitae
-								sit Nunc ipsum at ultrices est. Nunc efficitur. tincidunt non gravida
-							</p>
-							<img data-scroll data-scroll-speed="1" class="img-fluid detail-hero--big-picture"
-								src="<?php echo get_theme_file_uri() ?>/dist/assets/img/img-7.jpg" alt="">
-						</div>
+
 					</div>
 					<!-- content from wp  -->
 
 					<div class="row gsap__reveal-counter">
 						<div class="d-md-none">
-							<p class="text-uppercase" style="text-align: left; margin-bottom: 60px">
+							<p class="text-uppercase" style="text-align: left;">
 								<?php echo get_the_title() ?> CASE </br>
 							</p>
 						</div>
 
-						<?php the_content() ?>
+						<?php echo get_post_field('post_content', $post->ID); ?>
 					</div>
 
 				</div>
 
 			</div>
+			<!-- here END -->
 		</div>
 
 	</div>
-	<!-- <div class="detail-hero--title-absolute d-none d-lg-flex detail-hero--content-new">
-        Cases
-    </div> -->
 </section>
 
 <section class="single-case-pagination-and-footer-wrapper" style="position: relative;">
@@ -322,6 +304,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		</div>
 	</section>
 
-	<?php get_footer('single-case') ?>
+
 
 </section>
+
+<?php get_footer('single-case') ?>

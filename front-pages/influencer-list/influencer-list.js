@@ -3,8 +3,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-console.log('inflencer list ');
-
 // ScrollTrigger.create({
 //   trigger: '.influencers',
 //   scroller: '.smooth-scroll',

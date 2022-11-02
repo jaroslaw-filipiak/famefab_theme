@@ -293,7 +293,7 @@ ScrollTrigger.create({
 // =========================
 
 function handleInfluencer(influencer) {
-  console.log(influencer);
+  // console.log(influencer);
 
   //   const influencersBG = document.querySelector('.influencers--dynamic-bg');
   const outputPhoto = document.querySelector('.influencer--photo');
@@ -303,7 +303,7 @@ function handleInfluencer(influencer) {
   );
 
   const activeIndex = influencer.classList[1];
-  console.log('activeIndex', activeIndex);
+  // console.log('activeIndex', activeIndex);
   const influencerTitle = document.querySelector(`.${activeIndex} span`);
   // console.log('title===> ' + influencerTitle);
 
@@ -379,7 +379,7 @@ function SetInitialInfluencerData(data) {
 
   const listArr = [...list];
 
-  console.log('listarr[0]', listArr[0]);
+  // console.log('listarr[0]', listArr[0]);
 
   listArr[0].classList.add('influencer-is-active');
 
@@ -388,7 +388,7 @@ function SetInitialInfluencerData(data) {
   photo.style.backgroundImage = `url(${listArr[0].dataset.thumb})`;
   link.setAttribute('href', listArr[0].dataset.link);
 
-  console.log('name', listArr[0].dataset.name);
+  // console.log('name', listArr[0].dataset.name);
 }
 
 window.addEventListener('DOMContentLoaded', () => {

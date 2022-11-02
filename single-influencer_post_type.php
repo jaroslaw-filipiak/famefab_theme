@@ -85,8 +85,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	<div class="container-fluid second-row">
 		<div class="row h-100 d-flex align-items-end single-influencer-fixed-heading__gsap-trigger">
 			<div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
-			<div
-				class="influencer--photos-grid col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end">
+			<div class="influencer--photos-grid col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end"
+				style="padding-top: 35px;">
 				<div style="max-width: 610px;"
 					class="d-flex align-items-start justify-content-end gap-4 flex-wrap single-influencer--img-list">
 
@@ -129,7 +129,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	<div class="container-fluid first-row bg-cover bg-no-repeat">
 		<div class="row h-100 d-flex align-items-end">
 			<div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
-			<div class="col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start ">
+			<div
+				class="d-none d-lg-block col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start ">
 				<div class="influencer-cases--content influencer-cases--content__dynamic d-flex flex-column align-items-start justify-content-center color-green"
 					style="height: 100%; z-index: 98; padding-top:  20%; opacity: 0;">
 					<div class="influencer-cases--dynamic-title">
@@ -166,7 +167,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		<div class="row h-100 d-flex align-items-end">
 			<div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
 			<div data-scroll data-scroll-speed="1"
-				class=" col-10 col-md-9 text-center h-100 gap-4  d-flex flex-column align-items-end justify-content-start">
+				class=" col-10 col-md-9 text-center h-100 gap-4  d-flex flex-column align-items-end justify-content-start"
+				style="padding-top: 30px;">
 
 				<?php $cases_list = get_field( 'cases_list' ); ?>
 				<?php if ( $cases_list ) : ?>

@@ -132,7 +132,7 @@ if (!isMobile) {
 } // !isMobile
 
 function changeOverOnsClass(className) {
-  console.log('change over ons class');
+  //console.log('change over ons class');
   const title = document.querySelector('.over-ons--title');
   title.classList = `over-ons--title ${className}`;
 }
