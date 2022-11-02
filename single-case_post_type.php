@@ -6,6 +6,9 @@
 
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/caseDetail.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.1.slim.js"
+	integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+
 <?php 
 
 $hasInfluencerValue =  get_field( 'influencers_value' );
@@ -71,9 +74,26 @@ window.addEventListener("DOMContentLoaded", () => {
 		duration: 2,
 	});
 
-	$(function() {
-		$(window).resize();
-	});
+
+
+
+
+	console.log('scroll', scroll)
+
+	setTimeout(() => {
+
+		$ = jQuery;
+
+		$(function() {
+			$(window).resize();
+		});
+
+		scroll.update
+		console.log('after timeout', scroll)
+	}, 3000)
+
+
+
 })
 </script>
 
