@@ -40,23 +40,26 @@
 
   @include media-breakpoint-up(lg) {
     font-size: 80px;
-    line-height: 80px;
+    // line-height: 80px;
     text-align: center;
     left: 0;
+    height: 90px;
   }
 
   @include media-breakpoint-up(xl) {
     font-size: 100px;
-    line-height: 100px;
+    // line-height: 100px;
     text-align: center;
     left: 0;
+    height: 110px;
   }
 
   @include media-breakpoint-up(xxl) {
     font-size: 130px;
-    line-height: 130px;
+    // line-height: 130px;
     text-align: center;
     left: 0;
+    height: 110px;
   }
 }
 

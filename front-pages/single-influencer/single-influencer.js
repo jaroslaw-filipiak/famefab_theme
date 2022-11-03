@@ -74,7 +74,7 @@ gsap.to('.single-influencer-fixed-heading', {
     trigger: '.single-influencer-fixed-heading__gsap-trigger',
     scroller: '.smooth-scroll',
     scrub: true,
-    start: 'top 110%',
+    start: 'top 80%',
     end: 'top bottom',
     toggleActions: 'play none none reset',
   },
