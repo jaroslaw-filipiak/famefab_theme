@@ -154,14 +154,7 @@
 
 <?php if('influencer_post_type' == get_post_type()) { ?>
 
-<h1 class="color-yellow h1__small single-influencer-fixed-heading"><span>Shopping</span>
-	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
-	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
-	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
-	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
-	<span>Entertainment</span> <span>Sport</span> <span>Entertainment</span> <span>Sport</span>
-	<span>Entertainment</span> <span>Sport</span>
-</h1>
+<span><?php echo get_field('influencer_first_section_tags') ?></span>
 
 <div class="single-influencer--title color-green ">
 	About</div>
