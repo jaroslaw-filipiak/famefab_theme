@@ -14,16 +14,26 @@ var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 //   },
 // });
 
-if (!isMobile) {
-  ScrollTrigger.create({
-    trigger: '.influencer-hero',
-    scroller: '.smooth-scroll',
-    start: 'top top',
-    end: 'bottom 70%',
-    pin: '.influencer-hero--content',
-    markers: false,
-  });
-}
+// if (!isMobile) {
+//   ScrollTrigger.create({
+//     trigger: '.influencer-hero',
+//     scroller: '.smooth-scroll',
+//     start: 'top top',
+//     end: 'bottom 70%',
+//     pin: '.influencer-hero--content',
+//     markers: false,
+//   });
+// }
+
+ScrollTrigger.create({
+  trigger: '.influencer-cases',
+  scroller: '.smooth-scroll',
+  start: 'top top',
+  end: 'top bottom',
+  endTrigger: '.detail-pagination ',
+  pin: '.influencer-cases--content__dynamic',
+  markers: false,
+});
 
 // influencer-hero--content
 

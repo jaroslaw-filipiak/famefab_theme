@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
 					<?php } ?>
 
 					<?php if(get_field( 'image_#5' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed="2"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1.3"
 						src="<?php the_field( 'image_#5' ); ?>" alt="">
 					<?php } ?>
 

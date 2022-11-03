@@ -84,9 +84,9 @@
 
 
 
-					<a href="<?php echo $permalink ?>"
+					<a data-scroll data-scroll-speed="<?php echo $key ?>" href="<?php echo $permalink ?>"
 						class="manage-gallery--item br-30 manage-gallery--item-<?php echo $key +1 ?>"
-						style="text-decoration: none;; background-image: url('<?php echo $bgImg ? $bgImg : $bgPlaceholder ?>');">
+						style="text-decoration: none; background-image: url('<?php echo $bgImg ? $bgImg : $bgPlaceholder ?>');">
 						<div class="manage-gallery--item--content">
 							<?php echo get_the_title($post_ids) ?>
 						</div>
