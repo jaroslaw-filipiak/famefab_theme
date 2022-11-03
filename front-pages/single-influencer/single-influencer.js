@@ -14,16 +14,15 @@ var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 //   },
 // });
 
-// if (!isMobile) {
-//   ScrollTrigger.create({
-//     trigger: '.influencer-hero',
-//     scroller: '.smooth-scroll',
-//     start: 'top top',
-//     end: 'bottom 70%',
-//     pin: '.influencer-hero--content',
-//     markers: false,
-//   });
-// }
+if (!isMobile) {
+  ScrollTrigger.create({
+    trigger: '.influencer-hero',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'bottom 70%',
+    pin: '.influencer-hero--content',
+  });
+}
 
 ScrollTrigger.create({
   trigger: '.influencer-cases',
@@ -31,8 +30,8 @@ ScrollTrigger.create({
   start: 'top top',
   end: 'top bottom',
   endTrigger: '.detail-pagination ',
-  pin: '.influencer-cases--content__dynamic',
-  markers: true,
+  pin: '.influencer-cases--content',
+  markers: false,
 });
 
 // influencer-hero--content
@@ -82,173 +81,72 @@ gsap.to('.single-influencer-fixed-heading', {
   opacity: 0,
 });
 
-if (isMobile) {
-  // about title from right
-  gsap.to('.single-influencer--title', {
-    scrollTrigger: {
-      trigger: '.single-influencer-fixed-heading__gsap-trigger',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top 80%',
-      end: 'top 20%',
-      toggleActions: 'play none none reset',
-      markers: false,
-    },
-    //   opacity: 0,
-    left: 20,
-  });
+// about title from right
+gsap.from('.single-influencer--title', {
+  scrollTrigger: {
+    trigger: '.single-influencer-fixed-heading__gsap-trigger',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 80%',
+    end: 'top 20%',
+    toggleActions: 'play none none reset',
+  },
+  opacity: 0,
+  left: 2000,
+});
 
-  // about title from right
-  gsap.to('.single-influencer--title', {
-    scrollTrigger: {
-      trigger: '.influencer-cases',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top 80%',
-      end: 'top 20%',
-      toggleActions: 'play none none reset',
-      markers: false,
-    },
-    //   opacity: 0,
-    xPercent: -2000,
-  });
-}
-
-if (!isMobile) {
-  gsap.from('.single-influencer--title', {
-    scrollTrigger: {
-      trigger: '.single-influencer-fixed-heading__gsap-trigger',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top 80%',
-      end: 'top 20%',
-      toggleActions: 'play none none reset',
-    },
-    opacity: 0,
-    left: 2000,
-  });
-
-  // about title to opacity zero
-  gsap.to('.single-influencer--title', {
-    scrollTrigger: {
-      trigger: '.influencer-cases--content__dynamic',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top center',
-      end: 'top 20%',
-      toggleActions: 'play none none reset',
-    },
-    opacity: 0,
-  });
-}
+// about title to opacity zero
+gsap.to('.single-influencer--title', {
+  scrollTrigger: {
+    trigger: '.influencer-cases--content__dynamic',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top center',
+    end: 'top 20%',
+    toggleActions: 'play none none reset',
+  },
+  opacity: 0,
+});
 
 // Influencer Detail Page - always load the first read case when a user reaches cases section
 // influencer-cases--content__dynamic
 
-if (!isMobile) {
-  gsap.to('.influencer-cases--content__dynamic', {
-    scrollTrigger: {
-      trigger: '.single-influencer--case-1',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top 80%',
-      end: 'top 40%',
-      toggleActions: 'play none none reset',
-    },
-    opacity: 1,
-  });
+gsap.to('.influencer-cases--content__dynamic', {
+  scrollTrigger: {
+    trigger: '.single-influencer--case-1',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 80%',
+    end: 'top 40%',
+    toggleActions: 'play none none reset',
+  },
+  opacity: 1,
+});
 
-  // cases title to opacity 1
-  gsap.to('.single-influencer--title-cases', {
-    scrollTrigger: {
-      trigger: '.influencer-cases--content__dynamic',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top center',
-      end: 'top 20%',
-      toggleActions: 'play none none reset',
-    },
-    opacity: 1,
-  });
-}
+// cases title to opacity 1
+gsap.to('.single-influencer--title-cases', {
+  scrollTrigger: {
+    trigger: '.influencer-cases--content__dynamic',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top center',
+    end: 'top 20%',
+    toggleActions: 'play none none reset',
+  },
+  opacity: 1,
+});
 
-// if (isMobile) {
-//   // cases title to opacity 1
-//   gsap.to('.single-influencer--title-cases', {
-//     scrollTrigger: {
-//       trigger: '.influencer-cases--content__dynamic',
-//       scroller: '.smooth-scroll',
-//       scrub: true,
-//       start: 'top center',
-//       end: 'top 20%',
-//       toggleActions: 'play none none reset',
-//       markers: false,
-//     },
-//     opacity: 1,
-//   });
-// }
-
-if (isMobile) {
-  // cases title to opacity 1
-  gsap.to('.influencer-cases--content', {
-    scrollTrigger: {
-      trigger: 'body',
-      scroller: '.smooth-scroll',
-      scrub: false,
-      start: 'top top',
-      end: 'top 1%',
-      toggleActions: 'play none none reset',
-    },
-    opacity: 1,
-  });
-}
-
-// cases title to zero on desktop
-
-if (!isMobile) {
-  gsap.to('.single-influencer--title-cases', {
-    scrollTrigger: {
-      trigger: '.detail-pagination ',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      end: 'top 80%',
-      toggleActions: 'play reset reset reset',
-      markers: false,
-    },
-    opacity: 0,
-  });
-}
-
-if (isMobile) {
-  gsap.to('.single-influencer--title-cases', {
-    scrollTrigger: {
-      trigger: '.influencer-cases .second-row',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top 70%',
-      end: 'top 60%',
-      toggleActions: 'play reset reset reset',
-      markers: false,
-    },
-    // xPercent: -2000,
-    opacity: 1,
-  });
-
-  gsap.to('.single-influencer--title-cases', {
-    scrollTrigger: {
-      trigger: '.detail-pagination',
-      scroller: '.smooth-scroll',
-      scrub: true,
-      start: 'top bottom',
-      end: 'top 80%',
-      toggleActions: 'play reset reset reset',
-      markers: false,
-    },
-    xPercent: -2000,
-    opacity: 0,
-  });
-}
+gsap.to('.single-influencer--title-cases', {
+  scrollTrigger: {
+    trigger: '.detail-pagination ',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top bottom',
+    end: 'top 80%',
+    toggleActions: 'play reset reset reset',
+  },
+  opacity: 0,
+});
 
 // change content on hover on  ==> .single-influencer--case item
 
@@ -271,12 +169,12 @@ caseItemsArr.forEach((item) => {
 });
 
 function addDataToFirstCaseDynamic(itemClass) {
-  //console.log('add data to first case item');
-  //console.log(itemClass);
+  console.log('add data to first case item');
+  console.log(itemClass);
 
   const item = document.querySelector(`.${itemClass}`);
 
-  //console.log(item);
+  console.log(item);
 
   title.innerHTML = item.dataset.title;
   subtitle.innerHTML = item.dataset.subtitle;

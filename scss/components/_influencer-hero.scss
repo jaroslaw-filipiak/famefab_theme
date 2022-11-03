@@ -69,6 +69,12 @@
   //   padding: 40px;
   // }
 
+  &--inner--right {
+    @include media-breakpoint-up(lg) {
+      padding-left: 40px;
+    }
+  }
+
   .first-row,
   .second-row,
   .third-row {

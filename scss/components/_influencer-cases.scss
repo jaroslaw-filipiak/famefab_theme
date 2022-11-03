@@ -1,11 +1,13 @@
 .influencer-cases {
-  //   min-height: 100vh;
+  min-height: 100vh;
   position: relative;
-  border: 1px solid tomato;
 
   @include media-breakpoint-up(lg) {
     padding: 40px;
     padding-right: 7vw;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   h1 {
@@ -65,12 +67,17 @@
     opacity: 1;
     position: relative;
     margin-bottom: 20%;
-    border: 1px solid blue;
+    visibility: hidden;
 
     @include media-breakpoint-up(lg) {
       width: 325px;
-      left: -100px;
+      left: 100px;
       margin-bottom: 0%;
+      margin-left: -10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      visibility: visible;
     }
   }
 }

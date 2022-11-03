@@ -7,24 +7,25 @@
 <script type="module" src="<?php echo get_theme_file_uri() ?>/dist/singleInfluencer.js"></script>
 
 
-<!-- element #1  Counter #1 -->
+<!-- facebook -->
 
 <div class="our-reach--counter our-reach--counter__facebook color-yellow">
-	<p><?php echo get_field('counter_1_title') ?></p>
+	<p>Facebook</p>
 	<div class="d-flex">
 		<div id="FBValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
 	</div>
 </div>
 
-<!-- element #2 Counter #2 -->
+<!-- insta -->
 
 <div class="our-reach--counter our-reach--counter__insta color-yellow">
-	<p><?php echo get_field('counter_2_title') ?></p>
+	<p>Instagram</p>
 	<div class="d-flex">
 		<div id="InstaValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
 	</div>
+
 </div>
 
 <script>
@@ -60,8 +61,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
-
-
 })
 </script>
 
@@ -76,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		<div class="row  influencer-hero--inner">
 			<div class="col-3 d-md-block col-md-2  ps-0 h-100"></div>
 			<div
-				class="col-9 col-md-10 text-center h-100  d-flex align-items-center align-items-lg-start justify-content-start">
+				class="influencer-hero--inner--right col-9 col-md-10 text-center h-100  d-flex align-items-center align-items-lg-start justify-content-start">
 				<div class="influencer-hero--content color-yellow pl-3">
 					<?php the_field( 'influencer_first_section_text_content' ); ?>
 				</div>
@@ -85,10 +84,21 @@ window.addEventListener('DOMContentLoaded', () => {
 	</div>
 
 	<div class="container-fluid second-row">
-		<div class="row h-100 d-flex align-items-end single-influencer-fixed-heading__gsap-trigger">
-			<div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
+		<div class="row h-100 d-flex align-items-end">
+			<div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
+			<div data-scroll data-scroll-speed="1"
+				class="single-influencer-fixed-heading__gsap-trigger col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-end">
+				<img class="single-influencer--big-photo img-max-w-245__mobile mt-5 mt-lg-0"
+					style="border-radius: 30px;" src="<?php the_field( 'first_big_image' ); ?>" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid third-row">
+		<div class="row h-100 d-flex align-items-end">
+			<div class="col-2 d-md-block col-md-3  ps-0 h-100" style="border: 1px solid transparent;"></div>
 			<div class="influencer--photos-grid col-10 col-md-9 text-center h-100 d-flex aligin-items-start justify-content-end"
-				style="padding-top: 35px;">
+				style="border: 1px solid transparent;">
 				<div style="max-width: 610px;"
 					class="d-flex align-items-start justify-content-end gap-4 flex-wrap single-influencer--img-list">
 
@@ -96,22 +106,22 @@ window.addEventListener('DOMContentLoaded', () => {
 					<?php if(get_field( 'image_#2' )) { ?>
 					<img style="border-radius: 30px;"
 						class="<?php echo get_field('image_#4') ? '' : 'second-row-image_2' ?>" data-scroll
-						data-scroll-speed=".6" src="<?php the_field( 'image_#2' ); ?>" alt="">
+						data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#3' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
 						src="<?php the_field( 'image_#3' ); ?>" alt="">
 					<?php } ?>
 
 					<!-- if is disable go to 1 and add pos rel -->
 					<?php if(get_field( 'image_#4' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1.3"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
 						src="<?php the_field( 'image_#4' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#5' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed="1.3"
+					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
 						src="<?php the_field( 'image_#5' ); ?>" alt="">
 					<?php } ?>
 
@@ -122,17 +132,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		</div>
 	</div>
 
-
-
 </section>
 
-<section class="influencer-cases" style="background-color: #f1f0ef;">
+<section class="influencer-cases container-fluid" style="background-color: #f1f0ef;">
 
 	<div class="container-fluid first-row bg-cover bg-no-repeat">
-		<div class="row h-100 d-flex align-items-end">
+		<div class="row  d-flex align-items-end">
 			<div class="col-2 d-md-block col-md-3  ps-0 h-100"></div>
-			<div
-				class="d-none d-lg-block col-10 col-md-9 text-center h-100  d-flex align-items-start justify-content-start ">
+			<div class="col-10 col-md-9 text-center h-100  d-flex align-items-start justtify-content-start ">
 				<div class="influencer-cases--content influencer-cases--content__dynamic d-flex flex-column align-items-start justify-content-center color-green"
 					style="height: 100%; z-index: 98; padding-top:  20%; opacity: 0;">
 					<div class="influencer-cases--dynamic-title">
@@ -169,8 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		<div class="row h-100 d-flex align-items-end">
 			<div class=" col-2 d-md-block col-md-3  ps-0 h-100"></div>
 			<div data-scroll data-scroll-speed="1"
-				class=" col-10 col-md-9 text-center h-100 gap-4  d-flex flex-column align-items-end justify-content-start"
-				style="padding-top: 30px;">
+				class=" col-10 col-md-9 text-center h-100 gap-4  d-flex flex-column align-items-end justify-content-start">
 
 				<?php $cases_list = get_field( 'cases_list' ); ?>
 				<?php if ( $cases_list ) : ?>
@@ -208,16 +214,13 @@ window.addEventListener('DOMContentLoaded', () => {
     $nextPost = get_next_post();
     $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
 
-	// $next = next_post_link(); 
-
-
 ?>
 
 	<div class="container-fluid h-100">
 		<div class="row h-100">
 
 			<div class="bg-cover bg-no-repeat bg-center col  item-prev"
-				style="background-image: url('<?php echo $prevThumbnail ?>')">
+				style="background-image: url('<?php echo $prevThumbnail ?>'); background-color: #d5d0f3;">
 				<a href="<?php echo get_permalink($prevPost->ID) ?>"
 					class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none;">
@@ -243,7 +246,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			</div>
 
 			<div class="bg-cover bg-no-repeat bg-center col item-next"
-				style="background-image: url('<?php echo $nextThumbnail ?>')">
+				style="background-image: url('<?php echo $nextThumbnail ?>'); background-color: #214c2c;">
 				<a href="<?php echo get_permalink($nextPost->ID) ?>"
 					class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none">
