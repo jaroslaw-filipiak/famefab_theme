@@ -92,6 +92,16 @@ window.addEventListener('DOMContentLoaded', () => {
   }, 300);
 
   init();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    function ScrollUpdateDelay() {
+      setTimeout(function () {
+        scroll.update();
+      }, 500);
+    }
+
+    ScrollUpdateDelay();
+  });
 });
 
 // let tl = gsap.timeline({
