@@ -1,6 +1,7 @@
 .influencer-cases {
   //   min-height: 100vh;
   position: relative;
+  border: 1px solid tomato;
 
   @include media-breakpoint-up(lg) {
     padding: 40px;
@@ -64,6 +65,7 @@
     opacity: 1;
     position: relative;
     margin-bottom: 20%;
+    border: 1px solid blue;
 
     @include media-breakpoint-up(lg) {
       width: 325px;

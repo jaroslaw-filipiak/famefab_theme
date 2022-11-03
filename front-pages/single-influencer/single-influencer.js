@@ -32,7 +32,7 @@ ScrollTrigger.create({
   end: 'top bottom',
   endTrigger: '.detail-pagination ',
   pin: '.influencer-cases--content__dynamic',
-  markers: false,
+  markers: true,
 });
 
 // influencer-hero--content
