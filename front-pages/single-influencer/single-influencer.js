@@ -27,9 +27,9 @@ if (!isMobile) {
 ScrollTrigger.create({
   trigger: '.influencer-cases',
   scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'top bottom',
-  endTrigger: '.detail-pagination ',
+  start: 'top 10%',
+  end: 'top 50%',
+  endTrigger: '.single-influencer--case:last-child',
   pin: '.influencer-cases--content',
   markers: false,
 });

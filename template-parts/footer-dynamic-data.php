@@ -133,23 +133,13 @@
 <?php if(is_page_template( 'page-templates/page-manage.php' )) { ?>
 
 <h1 class="manage--title color-green"><?php the_field( 'page_manage_first_section_title' ); ?></h1>
-<h1 class="d-none d-lg-flex color-green influencers--title">Influencers</h1>
 <div class="influencers--dynamic-bg"></div>
 
 <?php } ?>
 
 <!-- end page manage stuff -->
 
-<!-- page influencers-list -->
 
-<?php if(is_page_template( 'page-templates/page-influencer-list.php' )) { ?>
-
-<h1 class="d-none d-lg-flex color-green influencers--title">Influencers</h1>
-<div class="influencers--dynamic-bg"></div>
-
-<?php } ?>
-
-<!-- end page influencers-list -->
 
 
 <?php if('influencer_post_type' == get_post_type()) { ?>
