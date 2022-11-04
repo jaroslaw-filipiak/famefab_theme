@@ -86,6 +86,13 @@
         @include default-transition;
       }
     }
+
+    @include media-breakpoint-down(lg) {
+      a {
+        opacity: 1;
+        @include default-transition;
+      }
+    }
   }
 }
 
