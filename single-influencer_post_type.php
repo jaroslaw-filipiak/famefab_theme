@@ -15,6 +15,7 @@ global $post;
 
 <!-- facebook -->
 
+<?php if ( get_field( 'is_fb_counter_visible' ) == 1 ) : ?>
 <div class="our-reach--counter our-reach--counter__facebook color-yellow">
 	<p>Facebook</p>
 	<div class="d-flex">
@@ -23,16 +24,25 @@ global $post;
 	</div>
 </div>
 
+<?php else : ?>
+<?php // echo 'false'; ?>
+<?php endif; ?>
+
+
 <!-- insta -->
 
+<?php if ( get_field( 'is_insta_counter_visible' ) == 1 ) : ?>
 <div class="our-reach--counter our-reach--counter__insta color-yellow">
 	<p>Instagram</p>
 	<div class="d-flex">
 		<div id="InstaValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
 	</div>
-
 </div>
+<?php else : ?>
+<?php // echo 'false'; ?>
+<?php endif; ?>
+
 
 <script>
 window.addEventListener('DOMContentLoaded', () => {

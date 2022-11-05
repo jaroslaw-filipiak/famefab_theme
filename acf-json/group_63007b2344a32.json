@@ -113,8 +113,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_636644c16c10a",
+            "label": "is fb counter visible ?",
+            "name": "is_fb_counter_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_63023621fcdfc",
-            "label": "Counter #1",
+            "label": "Facebook Counter",
             "name": "counter_facebook",
             "type": "number",
             "instructions": "",
@@ -134,10 +153,10 @@
             "step": ""
         },
         {
-            "key": "field_635e75bbdbfe3",
-            "label": "Counter #1 title",
-            "name": "counter_1_title",
-            "type": "text",
+            "key": "field_636644e86c10b",
+            "label": "is insta counter visible ?",
+            "name": "is_insta_counter_visible",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -146,15 +165,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Facebook",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_63023637fcdfd",
-            "label": "Counter #2",
+            "label": "Insta Counter",
             "name": "counter_insta",
             "type": "number",
             "instructions": "",
@@ -172,25 +191,6 @@
             "min": "",
             "max": 999,
             "step": ""
-        },
-        {
-            "key": "field_635e75eadbfe4",
-            "label": "Counter #2 title",
-            "name": "counter_2_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Instagram",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_63023518fcdf7",
@@ -468,5 +468,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667134984
+    "modified": 1667646718
 }
