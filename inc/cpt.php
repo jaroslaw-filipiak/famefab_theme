@@ -97,9 +97,8 @@ function influencers_post_type() {
 		'label'                 => __( 'Influencer', 'text_domain' ),
 		'description'           => __( 'Post Type Description', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
-		'hierarchical'          => false,
+		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
@@ -108,12 +107,14 @@ function influencers_post_type() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
+		'query_var'	            => true,
 		'rewrite' => array('slug' => 'influencers','with_front' => false),
+		'supports'           =>  array( 'title', 'editor', 'author', 'thumbnail', 'comments', 'revisions', 'page-attributes', 'custom-fields' )
 	);
 	register_post_type( 'influencer_post_type', $args );
 
