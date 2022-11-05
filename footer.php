@@ -14,8 +14,6 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 
 ?>
 
-
-
 <footer id="end" class="<?php echo $isInfluencerPostType ? 'd-none' : ''; ?>" role="content">
 	<section class="footer">
 		<div class="container-fluid">

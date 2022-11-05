@@ -220,37 +220,13 @@ window.addEventListener('DOMContentLoaded', () => {
 </section>
 
 
-
-
-<section class="detail-pagination ">
-
-	<?php
-
-	$previous_posts_link = get_previous_posts_link();
-	$next_posts_link = get_next_posts_link();
-
-	echo "<pre>";
-	var_dump($post -> ID);
-	var_dump($post -> post_title);
-	var_dump($post -> post_type);
-	var_dump( $previous_posts_link);
-	var_dump( $next_posts_link);
-	echo "</pre>";
-
-    
-    
-    $prevThumbnail = get_the_post_thumbnail_url( $prevPost->ID ); 
-    $nextThumbnail = get_the_post_thumbnail_url( $nextPost->ID );
-
-?>
-
-
+<section class="detail-pagination">
 	<div class="container-fluid h-100">
 		<div class="row h-100">
 
 			<div class="bg-cover bg-no-repeat bg-center col  item-prev"
-				style="background-image: url('<?php echo $prevThumbnail ?>'); background-color: #d5d0f3;">
-				<a href="<?php previous_posts_link()?>"
+				style="background-image: url(''); background-color: #d5d0f3;">
+				<a href=""
 					class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none;">
 					<div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
@@ -275,9 +251,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			</div>
 
 			<div class="bg-cover bg-no-repeat bg-center col item-next"
-				style="background-image: url('<?php echo $nextThumbnail ?>'); background-color: #214c2c;">
-				<a href="<?php next_posts_link(__( )) ?>"
-					class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+				style="background-image: url(''); background-color: #214c2c;">
+				<a href="" class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none">
 					<div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
 						<small>next </small>
@@ -302,5 +277,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	</div>
 </section>
 
+<?php
+
+$pt = get_post_type();
+
+echo "<pre>";
+var_dump($pt);
+echo "</pre>";
+
+?>
 
 <?php get_footer() ?>
