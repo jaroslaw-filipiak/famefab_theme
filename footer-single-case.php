@@ -16,7 +16,7 @@
 	<div class="container-fluid ">
 		<div class="row footer--columns-wrapper d-flex align-items-start justify-content-between">
 
-			<div data-scroll data-scroll-speed="1"
+			<div style="visibility: hidden;" data-scroll data-scroll-speed="1"
 				class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-start  justify-content-start ">
 
 				<div class="footer-col-content ">
@@ -25,7 +25,7 @@
 
 			</div>
 
-			<div data-scroll data-scroll-speed="1"
+			<div style="visibility: hidden;" data-scroll data-scroll-speed="1"
 				class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-lg-start  justify-content-start">
 				<div class="footer-col-content">
 					<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
@@ -33,14 +33,14 @@
 
 
 			</div>
-			<div data-scroll data-scroll-speed="1"
+			<div style="visibility: hidden;" data-scroll data-scroll-speed="1"
 				class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-center  justify-content-start ">
 				<div class="footer-col-content">
 					<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 				</div>
 
 			</div>
-			<div data-scroll data-scroll-speed="1"
+			<div style="visibility: hidden;" data-scroll data-scroll-speed="1"
 				class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-end  justify-content-start ">
 				<div class="footer-col-content">
 					<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
@@ -73,7 +73,7 @@
 
 <!-- footer on  mobile -->
 
-<footer id="end" class="d-lg-none" role="content">
+<footer id="end" class="d-lg-none d-none" role="content">
 	<section class="footer">
 		<div class="container-fluid">
 			<div class="row footer--columns-wrapper d-flex align-items-start justify-content-between">
