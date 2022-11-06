@@ -122,22 +122,26 @@ window.addEventListener('DOMContentLoaded', () => {
 					<?php if(get_field( 'image_#2' )) { ?>
 					<img style="border-radius: 30px;"
 						class="<?php echo get_field('image_#4') ? '' : 'second-row-image_2' ?>" data-scroll
-						data-scroll-speed=".3" src="<?php the_field( 'image_#2' ); ?>" alt="">
+						data-scroll-speed="<?php the_field( 'image_#2_parallax_value' ); ?>"
+						src="<?php the_field( 'image_#2' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#3' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll
+						data-scroll-speed="<?php the_field( 'image_#3_parallax_value' ); ?>"
 						src="<?php the_field( 'image_#3' ); ?>" alt="">
 					<?php } ?>
 
 					<!-- if is disable go to 1 and add pos rel -->
 					<?php if(get_field( 'image_#4' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll
+						data-scroll-speed="<?php the_field( 'image_#4_parallax_value' ); ?>"
 						src="<?php the_field( 'image_#4' ); ?>" alt="">
 					<?php } ?>
 
 					<?php if(get_field( 'image_#5' )) { ?>
-					<img style="border-radius: 30px;" data-scroll data-scroll-speed=".3"
+					<img style="border-radius: 30px;" data-scroll
+						data-scroll-speed="<?php the_field( 'image_#5_parallax_value' ); ?>"
 						src="<?php the_field( 'image_#5' ); ?>" alt="">
 					<?php } ?>
 
@@ -277,14 +281,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	</div>
 </section>
 
-<?php
-
-$pt = get_post_type();
-
-echo "<pre>";
-var_dump($pt);
-echo "</pre>";
-
-?>
 
 <?php get_footer() ?>
