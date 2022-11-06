@@ -279,7 +279,7 @@ function handleInfluencer(influencer) {
       ? influencer.dataset.reach
       : '';
     reachUnit.innerHTML = influencer.dataset.reach ? 'k' : '';
-    reachTitle.innerHTML = influencer.dataset.reach ? 'our reach' : '';
+    reachTitle.innerHTML = influencer.dataset.reach ? 'Followers' : '';
     outputInfluencerName.innerHTML = influencer.dataset.name;
     outputInfo.innerHTML = influencer.dataset.info;
     outputPhoto.style.backgroundImage = `url(${influencer.dataset.thumb})`;
