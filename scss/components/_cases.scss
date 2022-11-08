@@ -96,7 +96,7 @@
     .iterable {
       display: flex;
       flex-direction: column;
-      align-items: self-end;
+      align-items: flex-end;
       justify-content: flex-end;
 
       div {
