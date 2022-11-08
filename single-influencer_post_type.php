@@ -232,6 +232,13 @@ $prev_post = get_previous_post();
 // }
 
 $next_post = get_next_post();
+$test = next_post_link($id);
+$post = get_post($id);
+
+// echo "<pre>";
+// var_dump($test);
+// echo "</pre>";
+
 
 // if($next_post) {
 //    $next_title = strip_tags(str_replace('"', '', $next_post->post_title));

@@ -40,95 +40,160 @@ if (!isMobile) {
     pin: '.over-ons-content-pinned',
   });
 
-  gsap.to('.grid-area-photo1', {
-    scrollTrigger: {
-      trigger: '.scroll-gallery',
-      scroller: '.smooth-scroll',
-      scrub: false,
-      markers: false,
-      toggleActions: 'play none none reset',
-      // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
-    },
-    top: -250,
-    opacity: 1,
-  });
-
-  gsap.to('.grid-area-photo2', {
-    scrollTrigger: {
-      trigger: '.scroll-gallery',
-      scroller: '.smooth-scroll',
-      scrub: false,
-      markers: false,
-      toggleActions: 'play none none reset',
-      // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
-    },
-    top: -250,
-    opacity: 1,
-  });
-
-  gsap.to('.grid-area-photo3', {
-    scrollTrigger: {
-      trigger: '.scroll-gallery',
-      scroller: '.smooth-scroll',
-      scrub: false,
-      markers: false,
-      toggleActions: 'play none none reset',
-      // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
-    },
-    top: -150,
-    opacity: 1,
-  });
+  //   1. if grid-area-photo4 bottom edge is 90%
+  //   photo 1 + 3 go to top
+  // start is bottom edge 90 %
+  // end anim is if top of grid-area-photo4 20%
 
   gsap.to('.grid-area-photo4', {
     scrollTrigger: {
-      trigger: '.scroll-gallery',
+      trigger: '.grid-area-photo4',
       scroller: '.smooth-scroll',
-      scrub: false,
+      scrub: true,
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
+      start: 'top 120%',
+      end: 'top 15%',
     },
-    top: -250,
+    top: '-89%',
     opacity: 1,
   });
 
   gsap.to('.grid-area-photo5', {
     scrollTrigger: {
-      trigger: '.scroll-gallery',
+      trigger: '.grid-area-photo4',
       scroller: '.smooth-scroll',
-      scrub: false,
+      scrub: true,
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
+      start: 'top 120%',
+      end: 'top 15%',
     },
-    top: -250,
+    top: '-53%',
     opacity: 1,
   });
 
-  gsap.to('.grid-area-photo6', {
+  gsap.to('.grid-area-photo1', {
     scrollTrigger: {
-      trigger: '.scroll-gallery',
+      trigger: '.grid-area-photo4',
       scroller: '.smooth-scroll',
-      scrub: false,
+      scrub: true,
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top center',
-      // end: 'top top',
+      start: 'top 120%',
+      end: 'top 15%',
     },
-    top: -250,
+    top: '-233%',
     opacity: 1,
   });
+
+  gsap.to('.grid-area-photo3', {
+    scrollTrigger: {
+      trigger: '.grid-area-photo4',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      markers: false,
+      toggleActions: 'play none none reset',
+      // endTrigger: 'grid-area-photo2',
+      start: 'top 120%',
+      end: 'top 15%',
+    },
+    top: '-93%',
+    opacity: 1,
+  });
+
+  gsap.to('.grid-area-photo2', {
+    scrollTrigger: {
+      trigger: '.grid-area-photo4',
+      scroller: '.smooth-scroll',
+      scrub: true,
+      markers: false,
+      toggleActions: 'play none none reset',
+      // endTrigger: 'grid-area-photo2',
+      start: 'top 120%',
+      end: 'top 15%',
+    },
+    top: '-93%',
+    opacity: 1,
+  });
+
+  //   gsap.to('.grid-area-photo2', {
+  //     scrollTrigger: {
+  //       trigger: '.scroll-gallery',
+  //       scroller: '.smooth-scroll',
+  //       scrub: false,
+  //       markers: false,
+  //       toggleActions: 'play none none reset',
+  //       // endTrigger: 'grid-area-photo2',
+  //       start: 'top center',
+  //       // end: 'top top',
+  //     },
+  //     top: -250,
+  //     opacity: 1,
+  //   });
+
+  //   gsap.to('.grid-area-photo3', {
+  //     scrollTrigger: {
+  //       trigger: '.scroll-gallery',
+  //       scroller: '.smooth-scroll',
+  //       scrub: false,
+  //       markers: false,
+  //       toggleActions: 'play none none reset',
+  //       // endTrigger: 'grid-area-photo2',
+  //       start: 'top center',
+  //       // end: 'top top',
+  //     },
+  //     top: -150,
+  //     opacity: 1,
+  //   });
+
+  //   gsap.to('.grid-area-photo4', {
+  //     scrollTrigger: {
+  //       trigger: '.scroll-gallery',
+  //       scroller: '.smooth-scroll',
+  //       scrub: false,
+  //       markers: false,
+  //       toggleActions: 'play none none reset',
+  //       // endTrigger: 'grid-area-photo2',
+  //       start: 'top center',
+  //       // end: 'top top',
+  //     },
+  //     top: -250,
+  //     opacity: 1,
+  //   });
+
+  //   gsap.to('.grid-area-photo5', {
+  //     scrollTrigger: {
+  //       trigger: '.scroll-gallery',
+  //       scroller: '.smooth-scroll',
+  //       scrub: false,
+  //       markers: false,
+  //       toggleActions: 'play none none reset',
+  //       // endTrigger: 'grid-area-photo2',
+  //       start: 'top center',
+  //       // end: 'top top',
+  //     },
+  //     top: -250,
+  //     opacity: 1,
+  //   });
+
+  //   gsap.to('.grid-area-photo6', {
+  //     scrollTrigger: {
+  //       trigger: '.scroll-gallery',
+  //       scroller: '.smooth-scroll',
+  //       scrub: false,
+  //       markers: false,
+  //       toggleActions: 'play none none reset',
+  //       // endTrigger: 'grid-area-photo2',
+  //       start: 'top center',
+  //       // end: 'top top',
+  //     },
+  //     top: -250,
+  //     opacity: 1,
+  //   });
 } // !isMobile
 
 function changeOverOnsClass(className) {
