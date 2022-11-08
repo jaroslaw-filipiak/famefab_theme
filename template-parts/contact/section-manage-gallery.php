@@ -58,15 +58,17 @@
                             $image = get_sub_field('person_photo');
                             $Person_name = get_sub_field('person_name');
 							$scroll = get_sub_field('person_scroll_index');
+							$linkedin = get_sub_field('person_linkedin_link');
                             ?>
 
 					<!-- person -->
 					<div data-scroll data-scroll-speed="<?php echo $scroll ?>"
 						class="manage-gallery--item manage-gallery--item-<?php echo get_row_index(); ?>"
 						style="background-image: url('<?php echo $image ?>');">
-						<div class="manage-gallery--item--content">
+						<a style="text-decoration: none;" href="<?php echo $linkedin ?>"
+							class="manage-gallery--item--content">
 							<?php echo $Person_name ?>
-						</div>
+						</a>
 					</div>
 					<!-- person -->
 
