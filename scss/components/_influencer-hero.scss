@@ -25,6 +25,8 @@
   span {
     display: inline-block;
     margin-right: 100px;
+    line-height: 103px;
+    text-align: left;
   }
   @include media-breakpoint-up(sm) {
     font-size: 50px;
@@ -43,7 +45,7 @@
     // line-height: 80px;
     text-align: center;
     left: 0;
-    height: 90px;
+    // height: 90px;
   }
 
   @include media-breakpoint-up(xl) {
@@ -51,7 +53,7 @@
     // line-height: 100px;
     text-align: center;
     left: 0;
-    height: 110px;
+    // height: 110px;
   }
 
   @include media-breakpoint-up(xxl) {
@@ -59,7 +61,7 @@
     // line-height: 130px;
     text-align: center;
     left: 0;
-    height: 110px;
+    // height: 110px;
   }
 }
 
