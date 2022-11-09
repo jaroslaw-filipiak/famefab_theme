@@ -224,27 +224,13 @@ window.addEventListener('DOMContentLoaded', () => {
 </section>
 
 <?php
+
 $prev_post = get_previous_post();
-
-// if($prev_post) {
-//    $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
-//    echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class=" ">&laquo; Previous post<br /><strong>&quot;'. $prev_title . '&quot;</strong></a>' . "\n";
-// }
-
 $next_post = get_next_post();
-$test = next_post_link($id);
-$post = get_post($id);
+// $test = next_post_link($id);
+// $post = get_post($id);
 
-// echo "<pre>";
-// var_dump($test);
-// echo "</pre>";
-
-
-// if($next_post) {
-//    $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
-//    echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class=" ">Next post &raquo;<br /><strong>&quot;'. $next_title . '&quot;</strong></a>' . "\n";
-// }
-// ?>
+?>
 
 
 <section class="detail-pagination">
@@ -252,8 +238,8 @@ $post = get_post($id);
 		<div class="row h-100">
 
 			<div class="col-12 col-lg-6 bg-cover bg-no-repeat bg-center col  item-prev"
-				style="background-image: url('<?php echo  get_the_post_thumbnail_url($prev_post->ID) ?>'); background-color: #d5d0f3;">
-				<a href="<?php echo  get_permalink( $prev_post->ID )  ?>"
+				style="background-image: url('<?php echo $prev_post ?  get_the_post_thumbnail_url($prev_post->ID) : get_the_post_thumbnail_url(960)  ?>'); background-color: #d5d0f3;">
+				<a href="<?php echo $prev_post ? get_permalink( $prev_post->ID ) : get_permalink( 960 ) ?>"
 					class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none;">
 					<div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
@@ -278,8 +264,8 @@ $post = get_post($id);
 			</div>
 
 			<div class="col-12 col-lg-6 bg-cover bg-no-repeat bg-center col item-next"
-				style="background-image: url('<?php echo  get_the_post_thumbnail_url($next_post->ID) ?>'); background-color: #214c2c;">
-				<a href="<?php echo  get_permalink( $next_post->ID )  ?>"
+				style="background-image: url('<?php echo $next_post ? get_the_post_thumbnail_url($next_post->ID) : get_the_post_thumbnail_url(407) ?>'); background-color: #214c2c;">
+				<a href="<?php echo $next_post ?  get_permalink( $next_post->ID ) : get_permalink(407);  ?>"
 					class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 					style="margin-top: 80px; text-decoration: none">
 					<div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
