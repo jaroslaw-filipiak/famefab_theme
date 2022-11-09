@@ -80,13 +80,13 @@ if (!isMobile) {
       trigger: '.grid-area-photo4',
       scroller: '.smooth-scroll',
       scrub: true,
-      markers: false,
+      markers: true,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 260%',
-      end: 'top 15%',
+      start: 'top 80%',
+      end: 'top 25%',
     },
-    top: '63%',
+    top: '13%',
     opacity: 1,
   });
 

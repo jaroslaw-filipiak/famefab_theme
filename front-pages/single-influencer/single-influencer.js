@@ -79,6 +79,7 @@ gsap.to('.single-influencer-fixed-heading', {
     toggleActions: 'play none none reset',
   },
   opacity: 0,
+  zIndex: -1,
 });
 
 // about title from right
