@@ -148,7 +148,7 @@ if (!isMobile) {
   ScrollTrigger.create({
     trigger: '.manage-gallery--item-2',
     scroller: '.smooth-scroll',
-    start: 'top bottom',
+    start: 'top 40%',
     end: 'top bottom',
     endTrigger: '.footer',
     pin: '.manage-gallery--subtitle',
