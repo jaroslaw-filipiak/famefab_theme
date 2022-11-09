@@ -53,10 +53,10 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 120%',
+      start: 'top 260%',
       end: 'top 15%',
     },
-    top: '-89%',
+    top: '49%',
     opacity: 1,
   });
 
@@ -68,10 +68,10 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 120%',
+      start: 'top 260%',
       end: 'top 15%',
     },
-    top: '-53%',
+    top: '53%',
     opacity: 1,
   });
 
@@ -83,10 +83,10 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 120%',
+      start: 'top 260%',
       end: 'top 15%',
     },
-    top: '-233%',
+    top: '63%',
     opacity: 1,
   });
 
@@ -98,10 +98,10 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 120%',
+      start: 'top 260%',
       end: 'top 15%',
     },
-    top: '-93%',
+    top: '83%',
     opacity: 1,
   });
 
@@ -113,10 +113,10 @@ if (!isMobile) {
       markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
-      start: 'top 120%',
+      start: 'top 260%',
       end: 'top 15%',
     },
-    top: '-93%',
+    top: '63%',
     opacity: 1,
   });
 

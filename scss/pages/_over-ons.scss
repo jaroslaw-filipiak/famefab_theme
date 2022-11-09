@@ -126,11 +126,11 @@
     }
 
     @include media-breakpoint-up(lg) {
-      padding-top: 60px;
+      padding-top: 260px;
     }
 
     @include media-breakpoint-up(xxl) {
-      padding-top: 160px;
+      padding-top: 490px;
     }
   }
 
@@ -268,7 +268,7 @@
   grid-area: photo1;
   @include media-breakpoint-up(xl) {
     position: relative;
-    top: 152%;
+    top: 0%;
   }
 }
 
@@ -278,7 +278,7 @@
   @include media-breakpoint-up(xl) {
     height: 140%;
     position: relative;
-    top: 129%;
+    top: 0%;
   }
 }
 
@@ -288,7 +288,7 @@
   @include media-breakpoint-up(xl) {
     height: 120%;
     position: relative;
-    top: 168%;
+    top: 293%;
   }
 }
 
@@ -296,7 +296,7 @@
   grid-area: photo4;
   @include media-breakpoint-up(xl) {
     position: relative;
-    top: 67%;
+    top: 0%;
   }
 }
 
@@ -304,7 +304,7 @@
   grid-area: photo5;
   @include media-breakpoint-up(xl) {
     position: relative;
-    top: 88%;
+    top: 0%;
   }
 }
 
@@ -313,7 +313,7 @@
 
   @include media-breakpoint-up(xl) {
     position: relative;
-    top: 34%;
+    top: 0%;
     height: 190%;
   }
 }
