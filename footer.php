@@ -20,7 +20,7 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 			<div class="row footer--columns-wrapper d-flex align-items-start justify-content-between">
 
 				<div data-scroll data-scroll-speed="1"
-					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-start  justify-content-start ">
+					class="p-0 col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-start  justify-content-start ">
 
 					<div class="footer-col-content ">
 						<?php dynamic_sidebar( 'sidebar-footer-col-1' ); ?>
@@ -29,7 +29,7 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 				</div>
 
 				<div data-scroll data-scroll-speed="1"
-					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-lg-start  justify-content-start">
+					class="p-0 col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start align-items-lg-start  justify-content-start">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-2' ); ?>
 					</div>
@@ -37,14 +37,14 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 
 				</div>
 				<div data-scroll data-scroll-speed="1"
-					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-center  justify-content-start ">
+					class="p-0 col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-start  justify-content-start ">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-3' ); ?>
 					</div>
 
 				</div>
 				<div data-scroll data-scroll-speed="1"
-					class=" col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-end  justify-content-start ">
+					class="p-0 col-6 col-sm-6 col-lg-3 footer-col-xl-fixed-width d-flex flex-column align-items-start  align-items-lg-start  justify-content-start ">
 					<div class="footer-col-content">
 						<?php dynamic_sidebar( 'sidebar-footer-col-4' ); ?>
 						<a href="<?php echo get_page_link(481) ?>" data-scroll-speed=".3"
