@@ -142,6 +142,18 @@ if (!isMobile) {
     end: 'top 70%',
     pin: '.is-contact-title-pinned',
   });
+
+  //   manage-gallery--subtitle
+
+  ScrollTrigger.create({
+    trigger: '.manage-gallery--item-2',
+    scroller: '.smooth-scroll',
+    start: 'top bottom',
+    end: 'top bottom',
+    endTrigger: '.footer',
+    pin: '.manage-gallery--subtitle',
+    markers: false,
+  });
 }
 
 if (isMobile) {

@@ -16,8 +16,7 @@
 			<div class=" col-10 col-md-9 d-flex justify-content-between">
 				<!-- text + arrow button -->
 				<div>
-					<div data-scroll data-scroll-speed="2"
-						class="d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
+					<div class="d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
 						<?php the_field( 'page_contact_section_with_photos_small_text' ); ?>
 					</div>
 
