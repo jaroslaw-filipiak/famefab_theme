@@ -147,12 +147,13 @@ if (!isMobile) {
 }
 
 ScrollTrigger.create({
-  trigger: '.manage-gallery--item-2',
+  trigger: '.who-we-are__contact-us--title',
   scroller: '.smooth-scroll',
-  start: 'top 40%',
+  start: 'top top',
   end: 'top bottom',
   endTrigger: '.footer',
-  pin: '.manage-gallery--subtitle',
+  //   pin: '.manage-gallery--subtitle',
+  pin: '.contact-page-new-pin',
   markers: false,
 });
 

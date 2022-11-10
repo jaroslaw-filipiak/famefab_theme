@@ -9,14 +9,14 @@
 
 ?>
 
-<section class="manage-gallery">
+<div class="manage-gallery">
 	<div class="container-fluid h-100">
 		<div class="row h-100" style="position: relative">
 			<div class=" col-2 d-md-block col-md-3  ps-0"></div>
 			<div class=" col-10 col-md-9 d-flex justify-content-between">
 				<!-- text + arrow button -->
 				<div>
-					<div class="d-none d-lg-block manage-gallery--subtitle font-green-default text-uppercase font-sans">
+					<div class="d-none manage-gallery--subtitle font-green-default text-uppercase font-sans">
 						<?php the_field( 'page_contact_section_with_photos_small_text' ); ?>
 					</div>
 
@@ -88,4 +88,4 @@
 		</div>
 	</div>
 
-</section>
+</div>
