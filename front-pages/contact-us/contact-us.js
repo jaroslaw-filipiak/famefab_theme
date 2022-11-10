@@ -144,17 +144,17 @@ if (!isMobile) {
   });
 
   //   manage-gallery--subtitle
-
-  ScrollTrigger.create({
-    trigger: '.manage-gallery--item-2',
-    scroller: '.smooth-scroll',
-    start: 'top 40%',
-    end: 'top bottom',
-    endTrigger: '.footer',
-    pin: '.manage-gallery--subtitle',
-    markers: false,
-  });
 }
+
+ScrollTrigger.create({
+  trigger: '.manage-gallery--item-2',
+  scroller: '.smooth-scroll',
+  start: 'top 40%',
+  end: 'top bottom',
+  endTrigger: '.footer',
+  pin: '.manage-gallery--subtitle',
+  markers: false,
+});
 
 if (isMobile) {
   // who-we-are__contact-us--title
