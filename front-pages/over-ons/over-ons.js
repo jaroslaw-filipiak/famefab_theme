@@ -80,7 +80,7 @@ if (!isMobile) {
       trigger: '.grid-area-photo4',
       scroller: '.smooth-scroll',
       scrub: true,
-      markers: true,
+      markers: false,
       toggleActions: 'play none none reset',
       // endTrigger: 'grid-area-photo2',
       start: 'top 80%',

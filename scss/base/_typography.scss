@@ -5,11 +5,41 @@
 $titleSizeMax: 240px;
 
 @font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url('/public/fonts/tiempos/TiemposFine-Light.woff2') format('woff2'),
+    url('/public/fonts/tiempos/TiemposFine-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'TiemposFine-Light';
   src: url('/public/fonts/tiempos/tiempos-fine-light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaLTW01-Roman';
+  src: url('/public/fonts/helvetica/HelveticaLTW01-Roman.woff2') format('woff2'),
+    url('/public/fonts/helvetica/HelveticaLTW01-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-helvetica {
+  font-family: 'HelveticaLTW01-Roman';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-tiempos {
+  font-family: 'Copyright Klim Type Foundry';
+  font-weight: 300;
+  font-style: normal;
 }
 
 .font-serif {
@@ -18,14 +48,24 @@ $titleSizeMax: 240px;
 }
 
 .font-sans {
+  //   font-family: 'Open Sans', sans-serif;
+  font-family: 'HelveticaLTW01-Roman';
+}
+
+@mixin font-helvetica {
+  font-family: 'HelveticaLTW01-Roman';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-tiempos {
   // font-family: 'Helvetica', sans-serif;
-  // font-family: 'Helvetica LT W01 Roman';
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'TiemposFine-Light', serif;
 }
 
 @mixin font-sans {
-  // font-family: 'Helvetica', sans-serif;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'HelveticaLTW01-Roman';
+  //   font-family: 'Open Sans', sans-serif;
 }
 
 @mixin font-serif {

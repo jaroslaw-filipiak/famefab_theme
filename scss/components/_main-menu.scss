@@ -70,10 +70,11 @@
       text-decoration: none;
       font-weight: 300;
       font-size: 70px;
-      font-family: 'Kaisei Opti', serif;
+      //   font-family: 'Kaisei Opti', serif;
       display: inline-block;
       position: relative;
       left: 0px;
+      @include font-tiempos;
 
       @include media-breakpoint-only(xs) {
         font-size: 63px;
