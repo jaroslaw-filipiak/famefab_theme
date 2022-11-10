@@ -17,11 +17,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="preload" href="<?php echo get_theme_file_uri() ?>/dist/fonts/tiempos/tiempos-fine-light.woff2" as="font"
+
+	<link rel="preload" href="<?php echo get_theme_file_uri() ?>/public/fonts/tiempos/TiemposFine-Light.woff2" as="font"
 		type="font/woff2" crossorigin>
 
-	<link rel="preload" href="<?php echo get_theme_file_uri() ?>/dist/fonts/helvetica/HelveticaLTW01-Roman.woff2"
+	<link rel="preload" href="<?php echo get_theme_file_uri() ?>/public/fonts/helvetica/HelveticaLTW01-Roman.woff2"
 		as="font" type="font/woff2" crossorigin>
+
+
 
 	<?php wp_head(); ?>
 
