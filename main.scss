@@ -144,3 +144,25 @@ body {
 .wp-block-columns {
   gap: 20px;
 }
+
+// ===========
+
+.full-service-agency--title-wrapper {
+  .icon-m-vec:before {
+    position: relative;
+    top: -9px;
+    @include media-breakpoint-up(xl) {
+      top: -7px;
+    }
+  }
+}
+
+.who-we-are__contact-us--title {
+  .icon-m-vec:before {
+    position: relative;
+    top: -9px;
+    @include media-breakpoint-up(xl) {
+      top: -7px;
+    }
+  }
+}

@@ -1,2 +1,7 @@
 
 .icon-m-vec:before { content: '\e800'; } /* '' */
+.icon-vector-(5):before { content: '\e801'; } /* '' */
+.icon-m2:before { content: '\e802'; } /* '' */
+.icon-m3:before { content: '\e803'; } /* '' */
+.icon-m4:before { content: '\e804'; } /* '' */
+.icon-m5:before { content: '\e805'; } /* '' */

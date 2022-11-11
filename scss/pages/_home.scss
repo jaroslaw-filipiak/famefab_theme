@@ -121,6 +121,14 @@ body {
         margin-left: -20px;
       }
     }
+
+    .icon-m-vec:before {
+      position: relative;
+      top: -9px;
+      @include media-breakpoint-up(xl) {
+        top: -7px;
+      }
+    }
   }
 
   .m-sign-before {
@@ -538,6 +546,14 @@ body {
     &-row-2 {
       @include media-breakpoint-up(xl) {
         margin-left: -20px;
+      }
+    }
+
+    .icon-m-vec:before {
+      position: relative;
+      top: -9px;
+      @include media-breakpoint-up(xl) {
+        top: -7px;
       }
     }
   }
