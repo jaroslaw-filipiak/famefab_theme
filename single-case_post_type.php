@@ -121,27 +121,18 @@ window.addEventListener("DOMContentLoaded", () => {
 		</div>
 	</div>
 
-	<!-- engagement   40vh-->
+	<!-- engagement == tital clicks currently  // https://app.clickup.com/t/35zqd6x  40vh-->
 
 	<div
-		class="our-reach--counter our-reach--counter__engagement color-green <?php echo $hasEngagementValue ? '' : 'd-none' ?>">
-		<p>Engagement</p>
-		<div class="d-flex">
-			<div id="EngagementValue" class="our-reach--counter-value"></div>
-			<p class="our-reach-unit"><?php the_field( 'engagement_unit' ); ?></p>
-		</div>
-	</div>
-
-	<!-- total clicks   40vh-->
-
-	<div
-		class="our-reach--counter our-reach--counter__clicks color-green <?php echo $hasTotalClicksValue ? '' : 'd-none' ?>">
+		class="our-reach--counter our-reach--counter__engagement color-green <?php echo $hasTotalClicksValue ? '' : 'd-none' ?>">
 		<p>Total clicks</p>
 		<div class="d-flex">
-			<div id="ClicksValue" class="our-reach--counter-value"></div>
+			<div id="EngagementValue" class="our-reach--counter-value"></div>
 			<p class="our-reach-unit"><?php the_field( 'total_clicks_unit' ); ?></p>
 		</div>
 	</div>
+
+
 </div>
 
 

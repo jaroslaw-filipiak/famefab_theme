@@ -95,44 +95,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_631ed467d1c0a",
-            "label": "Engagement",
-            "name": "engagement_value",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_6321b3599680c",
-            "label": "Engagement unit",
-            "name": "engagement_unit",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_631ed477d1c0b",
             "label": "Total clicks",
             "name": "total_clicks_value",
@@ -260,5 +222,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663153020
+    "modified": 1668425846
 }
