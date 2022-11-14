@@ -17,7 +17,7 @@ global $post;
 
 <?php if ( get_field( 'is_fb_counter_visible' ) == 1 ) : ?>
 <div class="our-reach--counter our-reach--counter__facebook color-yellow">
-	<p>Facebook</p>
+	<p><?php the_field( 'counter_facebook_new_title' ); ?></p>
 	<div class="d-flex">
 		<div id="FBValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>
@@ -33,7 +33,7 @@ global $post;
 
 <?php if ( get_field( 'is_insta_counter_visible' ) == 1 ) : ?>
 <div class="our-reach--counter our-reach--counter__insta color-yellow">
-	<p>Instagram</p>
+	<p><?php the_field( 'counter_insta_new_title' ); ?></p>
 	<div class="d-flex">
 		<div id="InstaValue" class="our-reach--counter-value"></div>
 		<p class="our-reach-unit">k</p>

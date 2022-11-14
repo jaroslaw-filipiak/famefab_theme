@@ -153,6 +153,25 @@
             "step": ""
         },
         {
+            "key": "field_63722b3b6538e",
+            "label": "Facebook Counter --> new title",
+            "name": "counter_facebook_new_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Facebook",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_636644e86c10b",
             "label": "is insta counter visible ?",
             "name": "is_insta_counter_visible",
@@ -191,6 +210,25 @@
             "min": "",
             "max": 999,
             "step": ""
+        },
+        {
+            "key": "field_63722b846538f",
+            "label": "Insta Counter --> new title",
+            "name": "counter_insta_new_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Instagram",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_63023518fcdf7",
@@ -335,25 +373,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_6367fac3d5303",
-            "label": "Image #2 parallax value",
-            "name": "image_#2_parallax_value",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_630236fd8a61e",
             "label": "Image #3",
             "name": "image_#3",
@@ -376,25 +395,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_6367fae5d5304",
-            "label": "Image #3 parallax value",
-            "name": "image_#3_parallax_value",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_630237088a61f",
@@ -421,25 +421,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_6367faf2d5305",
-            "label": "Image #4 parallax value",
-            "name": "image_#4_parallax_value_",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_6302370e8a620",
             "label": "Image #5",
             "name": "image_#5",
@@ -462,25 +443,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_6367fafed5306",
-            "label": "Image #5 parallax value",
-            "name": "image_#5_parallax_value",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_6302373fe0184",
@@ -544,5 +506,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667758937
+    "modified": 1668426672
 }
