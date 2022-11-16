@@ -224,6 +224,8 @@
     height: 389px;
     background-color: transparent;
     border-radius: 15px;
+    background-position: center;
+    background-size: cover;
 
     @include media-breakpoint-up(xl) {
       width: 203px;
