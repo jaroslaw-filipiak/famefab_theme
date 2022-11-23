@@ -115,7 +115,7 @@
         },
         {
             "key": "field_6321b36a9680d",
-            "label": "Total clicks",
+            "label": "Total clicks unit",
             "name": "total_clicks_unit",
             "type": "text",
             "instructions": "",
@@ -222,5 +222,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668425846
+    "modified": 1669232814
 }

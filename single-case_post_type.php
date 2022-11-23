@@ -127,7 +127,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		class="our-reach--counter our-reach--counter__engagement color-green <?php echo $hasTotalClicksValue ? '' : 'd-none' ?>">
 		<p>Total clicks</p>
 		<div class="d-flex">
-			<div id="EngagementValue" class="our-reach--counter-value"></div>
+			<div id="ClicksValue" class="our-reach--counter-value"></div>
 			<p class="our-reach-unit"><?php the_field( 'total_clicks_unit' ); ?></p>
 		</div>
 	</div>
