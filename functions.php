@@ -263,3 +263,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 
 require get_template_directory() . '/inc/cpt.php';
+
+$clean_content .= apply_filters( 'the_content', render_block( $block ) );
