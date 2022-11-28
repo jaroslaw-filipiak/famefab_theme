@@ -81,6 +81,8 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 
 </footer>
 
+<script src="<?php echo get_theme_file_uri() ?>/inc/yt-video-popup/grt-youtube-popup.js"></script>
+
 
 <?php wp_footer(); ?>
 
@@ -99,7 +101,13 @@ jQuery(document).ready(function() {
 		jQuery(this).attr('placeholder', jQuery(this).data('placeholder'));
 	});
 
+
+
 });
+</script>
+
+<script>
+$(".youtube-link").grtyoutube();
 </script>
 
 

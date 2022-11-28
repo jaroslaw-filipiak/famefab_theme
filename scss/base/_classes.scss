@@ -69,6 +69,12 @@
     }
   }
 
+  .arrow-right--play {
+    svg path {
+      fill: $mainGreen;
+    }
+  }
+
   small {
     color: $mainGreen;
   }

@@ -120,6 +120,11 @@
 	/* '' */
 	</style>
 
+	<script src="https://code.jquery.com/jquery-3.6.1.slim.js"
+		integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+
+
+	<link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/inc/yt-video-popup/grt-youtube-popup.css">
 
 	<?php wp_head(); ?>
 

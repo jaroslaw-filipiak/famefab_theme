@@ -1,3 +1,30 @@
+.yt-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  svg {
+    @include default-transition;
+    transform: scale(1);
+  }
+
+  &:hover {
+    svg {
+      @include default-transition;
+      transform: scale(1.1);
+    }
+  }
+
+  &--play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .arrow-right,
 .arrow-left {
   &-icon {
