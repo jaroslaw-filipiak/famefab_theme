@@ -288,6 +288,14 @@
   }
 }
 
+.manage-gallery {
+  &--item {
+    height: 411px;
+    width: 298px;
+    background-color: aquamarine;
+  }
+}
+
 .manage-gallery--title__page-contact {
   @include media-breakpoint-down(md) {
     position: fixed;

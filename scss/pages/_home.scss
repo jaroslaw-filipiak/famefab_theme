@@ -466,6 +466,39 @@ body {
             top: -53%;
           }
         }
+
+        &-12 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+
+        &-14 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+
+        &-16 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+        &-18 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
+        &-20 {
+          @include media-breakpoint-up(lg) {
+            position: relative;
+            top: -53%;
+          }
+        }
       }
 
       div {
