@@ -166,3 +166,20 @@ body {
     }
   }
 }
+
+// popup
+
+.pum-container,
+.pum-theme-default-theme .pum-container {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.pum-content {
+  iframe {
+    @include media-breakpoint-up(lg) {
+      width: 300px !important;
+      height: 169px !important;
+    }
+  }
+}

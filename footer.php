@@ -81,7 +81,7 @@ $isInfluencerPostType = 'influencer_post_type' == get_post_type();
 
 </footer>
 
-<script src="<?php echo get_theme_file_uri() ?>/inc/yt-video-popup/grt-youtube-popup.js"></script>
+
 
 
 <?php wp_footer(); ?>
@@ -108,7 +108,25 @@ jQuery(document).ready(function() {
 
 
 
+<script>
+// window.addEventListener('DOMContentLoaded', () => {
 
+// 	$(".youtube-link").grtyoutube({
+// 		autoPlay: true
+// 	});
+
+
+
+// 	setTimeout((e) => {
+// 		const event = document.createEvent('Event');
+// 		event.initEvent('click', true, false);
+// 		document.querySelector('.youtube-link').dispatchEvent(event);
+// 		// $(".youtube-link").trigger('click');
+// 	}, 3000);
+
+
+// })
+</script>
 </body>
 
 </html>
