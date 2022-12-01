@@ -169,6 +169,13 @@ body {
 
 // popup
 
+.div#popmake-1970 {
+  max-width: 330px !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
 .pum-container,
 .pum-theme-default-theme .pum-container {
   box-shadow: none !important;
@@ -177,9 +184,15 @@ body {
 
 .pum-content {
   iframe {
-    @include media-breakpoint-up(lg) {
-      width: 300px !important;
-      height: 169px !important;
+    @include media-breakpoint-down(lg) {
+      width: 362px !important;
+      height: 239px !important;
     }
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

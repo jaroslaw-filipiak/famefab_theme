@@ -207,7 +207,8 @@ window.addEventListener('DOMContentLoaded', () => {
 				<div style="background-image: url(<?php echo get_the_post_thumbnail_url($post -> ID , 'full') ?>); background-size: cover; background-positon: center; background-repeat: no-repeat; border-radius: 30px;"
 					class="single-influencer--case single-influencer--case-1" data-title="<?php echo the_title() ?>"
 					data-subtitle="<?php echo the_excerpt() ?>" data-link="<?php echo the_permalink() ?>">
-					<a class="text-uppercase color-yellow" href="#"><?php echo the_title() ?></a>
+					<a class="text-uppercase color-yellow"
+						href="<?php echo get_permalink($post -> ID) ?>"><?php echo the_title() ?></a>
 					<!-- <img src="<?php echo get_theme_file_uri() ?>/dist/assets/img/influencer-page--case.png" alt=""> -->
 				</div>
 				<!-- END loop -->
