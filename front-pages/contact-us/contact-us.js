@@ -146,16 +146,18 @@ if (!isMobile) {
   //   manage-gallery--subtitle
 }
 
-ScrollTrigger.create({
-  trigger: '.who-we-are__contact-us--title',
-  scroller: '.smooth-scroll',
-  start: 'top top',
-  end: 'top bottom',
-  endTrigger: '.footer',
-  //   pin: '.manage-gallery--subtitle',
-  pin: '.contact-page-new-pin',
-  markers: false,
-});
+if (!isMobile) {
+  ScrollTrigger.create({
+    trigger: '.who-we-are__contact-us--title',
+    scroller: '.smooth-scroll',
+    start: 'top top',
+    end: 'top bottom',
+    endTrigger: '.footer',
+    //   pin: '.manage-gallery--subtitle',
+    pin: '.contact-page-new-pin',
+    markers: false,
+  });
+}
 
 if (isMobile) {
   // who-we-are__contact-us--title

@@ -154,6 +154,7 @@
   @include media-breakpoint-down(md) {
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   &--title-wrapper {
@@ -293,6 +294,10 @@
     height: 411px;
     width: 298px;
     background-color: aquamarine;
+
+    @include media-breakpoint-down(md) {
+      width: 260px;
+    }
   }
   &--gallery {
     @include media-breakpoint-up(lg) {
