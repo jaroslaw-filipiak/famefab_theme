@@ -139,21 +139,6 @@ window.addEventListener("DOMContentLoaded", () => {
 <?php get_template_part( 'template-parts/main-menu' ); ?>
 <?php get_template_part( 'template-parts/top-bar' ); ?>
 
-<!-- mobile -->
-<section class="detail-mobile-hero d-md-none bg-cover bg-no-repeat bg-center"
-	style="background-image:url('<?php echo get_theme_file_uri() ?>/dist/assets/img/case-hero-mobile.jpg')">
-	<div class="container-fluid h-100">
-		<div class="row h-100">
-			<div class="col h-100 d-flex align-items-center jutify-content-center">
-				<div style="width: 100%;" class="d-flex flex-column align-items-end justify-content-end">
-					<h1 class="text-end"><?php echo get_the_title() ?></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- mobile -->
-
 <section class="detail-hero">
 
 	<div class="container-fluid">
