@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		scrollTrigger: {
 			trigger: 'body',
 			scroller: '.smooth-scroll',
-			// scrub: true,
 			start: 'top bottom',
 			end: 'bottom',
 		},
@@ -67,18 +66,11 @@ window.addEventListener("DOMContentLoaded", () => {
 		scrollTrigger: {
 			trigger: 'body',
 			scroller: '.smooth-scroll',
-			// scrub: true,
 			start: 'top bottom',
 			end: 'bottom',
 		},
 		duration: 2,
 	});
-
-
-
-
-
-	console.log('scroll', scroll)
 
 	setTimeout(() => {
 
@@ -89,10 +81,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 
 		scroll.update
-		console.log('after timeout', scroll)
+
 	}, 3000)
-
-
 
 })
 </script>
@@ -240,15 +230,36 @@ window.addEventListener("DOMContentLoaded", () => {
     $previous_post_url = get_the_permalink($previous_post);
     $previous_post_thumbnail = get_the_post_thumbnail_url($previous_post);
 
-    ?>
+	$args = array(
+		'post_type' =>'case_post_type',
+		'numberposts' => -1,
+		'order' => 'ASC' );
+	
+	$case_posts = get_posts($args);
 
+	$count = count($case_posts);
+	
+	$first_case = $case_posts[0] ;
+	$first_case_url = get_the_permalink($first_case -> ID);
+	$first_case_thumbnail = get_the_post_thumbnail_url($first_case -> ID)
+	;
+	$last_case = $case_posts[$count-1] ;
+	$last_case_url = get_the_permalink($last_case -> ID);
+	$last_case_thumbnail = get_the_post_thumbnail_url($last_case -> ID);
+
+
+	// var_dump($next_post);
+	// var_dump($next_post -> ID);
+	// var_dump($next_post_url);
+
+    ?>
 
 		<div class="container-fluid h-100">
 			<div class="row h-100">
 
 				<div class="bg-cover bg-no-repeat bg-center col  item-prev"
-					style="background-image: url('<?php echo $previous_post_thumbnail ?>')">
-					<a href="<?php echo $previous_post_url ?>"
+					style="background-image: url('<?php echo $previous_post === "" ? $last_case_thumbnail : $previous_post_thumbnail ?>')">
+					<a href="<?php echo $previous_post === "" ? $last_case_url : $previous_post_url ?>"
 						class="content-and-arrow col-6 d-flex flex-row-reverse align-items-center justify-content-start p-0"
 						style="margin-top: 80px; text-decoration: none;">
 						<div data-scroll data-scroll-speed="1" class="ps-4 mb-2 mb-lg-0 color-yellow">
@@ -273,8 +284,8 @@ window.addEventListener("DOMContentLoaded", () => {
 				</div>
 
 				<div class="bg-cover bg-no-repeat bg-center col item-next"
-					style="background-image: url('<?php echo $next_post_thumbnail ?>')">
-					<a href="<?php echo $next_post_url;?>"
+					style="background-image: url('<?php echo $next_post === "" ? $first_case_thumbnail : $next_post_url  ?>')">
+					<a href="<?php echo $next_post === "" ? $first_case_url : $next_post_url; ?>"
 						class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 						style="margin-top: 80px; text-decoration: none">
 						<div data-scroll data-scroll-speed="1" class="pe-4 mb-2 mb-lg-0 color-yellow">
@@ -299,8 +310,6 @@ window.addEventListener("DOMContentLoaded", () => {
 			</div>
 		</div>
 	</section>
-
-
 
 </section>
 

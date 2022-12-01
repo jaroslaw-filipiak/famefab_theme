@@ -61,10 +61,6 @@
 
 		display: inline-block;
 		text-decoration: inherit;
-		/* width: 1em; */
-		/* margin-right: .2em; */
-		/* text-align: center; */
-		/* opacity: .8; */
 
 		/* For safety - reset parent styles, that can break glyph codes*/
 		font-variant: normal;
@@ -84,8 +80,7 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 
-		/* Uncomment for 3D effect */
-		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
 	}
 
 	/* =================== */
@@ -123,11 +118,6 @@
 
 	/* '' */
 	</style>
-
-
-
-
-
 
 	<?php wp_head(); ?>
 

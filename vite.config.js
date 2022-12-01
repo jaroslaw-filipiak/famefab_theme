@@ -6,7 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         global: resolve(__dirname, 'index.html'), // main global + vendors
-        homepage: resolve(__dirname, './front-pages/home/index.html'), // homepage
+        homepage: resolve(__dirname, './front-pages/home/index.html'),
         manage: resolve(__dirname, './front-pages/manage/index.html'),
         make: resolve(__dirname, './front-pages/make/index.html'),
         overOns: resolve(__dirname, './front-pages/over-ons/index.html'),

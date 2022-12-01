@@ -209,7 +209,6 @@ window.addEventListener('DOMContentLoaded', () => {
 					data-subtitle="<?php echo the_excerpt() ?>" data-link="<?php echo the_permalink() ?>">
 					<a class="text-uppercase color-yellow"
 						href="<?php echo get_permalink($post -> ID) ?>"><?php echo the_title() ?></a>
-					<!-- <img src="<?php echo get_theme_file_uri() ?>/dist/assets/img/influencer-page--case.png" alt=""> -->
 				</div>
 				<!-- END loop -->
 
@@ -228,8 +227,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 $prev_post = get_previous_post();
 $next_post = get_next_post();
-// $test = next_post_link($id);
-// $post = get_post($id);
 
 ?>
 
