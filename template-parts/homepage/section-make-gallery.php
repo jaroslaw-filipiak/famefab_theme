@@ -28,7 +28,7 @@
 						<?php if ( $home_section_make_gallery_link_to_section ) : ?>
 
 						<a href="<?php echo esc_url( $home_section_make_gallery_link_to_section['url'] ); ?>"
-							data-scroll-to data-scroll data-scroll-speed=".3"
+							data-scroll data-scroll-speed=".3"
 							class="link-yellow-unstyled content-and-arrow d-none d-lg-flex align-items-center justify-content-start p-0">
 							<div class="pe-4"><small
 									class="cursor-pointer"><?php echo esc_html( $home_section_make_gallery_link_to_section['title'] ); ?></small>
