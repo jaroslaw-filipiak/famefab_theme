@@ -106,9 +106,9 @@
 						<?php if(wp_is_mobile()) ?>
 
 						<div class="d-flex">
-							<div class="col-3"></div>
 
-							<div class="iterable d-block d-lg-none col-9">
+
+							<div class="iterable d-block d-lg-none col-12">
 
 								<?php 
 
