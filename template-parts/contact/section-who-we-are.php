@@ -33,7 +33,7 @@
 					<?php if ( $page_contact_section_with_big_heading_link_to_section ) : ?>
 
 					<a href="<?php echo esc_url( $page_contact_section_with_big_heading_link_to_section['url'] ); ?>"
-						class="link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
+						class="d-none d-lg-block link-green-unstyled content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 						style="margin-top: 80px;">
 						<div class="pe-4"><small
 								class="cursor-pointer"><?php echo esc_html( $page_contact_section_with_big_heading_link_to_section['title'] ); ?></small>
