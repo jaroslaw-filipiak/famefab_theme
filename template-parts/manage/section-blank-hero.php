@@ -69,7 +69,7 @@
 			<div class="col-3 col-sm-2 d-md-block col-md-2  ps-0 h-100"></div>
 			<div class="col-9 col-sm-10 col-md-9 text-center h-100 page-manage-piniata ">
 				<div
-					class="d-none d-md-block gsap_opacity-reveal__blank-hero blank-hero--content blank-hero--content__page-manage color-yellow ">
+					class="d-md-block gsap_opacity-reveal__blank-hero blank-hero--content blank-hero--content__page-manage color-yellow ">
 					<?php the_field( 'page_manage_second_section_text_content' ); ?>
 				</div>
 

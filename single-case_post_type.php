@@ -284,7 +284,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				</div>
 
 				<div class="bg-cover bg-no-repeat bg-center col item-next"
-					style="background-image: url('<?php echo $next_post === "" ? $first_case_thumbnail : $next_post_url  ?>')">
+					style="background-image: url('<?php echo $next_post === "" ? $first_case_thumbnail : $next_post_thumbnail  ?>')">
 					<a href="<?php echo $next_post === "" ? $first_case_url : $next_post_url; ?>"
 						class="content-and-arrow col-6 d-flex align-items-center justify-content-start p-0"
 						style="margin-top: 80px; text-decoration: none">
