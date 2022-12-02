@@ -46,7 +46,7 @@
 
 
 <!-- go to influencers -->
-<a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>"
+<a href="<?php echo get_home_url('', 'manage'); ?>"
 	class="link-green-unstyled d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-influencers"
 	style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center;">
 	<div class="pe-4" style="width: 140px; margin-top: 10px;"><small class="cursor-pointer">go to influencers</small>
@@ -68,7 +68,7 @@
 </a>
 
 <!-- go to cases -->
-<a href="<?php echo esc_url( $home_section_manage_with_bg_link_to_section['url'] ); ?>"
+<a href="<?php echo get_home_url('' ,'make') ?>"
 	class="link-yellow-unstyled d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-make"
 	style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center;">
 	<div class="pe-4" style="width: 140px; margin-top: 10px;"><small class="cursor-pointer">go to cases</small>
