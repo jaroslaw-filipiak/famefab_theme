@@ -144,7 +144,8 @@
 
 <?php if('influencer_post_type' == get_post_type()) { ?>
 
-<span class="influencer_first_section_tags"><?php echo get_field('influencer_first_section_tags') ?></span>
+<span class="influencer_first_section_tags"
+	style="opacity: <?php echo get_field('influencer_first_section_tags_opacity') ?>"><?php echo get_field('influencer_first_section_tags') ?></span>
 
 <div class="single-influencer--title color-green ">
 	About</div>

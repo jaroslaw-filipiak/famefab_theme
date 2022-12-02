@@ -309,6 +309,25 @@
             "new_lines": ""
         },
         {
+            "key": "field_6389e1ccbc957",
+            "label": "Rotating Tags opacity",
+            "name": "influencer_first_section_tags_opacity",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_630236608a61b",
             "label": "Section About",
             "name": "",
@@ -506,5 +525,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668426672
+    "modified": 1669980779
 }
