@@ -326,6 +326,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
   }
 
   input[type='email'] {
@@ -402,13 +406,18 @@
 }
 
 .cf7-submit-wrapper {
-  margin-left: 45px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   width: 120px;
   height: 60px;
+  margin-top: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 45px;
+    margin-top: 0px;
+  }
 
   img {
     margin-left: 15px;
