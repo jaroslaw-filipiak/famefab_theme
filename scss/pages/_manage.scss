@@ -2,7 +2,7 @@
   font-size: 70px;
   line-height: 70px;
   position: absolute;
-  left: 20px;
+  left: 0px;
   bottom: 10px;
   text-align: center;
   @include font-serif;
@@ -13,7 +13,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: center;
-    left: 0;
+    left: 20px;
     max-width: 100%;
   }
 
@@ -21,7 +21,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: center;
-    left: 0;
+    left: 20px;
     max-width: 100%;
   }
 
