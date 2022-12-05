@@ -108,7 +108,7 @@
 <!--  over ons title on over ons page first slide  -->
 <?php if(is_page_template( 'page-templates/page-over-ons.php' )) { ?>
 
-<h1 class="over-ons--title color-green">
+<h1 class="over-ons--title color-green  d-none d-md-block">
 	<?php the_field( 'page_over_ons_first_section_big_title' ); ?>
 </h1>
 <?php } ?>

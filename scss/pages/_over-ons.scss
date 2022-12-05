@@ -16,31 +16,19 @@
   line-height: 70px;
   position: fixed;
   left: 50%;
-
-  text-align: left;
+  text-align: center;
   @include font-serif;
   // @include default-transition;
 
-  @include media-breakpoint-up(xs) {
-    font-size: 100px;
-    line-height: 100px;
-    text-align: center;
-    left: 0;
-  }
-
   @include media-breakpoint-only(xs) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    left: 20px;
+    max-width: 100%;
     position: absolute;
-    top: 85vh !important;
-    left: 20px !important;
-    max-width: 100%;
-  }
-
-  @include media-breakpoint-only(xs) {
-    font-size: 70px;
-    line-height: 70px;
-    text-align: center;
-    left: 0;
-    max-width: 100%;
+    left: 20px;
+    bottom: 10px;
   }
 
   @include media-breakpoint-only(sm) {
