@@ -18,11 +18,11 @@
 
 				<div style="<?php echo wp_is_mobile() ? 'z-index: 22;' : '' ?>"
 					class="gsap__blank-hero-mobile-piniata flex flex-column  align-items-start justify-content-start  ">
-					<div class="d-flex flex-column d-md-none ">
+					<div class="d-flex flex-column d-none">
 						<?php the_field( 'page_manage_second_section_text_content' ); ?>
 					</div>
 
-					<div class="d-md-none ">
+					<div class="d-none">
 						<?php $page_manage_second_section_link_to_section = get_field( 'page_manage_second_section_link_to_section' ); ?>
 						<?php if ( $page_manage_second_section_link_to_section ) : ?>
 
