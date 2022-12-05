@@ -520,6 +520,24 @@ ScrollTrigger.create({
 
 // brand image pin change color to green
 
+function goToInfluencersMobileBtn(addClass) {
+  const elem = document.querySelector('.mobile__go-to-influencers');
+  elem.classList = `${addClass} link-green-unstyled flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-influencers`;
+}
+
+gsap.to('.mobile__go-to-influencers', {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '.make',
+    scroller: '.smooth-scroll',
+    scrub: true,
+    start: 'top 50%',
+    end: 'top 45%',
+    onEnter: () => goToInfluencersMobileBtn('d-none'),
+    onLeaveBack: () => goToInfluencersMobileBtn('d-flex'),
+  },
+});
+
 function changeBrandImagePinContentClass(addClass) {
   const elem = document.querySelector(
     '#brand-image-pin .make-gallery--subtitle'
@@ -792,17 +810,6 @@ gsap.from('.mobile__go-to-influencers', {
   opacity: 0,
   scrollTrigger: {
     trigger: '.manage-gallery--row',
-    scroller: '.smooth-scroll',
-    scrub: true,
-    start: 'top 50%',
-    end: 'top 45%',
-  },
-});
-
-gsap.to('.mobile__go-to-influencers', {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: '.make',
     scroller: '.smooth-scroll',
     scrub: true,
     start: 'top 50%',

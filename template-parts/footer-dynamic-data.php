@@ -48,7 +48,7 @@
 <!-- go to influencers -->
 <a href="<?php echo get_home_url('', 'manage'); ?>"
 	class="link-green-unstyled d-flex flex-column-reverse d-lg-none content-and-arrow align-items-start justify-content-start p-0 mobile__go-to-influencers"
-	style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center;">
+	style="position: fixed; left: 0px; top: 50vh; transform: scale(.8); transform-origin: center; z-index: 22">
 	<div class="pe-4" style="width: 140px; margin-top: 10px;"><small class="cursor-pointer">go to influencers</small>
 	</div>
 	<div class="arrow-right-icon">
