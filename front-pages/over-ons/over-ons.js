@@ -19,16 +19,17 @@ if (!isMobile) {
   });
 
   // title change color
-  gsap.to('.over-ons--title', {
+  gsap.to('.over-ons--title__desktop', {
     scrollTrigger: {
-      trigger: '.blank-hero--content',
+      trigger: '.over-ons-title-trigger',
       scroller: '.smooth-scroll',
       // scrub: true,
-      start: 'top bottom',
-      end: 'top bottom',
+      start: 'top 80%',
+      end: 'top 80%',
       onEnter: () => changeOverOnsClass('color-yellow'),
       onLeaveBack: () => changeOverOnsClass('color-green'),
       toggleActions: 'play none none reset',
+      markers: false,
     },
   });
 
@@ -197,9 +198,12 @@ if (!isMobile) {
 } // !isMobile
 
 function changeOverOnsClass(className) {
-  //console.log('change over ons class');
-  const title = document.querySelector('.over-ons--title');
-  title.classList = `over-ons--title ${className}`;
+  console.log('change over ons class');
+
+  const title = document.querySelector('.over-ons--title__desktop');
+  title.classList = `over-ons--title over-ons--title__desktop ${className}`;
+
+  console.log(title);
 }
 
 // title opacity to zero

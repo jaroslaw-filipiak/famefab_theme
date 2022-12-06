@@ -11,7 +11,7 @@
 
 
 <!-- <div class="pre--blank-hero"></div> -->
-<section class="blank-hero bg-second-violet total-reach-trigger">
+<section class="blank-hero bg-second-violet total-reach-trigger" style="position: static;">
 	<div class="blank-hero-color-overlay"></div>
 	<div class="container-fluid h-100">
 		<div class="row h-100 d-flex align-items-end">
